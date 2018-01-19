@@ -1,0 +1,1541 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.45 build -152302408 
+                                                                                               Wed Jan 17 22:46:24 2018
+
+Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160504
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     8                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     9                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    15                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    16                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    17  0000                     
+    18                           ; Version 1.45
+    19                           ; Generated 16/11/2017 GMT
+    20                           ; 
+    21                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    22                           ; All rights reserved.
+    23                           ; 
+    24                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    25                           ; 
+    26                           ; Redistribution and use in source and binary forms, with or without modification, are
+    27                           ; permitted provided that the following conditions are met:
+    28                           ; 
+    29                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    30                           ;        conditions and the following disclaimer.
+    31                           ; 
+    32                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    33                           ;        of conditions and the following disclaimer in the documentation and/or other
+    34                           ;        materials provided with the distribution.
+    35                           ; 
+    36                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    37                           ;        software without specific prior written permission.
+    38                           ; 
+    39                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    40                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    41                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    42                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    43                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    44                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    45                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    46                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    47                           ; 
+    48                           ; 
+    49                           ; Code-generator required, PIC18F4550 Definitions
+    50                           ; 
+    51                           ; SFR Addresses
+    52  0000                     
+    53                           	psect	idataCOMRAM
+    54  007A93                     __pidataCOMRAM:
+    55                           	opt stack 0
+    56                           
+    57                           ;initializer for _velocidad
+    58  007A93  0001               	dw	1
+    59  007A95  0000               	dw	0
+    60                           
+    61                           ;initializer for _juego
+    62  007A97  01                 	db	1
+    63  0000                     _PORTBbits	set	3969
+    64  0000                     _TRISD	set	3989
+    65  0000                     _INTCON2bits	set	4081
+    66  0000                     _TRISBbits	set	3987
+    67  0000                     _LATB	set	3978
+    68  0000                     _LATD	set	3980
+    69  0000                     _ADCON1bits	set	4033
+    70                           
+    71                           ; #config settings
+    72  0000                     
+    73                           	psect	cinit
+    74  007AB4                     __pcinit:
+    75                           	opt stack 0
+    76  007AB4                     start_initialization:
+    77                           	opt stack 0
+    78  007AB4                     __initialization:
+    79                           	opt stack 0
+    80                           
+    81                           ; Initialize objects allocated to COMRAM (5 bytes)
+    82                           ; load TBLPTR registers with __pidataCOMRAM
+    83  007AB4  0E93               	movlw	low __pidataCOMRAM
+    84  007AB6  6EF6               	movwf	tblptrl,c
+    85  007AB8  0E7A               	movlw	high __pidataCOMRAM
+    86  007ABA  6EF7               	movwf	tblptrh,c
+    87  007ABC  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+    88  007ABE  6EF8               	movwf	tblptru,c
+    89  007AC0  EE00  F001         	lfsr	0,__pdataCOMRAM
+    90  007AC4  EE10 F005          	lfsr	1,5
+    91  007AC8                     copy_data0:
+    92  007AC8  0009               	tblrd		*+
+    93  007ACA  CFF5 FFEE          	movff	tablat,postinc0
+    94  007ACE  50E5               	movf	postdec1,w,c
+    95  007AD0  50E1               	movf	fsr1l,w,c
+    96  007AD2  E1FA               	bnz	copy_data0
+    97  007AD4                     end_of_initialization:
+    98                           	opt stack 0
+    99  007AD4                     __end_of__initialization:
+   100                           	opt stack 0
+   101  007AD4  0E00               	movlw	low (__Lmediumconst shr (0+16))
+   102  007AD6  6EF8               	movwf	tblptru,c
+   103  007AD8  0100               	movlb	0
+   104  007ADA  EF6F  F03D         	goto	_main	;jump to C main() function
+   105                           tblptru	equ	0xFF8
+   106                           tblptrh	equ	0xFF7
+   107                           tblptrl	equ	0xFF6
+   108                           tablat	equ	0xFF5
+   109                           postinc0	equ	0xFEE
+   110                           postdec1	equ	0xFE5
+   111                           fsr1l	equ	0xFE1
+   112                           
+   113                           	psect	dataCOMRAM
+   114  000001                     __pdataCOMRAM:
+   115                           	opt stack 0
+   116  000001                     _velocidad:
+   117                           	opt stack 0
+   118  000001                     	ds	4
+   119  000005                     _juego:
+   120                           	opt stack 0
+   121  000005                     	ds	1
+   122                           tblptru	equ	0xFF8
+   123                           tblptrh	equ	0xFF7
+   124                           tblptrl	equ	0xFF6
+   125                           tablat	equ	0xFF5
+   126                           postinc0	equ	0xFEE
+   127                           postdec1	equ	0xFE5
+   128                           fsr1l	equ	0xFE1
+   129                           
+   130                           	psect	cstackCOMRAM
+   131  000006                     __pcstackCOMRAM:
+   132                           	opt stack 0
+   133  000006                     ??_Luces_Uno:
+   134  000006                     ??_Luces_Dos:
+   135  000006                     ??_Luces_Tres:
+   136  000006                     ??_Luces_Cuatro:
+   137  000006                     
+   138                           ; 1 bytes @ 0x0
+   139  000006                     	ds	2
+   140  000008                     ??_main:
+   141                           
+   142                           ; 1 bytes @ 0x2
+   143  000008                     	ds	1
+   144                           tblptru	equ	0xFF8
+   145                           tblptrh	equ	0xFF7
+   146                           tblptrl	equ	0xFF6
+   147                           tablat	equ	0xFF5
+   148                           postinc0	equ	0xFEE
+   149                           postdec1	equ	0xFE5
+   150                           fsr1l	equ	0xFE1
+   151                           
+   152 ;;
+   153 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   154 ;;
+   155 ;; *************** function _main *****************
+   156 ;; Defined at:
+   157 ;;		line 29 in file "Programa_principal.c"
+   158 ;; Parameters:    Size  Location     Type
+   159 ;;		None
+   160 ;; Auto vars:     Size  Location     Type
+   161 ;;		None
+   162 ;; Return value:  Size  Location     Type
+   163 ;;                  1    wreg      void 
+   164 ;; Registers used:
+   165 ;;		wreg, status,2, status,0, cstack
+   166 ;; Tracked objects:
+   167 ;;		On entry : 0/0
+   168 ;;		On exit  : 0/0
+   169 ;;		Unchanged: 0/0
+   170 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   171 ;;      Params:         0       0       0       0       0       0       0       0       0
+   172 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   173 ;;      Temps:          1       0       0       0       0       0       0       0       0
+   174 ;;      Totals:         1       0       0       0       0       0       0       0       0
+   175 ;;Total ram usage:        1 bytes
+   176 ;; Hardware stack levels required when called:    1
+   177 ;; This function calls:
+   178 ;;		_Luces_Cuatro
+   179 ;;		_Luces_Dos
+   180 ;;		_Luces_Tres
+   181 ;;		_Luces_Uno
+   182 ;;		_initPort
+   183 ;; This function is called by:
+   184 ;;		Startup code after reset
+   185 ;; This function uses a non-reentrant model
+   186 ;;
+   187                           
+   188                           	psect	text0
+   189  007ADE                     __ptext0:
+   190                           	opt stack 0
+   191  007ADE                     _main:
+   192                           	opt stack 30
+   193                           
+   194                           ;Programa_principal.c: 30: initPort();
+   195                           
+   196                           ;incstack = 0
+   197  007ADE  EC4C  F03D         	call	_initPort	;wreg free
+   198  007AE2                     
+   199                           ;Programa_principal.c: 32: if(PORTBbits.RB0 == 0){
+   200  007AE2  B081               	btfsc	3969,0,c	;volatile
+   201  007AE4  D01C               	goto	l39
+   202                           
+   203                           ;Programa_principal.c: 33: _delay((unsigned long)((20)*(2000000L/4000.0)));
+   204  007AE6  0E0D               	movlw	13
+   205  007AE8  6E08               	movwf	??_main& (0+255),c
+   206  007AEA  0EFC               	movlw	252
+   207  007AEC                     u277:
+   208  007AEC  2EE8               	decfsz	wreg,f,c
+   209  007AEE  D7FE               	bra	u277
+   210  007AF0  2E08               	decfsz	??_main& (0+255),f,c
+   211  007AF2  D7FC               	bra	u277
+   212                           
+   213                           ;Programa_principal.c: 34: juego = juego + 1;
+   214  007AF4  2805               	incf	_juego,w,c
+   215  007AF6  6E05               	movwf	_juego,c
+   216                           
+   217                           ;Programa_principal.c: 35: if(juego == 5){juego=1;}
+   218  007AF8  0E05               	movlw	5
+   219  007AFA  1805               	xorwf	_juego,w,c
+   220  007AFC  A4D8               	btfss	status,2,c
+   221  007AFE  D00F               	goto	l39
+   222  007B00  0E01               	movlw	1
+   223  007B02  6E05               	movwf	_juego,c
+   224                           
+   225                           ;Programa_principal.c: 36: }
+   226                           ;Programa_principal.c: 37: switch(juego){
+   227  007B04  D00C               	goto	l39
+   228  007B06                     
+   229                           ;Programa_principal.c: 39: Luces_Uno();
+   230  007B06  EC67  F03F         	call	_Luces_Uno	;wreg free
+   231                           
+   232                           ;Programa_principal.c: 40: break;
+   233  007B0A  D7EB               	goto	l36
+   234  007B0C                     
+   235                           ;Programa_principal.c: 42: Luces_Dos();
+   236  007B0C  EC9D  F03D         	call	_Luces_Dos	;wreg free
+   237                           
+   238                           ;Programa_principal.c: 43: break;
+   239  007B10  D7E8               	goto	l36
+   240  007B12                     
+   241                           ;Programa_principal.c: 45: Luces_Tres();
+   242  007B12  ECCE  F03E         	call	_Luces_Tres	;wreg free
+   243                           
+   244                           ;Programa_principal.c: 46: break;
+   245  007B16  D7E5               	goto	l36
+   246  007B18                     
+   247                           ;Programa_principal.c: 48: Luces_Cuatro();
+   248  007B18  EC35  F03E         	call	_Luces_Cuatro	;wreg free
+   249                           
+   250                           ;Programa_principal.c: 50: }
+   251                           
+   252                           ;Programa_principal.c: 49: break;
+   253  007B1C  D7E2               	goto	l36
+   254  007B1E                     l39:
+   255  007B1E  5005               	movf	_juego,w,c
+   256                           
+   257                           ; Switch size 1, requested type "space"
+   258                           ; Number of cases is 4, Range of values is 1 to 4
+   259                           ; switch strategies available:
+   260                           ; Name         Instructions Cycles
+   261                           ; simple_byte           13     7 (average)
+   262                           ;	Chosen strategy is simple_byte
+   263  007B20  0A01               	xorlw	1	; case 1
+   264  007B22  B4D8               	btfsc	status,2,c
+   265  007B24  D7F0               	goto	l40
+   266  007B26  0A03               	xorlw	3	; case 2
+   267  007B28  B4D8               	btfsc	status,2,c
+   268  007B2A  D7F0               	goto	l42
+   269  007B2C  0A01               	xorlw	1	; case 3
+   270  007B2E  B4D8               	btfsc	status,2,c
+   271  007B30  D7F0               	goto	l43
+   272  007B32  0A07               	xorlw	7	; case 4
+   273  007B34  B4D8               	btfsc	status,2,c
+   274  007B36  D7F0               	goto	l44
+   275  007B38  D7D4               	goto	l36
+   276  007B3A                     __end_of_main:
+   277                           	opt stack 0
+   278                           tblptru	equ	0xFF8
+   279                           tblptrh	equ	0xFF7
+   280                           tblptrl	equ	0xFF6
+   281                           tablat	equ	0xFF5
+   282                           postinc0	equ	0xFEE
+   283                           wreg	equ	0xFE8
+   284                           postdec1	equ	0xFE5
+   285                           fsr1l	equ	0xFE1
+   286                           status	equ	0xFD8
+   287                           
+   288 ;; *************** function _initPort *****************
+   289 ;; Defined at:
+   290 ;;		line 19 in file "Programa_principal.c"
+   291 ;; Parameters:    Size  Location     Type
+   292 ;;		None
+   293 ;; Auto vars:     Size  Location     Type
+   294 ;;		None
+   295 ;; Return value:  Size  Location     Type
+   296 ;;                  1    wreg      void 
+   297 ;; Registers used:
+   298 ;;		wreg, status,2
+   299 ;; Tracked objects:
+   300 ;;		On entry : 0/0
+   301 ;;		On exit  : 0/0
+   302 ;;		Unchanged: 0/0
+   303 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   304 ;;      Params:         0       0       0       0       0       0       0       0       0
+   305 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   306 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   307 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   308 ;;Total ram usage:        0 bytes
+   309 ;; Hardware stack levels used:    1
+   310 ;; This function calls:
+   311 ;;		Nothing
+   312 ;; This function is called by:
+   313 ;;		_main
+   314 ;; This function uses a non-reentrant model
+   315 ;;
+   316                           
+   317                           	psect	text1
+   318  007A98                     __ptext1:
+   319                           	opt stack 0
+   320  007A98                     _initPort:
+   321                           	opt stack 30
+   322                           
+   323                           ;Programa_principal.c: 20: ADCON1bits.PCFG = 0xFF;
+   324                           
+   325                           ;incstack = 0
+   326  007A98  80C1               	bsf	4033,0,c	;volatile
+   327  007A9A  82C1               	bsf	4033,1,c	;volatile
+   328  007A9C  84C1               	bsf	4033,2,c	;volatile
+   329  007A9E  86C1               	bsf	4033,3,c	;volatile
+   330                           
+   331                           ;Programa_principal.c: 21: LATD = 0x00;
+   332  007AA0  0E00               	movlw	0
+   333  007AA2  6E8C               	movwf	3980,c	;volatile
+   334                           
+   335                           ;Programa_principal.c: 22: LATB = 0x00;
+   336  007AA4  0E00               	movlw	0
+   337  007AA6  6E8A               	movwf	3978,c	;volatile
+   338                           
+   339                           ;Programa_principal.c: 23: TRISBbits.RB0 = 1;
+   340  007AA8  8093               	bsf	3987,0,c	;volatile
+   341                           
+   342                           ;Programa_principal.c: 24: TRISBbits.RB1 = 1;
+   343  007AAA  8293               	bsf	3987,1,c	;volatile
+   344                           
+   345                           ;Programa_principal.c: 25: INTCON2bits.RBPU = 0;
+   346  007AAC  9EF1               	bcf	intcon2,7,c	;volatile
+   347                           
+   348                           ;Programa_principal.c: 26: TRISD = 0x00;
+   349  007AAE  0E00               	movlw	0
+   350  007AB0  6E95               	movwf	3989,c	;volatile
+   351  007AB2  0012               	return		;funcret
+   352  007AB4                     __end_of_initPort:
+   353                           	opt stack 0
+   354                           tblptru	equ	0xFF8
+   355                           tblptrh	equ	0xFF7
+   356                           tblptrl	equ	0xFF6
+   357                           tablat	equ	0xFF5
+   358                           intcon2	equ	0xFF1
+   359                           postinc0	equ	0xFEE
+   360                           wreg	equ	0xFE8
+   361                           postdec1	equ	0xFE5
+   362                           fsr1l	equ	0xFE1
+   363                           status	equ	0xFD8
+   364                           
+   365 ;; *************** function _Luces_Uno *****************
+   366 ;; Defined at:
+   367 ;;		line 54 in file "Programa_principal.c"
+   368 ;; Parameters:    Size  Location     Type
+   369 ;;		None
+   370 ;; Auto vars:     Size  Location     Type
+   371 ;;		None
+   372 ;; Return value:  Size  Location     Type
+   373 ;;                  1    wreg      void 
+   374 ;; Registers used:
+   375 ;;		wreg, status,2, status,0
+   376 ;; Tracked objects:
+   377 ;;		On entry : 0/0
+   378 ;;		On exit  : 0/0
+   379 ;;		Unchanged: 0/0
+   380 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   381 ;;      Params:         0       0       0       0       0       0       0       0       0
+   382 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   383 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   384 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   385 ;;Total ram usage:        2 bytes
+   386 ;; Hardware stack levels used:    1
+   387 ;; This function calls:
+   388 ;;		Nothing
+   389 ;; This function is called by:
+   390 ;;		_main
+   391 ;; This function uses a non-reentrant model
+   392 ;;
+   393                           
+   394                           	psect	text2
+   395  007ECE                     __ptext2:
+   396                           	opt stack 0
+   397  007ECE                     _Luces_Uno:
+   398                           	opt stack 30
+   399                           
+   400                           ;Programa_principal.c: 55: LATD = 0xAA;
+   401                           
+   402                           ;incstack = 0
+   403  007ECE  0EAA               	movlw	170
+   404  007ED0  6E8C               	movwf	3980,c	;volatile
+   405                           
+   406                           ;Programa_principal.c: 56: if(velocidad==1){_delay((unsigned long)((1000)*(2000000L/4000
+      +                          .0)));LATD=0x00;_delay((unsigned long)((1000)*(2000000L/4000.0)));}
+   407  007ED2  0401               	decf	_velocidad,w,c
+   408  007ED4  1002               	iorwf	_velocidad+1,w,c
+   409  007ED6  1003               	iorwf	_velocidad+2,w,c
+   410  007ED8  1004               	iorwf	_velocidad+3,w,c
+   411  007EDA  A4D8               	btfss	status,2,c
+   412  007EDC  D019               	goto	l50
+   413  007EDE  0E03               	movlw	3
+   414  007EE0  6E07               	movwf	(??_Luces_Uno+1)& (0+255),c
+   415  007EE2  0E8A               	movlw	138
+   416  007EE4  6E06               	movwf	??_Luces_Uno& (0+255),c
+   417  007EE6  0E56               	movlw	86
+   418  007EE8                     u287:
+   419  007EE8  2EE8               	decfsz	wreg,f,c
+   420  007EEA  D7FE               	bra	u287
+   421  007EEC  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   422  007EEE  D7FC               	bra	u287
+   423  007EF0  2E07               	decfsz	(??_Luces_Uno+1)& (0+255),f,c
+   424  007EF2  D7FA               	bra	u287
+   425  007EF4  0E00               	movlw	0
+   426  007EF6  6E8C               	movwf	3980,c	;volatile
+   427  007EF8  0E03               	movlw	3
+   428  007EFA  6E07               	movwf	(??_Luces_Uno+1)& (0+255),c
+   429  007EFC  0E8A               	movlw	138
+   430  007EFE  6E06               	movwf	??_Luces_Uno& (0+255),c
+   431  007F00  0E56               	movlw	86
+   432  007F02                     u297:
+   433  007F02  2EE8               	decfsz	wreg,f,c
+   434  007F04  D7FE               	bra	u297
+   435  007F06  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   436  007F08  D7FC               	bra	u297
+   437  007F0A  2E07               	decfsz	(??_Luces_Uno+1)& (0+255),f,c
+   438  007F0C  D7FA               	bra	u297
+   439  007F0E  D053               	goto	l56
+   440  007F10                     l50:
+   441                           
+   442                           ;Programa_principal.c: 57: else if(velocidad==2){_delay((unsigned long)((500)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((500)*(2000000L/4000.0)));}
+   443  007F10  0E02               	movlw	2
+   444  007F12  1801               	xorwf	_velocidad,w,c
+   445  007F14  1002               	iorwf	_velocidad+1,w,c
+   446  007F16  1003               	iorwf	_velocidad+2,w,c
+   447  007F18  1004               	iorwf	_velocidad+3,w,c
+   448  007F1A  A4D8               	btfss	status,2,c
+   449  007F1C  D019               	goto	l52
+   450  007F1E  0E02               	movlw	2
+   451  007F20  6E07               	movwf	(??_Luces_Uno+1)& (0+255),c
+   452  007F22  0E45               	movlw	69
+   453  007F24  6E06               	movwf	??_Luces_Uno& (0+255),c
+   454  007F26  0EAA               	movlw	170
+   455  007F28                     u307:
+   456  007F28  2EE8               	decfsz	wreg,f,c
+   457  007F2A  D7FE               	bra	u307
+   458  007F2C  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   459  007F2E  D7FC               	bra	u307
+   460  007F30  2E07               	decfsz	(??_Luces_Uno+1)& (0+255),f,c
+   461  007F32  D7FA               	bra	u307
+   462  007F34  0E00               	movlw	0
+   463  007F36  6E8C               	movwf	3980,c	;volatile
+   464  007F38  0E02               	movlw	2
+   465  007F3A  6E07               	movwf	(??_Luces_Uno+1)& (0+255),c
+   466  007F3C  0E45               	movlw	69
+   467  007F3E  6E06               	movwf	??_Luces_Uno& (0+255),c
+   468  007F40  0EAA               	movlw	170
+   469  007F42                     u317:
+   470  007F42  2EE8               	decfsz	wreg,f,c
+   471  007F44  D7FE               	bra	u317
+   472  007F46  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   473  007F48  D7FC               	bra	u317
+   474  007F4A  2E07               	decfsz	(??_Luces_Uno+1)& (0+255),f,c
+   475  007F4C  D7FA               	bra	u317
+   476  007F4E  D033               	goto	l56
+   477  007F50                     l52:
+   478                           
+   479                           ;Programa_principal.c: 58: else if(velocidad==3){_delay((unsigned long)((250)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((250)*(2000000L/4000.0)));}
+   480  007F50  0E03               	movlw	3
+   481  007F52  1801               	xorwf	_velocidad,w,c
+   482  007F54  1002               	iorwf	_velocidad+1,w,c
+   483  007F56  1003               	iorwf	_velocidad+2,w,c
+   484  007F58  1004               	iorwf	_velocidad+3,w,c
+   485  007F5A  A4D8               	btfss	status,2,c
+   486  007F5C  D013               	goto	l54
+   487  007F5E  0EA3               	movlw	163
+   488  007F60  6E06               	movwf	??_Luces_Uno& (0+255),c
+   489  007F62  0E55               	movlw	85
+   490  007F64                     u327:
+   491  007F64  2EE8               	decfsz	wreg,f,c
+   492  007F66  D7FE               	bra	u327
+   493  007F68  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   494  007F6A  D7FC               	bra	u327
+   495  007F6C  F000               	nop	
+   496  007F6E  0E00               	movlw	0
+   497  007F70  6E8C               	movwf	3980,c	;volatile
+   498  007F72  0EA3               	movlw	163
+   499  007F74  6E06               	movwf	??_Luces_Uno& (0+255),c
+   500  007F76  0E55               	movlw	85
+   501  007F78                     u337:
+   502  007F78  2EE8               	decfsz	wreg,f,c
+   503  007F7A  D7FE               	bra	u337
+   504  007F7C  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   505  007F7E  D7FC               	bra	u337
+   506  007F80  F000               	nop	
+   507  007F82  D019               	goto	l56
+   508  007F84                     l54:
+   509                           
+   510                           ;Programa_principal.c: 59: else if(velocidad==4){_delay((unsigned long)((100)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((100)*(2000000L/4000.0)));}
+   511  007F84  0E04               	movlw	4
+   512  007F86  1801               	xorwf	_velocidad,w,c
+   513  007F88  1002               	iorwf	_velocidad+1,w,c
+   514  007F8A  1003               	iorwf	_velocidad+2,w,c
+   515  007F8C  1004               	iorwf	_velocidad+3,w,c
+   516  007F8E  A4D8               	btfss	status,2,c
+   517  007F90  D012               	goto	l56
+   518  007F92  0E41               	movlw	65
+   519  007F94  6E06               	movwf	??_Luces_Uno& (0+255),c
+   520  007F96  0EEE               	movlw	238
+   521  007F98                     u347:
+   522  007F98  2EE8               	decfsz	wreg,f,c
+   523  007F9A  D7FE               	bra	u347
+   524  007F9C  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   525  007F9E  D7FC               	bra	u347
+   526  007FA0  D000               	nop2	
+   527  007FA2  0E00               	movlw	0
+   528  007FA4  6E8C               	movwf	3980,c	;volatile
+   529  007FA6  0E41               	movlw	65
+   530  007FA8  6E06               	movwf	??_Luces_Uno& (0+255),c
+   531  007FAA  0EEE               	movlw	238
+   532  007FAC                     u357:
+   533  007FAC  2EE8               	decfsz	wreg,f,c
+   534  007FAE  D7FE               	bra	u357
+   535  007FB0  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   536  007FB2  D7FC               	bra	u357
+   537  007FB4  D000               	nop2	
+   538  007FB6                     l56:
+   539                           
+   540                           ;Programa_principal.c: 60: if(PORTBbits.RB1 == 0){
+   541  007FB6  B281               	btfsc	3969,1,c	;volatile
+   542  007FB8  0012               	return	
+   543                           
+   544                           ;Programa_principal.c: 61: _delay((unsigned long)((20)*(2000000L/4000.0)));
+   545  007FBA  0E0D               	movlw	13
+   546  007FBC  6E06               	movwf	??_Luces_Uno& (0+255),c
+   547  007FBE  0EFC               	movlw	252
+   548  007FC0                     u367:
+   549  007FC0  2EE8               	decfsz	wreg,f,c
+   550  007FC2  D7FE               	bra	u367
+   551  007FC4  2E06               	decfsz	??_Luces_Uno& (0+255),f,c
+   552  007FC6  D7FC               	bra	u367
+   553                           
+   554                           ;Programa_principal.c: 62: velocidad = velocidad + 1;
+   555  007FC8  0E01               	movlw	1
+   556  007FCA  2401               	addwf	_velocidad,w,c
+   557  007FCC  6E01               	movwf	_velocidad,c
+   558  007FCE  0E00               	movlw	0
+   559  007FD0  2002               	addwfc	_velocidad+1,w,c
+   560  007FD2  6E02               	movwf	_velocidad+1,c
+   561  007FD4  0E00               	movlw	0
+   562  007FD6  2003               	addwfc	_velocidad+2,w,c
+   563  007FD8  6E03               	movwf	_velocidad+2,c
+   564  007FDA  0E00               	movlw	0
+   565  007FDC  2004               	addwfc	_velocidad+3,w,c
+   566  007FDE  6E04               	movwf	_velocidad+3,c
+   567                           
+   568                           ;Programa_principal.c: 63: if(velocidad == 5){velocidad=1;}
+   569  007FE0  0E05               	movlw	5
+   570  007FE2  1801               	xorwf	_velocidad,w,c
+   571  007FE4  1002               	iorwf	_velocidad+1,w,c
+   572  007FE6  1003               	iorwf	_velocidad+2,w,c
+   573  007FE8  1004               	iorwf	_velocidad+3,w,c
+   574  007FEA  A4D8               	btfss	status,2,c
+   575  007FEC  0012               	return	
+   576  007FEE  0E01               	movlw	1
+   577  007FF0  6E01               	movwf	_velocidad,c
+   578  007FF2  0E00               	movlw	0
+   579  007FF4  6E02               	movwf	_velocidad+1,c
+   580  007FF6  0E00               	movlw	0
+   581  007FF8  6E03               	movwf	_velocidad+2,c
+   582  007FFA  0E00               	movlw	0
+   583  007FFC  6E04               	movwf	_velocidad+3,c
+   584  007FFE  0012               	return	
+   585  008000                     __end_of_Luces_Uno:
+   586                           	opt stack 0
+   587                           tblptru	equ	0xFF8
+   588                           tblptrh	equ	0xFF7
+   589                           tblptrl	equ	0xFF6
+   590                           tablat	equ	0xFF5
+   591                           intcon2	equ	0xFF1
+   592                           postinc0	equ	0xFEE
+   593                           wreg	equ	0xFE8
+   594                           postdec1	equ	0xFE5
+   595                           fsr1l	equ	0xFE1
+   596                           status	equ	0xFD8
+   597                           
+   598 ;; *************** function _Luces_Tres *****************
+   599 ;; Defined at:
+   600 ;;		line 80 in file "Programa_principal.c"
+   601 ;; Parameters:    Size  Location     Type
+   602 ;;		None
+   603 ;; Auto vars:     Size  Location     Type
+   604 ;;		None
+   605 ;; Return value:  Size  Location     Type
+   606 ;;                  1    wreg      void 
+   607 ;; Registers used:
+   608 ;;		wreg, status,2, status,0
+   609 ;; Tracked objects:
+   610 ;;		On entry : 0/0
+   611 ;;		On exit  : 0/0
+   612 ;;		Unchanged: 0/0
+   613 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   614 ;;      Params:         0       0       0       0       0       0       0       0       0
+   615 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   616 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   617 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   618 ;;Total ram usage:        2 bytes
+   619 ;; Hardware stack levels used:    1
+   620 ;; This function calls:
+   621 ;;		Nothing
+   622 ;; This function is called by:
+   623 ;;		_main
+   624 ;; This function uses a non-reentrant model
+   625 ;;
+   626                           
+   627                           	psect	text3
+   628  007D9C                     __ptext3:
+   629                           	opt stack 0
+   630  007D9C                     _Luces_Tres:
+   631                           	opt stack 30
+   632                           
+   633                           ;Programa_principal.c: 81: LATD = 0x66;
+   634                           
+   635                           ;incstack = 0
+   636  007D9C  0E66               	movlw	102
+   637  007D9E  6E8C               	movwf	3980,c	;volatile
+   638                           
+   639                           ;Programa_principal.c: 82: if(velocidad==1){_delay((unsigned long)((1000)*(2000000L/4000
+      +                          .0)));LATD=0x00;_delay((unsigned long)((1000)*(2000000L/4000.0)));}
+   640  007DA0  0401               	decf	_velocidad,w,c
+   641  007DA2  1002               	iorwf	_velocidad+1,w,c
+   642  007DA4  1003               	iorwf	_velocidad+2,w,c
+   643  007DA6  1004               	iorwf	_velocidad+3,w,c
+   644  007DA8  A4D8               	btfss	status,2,c
+   645  007DAA  D019               	goto	l74
+   646  007DAC  0E03               	movlw	3
+   647  007DAE  6E07               	movwf	(??_Luces_Tres+1)& (0+255),c
+   648  007DB0  0E8A               	movlw	138
+   649  007DB2  6E06               	movwf	??_Luces_Tres& (0+255),c
+   650  007DB4  0E56               	movlw	86
+   651  007DB6                     u377:
+   652  007DB6  2EE8               	decfsz	wreg,f,c
+   653  007DB8  D7FE               	bra	u377
+   654  007DBA  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   655  007DBC  D7FC               	bra	u377
+   656  007DBE  2E07               	decfsz	(??_Luces_Tres+1)& (0+255),f,c
+   657  007DC0  D7FA               	bra	u377
+   658  007DC2  0E00               	movlw	0
+   659  007DC4  6E8C               	movwf	3980,c	;volatile
+   660  007DC6  0E03               	movlw	3
+   661  007DC8  6E07               	movwf	(??_Luces_Tres+1)& (0+255),c
+   662  007DCA  0E8A               	movlw	138
+   663  007DCC  6E06               	movwf	??_Luces_Tres& (0+255),c
+   664  007DCE  0E56               	movlw	86
+   665  007DD0                     u387:
+   666  007DD0  2EE8               	decfsz	wreg,f,c
+   667  007DD2  D7FE               	bra	u387
+   668  007DD4  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   669  007DD6  D7FC               	bra	u387
+   670  007DD8  2E07               	decfsz	(??_Luces_Tres+1)& (0+255),f,c
+   671  007DDA  D7FA               	bra	u387
+   672  007DDC  D053               	goto	l80
+   673  007DDE                     l74:
+   674                           
+   675                           ;Programa_principal.c: 83: else if(velocidad==2){_delay((unsigned long)((500)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((500)*(2000000L/4000.0)));}
+   676  007DDE  0E02               	movlw	2
+   677  007DE0  1801               	xorwf	_velocidad,w,c
+   678  007DE2  1002               	iorwf	_velocidad+1,w,c
+   679  007DE4  1003               	iorwf	_velocidad+2,w,c
+   680  007DE6  1004               	iorwf	_velocidad+3,w,c
+   681  007DE8  A4D8               	btfss	status,2,c
+   682  007DEA  D019               	goto	l76
+   683  007DEC  0E02               	movlw	2
+   684  007DEE  6E07               	movwf	(??_Luces_Tres+1)& (0+255),c
+   685  007DF0  0E45               	movlw	69
+   686  007DF2  6E06               	movwf	??_Luces_Tres& (0+255),c
+   687  007DF4  0EAA               	movlw	170
+   688  007DF6                     u397:
+   689  007DF6  2EE8               	decfsz	wreg,f,c
+   690  007DF8  D7FE               	bra	u397
+   691  007DFA  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   692  007DFC  D7FC               	bra	u397
+   693  007DFE  2E07               	decfsz	(??_Luces_Tres+1)& (0+255),f,c
+   694  007E00  D7FA               	bra	u397
+   695  007E02  0E00               	movlw	0
+   696  007E04  6E8C               	movwf	3980,c	;volatile
+   697  007E06  0E02               	movlw	2
+   698  007E08  6E07               	movwf	(??_Luces_Tres+1)& (0+255),c
+   699  007E0A  0E45               	movlw	69
+   700  007E0C  6E06               	movwf	??_Luces_Tres& (0+255),c
+   701  007E0E  0EAA               	movlw	170
+   702  007E10                     u407:
+   703  007E10  2EE8               	decfsz	wreg,f,c
+   704  007E12  D7FE               	bra	u407
+   705  007E14  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   706  007E16  D7FC               	bra	u407
+   707  007E18  2E07               	decfsz	(??_Luces_Tres+1)& (0+255),f,c
+   708  007E1A  D7FA               	bra	u407
+   709  007E1C  D033               	goto	l80
+   710  007E1E                     l76:
+   711                           
+   712                           ;Programa_principal.c: 84: else if(velocidad==3){_delay((unsigned long)((250)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((250)*(2000000L/4000.0)));}
+   713  007E1E  0E03               	movlw	3
+   714  007E20  1801               	xorwf	_velocidad,w,c
+   715  007E22  1002               	iorwf	_velocidad+1,w,c
+   716  007E24  1003               	iorwf	_velocidad+2,w,c
+   717  007E26  1004               	iorwf	_velocidad+3,w,c
+   718  007E28  A4D8               	btfss	status,2,c
+   719  007E2A  D013               	goto	l78
+   720  007E2C  0EA3               	movlw	163
+   721  007E2E  6E06               	movwf	??_Luces_Tres& (0+255),c
+   722  007E30  0E55               	movlw	85
+   723  007E32                     u417:
+   724  007E32  2EE8               	decfsz	wreg,f,c
+   725  007E34  D7FE               	bra	u417
+   726  007E36  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   727  007E38  D7FC               	bra	u417
+   728  007E3A  F000               	nop	
+   729  007E3C  0E00               	movlw	0
+   730  007E3E  6E8C               	movwf	3980,c	;volatile
+   731  007E40  0EA3               	movlw	163
+   732  007E42  6E06               	movwf	??_Luces_Tres& (0+255),c
+   733  007E44  0E55               	movlw	85
+   734  007E46                     u427:
+   735  007E46  2EE8               	decfsz	wreg,f,c
+   736  007E48  D7FE               	bra	u427
+   737  007E4A  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   738  007E4C  D7FC               	bra	u427
+   739  007E4E  F000               	nop	
+   740  007E50  D019               	goto	l80
+   741  007E52                     l78:
+   742                           
+   743                           ;Programa_principal.c: 85: else if(velocidad==4){_delay((unsigned long)((100)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((100)*(2000000L/4000.0)));}
+   744  007E52  0E04               	movlw	4
+   745  007E54  1801               	xorwf	_velocidad,w,c
+   746  007E56  1002               	iorwf	_velocidad+1,w,c
+   747  007E58  1003               	iorwf	_velocidad+2,w,c
+   748  007E5A  1004               	iorwf	_velocidad+3,w,c
+   749  007E5C  A4D8               	btfss	status,2,c
+   750  007E5E  D012               	goto	l80
+   751  007E60  0E41               	movlw	65
+   752  007E62  6E06               	movwf	??_Luces_Tres& (0+255),c
+   753  007E64  0EEE               	movlw	238
+   754  007E66                     u437:
+   755  007E66  2EE8               	decfsz	wreg,f,c
+   756  007E68  D7FE               	bra	u437
+   757  007E6A  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   758  007E6C  D7FC               	bra	u437
+   759  007E6E  D000               	nop2	
+   760  007E70  0E00               	movlw	0
+   761  007E72  6E8C               	movwf	3980,c	;volatile
+   762  007E74  0E41               	movlw	65
+   763  007E76  6E06               	movwf	??_Luces_Tres& (0+255),c
+   764  007E78  0EEE               	movlw	238
+   765  007E7A                     u447:
+   766  007E7A  2EE8               	decfsz	wreg,f,c
+   767  007E7C  D7FE               	bra	u447
+   768  007E7E  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   769  007E80  D7FC               	bra	u447
+   770  007E82  D000               	nop2	
+   771  007E84                     l80:
+   772                           
+   773                           ;Programa_principal.c: 86: if(PORTBbits.RB1 == 0){
+   774  007E84  B281               	btfsc	3969,1,c	;volatile
+   775  007E86  0012               	return	
+   776                           
+   777                           ;Programa_principal.c: 87: _delay((unsigned long)((20)*(2000000L/4000.0)));
+   778  007E88  0E0D               	movlw	13
+   779  007E8A  6E06               	movwf	??_Luces_Tres& (0+255),c
+   780  007E8C  0EFC               	movlw	252
+   781  007E8E                     u457:
+   782  007E8E  2EE8               	decfsz	wreg,f,c
+   783  007E90  D7FE               	bra	u457
+   784  007E92  2E06               	decfsz	??_Luces_Tres& (0+255),f,c
+   785  007E94  D7FC               	bra	u457
+   786                           
+   787                           ;Programa_principal.c: 88: velocidad = velocidad + 1;
+   788  007E96  0E01               	movlw	1
+   789  007E98  2401               	addwf	_velocidad,w,c
+   790  007E9A  6E01               	movwf	_velocidad,c
+   791  007E9C  0E00               	movlw	0
+   792  007E9E  2002               	addwfc	_velocidad+1,w,c
+   793  007EA0  6E02               	movwf	_velocidad+1,c
+   794  007EA2  0E00               	movlw	0
+   795  007EA4  2003               	addwfc	_velocidad+2,w,c
+   796  007EA6  6E03               	movwf	_velocidad+2,c
+   797  007EA8  0E00               	movlw	0
+   798  007EAA  2004               	addwfc	_velocidad+3,w,c
+   799  007EAC  6E04               	movwf	_velocidad+3,c
+   800                           
+   801                           ;Programa_principal.c: 89: if(velocidad == 5){velocidad=1;}
+   802  007EAE  0E05               	movlw	5
+   803  007EB0  1801               	xorwf	_velocidad,w,c
+   804  007EB2  1002               	iorwf	_velocidad+1,w,c
+   805  007EB4  1003               	iorwf	_velocidad+2,w,c
+   806  007EB6  1004               	iorwf	_velocidad+3,w,c
+   807  007EB8  A4D8               	btfss	status,2,c
+   808  007EBA  0012               	return	
+   809  007EBC  0E01               	movlw	1
+   810  007EBE  6E01               	movwf	_velocidad,c
+   811  007EC0  0E00               	movlw	0
+   812  007EC2  6E02               	movwf	_velocidad+1,c
+   813  007EC4  0E00               	movlw	0
+   814  007EC6  6E03               	movwf	_velocidad+2,c
+   815  007EC8  0E00               	movlw	0
+   816  007ECA  6E04               	movwf	_velocidad+3,c
+   817  007ECC  0012               	return	
+   818  007ECE                     __end_of_Luces_Tres:
+   819                           	opt stack 0
+   820                           tblptru	equ	0xFF8
+   821                           tblptrh	equ	0xFF7
+   822                           tblptrl	equ	0xFF6
+   823                           tablat	equ	0xFF5
+   824                           intcon2	equ	0xFF1
+   825                           postinc0	equ	0xFEE
+   826                           wreg	equ	0xFE8
+   827                           postdec1	equ	0xFE5
+   828                           fsr1l	equ	0xFE1
+   829                           status	equ	0xFD8
+   830                           
+   831 ;; *************** function _Luces_Dos *****************
+   832 ;; Defined at:
+   833 ;;		line 67 in file "Programa_principal.c"
+   834 ;; Parameters:    Size  Location     Type
+   835 ;;		None
+   836 ;; Auto vars:     Size  Location     Type
+   837 ;;		None
+   838 ;; Return value:  Size  Location     Type
+   839 ;;                  1    wreg      void 
+   840 ;; Registers used:
+   841 ;;		wreg, status,2, status,0
+   842 ;; Tracked objects:
+   843 ;;		On entry : 0/0
+   844 ;;		On exit  : 0/0
+   845 ;;		Unchanged: 0/0
+   846 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   847 ;;      Params:         0       0       0       0       0       0       0       0       0
+   848 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   849 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   850 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   851 ;;Total ram usage:        2 bytes
+   852 ;; Hardware stack levels used:    1
+   853 ;; This function calls:
+   854 ;;		Nothing
+   855 ;; This function is called by:
+   856 ;;		_main
+   857 ;; This function uses a non-reentrant model
+   858 ;;
+   859                           
+   860                           	psect	text4
+   861  007B3A                     __ptext4:
+   862                           	opt stack 0
+   863  007B3A                     _Luces_Dos:
+   864                           	opt stack 30
+   865                           
+   866                           ;Programa_principal.c: 68: LATD = 0xFF;
+   867                           
+   868                           ;incstack = 0
+   869  007B3A  688C               	setf	3980,c	;volatile
+   870                           
+   871                           ;Programa_principal.c: 69: if(velocidad==1){_delay((unsigned long)((1000)*(2000000L/4000
+      +                          .0)));LATD=0x00;_delay((unsigned long)((1000)*(2000000L/4000.0)));}
+   872  007B3C  0401               	decf	_velocidad,w,c
+   873  007B3E  1002               	iorwf	_velocidad+1,w,c
+   874  007B40  1003               	iorwf	_velocidad+2,w,c
+   875  007B42  1004               	iorwf	_velocidad+3,w,c
+   876  007B44  A4D8               	btfss	status,2,c
+   877  007B46  D019               	goto	l62
+   878  007B48  0E03               	movlw	3
+   879  007B4A  6E07               	movwf	(??_Luces_Dos+1)& (0+255),c
+   880  007B4C  0E8A               	movlw	138
+   881  007B4E  6E06               	movwf	??_Luces_Dos& (0+255),c
+   882  007B50  0E56               	movlw	86
+   883  007B52                     u467:
+   884  007B52  2EE8               	decfsz	wreg,f,c
+   885  007B54  D7FE               	bra	u467
+   886  007B56  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+   887  007B58  D7FC               	bra	u467
+   888  007B5A  2E07               	decfsz	(??_Luces_Dos+1)& (0+255),f,c
+   889  007B5C  D7FA               	bra	u467
+   890  007B5E  0E00               	movlw	0
+   891  007B60  6E8C               	movwf	3980,c	;volatile
+   892  007B62  0E03               	movlw	3
+   893  007B64  6E07               	movwf	(??_Luces_Dos+1)& (0+255),c
+   894  007B66  0E8A               	movlw	138
+   895  007B68  6E06               	movwf	??_Luces_Dos& (0+255),c
+   896  007B6A  0E56               	movlw	86
+   897  007B6C                     u477:
+   898  007B6C  2EE8               	decfsz	wreg,f,c
+   899  007B6E  D7FE               	bra	u477
+   900  007B70  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+   901  007B72  D7FC               	bra	u477
+   902  007B74  2E07               	decfsz	(??_Luces_Dos+1)& (0+255),f,c
+   903  007B76  D7FA               	bra	u477
+   904  007B78  D053               	goto	l68
+   905  007B7A                     l62:
+   906                           
+   907                           ;Programa_principal.c: 70: else if(velocidad==2){_delay((unsigned long)((500)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((500)*(2000000L/4000.0)));}
+   908  007B7A  0E02               	movlw	2
+   909  007B7C  1801               	xorwf	_velocidad,w,c
+   910  007B7E  1002               	iorwf	_velocidad+1,w,c
+   911  007B80  1003               	iorwf	_velocidad+2,w,c
+   912  007B82  1004               	iorwf	_velocidad+3,w,c
+   913  007B84  A4D8               	btfss	status,2,c
+   914  007B86  D019               	goto	l64
+   915  007B88  0E02               	movlw	2
+   916  007B8A  6E07               	movwf	(??_Luces_Dos+1)& (0+255),c
+   917  007B8C  0E45               	movlw	69
+   918  007B8E  6E06               	movwf	??_Luces_Dos& (0+255),c
+   919  007B90  0EAA               	movlw	170
+   920  007B92                     u487:
+   921  007B92  2EE8               	decfsz	wreg,f,c
+   922  007B94  D7FE               	bra	u487
+   923  007B96  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+   924  007B98  D7FC               	bra	u487
+   925  007B9A  2E07               	decfsz	(??_Luces_Dos+1)& (0+255),f,c
+   926  007B9C  D7FA               	bra	u487
+   927  007B9E  0E00               	movlw	0
+   928  007BA0  6E8C               	movwf	3980,c	;volatile
+   929  007BA2  0E02               	movlw	2
+   930  007BA4  6E07               	movwf	(??_Luces_Dos+1)& (0+255),c
+   931  007BA6  0E45               	movlw	69
+   932  007BA8  6E06               	movwf	??_Luces_Dos& (0+255),c
+   933  007BAA  0EAA               	movlw	170
+   934  007BAC                     u497:
+   935  007BAC  2EE8               	decfsz	wreg,f,c
+   936  007BAE  D7FE               	bra	u497
+   937  007BB0  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+   938  007BB2  D7FC               	bra	u497
+   939  007BB4  2E07               	decfsz	(??_Luces_Dos+1)& (0+255),f,c
+   940  007BB6  D7FA               	bra	u497
+   941  007BB8  D033               	goto	l68
+   942  007BBA                     l64:
+   943                           
+   944                           ;Programa_principal.c: 71: else if(velocidad==3){_delay((unsigned long)((250)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((250)*(2000000L/4000.0)));}
+   945  007BBA  0E03               	movlw	3
+   946  007BBC  1801               	xorwf	_velocidad,w,c
+   947  007BBE  1002               	iorwf	_velocidad+1,w,c
+   948  007BC0  1003               	iorwf	_velocidad+2,w,c
+   949  007BC2  1004               	iorwf	_velocidad+3,w,c
+   950  007BC4  A4D8               	btfss	status,2,c
+   951  007BC6  D013               	goto	l66
+   952  007BC8  0EA3               	movlw	163
+   953  007BCA  6E06               	movwf	??_Luces_Dos& (0+255),c
+   954  007BCC  0E55               	movlw	85
+   955  007BCE                     u507:
+   956  007BCE  2EE8               	decfsz	wreg,f,c
+   957  007BD0  D7FE               	bra	u507
+   958  007BD2  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+   959  007BD4  D7FC               	bra	u507
+   960  007BD6  F000               	nop	
+   961  007BD8  0E00               	movlw	0
+   962  007BDA  6E8C               	movwf	3980,c	;volatile
+   963  007BDC  0EA3               	movlw	163
+   964  007BDE  6E06               	movwf	??_Luces_Dos& (0+255),c
+   965  007BE0  0E55               	movlw	85
+   966  007BE2                     u517:
+   967  007BE2  2EE8               	decfsz	wreg,f,c
+   968  007BE4  D7FE               	bra	u517
+   969  007BE6  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+   970  007BE8  D7FC               	bra	u517
+   971  007BEA  F000               	nop	
+   972  007BEC  D019               	goto	l68
+   973  007BEE                     l66:
+   974                           
+   975                           ;Programa_principal.c: 72: else if(velocidad==4){_delay((unsigned long)((100)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((100)*(2000000L/4000.0)));}
+   976  007BEE  0E04               	movlw	4
+   977  007BF0  1801               	xorwf	_velocidad,w,c
+   978  007BF2  1002               	iorwf	_velocidad+1,w,c
+   979  007BF4  1003               	iorwf	_velocidad+2,w,c
+   980  007BF6  1004               	iorwf	_velocidad+3,w,c
+   981  007BF8  A4D8               	btfss	status,2,c
+   982  007BFA  D012               	goto	l68
+   983  007BFC  0E41               	movlw	65
+   984  007BFE  6E06               	movwf	??_Luces_Dos& (0+255),c
+   985  007C00  0EEE               	movlw	238
+   986  007C02                     u527:
+   987  007C02  2EE8               	decfsz	wreg,f,c
+   988  007C04  D7FE               	bra	u527
+   989  007C06  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+   990  007C08  D7FC               	bra	u527
+   991  007C0A  D000               	nop2	
+   992  007C0C  0E00               	movlw	0
+   993  007C0E  6E8C               	movwf	3980,c	;volatile
+   994  007C10  0E41               	movlw	65
+   995  007C12  6E06               	movwf	??_Luces_Dos& (0+255),c
+   996  007C14  0EEE               	movlw	238
+   997  007C16                     u537:
+   998  007C16  2EE8               	decfsz	wreg,f,c
+   999  007C18  D7FE               	bra	u537
+  1000  007C1A  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+  1001  007C1C  D7FC               	bra	u537
+  1002  007C1E  D000               	nop2	
+  1003  007C20                     l68:
+  1004                           
+  1005                           ;Programa_principal.c: 73: if(PORTBbits.RB1 == 0){
+  1006  007C20  B281               	btfsc	3969,1,c	;volatile
+  1007  007C22  0012               	return	
+  1008                           
+  1009                           ;Programa_principal.c: 74: _delay((unsigned long)((20)*(2000000L/4000.0)));
+  1010  007C24  0E0D               	movlw	13
+  1011  007C26  6E06               	movwf	??_Luces_Dos& (0+255),c
+  1012  007C28  0EFC               	movlw	252
+  1013  007C2A                     u547:
+  1014  007C2A  2EE8               	decfsz	wreg,f,c
+  1015  007C2C  D7FE               	bra	u547
+  1016  007C2E  2E06               	decfsz	??_Luces_Dos& (0+255),f,c
+  1017  007C30  D7FC               	bra	u547
+  1018                           
+  1019                           ;Programa_principal.c: 75: velocidad = velocidad + 1;
+  1020  007C32  0E01               	movlw	1
+  1021  007C34  2401               	addwf	_velocidad,w,c
+  1022  007C36  6E01               	movwf	_velocidad,c
+  1023  007C38  0E00               	movlw	0
+  1024  007C3A  2002               	addwfc	_velocidad+1,w,c
+  1025  007C3C  6E02               	movwf	_velocidad+1,c
+  1026  007C3E  0E00               	movlw	0
+  1027  007C40  2003               	addwfc	_velocidad+2,w,c
+  1028  007C42  6E03               	movwf	_velocidad+2,c
+  1029  007C44  0E00               	movlw	0
+  1030  007C46  2004               	addwfc	_velocidad+3,w,c
+  1031  007C48  6E04               	movwf	_velocidad+3,c
+  1032                           
+  1033                           ;Programa_principal.c: 76: if(velocidad == 5){velocidad=1;}
+  1034  007C4A  0E05               	movlw	5
+  1035  007C4C  1801               	xorwf	_velocidad,w,c
+  1036  007C4E  1002               	iorwf	_velocidad+1,w,c
+  1037  007C50  1003               	iorwf	_velocidad+2,w,c
+  1038  007C52  1004               	iorwf	_velocidad+3,w,c
+  1039  007C54  A4D8               	btfss	status,2,c
+  1040  007C56  0012               	return	
+  1041  007C58  0E01               	movlw	1
+  1042  007C5A  6E01               	movwf	_velocidad,c
+  1043  007C5C  0E00               	movlw	0
+  1044  007C5E  6E02               	movwf	_velocidad+1,c
+  1045  007C60  0E00               	movlw	0
+  1046  007C62  6E03               	movwf	_velocidad+2,c
+  1047  007C64  0E00               	movlw	0
+  1048  007C66  6E04               	movwf	_velocidad+3,c
+  1049  007C68  0012               	return	
+  1050  007C6A                     __end_of_Luces_Dos:
+  1051                           	opt stack 0
+  1052                           tblptru	equ	0xFF8
+  1053                           tblptrh	equ	0xFF7
+  1054                           tblptrl	equ	0xFF6
+  1055                           tablat	equ	0xFF5
+  1056                           intcon2	equ	0xFF1
+  1057                           postinc0	equ	0xFEE
+  1058                           wreg	equ	0xFE8
+  1059                           postdec1	equ	0xFE5
+  1060                           fsr1l	equ	0xFE1
+  1061                           status	equ	0xFD8
+  1062                           
+  1063 ;; *************** function _Luces_Cuatro *****************
+  1064 ;; Defined at:
+  1065 ;;		line 93 in file "Programa_principal.c"
+  1066 ;; Parameters:    Size  Location     Type
+  1067 ;;		None
+  1068 ;; Auto vars:     Size  Location     Type
+  1069 ;;		None
+  1070 ;; Return value:  Size  Location     Type
+  1071 ;;                  1    wreg      void 
+  1072 ;; Registers used:
+  1073 ;;		wreg, status,2, status,0
+  1074 ;; Tracked objects:
+  1075 ;;		On entry : 0/0
+  1076 ;;		On exit  : 0/0
+  1077 ;;		Unchanged: 0/0
+  1078 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1079 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1080 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1081 ;;      Temps:          2       0       0       0       0       0       0       0       0
+  1082 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1083 ;;Total ram usage:        2 bytes
+  1084 ;; Hardware stack levels used:    1
+  1085 ;; This function calls:
+  1086 ;;		Nothing
+  1087 ;; This function is called by:
+  1088 ;;		_main
+  1089 ;; This function uses a non-reentrant model
+  1090 ;;
+  1091                           
+  1092                           	psect	text5
+  1093  007C6A                     __ptext5:
+  1094                           	opt stack 0
+  1095  007C6A                     _Luces_Cuatro:
+  1096                           	opt stack 30
+  1097                           
+  1098                           ;Programa_principal.c: 94: LATD = 0x99;
+  1099                           
+  1100                           ;incstack = 0
+  1101  007C6A  0E99               	movlw	153
+  1102  007C6C  6E8C               	movwf	3980,c	;volatile
+  1103                           
+  1104                           ;Programa_principal.c: 95: if(velocidad==1){_delay((unsigned long)((1000)*(2000000L/4000
+      +                          .0)));LATD=0x00;_delay((unsigned long)((1000)*(2000000L/4000.0)));}
+  1105  007C6E  0401               	decf	_velocidad,w,c
+  1106  007C70  1002               	iorwf	_velocidad+1,w,c
+  1107  007C72  1003               	iorwf	_velocidad+2,w,c
+  1108  007C74  1004               	iorwf	_velocidad+3,w,c
+  1109  007C76  A4D8               	btfss	status,2,c
+  1110  007C78  D019               	goto	l86
+  1111  007C7A  0E03               	movlw	3
+  1112  007C7C  6E07               	movwf	(??_Luces_Cuatro+1)& (0+255),c
+  1113  007C7E  0E8A               	movlw	138
+  1114  007C80  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1115  007C82  0E56               	movlw	86
+  1116  007C84                     u557:
+  1117  007C84  2EE8               	decfsz	wreg,f,c
+  1118  007C86  D7FE               	bra	u557
+  1119  007C88  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1120  007C8A  D7FC               	bra	u557
+  1121  007C8C  2E07               	decfsz	(??_Luces_Cuatro+1)& (0+255),f,c
+  1122  007C8E  D7FA               	bra	u557
+  1123  007C90  0E00               	movlw	0
+  1124  007C92  6E8C               	movwf	3980,c	;volatile
+  1125  007C94  0E03               	movlw	3
+  1126  007C96  6E07               	movwf	(??_Luces_Cuatro+1)& (0+255),c
+  1127  007C98  0E8A               	movlw	138
+  1128  007C9A  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1129  007C9C  0E56               	movlw	86
+  1130  007C9E                     u567:
+  1131  007C9E  2EE8               	decfsz	wreg,f,c
+  1132  007CA0  D7FE               	bra	u567
+  1133  007CA2  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1134  007CA4  D7FC               	bra	u567
+  1135  007CA6  2E07               	decfsz	(??_Luces_Cuatro+1)& (0+255),f,c
+  1136  007CA8  D7FA               	bra	u567
+  1137  007CAA  D053               	goto	l92
+  1138  007CAC                     l86:
+  1139                           
+  1140                           ;Programa_principal.c: 96: else if(velocidad==2){_delay((unsigned long)((500)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((500)*(2000000L/4000.0)));}
+  1141  007CAC  0E02               	movlw	2
+  1142  007CAE  1801               	xorwf	_velocidad,w,c
+  1143  007CB0  1002               	iorwf	_velocidad+1,w,c
+  1144  007CB2  1003               	iorwf	_velocidad+2,w,c
+  1145  007CB4  1004               	iorwf	_velocidad+3,w,c
+  1146  007CB6  A4D8               	btfss	status,2,c
+  1147  007CB8  D019               	goto	l88
+  1148  007CBA  0E02               	movlw	2
+  1149  007CBC  6E07               	movwf	(??_Luces_Cuatro+1)& (0+255),c
+  1150  007CBE  0E45               	movlw	69
+  1151  007CC0  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1152  007CC2  0EAA               	movlw	170
+  1153  007CC4                     u577:
+  1154  007CC4  2EE8               	decfsz	wreg,f,c
+  1155  007CC6  D7FE               	bra	u577
+  1156  007CC8  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1157  007CCA  D7FC               	bra	u577
+  1158  007CCC  2E07               	decfsz	(??_Luces_Cuatro+1)& (0+255),f,c
+  1159  007CCE  D7FA               	bra	u577
+  1160  007CD0  0E00               	movlw	0
+  1161  007CD2  6E8C               	movwf	3980,c	;volatile
+  1162  007CD4  0E02               	movlw	2
+  1163  007CD6  6E07               	movwf	(??_Luces_Cuatro+1)& (0+255),c
+  1164  007CD8  0E45               	movlw	69
+  1165  007CDA  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1166  007CDC  0EAA               	movlw	170
+  1167  007CDE                     u587:
+  1168  007CDE  2EE8               	decfsz	wreg,f,c
+  1169  007CE0  D7FE               	bra	u587
+  1170  007CE2  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1171  007CE4  D7FC               	bra	u587
+  1172  007CE6  2E07               	decfsz	(??_Luces_Cuatro+1)& (0+255),f,c
+  1173  007CE8  D7FA               	bra	u587
+  1174  007CEA  D033               	goto	l92
+  1175  007CEC                     l88:
+  1176                           
+  1177                           ;Programa_principal.c: 97: else if(velocidad==3){_delay((unsigned long)((250)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((250)*(2000000L/4000.0)));}
+  1178  007CEC  0E03               	movlw	3
+  1179  007CEE  1801               	xorwf	_velocidad,w,c
+  1180  007CF0  1002               	iorwf	_velocidad+1,w,c
+  1181  007CF2  1003               	iorwf	_velocidad+2,w,c
+  1182  007CF4  1004               	iorwf	_velocidad+3,w,c
+  1183  007CF6  A4D8               	btfss	status,2,c
+  1184  007CF8  D013               	goto	l90
+  1185  007CFA  0EA3               	movlw	163
+  1186  007CFC  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1187  007CFE  0E55               	movlw	85
+  1188  007D00                     u597:
+  1189  007D00  2EE8               	decfsz	wreg,f,c
+  1190  007D02  D7FE               	bra	u597
+  1191  007D04  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1192  007D06  D7FC               	bra	u597
+  1193  007D08  F000               	nop	
+  1194  007D0A  0E00               	movlw	0
+  1195  007D0C  6E8C               	movwf	3980,c	;volatile
+  1196  007D0E  0EA3               	movlw	163
+  1197  007D10  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1198  007D12  0E55               	movlw	85
+  1199  007D14                     u607:
+  1200  007D14  2EE8               	decfsz	wreg,f,c
+  1201  007D16  D7FE               	bra	u607
+  1202  007D18  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1203  007D1A  D7FC               	bra	u607
+  1204  007D1C  F000               	nop	
+  1205  007D1E  D019               	goto	l92
+  1206  007D20                     l90:
+  1207                           
+  1208                           ;Programa_principal.c: 98: else if(velocidad==4){_delay((unsigned long)((100)*(2000000L/
+      +                          4000.0)));LATD=0x00;_delay((unsigned long)((100)*(2000000L/4000.0)));}
+  1209  007D20  0E04               	movlw	4
+  1210  007D22  1801               	xorwf	_velocidad,w,c
+  1211  007D24  1002               	iorwf	_velocidad+1,w,c
+  1212  007D26  1003               	iorwf	_velocidad+2,w,c
+  1213  007D28  1004               	iorwf	_velocidad+3,w,c
+  1214  007D2A  A4D8               	btfss	status,2,c
+  1215  007D2C  D012               	goto	l92
+  1216  007D2E  0E41               	movlw	65
+  1217  007D30  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1218  007D32  0EEE               	movlw	238
+  1219  007D34                     u617:
+  1220  007D34  2EE8               	decfsz	wreg,f,c
+  1221  007D36  D7FE               	bra	u617
+  1222  007D38  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1223  007D3A  D7FC               	bra	u617
+  1224  007D3C  D000               	nop2	
+  1225  007D3E  0E00               	movlw	0
+  1226  007D40  6E8C               	movwf	3980,c	;volatile
+  1227  007D42  0E41               	movlw	65
+  1228  007D44  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1229  007D46  0EEE               	movlw	238
+  1230  007D48                     u627:
+  1231  007D48  2EE8               	decfsz	wreg,f,c
+  1232  007D4A  D7FE               	bra	u627
+  1233  007D4C  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1234  007D4E  D7FC               	bra	u627
+  1235  007D50  D000               	nop2	
+  1236  007D52                     l92:
+  1237                           
+  1238                           ;Programa_principal.c: 99: if(PORTBbits.RB1 == 0){
+  1239  007D52  B281               	btfsc	3969,1,c	;volatile
+  1240  007D54  0012               	return	
+  1241                           
+  1242                           ;Programa_principal.c: 100: _delay((unsigned long)((20)*(2000000L/4000.0)));
+  1243  007D56  0E0D               	movlw	13
+  1244  007D58  6E06               	movwf	??_Luces_Cuatro& (0+255),c
+  1245  007D5A  0EFC               	movlw	252
+  1246  007D5C                     u637:
+  1247  007D5C  2EE8               	decfsz	wreg,f,c
+  1248  007D5E  D7FE               	bra	u637
+  1249  007D60  2E06               	decfsz	??_Luces_Cuatro& (0+255),f,c
+  1250  007D62  D7FC               	bra	u637
+  1251                           
+  1252                           ;Programa_principal.c: 101: velocidad = velocidad + 1;
+  1253  007D64  0E01               	movlw	1
+  1254  007D66  2401               	addwf	_velocidad,w,c
+  1255  007D68  6E01               	movwf	_velocidad,c
+  1256  007D6A  0E00               	movlw	0
+  1257  007D6C  2002               	addwfc	_velocidad+1,w,c
+  1258  007D6E  6E02               	movwf	_velocidad+1,c
+  1259  007D70  0E00               	movlw	0
+  1260  007D72  2003               	addwfc	_velocidad+2,w,c
+  1261  007D74  6E03               	movwf	_velocidad+2,c
+  1262  007D76  0E00               	movlw	0
+  1263  007D78  2004               	addwfc	_velocidad+3,w,c
+  1264  007D7A  6E04               	movwf	_velocidad+3,c
+  1265                           
+  1266                           ;Programa_principal.c: 102: if(velocidad == 5){velocidad=1;}
+  1267  007D7C  0E05               	movlw	5
+  1268  007D7E  1801               	xorwf	_velocidad,w,c
+  1269  007D80  1002               	iorwf	_velocidad+1,w,c
+  1270  007D82  1003               	iorwf	_velocidad+2,w,c
+  1271  007D84  1004               	iorwf	_velocidad+3,w,c
+  1272  007D86  A4D8               	btfss	status,2,c
+  1273  007D88  0012               	return	
+  1274  007D8A  0E01               	movlw	1
+  1275  007D8C  6E01               	movwf	_velocidad,c
+  1276  007D8E  0E00               	movlw	0
+  1277  007D90  6E02               	movwf	_velocidad+1,c
+  1278  007D92  0E00               	movlw	0
+  1279  007D94  6E03               	movwf	_velocidad+2,c
+  1280  007D96  0E00               	movlw	0
+  1281  007D98  6E04               	movwf	_velocidad+3,c
+  1282  007D9A  0012               	return	
+  1283  007D9C                     __end_of_Luces_Cuatro:
+  1284                           	opt stack 0
+  1285  0000                     tblptru	equ	0xFF8
+  1286                           tblptrh	equ	0xFF7
+  1287                           tblptrl	equ	0xFF6
+  1288                           tablat	equ	0xFF5
+  1289                           intcon2	equ	0xFF1
+  1290                           postinc0	equ	0xFEE
+  1291                           wreg	equ	0xFE8
+  1292                           postdec1	equ	0xFE5
+  1293                           fsr1l	equ	0xFE1
+  1294                           status	equ	0xFD8
+  1295                           tblptru	equ	0xFF8
+  1296                           tblptrh	equ	0xFF7
+  1297                           tblptrl	equ	0xFF6
+  1298                           tablat	equ	0xFF5
+  1299                           intcon2	equ	0xFF1
+  1300                           postinc0	equ	0xFEE
+  1301                           wreg	equ	0xFE8
+  1302                           postdec1	equ	0xFE5
+  1303                           fsr1l	equ	0xFE1
+  1304                           status	equ	0xFD8
+  1305                           
+  1306                           	psect	rparam
+  1307  0000                     tblptru	equ	0xFF8
+  1308                           tblptrh	equ	0xFF7
+  1309                           tblptrl	equ	0xFF6
+  1310                           tablat	equ	0xFF5
+  1311                           intcon2	equ	0xFF1
+  1312                           postinc0	equ	0xFEE
+  1313                           wreg	equ	0xFE8
+  1314                           postdec1	equ	0xFE5
+  1315                           fsr1l	equ	0xFE1
+  1316                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        5
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      3       8
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_Luces_Cuatro
+    _main->_Luces_Dos
+    _main->_Luces_Tres
+    _main->_Luces_Uno
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0       0
+                                              2 COMRAM     1     1      0
+                       _Luces_Cuatro
+                          _Luces_Dos
+                         _Luces_Tres
+                          _Luces_Uno
+                           _initPort
+ ---------------------------------------------------------------------------------
+ (1) _initPort                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _Luces_Uno                                            2     2      0       0
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ (1) _Luces_Tres                                           2     2      0       0
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ (1) _Luces_Dos                                            2     2      0       0
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ (1) _Luces_Cuatro                                         2     2      0       0
+                                              0 COMRAM     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Luces_Cuatro
+   _Luces_Dos
+   _Luces_Tres
+   _Luces_Uno
+   _initPort
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      3       8       1        8.4%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0       8      20        0.0%
+DATA                 0      0       8       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
+Symbol Table                                                                                   Wed Jan 17 22:46:24 2018
+
+                     l40 7B06                       l50 7F10                       l42 7B0C  
+                     l43 7B12                       l52 7F50                       l44 7B18  
+                     l36 7AE2                       l62 7B7A                       l54 7F84  
+                     l39 7B1E                       l64 7BBA                       l80 7E84  
+                     l56 7FB6                       l90 7D20                       l66 7BEE  
+                     l74 7DDE                       l92 7D52                       l68 7C20  
+                     l76 7E1E                       l86 7CAC                       l78 7E52  
+                     l88 7CEC              __CFG_BORV$3 000000             __CFG_CP0$OFF 000000  
+           __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000  
+           __CFG_CPB$OFF 000000                      u307 7F28                      u317 7F42  
+                    u407 7E10                      u327 7F64                      u417 7E32  
+                    u337 7F78             __CFG_CPD$OFF 000000                      u507 7BCE  
+                    u427 7E46                      u347 7F98                      u517 7BE2  
+                    u437 7E66                      u357 7FAC                      u277 7AEC  
+                    u607 7D14                      u527 7C02                      u447 7E7A  
+                    u367 7FC0                      u287 7EE8                      u617 7D34  
+                    u537 7C16                      u457 7E8E                      u377 7DB6  
+                    u297 7F02                      u627 7D48                      u547 7C2A  
+                    u467 7B52                      u387 7DD0                      u637 7D5C  
+                    u557 7C84                      u477 7B6C                      u397 7DF6  
+                    u567 7C9E                      u487 7B92                      u577 7CC4  
+                    u497 7BAC                      u587 7CDE                      u597 7D00  
+           __CFG_BOR$OFF 000000                      wreg 000FE8             __CFG_FOSC$HS 000000  
+           __CFG_LVP$OFF 000000             __CFG_WDT$OFF 000000                     _LATB 000F8A  
+                   _LATD 000F8C             __CFG_PWRT$ON 000000                     _main 7ADE  
+                   fsr1l 000FE1                     start 0000            __CFG_IESO$OFF 000000  
+          __CFG_MCLRE$ON 000000             ___param_bank 000000            __CFG_PLLDIV$1 000000  
+         __CFG_CCP2MX$ON 000000                    ?_main 0006            __CFG_USBDIV$1 000000  
+                  _TRISD 000F95            __CFG_WRT0$OFF 000000            __CFG_WRT1$OFF 000000  
+          __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000           __CFG_EBTR0$OFF 000000  
+         __CFG_FCMEN$OFF 000000           __CFG_EBTR1$OFF 000000           __CFG_EBTR2$OFF 000000  
+         __CFG_EBTR3$OFF 000000            __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000  
+          __CFG_WRTD$OFF 000000           __CFG_EBTRB$OFF 000000                    _juego 0005  
+                  tablat 000FF5                    status 000FD8           __CFG_ICPRT$OFF 000000  
+         __CFG_PBADEN$ON 000000          __initialization 7AB4             __end_of_main 7B3A  
+                 ??_main 0008            __activetblptr 000002               _Luces_Tres 7D9C  
+         __CFG_XINST$OFF 000000       __size_of_Luces_Dos 0130       __size_of_Luces_Uno 0132  
+         __CFG_STVREN$ON 000000         __end_of_initPort 7AB4            ?_Luces_Cuatro 0006  
+           __pdataCOMRAM 0001                   tblptrh 000FF7                   tblptrl 000FF6  
+                 tblptru 000FF8               __accesstop 0060  __end_of__initialization 7AD4  
+          ___rparam_used 000001           __pcstackCOMRAM 0006           ??_Luces_Cuatro 0006  
+      __end_of_Luces_Dos 7C6A              ?_Luces_Tres 0006        __end_of_Luces_Uno 8000  
+        __CFG_VREGEN$OFF 000000                ?_initPort 0006                  __Hparam 0000  
+                __Lparam 0000      __size_of_Luces_Tres 0132                  __pcinit 7AB4  
+                __ramtop 0800                  __ptext0 7ADE                  __ptext1 7A98  
+                __ptext2 7ECE                  __ptext3 7D9C                  __ptext4 7B3A  
+                __ptext5 7C6A     end_of_initialization 7AD4               ??_initPort 0006  
+          __Lmediumconst 0000     __end_of_Luces_Cuatro 7D9C                  postdec1 000FE5  
+                postinc0 000FEE                _PORTBbits 000F81                _TRISBbits 000F93  
+          __pidataCOMRAM 7A93      start_initialization 7AB4             ??_Luces_Tres 0006  
+              _Luces_Dos 7B3A                _Luces_Uno 7ECE         __CFG_LPT1OSC$OFF 000000  
+     __end_of_Luces_Tres 7ECE    __size_of_Luces_Cuatro 0132               ?_Luces_Dos 0006  
+             ?_Luces_Uno 0006        __size_of_initPort 001C             _Luces_Cuatro 7C6A  
+       __CFG_WDTPS$32768 000000                _velocidad 0001               _ADCON1bits 000FC1  
+            _INTCON2bits 000FF1                copy_data0 7AC8              ??_Luces_Dos 0006  
+            ??_Luces_Uno 0006                 __Hrparam 0000                 __Lrparam 0000  
+               _initPort 7A98            __size_of_main 005C    __CFG_CPUDIV$OSC1_PLL2 000000  
