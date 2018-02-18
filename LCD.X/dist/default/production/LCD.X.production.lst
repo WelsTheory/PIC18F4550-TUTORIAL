@@ -1,0 +1,2864 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.45 build -152302408 
+                                                                                               Sat Feb 17 19:36:31 2018
+
+Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160504
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     8                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text8,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text11,global,reloc=2,class=CODE,delta=1
+    20                           	psect	text12,global,reloc=2,class=CODE,delta=1
+    21                           	psect	text13,global,reloc=2,class=CODE,delta=1
+    22                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    23                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    24  0000                     
+    25                           ; Version 1.45
+    26                           ; Generated 16/11/2017 GMT
+    27                           ; 
+    28                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    29                           ; All rights reserved.
+    30                           ; 
+    31                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    32                           ; 
+    33                           ; Redistribution and use in source and binary forms, with or without modification, are
+    34                           ; permitted provided that the following conditions are met:
+    35                           ; 
+    36                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    37                           ;        conditions and the following disclaimer.
+    38                           ; 
+    39                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    40                           ;        of conditions and the following disclaimer in the documentation and/or other
+    41                           ;        materials provided with the distribution.
+    42                           ; 
+    43                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    44                           ;        software without specific prior written permission.
+    45                           ; 
+    46                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    47                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    48                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    49                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    50                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    51                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    52                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    53                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    54                           ; 
+    55                           ; 
+    56                           ; Code-generator required, PIC18F4550 Definitions
+    57                           ; 
+    58                           ; SFR Addresses
+    59  0000                     
+    60                           	psect	smallconst
+    61  000800                     __psmallconst:
+    62                           	opt stack 0
+    63  000800  00                 	db	0
+    64  000801                     _charmander:
+    65                           	opt stack 0
+    66  000801  0E                 	db	14
+    67  000802  0E                 	db	14
+    68  000803  04                 	db	4
+    69  000804  1F                 	db	31
+    70  000805  0E                 	db	14
+    71  000806  0F                 	db	15
+    72  000807  0A                 	db	10
+    73  000808  00                 	db	0
+    74  000809  00                 	db	0
+    75  00080A                     __end_of_charmander:
+    76                           	opt stack 0
+    77  00080A                     _bulbasaur:
+    78                           	opt stack 0
+    79  00080A  00                 	db	0
+    80  00080B  04                 	db	4
+    81  00080C  0E                 	db	14
+    82  00080D  1F                 	db	31
+    83  00080E  0E                 	db	14
+    84  00080F  0E                 	db	14
+    85  000810  0A                 	db	10
+    86  000811  00                 	db	0
+    87  000812  00                 	db	0
+    88  000813                     __end_of_bulbasaur:
+    89                           	opt stack 0
+    90  000813                     _squirtle:
+    91                           	opt stack 0
+    92  000813  00                 	db	0
+    93  000814  0E                 	db	14
+    94  000815  0E                 	db	14
+    95  000816  04                 	db	4
+    96  000817  1F                 	db	31
+    97  000818  0E                 	db	14
+    98  000819  11                 	db	17
+    99  00081A  00                 	db	0
+   100  00081B  00                 	db	0
+   101  00081C                     __end_of_squirtle:
+   102                           	opt stack 0
+   103  00081C                     _pikachu:
+   104                           	opt stack 0
+   105  00081C  11                 	db	17
+   106  00081D  0E                 	db	14
+   107  00081E  0E                 	db	14
+   108  00081F  04                 	db	4
+   109  000820  1F                 	db	31
+   110  000821  0E                 	db	14
+   111  000822  1B                 	db	27
+   112  000823  00                 	db	0
+   113  000824  00                 	db	0
+   114  000825                     __end_of_pikachu:
+   115                           	opt stack 0
+   116  000825                     _pokeball:
+   117                           	opt stack 0
+   118  000825  00                 	db	0
+   119  000826  00                 	db	0
+   120  000827  0E                 	db	14
+   121  000828  11                 	db	17
+   122  000829  1B                 	db	27
+   123  00082A  11                 	db	17
+   124  00082B  0E                 	db	14
+   125  00082C  00                 	db	0
+   126  00082D  00                 	db	0
+   127  00082E                     __end_of_pokeball:
+   128                           	opt stack 0
+   129  00082E                     _wels1:
+   130                           	opt stack 0
+   131  00082E  07                 	db	7
+   132  00082F  0E                 	db	14
+   133  000830  04                 	db	4
+   134  000831  0F                 	db	15
+   135  000832  14                 	db	20
+   136  000833  0A                 	db	10
+   137  000834  11                 	db	17
+   138  000835  00                 	db	0
+   139  000836  00                 	db	0
+   140  000837                     __end_of_wels1:
+   141                           	opt stack 0
+   142  000837                     _wels:
+   143                           	opt stack 0
+   144  000837  07                 	db	7
+   145  000838  0E                 	db	14
+   146  000839  05                 	db	5
+   147  00083A  0E                 	db	14
+   148  00083B  14                 	db	20
+   149  00083C  0A                 	db	10
+   150  00083D  11                 	db	17
+   151  00083E  00                 	db	0
+   152  00083F  00                 	db	0
+   153  000840                     __end_of_wels:
+   154                           	opt stack 0
+   155  0000                     _LATDbits	set	3980
+   156  0000                     _TRISDbits	set	3989
+   157  0000                     _TRISD	set	3989
+   158  0000                     _PORTD	set	3971
+   159  0000                     _PORTBbits	set	3969
+   160  0000                     _INTCON2bits	set	4081
+   161  0000                     _TRISBbits	set	3987
+   162  0000                     _ADCON1bits	set	4033
+   163  000840                     STR_2:
+   164  000840  50                 	db	80	;'P'
+   165  000841  72                 	db	114	;'r'
+   166  000842  65                 	db	101	;'e'
+   167  000843  73                 	db	115	;'s'
+   168  000844  69                 	db	105	;'i'
+   169  000845  6F                 	db	111	;'o'
+   170  000846  6E                 	db	110	;'n'
+   171  000847  61                 	db	97	;'a'
+   172  000848  20                 	db	32
+   173  000849  53                 	db	83	;'S'
+   174  00084A  74                 	db	116	;'t'
+   175  00084B  61                 	db	97	;'a'
+   176  00084C  72                 	db	114	;'r'
+   177  00084D  74                 	db	116	;'t'
+   178  00084E  21                 	db	33
+   179  00084F  21                 	db	33
+   180  000850  00                 	db	0
+   181  000851                     STR_1:
+   182  000851  2A                 	db	42
+   183  000852  2A                 	db	42
+   184  000853  50                 	db	80	;'P'
+   185  000854  4F                 	db	79	;'O'
+   186  000855  4B                 	db	75	;'K'
+   187  000856  45                 	db	69	;'E'
+   188  000857  4D                 	db	77	;'M'
+   189  000858  4F                 	db	79	;'O'
+   190  000859  4E                 	db	78	;'N'
+   191  00085A  20                 	db	32
+   192  00085B  47                 	db	71	;'G'
+   193  00085C  4F                 	db	79	;'O'
+   194  00085D  21                 	db	33
+   195  00085E  2A                 	db	42
+   196  00085F  2A                 	db	42
+   197  000860  2A                 	db	42
+   198  000861  00                 	db	0
+   199  000862                     STR_5:
+   200  000862  45                 	db	69	;'E'
+   201  000863  53                 	db	83	;'S'
+   202  000864  20                 	db	32
+   203  000865  43                 	db	67	;'C'
+   204  000866  48                 	db	72	;'H'
+   205  000867  41                 	db	65	;'A'
+   206  000868  52                 	db	82	;'R'
+   207  000869  4D                 	db	77	;'M'
+   208  00086A  41                 	db	65	;'A'
+   209  00086B  4E                 	db	78	;'N'
+   210  00086C  44                 	db	68	;'D'
+   211  00086D  45                 	db	69	;'E'
+   212  00086E  52                 	db	82	;'R'
+   213  00086F  21                 	db	33
+   214  000870  21                 	db	33
+   215  000871  00                 	db	0
+   216  000872                     STR_7:
+   217  000872  45                 	db	69	;'E'
+   218  000873  53                 	db	83	;'S'
+   219  000874  20                 	db	32
+   220  000875  42                 	db	66	;'B'
+   221  000876  55                 	db	85	;'U'
+   222  000877  4C                 	db	76	;'L'
+   223  000878  42                 	db	66	;'B'
+   224  000879  41                 	db	65	;'A'
+   225  00087A  53                 	db	83	;'S'
+   226  00087B  41                 	db	65	;'A'
+   227  00087C  55                 	db	85	;'U'
+   228  00087D  52                 	db	82	;'R'
+   229  00087E  21                 	db	33
+   230  00087F  21                 	db	33
+   231  000880  00                 	db	0
+   232  000881                     STR_6:
+   233  000881  45                 	db	69	;'E'
+   234  000882  53                 	db	83	;'S'
+   235  000883  20                 	db	32
+   236  000884  53                 	db	83	;'S'
+   237  000885  51                 	db	81	;'Q'
+   238  000886  55                 	db	85	;'U'
+   239  000887  49                 	db	73	;'I'
+   240  000888  52                 	db	82	;'R'
+   241  000889  54                 	db	84	;'T'
+   242  00088A  4C                 	db	76	;'L'
+   243  00088B  45                 	db	69	;'E'
+   244  00088C  21                 	db	33
+   245  00088D  21                 	db	33
+   246  00088E  00                 	db	0
+   247  00088F                     STR_4:
+   248  00088F  45                 	db	69	;'E'
+   249  000890  53                 	db	83	;'S'
+   250  000891  20                 	db	32
+   251  000892  50                 	db	80	;'P'
+   252  000893  49                 	db	73	;'I'
+   253  000894  4B                 	db	75	;'K'
+   254  000895  41                 	db	65	;'A'
+   255  000896  43                 	db	67	;'C'
+   256  000897  48                 	db	72	;'H'
+   257  000898  55                 	db	85	;'U'
+   258  000899  21                 	db	33
+   259  00089A  21                 	db	33
+   260  00089B  00                 	db	0
+   261  00089C                     STR_3:
+   262  00089C  57                 	db	87	;'W'
+   263  00089D  65                 	db	101	;'e'
+   264  00089E  6C                 	db	108	;'l'
+   265  00089F  73                 	db	115	;'s'
+   266  0008A0  20                 	db	32
+   267  0008A1  4B                 	db	75	;'K'
+   268  0008A2  65                 	db	101	;'e'
+   269  0008A3  74                 	db	116	;'t'
+   270  0008A4  63                 	db	99	;'c'
+   271  0008A5  68                 	db	104	;'h'
+   272  0008A6  75                 	db	117	;'u'
+   273  0008A7  70                 	db	112	;'p'
+   274  0008A8  00                 	db	0
+   275                           
+   276                           ; #config settings
+   277  0008A9  00                 	db	0	; dummy byte at the end
+   278  0000                     
+   279                           	psect	cinit
+   280  001100                     __pcinit:
+   281                           	opt stack 0
+   282  001100                     start_initialization:
+   283                           	opt stack 0
+   284  001100                     __initialization:
+   285                           	opt stack 0
+   286  001100                     end_of_initialization:
+   287                           	opt stack 0
+   288  001100                     __end_of__initialization:
+   289                           	opt stack 0
+   290  001100  0E00               	movlw	low (__Lsmallconst shr (0+16))
+   291  001102  6EF8               	movwf	tblptru,c
+   292  001104  0E08               	movlw	high __Lsmallconst
+   293  001106  6EF7               	movwf	tblptrh,c
+   294  001108  0100               	movlb	0
+   295  00110A  EF55  F004         	goto	_main	;jump to C main() function
+   296                           tblptru	equ	0xFF8
+   297                           tblptrh	equ	0xFF7
+   298                           
+   299                           	psect	cstackCOMRAM
+   300  000001                     __pcstackCOMRAM:
+   301                           	opt stack 0
+   302  000001                     ??_SetCGRamAddr:
+   303  000001                     ??_SetDDRamAddr:
+   304  000001                     ??_DelayPORXLCD:
+   305  000001                     WriteCmdXLCD@cmd:
+   306                           	opt stack 0
+   307  000001                     WriteDataXLCD@data:
+   308                           	opt stack 0
+   309                           
+   310                           ; 1 bytes @ 0x0
+   311  000001                     	ds	1
+   312  000002                     LCD_gotoXY@x:
+   313                           	opt stack 0
+   314  000002                     putrsXLCD@buffer:
+   315                           	opt stack 0
+   316                           
+   317                           ; 2 bytes @ 0x1
+   318  000002                     	ds	2
+   319  000004                     SetCGRamAddr@CGaddr:
+   320                           	opt stack 0
+   321  000004                     SetDDRamAddr@DDaddr:
+   322                           	opt stack 0
+   323  000004                     LCD_gotoXY@y:
+   324                           	opt stack 0
+   325                           
+   326                           ; 2 bytes @ 0x3
+   327  000004                     	ds	1
+   328  000005                     OpenXLCD@lcdtype:
+   329                           	opt stack 0
+   330  000005                     LCD_WriteChr_CGRAM@buffer:
+   331                           	opt stack 0
+   332                           
+   333                           ; 2 bytes @ 0x4
+   334  000005                     	ds	1
+   335  000006                     
+   336                           ; 1 bytes @ 0x5
+   337  000006                     	ds	1
+   338  000007                     LCD_WriteChr_CGRAM@Addres:
+   339                           	opt stack 0
+   340                           
+   341                           ; 1 bytes @ 0x6
+   342  000007                     	ds	1
+   343  000008                     LCD_WriteChr_CGRAM@i:
+   344                           	opt stack 0
+   345                           
+   346                           ; 1 bytes @ 0x7
+   347  000008                     	ds	1
+   348  000009                     ??_main:
+   349                           
+   350                           ; 1 bytes @ 0x8
+   351  000009                     	ds	2
+   352                           tblptru	equ	0xFF8
+   353                           tblptrh	equ	0xFF7
+   354                           
+   355 ;;
+   356 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   357 ;;
+   358 ;; *************** function _main *****************
+   359 ;; Defined at:
+   360 ;;		line 108 in file "Programa_principal.c"
+   361 ;; Parameters:    Size  Location     Type
+   362 ;;		None
+   363 ;; Auto vars:     Size  Location     Type
+   364 ;;		None
+   365 ;; Return value:  Size  Location     Type
+   366 ;;                  1    wreg      void 
+   367 ;; Registers used:
+   368 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+   369 ;; Tracked objects:
+   370 ;;		On entry : 0/0
+   371 ;;		On exit  : 0/0
+   372 ;;		Unchanged: 0/0
+   373 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   374 ;;      Params:         0       0       0       0       0       0       0       0       0
+   375 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   376 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   377 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   378 ;;Total ram usage:        2 bytes
+   379 ;; Hardware stack levels required when called:    4
+   380 ;; This function calls:
+   381 ;;		_InitPort
+   382 ;;		_LCD_Init
+   383 ;;		_LCD_WriteChr_CGRAM
+   384 ;;		_LCD_gotoXY
+   385 ;;		_WriteCmdXLCD
+   386 ;;		_WriteDataXLCD
+   387 ;;		_putrsXLCD
+   388 ;; This function is called by:
+   389 ;;		Startup code after reset
+   390 ;; This function uses a non-reentrant model
+   391 ;;
+   392                           
+   393                           	psect	text0
+   394  0008AA                     __ptext0:
+   395                           	opt stack 0
+   396  0008AA                     _main:
+   397                           	opt stack 27
+   398                           
+   399                           ;Programa_principal.c: 109: LCD_Init();
+   400                           
+   401                           ;incstack = 0
+   402  0008AA  EC51  F008         	call	_LCD_Init	;wreg free
+   403                           
+   404                           ;Programa_principal.c: 110: InitPort();
+   405  0008AE  EC6D  F008         	call	_InitPort	;wreg free
+   406                           
+   407                           ;Programa_principal.c: 111: LCD_gotoXY(0,0);
+   408  0008B2  0E00               	movlw	0
+   409  0008B4  6E03               	movwf	LCD_gotoXY@x+1,c
+   410  0008B6  0E00               	movlw	0
+   411  0008B8  6E02               	movwf	LCD_gotoXY@x,c
+   412  0008BA  0E00               	movlw	0
+   413  0008BC  6E05               	movwf	LCD_gotoXY@y+1,c
+   414  0008BE  0E00               	movlw	0
+   415  0008C0  6E04               	movwf	LCD_gotoXY@y,c
+   416  0008C2  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   417                           
+   418                           ;Programa_principal.c: 112: putrsXLCD("**POKEMON GO!***");
+   419  0008C6  0E51               	movlw	low STR_1
+   420  0008C8  6E02               	movwf	putrsXLCD@buffer,c
+   421  0008CA  0E08               	movlw	high STR_1
+   422  0008CC  6E03               	movwf	putrsXLCD@buffer+1,c
+   423  0008CE  EC0D  F008         	call	_putrsXLCD	;wreg free
+   424                           
+   425                           ;Programa_principal.c: 113: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   426  0008D2  0E03               	movlw	3
+   427  0008D4  6E0A               	movwf	(??_main+1)& (0+255),c
+   428  0008D6  0E8A               	movlw	138
+   429  0008D8  6E09               	movwf	??_main& (0+255),c
+   430  0008DA  0E56               	movlw	86
+   431  0008DC                     u367:
+   432  0008DC  2EE8               	decfsz	wreg,f,c
+   433  0008DE  D7FE               	bra	u367
+   434  0008E0  2E09               	decfsz	??_main& (0+255),f,c
+   435  0008E2  D7FC               	bra	u367
+   436  0008E4  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   437  0008E6  D7FA               	bra	u367
+   438                           
+   439                           ;Programa_principal.c: 114: LCD_gotoXY(1,0);
+   440  0008E8  0E00               	movlw	0
+   441  0008EA  6E03               	movwf	LCD_gotoXY@x+1,c
+   442  0008EC  0E01               	movlw	1
+   443  0008EE  6E02               	movwf	LCD_gotoXY@x,c
+   444  0008F0  0E00               	movlw	0
+   445  0008F2  6E05               	movwf	LCD_gotoXY@y+1,c
+   446  0008F4  0E00               	movlw	0
+   447  0008F6  6E04               	movwf	LCD_gotoXY@y,c
+   448  0008F8  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   449                           
+   450                           ;Programa_principal.c: 115: putrsXLCD("Presiona Start!!");
+   451  0008FC  0E40               	movlw	low STR_2
+   452  0008FE  6E02               	movwf	putrsXLCD@buffer,c
+   453  000900  0E08               	movlw	high STR_2
+   454  000902  6E03               	movwf	putrsXLCD@buffer+1,c
+   455  000904  EC0D  F008         	call	_putrsXLCD	;wreg free
+   456                           
+   457                           ;Programa_principal.c: 116: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   458  000908  0E03               	movlw	3
+   459  00090A  6E0A               	movwf	(??_main+1)& (0+255),c
+   460  00090C  0E8A               	movlw	138
+   461  00090E  6E09               	movwf	??_main& (0+255),c
+   462  000910  0E56               	movlw	86
+   463  000912                     u377:
+   464  000912  2EE8               	decfsz	wreg,f,c
+   465  000914  D7FE               	bra	u377
+   466  000916  2E09               	decfsz	??_main& (0+255),f,c
+   467  000918  D7FC               	bra	u377
+   468  00091A  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   469  00091C  D7FA               	bra	u377
+   470                           
+   471                           ;Programa_principal.c: 117: if(PORTBbits.RB0 == 0){
+   472  00091E  B081               	btfsc	3969,0,c	;volatile
+   473  000920  EF00  F000         	goto	start
+   474                           
+   475                           ;Programa_principal.c: 118: WriteCmdXLCD(0x01);
+   476  000924  0E01               	movlw	1
+   477  000926  ECD1  F007         	call	_WriteCmdXLCD
+   478                           
+   479                           ;Programa_principal.c: 119: LCD_WriteChr_CGRAM(wels,0);
+   480  00092A  0E37               	movlw	low _wels
+   481  00092C  6E05               	movwf	LCD_WriteChr_CGRAM@buffer,c
+   482  00092E  0E08               	movlw	high _wels
+   483  000930  6E06               	movwf	LCD_WriteChr_CGRAM@buffer+1,c
+   484  000932  0E00               	movlw	0
+   485  000934  6E07               	movwf	LCD_WriteChr_CGRAM@Addres,c
+   486  000936  EC27  F008         	call	_LCD_WriteChr_CGRAM	;wreg free
+   487                           
+   488                           ;Programa_principal.c: 120: LCD_WriteChr_CGRAM(wels1,1);
+   489  00093A  0E2E               	movlw	low _wels1
+   490  00093C  6E05               	movwf	LCD_WriteChr_CGRAM@buffer,c
+   491  00093E  0E08               	movlw	high _wels1
+   492  000940  6E06               	movwf	LCD_WriteChr_CGRAM@buffer+1,c
+   493  000942  0E01               	movlw	1
+   494  000944  6E07               	movwf	LCD_WriteChr_CGRAM@Addres,c
+   495  000946  EC27  F008         	call	_LCD_WriteChr_CGRAM	;wreg free
+   496                           
+   497                           ;Programa_principal.c: 121: LCD_WriteChr_CGRAM(pokeball,3);
+   498  00094A  0E25               	movlw	low _pokeball
+   499  00094C  6E05               	movwf	LCD_WriteChr_CGRAM@buffer,c
+   500  00094E  0E08               	movlw	high _pokeball
+   501  000950  6E06               	movwf	LCD_WriteChr_CGRAM@buffer+1,c
+   502  000952  0E03               	movlw	3
+   503  000954  6E07               	movwf	LCD_WriteChr_CGRAM@Addres,c
+   504  000956  EC27  F008         	call	_LCD_WriteChr_CGRAM	;wreg free
+   505                           
+   506                           ;Programa_principal.c: 122: LCD_WriteChr_CGRAM(pikachu,4);
+   507  00095A  0E1C               	movlw	low _pikachu
+   508  00095C  6E05               	movwf	LCD_WriteChr_CGRAM@buffer,c
+   509  00095E  0E08               	movlw	high _pikachu
+   510  000960  6E06               	movwf	LCD_WriteChr_CGRAM@buffer+1,c
+   511  000962  0E04               	movlw	4
+   512  000964  6E07               	movwf	LCD_WriteChr_CGRAM@Addres,c
+   513  000966  EC27  F008         	call	_LCD_WriteChr_CGRAM	;wreg free
+   514                           
+   515                           ;Programa_principal.c: 123: LCD_WriteChr_CGRAM(charmander,5);
+   516  00096A  0E01               	movlw	low _charmander
+   517  00096C  6E05               	movwf	LCD_WriteChr_CGRAM@buffer,c
+   518  00096E  0E08               	movlw	high _charmander
+   519  000970  6E06               	movwf	LCD_WriteChr_CGRAM@buffer+1,c
+   520  000972  0E05               	movlw	5
+   521  000974  6E07               	movwf	LCD_WriteChr_CGRAM@Addres,c
+   522  000976  EC27  F008         	call	_LCD_WriteChr_CGRAM	;wreg free
+   523                           
+   524                           ;Programa_principal.c: 124: LCD_WriteChr_CGRAM(squirtle,6);
+   525  00097A  0E13               	movlw	low _squirtle
+   526  00097C  6E05               	movwf	LCD_WriteChr_CGRAM@buffer,c
+   527  00097E  0E08               	movlw	high _squirtle
+   528  000980  6E06               	movwf	LCD_WriteChr_CGRAM@buffer+1,c
+   529  000982  0E06               	movlw	6
+   530  000984  6E07               	movwf	LCD_WriteChr_CGRAM@Addres,c
+   531  000986  EC27  F008         	call	_LCD_WriteChr_CGRAM	;wreg free
+   532                           
+   533                           ;Programa_principal.c: 125: LCD_WriteChr_CGRAM(bulbasaur,7);
+   534  00098A  0E0A               	movlw	low _bulbasaur
+   535  00098C  6E05               	movwf	LCD_WriteChr_CGRAM@buffer,c
+   536  00098E  0E08               	movlw	high _bulbasaur
+   537  000990  6E06               	movwf	LCD_WriteChr_CGRAM@buffer+1,c
+   538  000992  0E07               	movlw	7
+   539  000994  6E07               	movwf	LCD_WriteChr_CGRAM@Addres,c
+   540  000996  EC27  F008         	call	_LCD_WriteChr_CGRAM	;wreg free
+   541                           
+   542                           ;Programa_principal.c: 126: _delay((unsigned long)((500)*(20000000L/4000.0)));
+   543  00099A  0E0D               	movlw	13
+   544  00099C  6E0A               	movwf	(??_main+1)& (0+255),c
+   545  00099E  0EAF               	movlw	175
+   546  0009A0  6E09               	movwf	??_main& (0+255),c
+   547  0009A2  0EB6               	movlw	182
+   548  0009A4                     u387:
+   549  0009A4  2EE8               	decfsz	wreg,f,c
+   550  0009A6  D7FE               	bra	u387
+   551  0009A8  2E09               	decfsz	??_main& (0+255),f,c
+   552  0009AA  D7FC               	bra	u387
+   553  0009AC  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   554  0009AE  D7FA               	bra	u387
+   555  0009B0  D000               	nop2	
+   556  0009B2                     
+   557                           ;Programa_principal.c: 128: LCD_gotoXY(0,0);
+   558  0009B2  0E00               	movlw	0
+   559  0009B4  6E03               	movwf	LCD_gotoXY@x+1,c
+   560  0009B6  0E00               	movlw	0
+   561  0009B8  6E02               	movwf	LCD_gotoXY@x,c
+   562  0009BA  0E00               	movlw	0
+   563  0009BC  6E05               	movwf	LCD_gotoXY@y+1,c
+   564  0009BE  0E00               	movlw	0
+   565  0009C0  6E04               	movwf	LCD_gotoXY@y,c
+   566  0009C2  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   567                           
+   568                           ;Programa_principal.c: 129: putrsXLCD("Wels Ketchup");
+   569  0009C6  0E9C               	movlw	low STR_3
+   570  0009C8  6E02               	movwf	putrsXLCD@buffer,c
+   571  0009CA  0E08               	movlw	high STR_3
+   572  0009CC  6E03               	movwf	putrsXLCD@buffer+1,c
+   573  0009CE  EC0D  F008         	call	_putrsXLCD	;wreg free
+   574                           
+   575                           ;Programa_principal.c: 130: _delay((unsigned long)((500)*(20000000L/4000.0)));
+   576  0009D2  0E0D               	movlw	13
+   577  0009D4  6E0A               	movwf	(??_main+1)& (0+255),c
+   578  0009D6  0EAF               	movlw	175
+   579  0009D8  6E09               	movwf	??_main& (0+255),c
+   580  0009DA  0EB6               	movlw	182
+   581  0009DC                     u397:
+   582  0009DC  2EE8               	decfsz	wreg,f,c
+   583  0009DE  D7FE               	bra	u397
+   584  0009E0  2E09               	decfsz	??_main& (0+255),f,c
+   585  0009E2  D7FC               	bra	u397
+   586  0009E4  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   587  0009E6  D7FA               	bra	u397
+   588  0009E8  D000               	nop2	
+   589                           
+   590                           ;Programa_principal.c: 131: LCD_gotoXY(1,0);
+   591  0009EA  0E00               	movlw	0
+   592  0009EC  6E03               	movwf	LCD_gotoXY@x+1,c
+   593  0009EE  0E01               	movlw	1
+   594  0009F0  6E02               	movwf	LCD_gotoXY@x,c
+   595  0009F2  0E00               	movlw	0
+   596  0009F4  6E05               	movwf	LCD_gotoXY@y+1,c
+   597  0009F6  0E00               	movlw	0
+   598  0009F8  6E04               	movwf	LCD_gotoXY@y,c
+   599  0009FA  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   600                           
+   601                           ;Programa_principal.c: 132: WriteDataXLCD(0);
+   602  0009FE  0E00               	movlw	0
+   603  000A00  ECAD  F007         	call	_WriteDataXLCD
+   604                           
+   605                           ;Programa_principal.c: 133: _delay((unsigned long)((200)*(20000000L/4000.0)));
+   606  000A04  0E06               	movlw	6
+   607  000A06  6E0A               	movwf	(??_main+1)& (0+255),c
+   608  000A08  0E13               	movlw	19
+   609  000A0A  6E09               	movwf	??_main& (0+255),c
+   610  000A0C  0EAE               	movlw	174
+   611  000A0E                     u407:
+   612  000A0E  2EE8               	decfsz	wreg,f,c
+   613  000A10  D7FE               	bra	u407
+   614  000A12  2E09               	decfsz	??_main& (0+255),f,c
+   615  000A14  D7FC               	bra	u407
+   616  000A16  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   617  000A18  D7FA               	bra	u407
+   618                           
+   619                           ;Programa_principal.c: 134: if(PORTBbits.RB7 == 0){
+   620  000A1A  BE81               	btfsc	3969,7,c	;volatile
+   621  000A1C  D07A               	goto	l54
+   622                           
+   623                           ;Programa_principal.c: 135: WriteCmdXLCD(0x01);
+   624  000A1E  0E01               	movlw	1
+   625  000A20  ECD1  F007         	call	_WriteCmdXLCD
+   626                           
+   627                           ;Programa_principal.c: 136: _delay((unsigned long)((5)*(20000000L/4000.0)));
+   628  000A24  0E21               	movlw	33
+   629  000A26  6E09               	movwf	??_main& (0+255),c
+   630  000A28  0E76               	movlw	118
+   631  000A2A                     u417:
+   632  000A2A  2EE8               	decfsz	wreg,f,c
+   633  000A2C  D7FE               	bra	u417
+   634  000A2E  2E09               	decfsz	??_main& (0+255),f,c
+   635  000A30  D7FC               	bra	u417
+   636  000A32  D000               	nop2	
+   637                           
+   638                           ;Programa_principal.c: 137: LCD_gotoXY(1,0);
+   639  000A34  0E00               	movlw	0
+   640  000A36  6E03               	movwf	LCD_gotoXY@x+1,c
+   641  000A38  0E01               	movlw	1
+   642  000A3A  6E02               	movwf	LCD_gotoXY@x,c
+   643  000A3C  0E00               	movlw	0
+   644  000A3E  6E05               	movwf	LCD_gotoXY@y+1,c
+   645  000A40  0E00               	movlw	0
+   646  000A42  6E04               	movwf	LCD_gotoXY@y,c
+   647  000A44  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   648                           
+   649                           ;Programa_principal.c: 138: WriteDataXLCD(1);
+   650  000A48  0E01               	movlw	1
+   651  000A4A  ECAD  F007         	call	_WriteDataXLCD
+   652                           
+   653                           ;Programa_principal.c: 139: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   654  000A4E  0E03               	movlw	3
+   655  000A50  6E0A               	movwf	(??_main+1)& (0+255),c
+   656  000A52  0E8A               	movlw	138
+   657  000A54  6E09               	movwf	??_main& (0+255),c
+   658  000A56  0E56               	movlw	86
+   659  000A58                     u427:
+   660  000A58  2EE8               	decfsz	wreg,f,c
+   661  000A5A  D7FE               	bra	u427
+   662  000A5C  2E09               	decfsz	??_main& (0+255),f,c
+   663  000A5E  D7FC               	bra	u427
+   664  000A60  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   665  000A62  D7FA               	bra	u427
+   666                           
+   667                           ;Programa_principal.c: 140: LCD_gotoXY(1,3);
+   668  000A64  0E00               	movlw	0
+   669  000A66  6E03               	movwf	LCD_gotoXY@x+1,c
+   670  000A68  0E01               	movlw	1
+   671  000A6A  6E02               	movwf	LCD_gotoXY@x,c
+   672  000A6C  0E00               	movlw	0
+   673  000A6E  6E05               	movwf	LCD_gotoXY@y+1,c
+   674  000A70  0E03               	movlw	3
+   675  000A72  6E04               	movwf	LCD_gotoXY@y,c
+   676  000A74  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   677                           
+   678                           ;Programa_principal.c: 141: WriteDataXLCD(3);
+   679  000A78  0E03               	movlw	3
+   680  000A7A  ECAD  F007         	call	_WriteDataXLCD
+   681                           
+   682                           ;Programa_principal.c: 142: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   683  000A7E  0E03               	movlw	3
+   684  000A80  6E0A               	movwf	(??_main+1)& (0+255),c
+   685  000A82  0E8A               	movlw	138
+   686  000A84  6E09               	movwf	??_main& (0+255),c
+   687  000A86  0E56               	movlw	86
+   688  000A88                     u437:
+   689  000A88  2EE8               	decfsz	wreg,f,c
+   690  000A8A  D7FE               	bra	u437
+   691  000A8C  2E09               	decfsz	??_main& (0+255),f,c
+   692  000A8E  D7FC               	bra	u437
+   693  000A90  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   694  000A92  D7FA               	bra	u437
+   695                           
+   696                           ;Programa_principal.c: 143: LCD_gotoXY(1,5);
+   697  000A94  0E00               	movlw	0
+   698  000A96  6E03               	movwf	LCD_gotoXY@x+1,c
+   699  000A98  0E01               	movlw	1
+   700  000A9A  6E02               	movwf	LCD_gotoXY@x,c
+   701  000A9C  0E00               	movlw	0
+   702  000A9E  6E05               	movwf	LCD_gotoXY@y+1,c
+   703  000AA0  0E05               	movlw	5
+   704  000AA2  6E04               	movwf	LCD_gotoXY@y,c
+   705  000AA4  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   706                           
+   707                           ;Programa_principal.c: 144: WriteDataXLCD(4);
+   708  000AA8  0E04               	movlw	4
+   709  000AAA  ECAD  F007         	call	_WriteDataXLCD
+   710                           
+   711                           ;Programa_principal.c: 145: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   712  000AAE  0E03               	movlw	3
+   713  000AB0  6E0A               	movwf	(??_main+1)& (0+255),c
+   714  000AB2  0E8A               	movlw	138
+   715  000AB4  6E09               	movwf	??_main& (0+255),c
+   716  000AB6  0E56               	movlw	86
+   717  000AB8                     u447:
+   718  000AB8  2EE8               	decfsz	wreg,f,c
+   719  000ABA  D7FE               	bra	u447
+   720  000ABC  2E09               	decfsz	??_main& (0+255),f,c
+   721  000ABE  D7FC               	bra	u447
+   722  000AC0  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   723  000AC2  D7FA               	bra	u447
+   724                           
+   725                           ;Programa_principal.c: 146: LCD_gotoXY(0,0);
+   726  000AC4  0E00               	movlw	0
+   727  000AC6  6E03               	movwf	LCD_gotoXY@x+1,c
+   728  000AC8  0E00               	movlw	0
+   729  000ACA  6E02               	movwf	LCD_gotoXY@x,c
+   730  000ACC  0E00               	movlw	0
+   731  000ACE  6E05               	movwf	LCD_gotoXY@y+1,c
+   732  000AD0  0E00               	movlw	0
+   733  000AD2  6E04               	movwf	LCD_gotoXY@y,c
+   734  000AD4  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   735                           
+   736                           ;Programa_principal.c: 147: putrsXLCD("ES PIKACHU!!");
+   737  000AD8  0E8F               	movlw	low STR_4
+   738  000ADA  6E02               	movwf	putrsXLCD@buffer,c
+   739  000ADC  0E08               	movlw	high STR_4
+   740  000ADE  6E03               	movwf	putrsXLCD@buffer+1,c
+   741  000AE0  EC0D  F008         	call	_putrsXLCD	;wreg free
+   742                           
+   743                           ;Programa_principal.c: 148: _delay((unsigned long)((1500)*(20000000L/4000.0)));
+   744  000AE4  0E27               	movlw	39
+   745  000AE6  6E0A               	movwf	(??_main+1)& (0+255),c
+   746  000AE8  0E0D               	movlw	13
+   747  000AEA  6E09               	movwf	??_main& (0+255),c
+   748  000AEC  0E26               	movlw	38
+   749  000AEE                     u457:
+   750  000AEE  2EE8               	decfsz	wreg,f,c
+   751  000AF0  D7FE               	bra	u457
+   752  000AF2  2E09               	decfsz	??_main& (0+255),f,c
+   753  000AF4  D7FC               	bra	u457
+   754  000AF6  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   755  000AF8  D7FA               	bra	u457
+   756  000AFA  D000               	nop2	
+   757                           
+   758                           ;Programa_principal.c: 149: WriteCmdXLCD(0x01);
+   759  000AFC  0E01               	movlw	1
+   760  000AFE  ECD1  F007         	call	_WriteCmdXLCD
+   761                           
+   762                           ;Programa_principal.c: 150: _delay((unsigned long)((5)*(20000000L/4000.0)));
+   763  000B02  0E21               	movlw	33
+   764  000B04  6E09               	movwf	??_main& (0+255),c
+   765  000B06  0E76               	movlw	118
+   766  000B08                     u467:
+   767  000B08  2EE8               	decfsz	wreg,f,c
+   768  000B0A  D7FE               	bra	u467
+   769  000B0C  2E09               	decfsz	??_main& (0+255),f,c
+   770  000B0E  D7FC               	bra	u467
+   771  000B10  D000               	nop2	
+   772  000B12                     l54:
+   773                           
+   774                           ;Programa_principal.c: 151: }
+   775                           ;Programa_principal.c: 152: if(PORTBbits.RB5 == 0){
+   776  000B12  BA81               	btfsc	3969,5,c	;volatile
+   777  000B14  D07A               	goto	l55
+   778                           
+   779                           ;Programa_principal.c: 153: WriteCmdXLCD(0x01);
+   780  000B16  0E01               	movlw	1
+   781  000B18  ECD1  F007         	call	_WriteCmdXLCD
+   782                           
+   783                           ;Programa_principal.c: 154: _delay((unsigned long)((5)*(20000000L/4000.0)));
+   784  000B1C  0E21               	movlw	33
+   785  000B1E  6E09               	movwf	??_main& (0+255),c
+   786  000B20  0E76               	movlw	118
+   787  000B22                     u477:
+   788  000B22  2EE8               	decfsz	wreg,f,c
+   789  000B24  D7FE               	bra	u477
+   790  000B26  2E09               	decfsz	??_main& (0+255),f,c
+   791  000B28  D7FC               	bra	u477
+   792  000B2A  D000               	nop2	
+   793                           
+   794                           ;Programa_principal.c: 155: LCD_gotoXY(1,0);
+   795  000B2C  0E00               	movlw	0
+   796  000B2E  6E03               	movwf	LCD_gotoXY@x+1,c
+   797  000B30  0E01               	movlw	1
+   798  000B32  6E02               	movwf	LCD_gotoXY@x,c
+   799  000B34  0E00               	movlw	0
+   800  000B36  6E05               	movwf	LCD_gotoXY@y+1,c
+   801  000B38  0E00               	movlw	0
+   802  000B3A  6E04               	movwf	LCD_gotoXY@y,c
+   803  000B3C  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   804                           
+   805                           ;Programa_principal.c: 156: WriteDataXLCD(1);
+   806  000B40  0E01               	movlw	1
+   807  000B42  ECAD  F007         	call	_WriteDataXLCD
+   808                           
+   809                           ;Programa_principal.c: 157: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   810  000B46  0E03               	movlw	3
+   811  000B48  6E0A               	movwf	(??_main+1)& (0+255),c
+   812  000B4A  0E8A               	movlw	138
+   813  000B4C  6E09               	movwf	??_main& (0+255),c
+   814  000B4E  0E56               	movlw	86
+   815  000B50                     u487:
+   816  000B50  2EE8               	decfsz	wreg,f,c
+   817  000B52  D7FE               	bra	u487
+   818  000B54  2E09               	decfsz	??_main& (0+255),f,c
+   819  000B56  D7FC               	bra	u487
+   820  000B58  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   821  000B5A  D7FA               	bra	u487
+   822                           
+   823                           ;Programa_principal.c: 158: LCD_gotoXY(1,3);
+   824  000B5C  0E00               	movlw	0
+   825  000B5E  6E03               	movwf	LCD_gotoXY@x+1,c
+   826  000B60  0E01               	movlw	1
+   827  000B62  6E02               	movwf	LCD_gotoXY@x,c
+   828  000B64  0E00               	movlw	0
+   829  000B66  6E05               	movwf	LCD_gotoXY@y+1,c
+   830  000B68  0E03               	movlw	3
+   831  000B6A  6E04               	movwf	LCD_gotoXY@y,c
+   832  000B6C  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   833                           
+   834                           ;Programa_principal.c: 159: WriteDataXLCD(3);
+   835  000B70  0E03               	movlw	3
+   836  000B72  ECAD  F007         	call	_WriteDataXLCD
+   837                           
+   838                           ;Programa_principal.c: 160: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   839  000B76  0E03               	movlw	3
+   840  000B78  6E0A               	movwf	(??_main+1)& (0+255),c
+   841  000B7A  0E8A               	movlw	138
+   842  000B7C  6E09               	movwf	??_main& (0+255),c
+   843  000B7E  0E56               	movlw	86
+   844  000B80                     u497:
+   845  000B80  2EE8               	decfsz	wreg,f,c
+   846  000B82  D7FE               	bra	u497
+   847  000B84  2E09               	decfsz	??_main& (0+255),f,c
+   848  000B86  D7FC               	bra	u497
+   849  000B88  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   850  000B8A  D7FA               	bra	u497
+   851                           
+   852                           ;Programa_principal.c: 161: LCD_gotoXY(1,5);
+   853  000B8C  0E00               	movlw	0
+   854  000B8E  6E03               	movwf	LCD_gotoXY@x+1,c
+   855  000B90  0E01               	movlw	1
+   856  000B92  6E02               	movwf	LCD_gotoXY@x,c
+   857  000B94  0E00               	movlw	0
+   858  000B96  6E05               	movwf	LCD_gotoXY@y+1,c
+   859  000B98  0E05               	movlw	5
+   860  000B9A  6E04               	movwf	LCD_gotoXY@y,c
+   861  000B9C  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   862                           
+   863                           ;Programa_principal.c: 162: WriteDataXLCD(5);
+   864  000BA0  0E05               	movlw	5
+   865  000BA2  ECAD  F007         	call	_WriteDataXLCD
+   866                           
+   867                           ;Programa_principal.c: 163: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   868  000BA6  0E03               	movlw	3
+   869  000BA8  6E0A               	movwf	(??_main+1)& (0+255),c
+   870  000BAA  0E8A               	movlw	138
+   871  000BAC  6E09               	movwf	??_main& (0+255),c
+   872  000BAE  0E56               	movlw	86
+   873  000BB0                     u507:
+   874  000BB0  2EE8               	decfsz	wreg,f,c
+   875  000BB2  D7FE               	bra	u507
+   876  000BB4  2E09               	decfsz	??_main& (0+255),f,c
+   877  000BB6  D7FC               	bra	u507
+   878  000BB8  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   879  000BBA  D7FA               	bra	u507
+   880                           
+   881                           ;Programa_principal.c: 164: LCD_gotoXY(0,0);
+   882  000BBC  0E00               	movlw	0
+   883  000BBE  6E03               	movwf	LCD_gotoXY@x+1,c
+   884  000BC0  0E00               	movlw	0
+   885  000BC2  6E02               	movwf	LCD_gotoXY@x,c
+   886  000BC4  0E00               	movlw	0
+   887  000BC6  6E05               	movwf	LCD_gotoXY@y+1,c
+   888  000BC8  0E00               	movlw	0
+   889  000BCA  6E04               	movwf	LCD_gotoXY@y,c
+   890  000BCC  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   891                           
+   892                           ;Programa_principal.c: 165: putrsXLCD("ES CHARMANDER!!");
+   893  000BD0  0E62               	movlw	low STR_5
+   894  000BD2  6E02               	movwf	putrsXLCD@buffer,c
+   895  000BD4  0E08               	movlw	high STR_5
+   896  000BD6  6E03               	movwf	putrsXLCD@buffer+1,c
+   897  000BD8  EC0D  F008         	call	_putrsXLCD	;wreg free
+   898                           
+   899                           ;Programa_principal.c: 166: _delay((unsigned long)((1500)*(20000000L/4000.0)));
+   900  000BDC  0E27               	movlw	39
+   901  000BDE  6E0A               	movwf	(??_main+1)& (0+255),c
+   902  000BE0  0E0D               	movlw	13
+   903  000BE2  6E09               	movwf	??_main& (0+255),c
+   904  000BE4  0E26               	movlw	38
+   905  000BE6                     u517:
+   906  000BE6  2EE8               	decfsz	wreg,f,c
+   907  000BE8  D7FE               	bra	u517
+   908  000BEA  2E09               	decfsz	??_main& (0+255),f,c
+   909  000BEC  D7FC               	bra	u517
+   910  000BEE  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   911  000BF0  D7FA               	bra	u517
+   912  000BF2  D000               	nop2	
+   913                           
+   914                           ;Programa_principal.c: 167: WriteCmdXLCD(0x01);
+   915  000BF4  0E01               	movlw	1
+   916  000BF6  ECD1  F007         	call	_WriteCmdXLCD
+   917                           
+   918                           ;Programa_principal.c: 168: _delay((unsigned long)((5)*(20000000L/4000.0)));
+   919  000BFA  0E21               	movlw	33
+   920  000BFC  6E09               	movwf	??_main& (0+255),c
+   921  000BFE  0E76               	movlw	118
+   922  000C00                     u527:
+   923  000C00  2EE8               	decfsz	wreg,f,c
+   924  000C02  D7FE               	bra	u527
+   925  000C04  2E09               	decfsz	??_main& (0+255),f,c
+   926  000C06  D7FC               	bra	u527
+   927  000C08  D000               	nop2	
+   928  000C0A                     l55:
+   929                           
+   930                           ;Programa_principal.c: 169: }
+   931                           ;Programa_principal.c: 170: if(PORTBbits.RB4 == 0){
+   932  000C0A  B881               	btfsc	3969,4,c	;volatile
+   933  000C0C  D07A               	goto	l56
+   934                           
+   935                           ;Programa_principal.c: 171: WriteCmdXLCD(0x01);
+   936  000C0E  0E01               	movlw	1
+   937  000C10  ECD1  F007         	call	_WriteCmdXLCD
+   938                           
+   939                           ;Programa_principal.c: 172: _delay((unsigned long)((5)*(20000000L/4000.0)));
+   940  000C14  0E21               	movlw	33
+   941  000C16  6E09               	movwf	??_main& (0+255),c
+   942  000C18  0E76               	movlw	118
+   943  000C1A                     u537:
+   944  000C1A  2EE8               	decfsz	wreg,f,c
+   945  000C1C  D7FE               	bra	u537
+   946  000C1E  2E09               	decfsz	??_main& (0+255),f,c
+   947  000C20  D7FC               	bra	u537
+   948  000C22  D000               	nop2	
+   949                           
+   950                           ;Programa_principal.c: 173: LCD_gotoXY(1,0);
+   951  000C24  0E00               	movlw	0
+   952  000C26  6E03               	movwf	LCD_gotoXY@x+1,c
+   953  000C28  0E01               	movlw	1
+   954  000C2A  6E02               	movwf	LCD_gotoXY@x,c
+   955  000C2C  0E00               	movlw	0
+   956  000C2E  6E05               	movwf	LCD_gotoXY@y+1,c
+   957  000C30  0E00               	movlw	0
+   958  000C32  6E04               	movwf	LCD_gotoXY@y,c
+   959  000C34  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   960                           
+   961                           ;Programa_principal.c: 174: WriteDataXLCD(1);
+   962  000C38  0E01               	movlw	1
+   963  000C3A  ECAD  F007         	call	_WriteDataXLCD
+   964                           
+   965                           ;Programa_principal.c: 175: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   966  000C3E  0E03               	movlw	3
+   967  000C40  6E0A               	movwf	(??_main+1)& (0+255),c
+   968  000C42  0E8A               	movlw	138
+   969  000C44  6E09               	movwf	??_main& (0+255),c
+   970  000C46  0E56               	movlw	86
+   971  000C48                     u547:
+   972  000C48  2EE8               	decfsz	wreg,f,c
+   973  000C4A  D7FE               	bra	u547
+   974  000C4C  2E09               	decfsz	??_main& (0+255),f,c
+   975  000C4E  D7FC               	bra	u547
+   976  000C50  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+   977  000C52  D7FA               	bra	u547
+   978                           
+   979                           ;Programa_principal.c: 176: LCD_gotoXY(1,3);
+   980  000C54  0E00               	movlw	0
+   981  000C56  6E03               	movwf	LCD_gotoXY@x+1,c
+   982  000C58  0E01               	movlw	1
+   983  000C5A  6E02               	movwf	LCD_gotoXY@x,c
+   984  000C5C  0E00               	movlw	0
+   985  000C5E  6E05               	movwf	LCD_gotoXY@y+1,c
+   986  000C60  0E03               	movlw	3
+   987  000C62  6E04               	movwf	LCD_gotoXY@y,c
+   988  000C64  EC40  F008         	call	_LCD_gotoXY	;wreg free
+   989                           
+   990                           ;Programa_principal.c: 177: WriteDataXLCD(3);
+   991  000C68  0E03               	movlw	3
+   992  000C6A  ECAD  F007         	call	_WriteDataXLCD
+   993                           
+   994                           ;Programa_principal.c: 178: _delay((unsigned long)((100)*(20000000L/4000.0)));
+   995  000C6E  0E03               	movlw	3
+   996  000C70  6E0A               	movwf	(??_main+1)& (0+255),c
+   997  000C72  0E8A               	movlw	138
+   998  000C74  6E09               	movwf	??_main& (0+255),c
+   999  000C76  0E56               	movlw	86
+  1000  000C78                     u557:
+  1001  000C78  2EE8               	decfsz	wreg,f,c
+  1002  000C7A  D7FE               	bra	u557
+  1003  000C7C  2E09               	decfsz	??_main& (0+255),f,c
+  1004  000C7E  D7FC               	bra	u557
+  1005  000C80  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+  1006  000C82  D7FA               	bra	u557
+  1007                           
+  1008                           ;Programa_principal.c: 179: LCD_gotoXY(1,5);
+  1009  000C84  0E00               	movlw	0
+  1010  000C86  6E03               	movwf	LCD_gotoXY@x+1,c
+  1011  000C88  0E01               	movlw	1
+  1012  000C8A  6E02               	movwf	LCD_gotoXY@x,c
+  1013  000C8C  0E00               	movlw	0
+  1014  000C8E  6E05               	movwf	LCD_gotoXY@y+1,c
+  1015  000C90  0E05               	movlw	5
+  1016  000C92  6E04               	movwf	LCD_gotoXY@y,c
+  1017  000C94  EC40  F008         	call	_LCD_gotoXY	;wreg free
+  1018                           
+  1019                           ;Programa_principal.c: 180: WriteDataXLCD(6);
+  1020  000C98  0E06               	movlw	6
+  1021  000C9A  ECAD  F007         	call	_WriteDataXLCD
+  1022                           
+  1023                           ;Programa_principal.c: 181: _delay((unsigned long)((100)*(20000000L/4000.0)));
+  1024  000C9E  0E03               	movlw	3
+  1025  000CA0  6E0A               	movwf	(??_main+1)& (0+255),c
+  1026  000CA2  0E8A               	movlw	138
+  1027  000CA4  6E09               	movwf	??_main& (0+255),c
+  1028  000CA6  0E56               	movlw	86
+  1029  000CA8                     u567:
+  1030  000CA8  2EE8               	decfsz	wreg,f,c
+  1031  000CAA  D7FE               	bra	u567
+  1032  000CAC  2E09               	decfsz	??_main& (0+255),f,c
+  1033  000CAE  D7FC               	bra	u567
+  1034  000CB0  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+  1035  000CB2  D7FA               	bra	u567
+  1036                           
+  1037                           ;Programa_principal.c: 182: LCD_gotoXY(0,0);
+  1038  000CB4  0E00               	movlw	0
+  1039  000CB6  6E03               	movwf	LCD_gotoXY@x+1,c
+  1040  000CB8  0E00               	movlw	0
+  1041  000CBA  6E02               	movwf	LCD_gotoXY@x,c
+  1042  000CBC  0E00               	movlw	0
+  1043  000CBE  6E05               	movwf	LCD_gotoXY@y+1,c
+  1044  000CC0  0E00               	movlw	0
+  1045  000CC2  6E04               	movwf	LCD_gotoXY@y,c
+  1046  000CC4  EC40  F008         	call	_LCD_gotoXY	;wreg free
+  1047                           
+  1048                           ;Programa_principal.c: 183: putrsXLCD("ES SQUIRTLE!!");
+  1049  000CC8  0E81               	movlw	low STR_6
+  1050  000CCA  6E02               	movwf	putrsXLCD@buffer,c
+  1051  000CCC  0E08               	movlw	high STR_6
+  1052  000CCE  6E03               	movwf	putrsXLCD@buffer+1,c
+  1053  000CD0  EC0D  F008         	call	_putrsXLCD	;wreg free
+  1054                           
+  1055                           ;Programa_principal.c: 184: _delay((unsigned long)((1500)*(20000000L/4000.0)));
+  1056  000CD4  0E27               	movlw	39
+  1057  000CD6  6E0A               	movwf	(??_main+1)& (0+255),c
+  1058  000CD8  0E0D               	movlw	13
+  1059  000CDA  6E09               	movwf	??_main& (0+255),c
+  1060  000CDC  0E26               	movlw	38
+  1061  000CDE                     u577:
+  1062  000CDE  2EE8               	decfsz	wreg,f,c
+  1063  000CE0  D7FE               	bra	u577
+  1064  000CE2  2E09               	decfsz	??_main& (0+255),f,c
+  1065  000CE4  D7FC               	bra	u577
+  1066  000CE6  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+  1067  000CE8  D7FA               	bra	u577
+  1068  000CEA  D000               	nop2	
+  1069                           
+  1070                           ;Programa_principal.c: 185: WriteCmdXLCD(0x01);
+  1071  000CEC  0E01               	movlw	1
+  1072  000CEE  ECD1  F007         	call	_WriteCmdXLCD
+  1073                           
+  1074                           ;Programa_principal.c: 186: _delay((unsigned long)((5)*(20000000L/4000.0)));
+  1075  000CF2  0E21               	movlw	33
+  1076  000CF4  6E09               	movwf	??_main& (0+255),c
+  1077  000CF6  0E76               	movlw	118
+  1078  000CF8                     u587:
+  1079  000CF8  2EE8               	decfsz	wreg,f,c
+  1080  000CFA  D7FE               	bra	u587
+  1081  000CFC  2E09               	decfsz	??_main& (0+255),f,c
+  1082  000CFE  D7FC               	bra	u587
+  1083  000D00  D000               	nop2	
+  1084  000D02                     l56:
+  1085                           
+  1086                           ;Programa_principal.c: 187: }
+  1087                           ;Programa_principal.c: 188: if(PORTBbits.RB2 == 0){
+  1088  000D02  B481               	btfsc	3969,2,c	;volatile
+  1089  000D04  D656               	goto	l53
+  1090                           
+  1091                           ;Programa_principal.c: 189: WriteCmdXLCD(0x01);
+  1092  000D06  0E01               	movlw	1
+  1093  000D08  ECD1  F007         	call	_WriteCmdXLCD
+  1094                           
+  1095                           ;Programa_principal.c: 190: _delay((unsigned long)((5)*(20000000L/4000.0)));
+  1096  000D0C  0E21               	movlw	33
+  1097  000D0E  6E09               	movwf	??_main& (0+255),c
+  1098  000D10  0E76               	movlw	118
+  1099  000D12                     u597:
+  1100  000D12  2EE8               	decfsz	wreg,f,c
+  1101  000D14  D7FE               	bra	u597
+  1102  000D16  2E09               	decfsz	??_main& (0+255),f,c
+  1103  000D18  D7FC               	bra	u597
+  1104  000D1A  D000               	nop2	
+  1105                           
+  1106                           ;Programa_principal.c: 191: LCD_gotoXY(1,0);
+  1107  000D1C  0E00               	movlw	0
+  1108  000D1E  6E03               	movwf	LCD_gotoXY@x+1,c
+  1109  000D20  0E01               	movlw	1
+  1110  000D22  6E02               	movwf	LCD_gotoXY@x,c
+  1111  000D24  0E00               	movlw	0
+  1112  000D26  6E05               	movwf	LCD_gotoXY@y+1,c
+  1113  000D28  0E00               	movlw	0
+  1114  000D2A  6E04               	movwf	LCD_gotoXY@y,c
+  1115  000D2C  EC40  F008         	call	_LCD_gotoXY	;wreg free
+  1116                           
+  1117                           ;Programa_principal.c: 192: WriteDataXLCD(1);
+  1118  000D30  0E01               	movlw	1
+  1119  000D32  ECAD  F007         	call	_WriteDataXLCD
+  1120                           
+  1121                           ;Programa_principal.c: 193: _delay((unsigned long)((100)*(20000000L/4000.0)));
+  1122  000D36  0E03               	movlw	3
+  1123  000D38  6E0A               	movwf	(??_main+1)& (0+255),c
+  1124  000D3A  0E8A               	movlw	138
+  1125  000D3C  6E09               	movwf	??_main& (0+255),c
+  1126  000D3E  0E56               	movlw	86
+  1127  000D40                     u607:
+  1128  000D40  2EE8               	decfsz	wreg,f,c
+  1129  000D42  D7FE               	bra	u607
+  1130  000D44  2E09               	decfsz	??_main& (0+255),f,c
+  1131  000D46  D7FC               	bra	u607
+  1132  000D48  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+  1133  000D4A  D7FA               	bra	u607
+  1134                           
+  1135                           ;Programa_principal.c: 194: LCD_gotoXY(1,3);
+  1136  000D4C  0E00               	movlw	0
+  1137  000D4E  6E03               	movwf	LCD_gotoXY@x+1,c
+  1138  000D50  0E01               	movlw	1
+  1139  000D52  6E02               	movwf	LCD_gotoXY@x,c
+  1140  000D54  0E00               	movlw	0
+  1141  000D56  6E05               	movwf	LCD_gotoXY@y+1,c
+  1142  000D58  0E03               	movlw	3
+  1143  000D5A  6E04               	movwf	LCD_gotoXY@y,c
+  1144  000D5C  EC40  F008         	call	_LCD_gotoXY	;wreg free
+  1145                           
+  1146                           ;Programa_principal.c: 195: WriteDataXLCD(3);
+  1147  000D60  0E03               	movlw	3
+  1148  000D62  ECAD  F007         	call	_WriteDataXLCD
+  1149                           
+  1150                           ;Programa_principal.c: 196: _delay((unsigned long)((100)*(20000000L/4000.0)));
+  1151  000D66  0E03               	movlw	3
+  1152  000D68  6E0A               	movwf	(??_main+1)& (0+255),c
+  1153  000D6A  0E8A               	movlw	138
+  1154  000D6C  6E09               	movwf	??_main& (0+255),c
+  1155  000D6E  0E56               	movlw	86
+  1156  000D70                     u617:
+  1157  000D70  2EE8               	decfsz	wreg,f,c
+  1158  000D72  D7FE               	bra	u617
+  1159  000D74  2E09               	decfsz	??_main& (0+255),f,c
+  1160  000D76  D7FC               	bra	u617
+  1161  000D78  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+  1162  000D7A  D7FA               	bra	u617
+  1163                           
+  1164                           ;Programa_principal.c: 197: LCD_gotoXY(1,5);
+  1165  000D7C  0E00               	movlw	0
+  1166  000D7E  6E03               	movwf	LCD_gotoXY@x+1,c
+  1167  000D80  0E01               	movlw	1
+  1168  000D82  6E02               	movwf	LCD_gotoXY@x,c
+  1169  000D84  0E00               	movlw	0
+  1170  000D86  6E05               	movwf	LCD_gotoXY@y+1,c
+  1171  000D88  0E05               	movlw	5
+  1172  000D8A  6E04               	movwf	LCD_gotoXY@y,c
+  1173  000D8C  EC40  F008         	call	_LCD_gotoXY	;wreg free
+  1174                           
+  1175                           ;Programa_principal.c: 198: WriteDataXLCD(7);
+  1176  000D90  0E07               	movlw	7
+  1177  000D92  ECAD  F007         	call	_WriteDataXLCD
+  1178                           
+  1179                           ;Programa_principal.c: 199: _delay((unsigned long)((100)*(20000000L/4000.0)));
+  1180  000D96  0E03               	movlw	3
+  1181  000D98  6E0A               	movwf	(??_main+1)& (0+255),c
+  1182  000D9A  0E8A               	movlw	138
+  1183  000D9C  6E09               	movwf	??_main& (0+255),c
+  1184  000D9E  0E56               	movlw	86
+  1185  000DA0                     u627:
+  1186  000DA0  2EE8               	decfsz	wreg,f,c
+  1187  000DA2  D7FE               	bra	u627
+  1188  000DA4  2E09               	decfsz	??_main& (0+255),f,c
+  1189  000DA6  D7FC               	bra	u627
+  1190  000DA8  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+  1191  000DAA  D7FA               	bra	u627
+  1192                           
+  1193                           ;Programa_principal.c: 200: LCD_gotoXY(0,0);
+  1194  000DAC  0E00               	movlw	0
+  1195  000DAE  6E03               	movwf	LCD_gotoXY@x+1,c
+  1196  000DB0  0E00               	movlw	0
+  1197  000DB2  6E02               	movwf	LCD_gotoXY@x,c
+  1198  000DB4  0E00               	movlw	0
+  1199  000DB6  6E05               	movwf	LCD_gotoXY@y+1,c
+  1200  000DB8  0E00               	movlw	0
+  1201  000DBA  6E04               	movwf	LCD_gotoXY@y,c
+  1202  000DBC  EC40  F008         	call	_LCD_gotoXY	;wreg free
+  1203                           
+  1204                           ;Programa_principal.c: 201: putrsXLCD("ES BULBASAUR!!");
+  1205  000DC0  0E72               	movlw	low STR_7
+  1206  000DC2  6E02               	movwf	putrsXLCD@buffer,c
+  1207  000DC4  0E08               	movlw	high STR_7
+  1208  000DC6  6E03               	movwf	putrsXLCD@buffer+1,c
+  1209  000DC8  EC0D  F008         	call	_putrsXLCD	;wreg free
+  1210                           
+  1211                           ;Programa_principal.c: 202: _delay((unsigned long)((1500)*(20000000L/4000.0)));
+  1212  000DCC  0E27               	movlw	39
+  1213  000DCE  6E0A               	movwf	(??_main+1)& (0+255),c
+  1214  000DD0  0E0D               	movlw	13
+  1215  000DD2  6E09               	movwf	??_main& (0+255),c
+  1216  000DD4  0E26               	movlw	38
+  1217  000DD6                     u637:
+  1218  000DD6  2EE8               	decfsz	wreg,f,c
+  1219  000DD8  D7FE               	bra	u637
+  1220  000DDA  2E09               	decfsz	??_main& (0+255),f,c
+  1221  000DDC  D7FC               	bra	u637
+  1222  000DDE  2E0A               	decfsz	(??_main+1)& (0+255),f,c
+  1223  000DE0  D7FA               	bra	u637
+  1224  000DE2  D000               	nop2	
+  1225                           
+  1226                           ;Programa_principal.c: 203: WriteCmdXLCD(0x01);
+  1227  000DE4  0E01               	movlw	1
+  1228  000DE6  ECD1  F007         	call	_WriteCmdXLCD
+  1229                           
+  1230                           ;Programa_principal.c: 204: _delay((unsigned long)((5)*(20000000L/4000.0)));
+  1231  000DEA  0E21               	movlw	33
+  1232  000DEC  6E09               	movwf	??_main& (0+255),c
+  1233  000DEE  0E76               	movlw	118
+  1234  000DF0                     u647:
+  1235  000DF0  2EE8               	decfsz	wreg,f,c
+  1236  000DF2  D7FE               	bra	u647
+  1237  000DF4  2E09               	decfsz	??_main& (0+255),f,c
+  1238  000DF6  D7FC               	bra	u647
+  1239  000DF8  D5DB               	goto	L1
+  1240  000DFA                     __end_of_main:
+  1241                           	opt stack 0
+  1242                           tblptru	equ	0xFF8
+  1243                           tblptrh	equ	0xFF7
+  1244                           wreg	equ	0xFE8
+  1245                           
+  1246 ;; *************** function _putrsXLCD *****************
+  1247 ;; Defined at:
+  1248 ;;		line 138 in file "LCD_libreria.c"
+  1249 ;; Parameters:    Size  Location     Type
+  1250 ;;  buffer          2    1[COMRAM] PTR const unsigned char 
+  1251 ;;		 -> STR_7(15), STR_6(14), STR_5(16), STR_4(13), 
+  1252 ;;		 -> STR_3(13), STR_2(17), STR_1(17), 
+  1253 ;; Auto vars:     Size  Location     Type
+  1254 ;;		None
+  1255 ;; Return value:  Size  Location     Type
+  1256 ;;                  1    wreg      void 
+  1257 ;; Registers used:
+  1258 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  1259 ;; Tracked objects:
+  1260 ;;		On entry : 0/0
+  1261 ;;		On exit  : 0/0
+  1262 ;;		Unchanged: 0/0
+  1263 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1264 ;;      Params:         2       0       0       0       0       0       0       0       0
+  1265 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1266 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1267 ;;      Totals:         2       0       0       0       0       0       0       0       0
+  1268 ;;Total ram usage:        2 bytes
+  1269 ;; Hardware stack levels used:    1
+  1270 ;; Hardware stack levels required when called:    3
+  1271 ;; This function calls:
+  1272 ;;		_BusyXLCD
+  1273 ;;		_WriteDataXLCD
+  1274 ;; This function is called by:
+  1275 ;;		_main
+  1276 ;; This function uses a non-reentrant model
+  1277 ;;
+  1278                           
+  1279                           	psect	text1
+  1280  00101A                     __ptext1:
+  1281                           	opt stack 0
+  1282  00101A                     _putrsXLCD:
+  1283                           	opt stack 27
+  1284                           
+  1285                           ;LCD_libreria.c: 140: while(*buffer)
+  1286                           
+  1287                           ;incstack = 0
+  1288  00101A  D00F               	goto	l128
+  1289  00101C                     
+  1290                           ;LCD_libreria.c: 141: {
+  1291                           ;LCD_libreria.c: 142: while(BusyXLCD());
+  1292  00101C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1293  001020  0900               	iorlw	0
+  1294  001022  A4D8               	btfss	status,2,c
+  1295  001024  D7FB               	goto	l129
+  1296                           
+  1297                           ;LCD_libreria.c: 143: WriteDataXLCD(*buffer);
+  1298  001026  C002  FFF6         	movff	putrsXLCD@buffer,tblptrl
+  1299  00102A  C003  FFF7         	movff	putrsXLCD@buffer+1,tblptrh
+  1300  00102E                     	if	0	;tblptru may be non-zero
+  1301  00102E                     	endif
+  1302  00102E                     	if	0	;tblptru may be non-zero
+  1303  00102E                     	endif
+  1304  00102E  0008               	tblrd		*
+  1305  001030  50F5               	movf	tablat,w,c
+  1306  001032  ECAD  F007         	call	_WriteDataXLCD
+  1307                           
+  1308                           ;LCD_libreria.c: 144: buffer++;
+  1309  001036  4A02               	infsnz	putrsXLCD@buffer,f,c
+  1310  001038  2A03               	incf	putrsXLCD@buffer+1,f,c
+  1311  00103A                     l128:
+  1312  00103A  C002  FFF6         	movff	putrsXLCD@buffer,tblptrl
+  1313  00103E  C003  FFF7         	movff	putrsXLCD@buffer+1,tblptrh
+  1314  001042                     	if	0	;tblptru may be non-zero
+  1315  001042                     	endif
+  1316  001042                     	if	0	;tblptru may be non-zero
+  1317  001042                     	endif
+  1318  001042  0008               	tblrd		*
+  1319  001044  50F5               	movf	tablat,w,c
+  1320  001046  0900               	iorlw	0
+  1321  001048  B4D8               	btfsc	status,2,c
+  1322  00104A  0012               	return	
+  1323  00104C  D7E7               	goto	l129
+  1324  00104E                     __end_of_putrsXLCD:
+  1325                           	opt stack 0
+  1326                           tblptru	equ	0xFF8
+  1327                           tblptrh	equ	0xFF7
+  1328                           tblptrl	equ	0xFF6
+  1329                           tablat	equ	0xFF5
+  1330                           wreg	equ	0xFE8
+  1331                           status	equ	0xFD8
+  1332                           
+  1333 ;; *************** function _LCD_gotoXY *****************
+  1334 ;; Defined at:
+  1335 ;;		line 55 in file "LCD_libreria.c"
+  1336 ;; Parameters:    Size  Location     Type
+  1337 ;;  x               2    1[COMRAM] int 
+  1338 ;;  y               2    3[COMRAM] int 
+  1339 ;; Auto vars:     Size  Location     Type
+  1340 ;;		None
+  1341 ;; Return value:  Size  Location     Type
+  1342 ;;                  1    wreg      void 
+  1343 ;; Registers used:
+  1344 ;;		wreg, status,2, status,0, cstack
+  1345 ;; Tracked objects:
+  1346 ;;		On entry : 0/0
+  1347 ;;		On exit  : 0/0
+  1348 ;;		Unchanged: 0/0
+  1349 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1350 ;;      Params:         4       0       0       0       0       0       0       0       0
+  1351 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1352 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1353 ;;      Totals:         4       0       0       0       0       0       0       0       0
+  1354 ;;Total ram usage:        4 bytes
+  1355 ;; Hardware stack levels used:    1
+  1356 ;; Hardware stack levels required when called:    2
+  1357 ;; This function calls:
+  1358 ;;		_WriteCmdXLCD
+  1359 ;; This function is called by:
+  1360 ;;		_main
+  1361 ;; This function uses a non-reentrant model
+  1362 ;;
+  1363                           
+  1364                           	psect	text2
+  1365  001080                     __ptext2:
+  1366                           	opt stack 0
+  1367  001080                     _LCD_gotoXY:
+  1368                           	opt stack 28
+  1369                           
+  1370                           ;LCD_libreria.c: 57: if ( x>0 ){WriteCmdXLCD(0b11000000+y);}
+  1371                           
+  1372                           ;incstack = 0
+  1373  001080  BE03               	btfsc	LCD_gotoXY@x+1,7,c
+  1374  001082  D00A               	goto	l94
+  1375  001084  5003               	movf	LCD_gotoXY@x+1,w,c
+  1376  001086  E103               	bnz	u260
+  1377  001088  0402               	decf	LCD_gotoXY@x,w,c
+  1378  00108A  A0D8               	btfss	status,0,c
+  1379  00108C  D005               	goto	l94
+  1380  00108E                     u260:
+  1381  00108E  5004               	movf	LCD_gotoXY@y,w,c
+  1382  001090  0FC0               	addlw	192
+  1383  001092  ECD1  F007         	call	_WriteCmdXLCD
+  1384  001096  0012               	return	
+  1385  001098                     l94:
+  1386                           
+  1387                           ;LCD_libreria.c: 58: else {WriteCmdXLCD(0b10000000+y);}
+  1388  001098  5004               	movf	LCD_gotoXY@y,w,c
+  1389  00109A  0F80               	addlw	128
+  1390  00109C  ECD1  F007         	call	_WriteCmdXLCD
+  1391  0010A0  0012               	return	
+  1392  0010A2                     __end_of_LCD_gotoXY:
+  1393                           	opt stack 0
+  1394                           tblptru	equ	0xFF8
+  1395                           tblptrh	equ	0xFF7
+  1396                           tblptrl	equ	0xFF6
+  1397                           tablat	equ	0xFF5
+  1398                           wreg	equ	0xFE8
+  1399                           status	equ	0xFD8
+  1400                           
+  1401 ;; *************** function _LCD_WriteChr_CGRAM *****************
+  1402 ;; Defined at:
+  1403 ;;		line 63 in file "LCD_libreria.c"
+  1404 ;; Parameters:    Size  Location     Type
+  1405 ;;  buffer          2    4[COMRAM] PTR const unsigned char 
+  1406 ;;		 -> bulbasaur(9), squirtle(9), charmander(9), pikachu(9), 
+  1407 ;;		 -> pokeball(9), wels1(9), wels(9), 
+  1408 ;;  Addres          1    6[COMRAM] unsigned char 
+  1409 ;; Auto vars:     Size  Location     Type
+  1410 ;;  i               1    7[COMRAM] unsigned char 
+  1411 ;; Return value:  Size  Location     Type
+  1412 ;;                  1    wreg      void 
+  1413 ;; Registers used:
+  1414 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
+  1415 ;; Tracked objects:
+  1416 ;;		On entry : 0/0
+  1417 ;;		On exit  : 0/0
+  1418 ;;		Unchanged: 0/0
+  1419 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1420 ;;      Params:         3       0       0       0       0       0       0       0       0
+  1421 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1422 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1423 ;;      Totals:         4       0       0       0       0       0       0       0       0
+  1424 ;;Total ram usage:        4 bytes
+  1425 ;; Hardware stack levels used:    1
+  1426 ;; Hardware stack levels required when called:    3
+  1427 ;; This function calls:
+  1428 ;;		_SetCGRamAddr
+  1429 ;;		_WriteDataXLCD
+  1430 ;; This function is called by:
+  1431 ;;		_main
+  1432 ;; This function uses a non-reentrant model
+  1433 ;;
+  1434                           
+  1435                           	psect	text3
+  1436  00104E                     __ptext3:
+  1437                           	opt stack 0
+  1438  00104E                     _LCD_WriteChr_CGRAM:
+  1439                           	opt stack 27
+  1440                           
+  1441                           ;incstack = 0
+  1442  00104E  0E00               	movlw	0
+  1443  001050  6E08               	movwf	LCD_WriteChr_CGRAM@i,c
+  1444                           
+  1445                           ;LCD_libreria.c: 66: SetCGRamAddr(Addres*8);
+  1446  001052  5007               	movf	LCD_WriteChr_CGRAM@Addres,w,c
+  1447  001054  0D08               	mullw	8
+  1448  001056  50F3               	movf	prodl,w,c
+  1449  001058  EC4F  F007         	call	_SetCGRamAddr
+  1450                           
+  1451                           ;LCD_libreria.c: 67: for (i=0;i<8;i++)
+  1452  00105C  0E00               	movlw	0
+  1453  00105E  6E08               	movwf	LCD_WriteChr_CGRAM@i,c
+  1454  001060                     l1286:
+  1455  001060  0E07               	movlw	7
+  1456  001062  6408               	cpfsgt	LCD_WriteChr_CGRAM@i,c
+  1457  001064  D001               	goto	l99
+  1458  001066  0012               	return	
+  1459  001068                     l99:
+  1460                           
+  1461                           ;LCD_libreria.c: 68: { WriteDataXLCD(*buffer);
+  1462  001068  C005  FFF6         	movff	LCD_WriteChr_CGRAM@buffer,tblptrl
+  1463  00106C  C006  FFF7         	movff	LCD_WriteChr_CGRAM@buffer+1,tblptrh
+  1464  001070                     	if	0	;tblptru may be non-zero
+  1465  001070                     	endif
+  1466  001070                     	if	0	;tblptru may be non-zero
+  1467  001070                     	endif
+  1468  001070  0008               	tblrd		*
+  1469  001072  50F5               	movf	tablat,w,c
+  1470  001074  ECAD  F007         	call	_WriteDataXLCD
+  1471                           
+  1472                           ;LCD_libreria.c: 69: ++buffer;
+  1473  001078  4A05               	infsnz	LCD_WriteChr_CGRAM@buffer,f,c
+  1474  00107A  2A06               	incf	LCD_WriteChr_CGRAM@buffer+1,f,c
+  1475  00107C  2A08               	incf	LCD_WriteChr_CGRAM@i,f,c
+  1476  00107E  D7F0               	goto	l1286
+  1477  001080                     __end_of_LCD_WriteChr_CGRAM:
+  1478                           	opt stack 0
+  1479                           tblptru	equ	0xFF8
+  1480                           tblptrh	equ	0xFF7
+  1481                           tblptrl	equ	0xFF6
+  1482                           tablat	equ	0xFF5
+  1483                           prodl	equ	0xFF3
+  1484                           wreg	equ	0xFE8
+  1485                           status	equ	0xFD8
+  1486                           
+  1487 ;; *************** function _WriteDataXLCD *****************
+  1488 ;; Defined at:
+  1489 ;;		line 395 in file "LCD_libreria.c"
+  1490 ;; Parameters:    Size  Location     Type
+  1491 ;;  data            1    wreg     unsigned char 
+  1492 ;; Auto vars:     Size  Location     Type
+  1493 ;;  data            1    0[COMRAM] unsigned char 
+  1494 ;; Return value:  Size  Location     Type
+  1495 ;;                  1    wreg      void 
+  1496 ;; Registers used:
+  1497 ;;		wreg, status,2, status,0, cstack
+  1498 ;; Tracked objects:
+  1499 ;;		On entry : 0/0
+  1500 ;;		On exit  : 0/0
+  1501 ;;		Unchanged: 0/0
+  1502 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1503 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1504 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1505 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1506 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  1507 ;;Total ram usage:        1 bytes
+  1508 ;; Hardware stack levels used:    1
+  1509 ;; Hardware stack levels required when called:    2
+  1510 ;; This function calls:
+  1511 ;;		_BusyXLCD
+  1512 ;;		_DelayFor18TCY
+  1513 ;; This function is called by:
+  1514 ;;		_main
+  1515 ;;		_LCD_WriteChr_CGRAM
+  1516 ;;		_putrsXLCD
+  1517 ;;		_putsXLCD
+  1518 ;; This function uses a non-reentrant model
+  1519 ;;
+  1520                           
+  1521                           	psect	text4
+  1522  000F5A                     __ptext4:
+  1523                           	opt stack 0
+  1524  000F5A                     _WriteDataXLCD:
+  1525                           	opt stack 27
+  1526                           
+  1527                           ;incstack = 0
+  1528                           ;WriteDataXLCD@data stored from wreg
+  1529  000F5A  6E01               	movwf	WriteDataXLCD@data,c
+  1530  000F5C                     
+  1531                           ;LCD_libreria.c: 397: while(BusyXLCD());
+  1532  000F5C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1533  000F60  0900               	iorlw	0
+  1534  000F62  A4D8               	btfss	status,2,c
+  1535  000F64  D7FB               	goto	l938
+  1536                           
+  1537                           ;LCD_libreria.c: 415: TRISD &= 0xf0;
+  1538  000F66  0EF0               	movlw	240
+  1539  000F68  1695               	andwf	3989,f,c	;volatile
+  1540                           
+  1541                           ;LCD_libreria.c: 416: PORTD &= 0xf0;
+  1542  000F6A  0EF0               	movlw	240
+  1543  000F6C  1683               	andwf	3971,f,c	;volatile
+  1544                           
+  1545                           ;LCD_libreria.c: 417: PORTD |= ((data>>4)&0x0f);
+  1546  000F6E  3801               	swapf	WriteDataXLCD@data,w,c
+  1547  000F70  0B0F               	andlw	15
+  1548  000F72  0B0F               	andlw	15
+  1549  000F74  1283               	iorwf	3971,f,c	;volatile
+  1550                           
+  1551                           ;LCD_libreria.c: 419: LATDbits.LATD5 = 1;
+  1552  000F76  8A8C               	bsf	3980,5,c	;volatile
+  1553                           
+  1554                           ;LCD_libreria.c: 420: LATDbits.LATD6 = 0;
+  1555  000F78  9C8C               	bcf	3980,6,c	;volatile
+  1556                           
+  1557                           ;LCD_libreria.c: 421: DelayFor18TCY();
+  1558  000F7A  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  1559                           
+  1560                           ;LCD_libreria.c: 422: LATDbits.LATD4 = 1;
+  1561  000F7E  888C               	bsf	3980,4,c	;volatile
+  1562                           
+  1563                           ;LCD_libreria.c: 423: DelayFor18TCY();
+  1564  000F80  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  1565                           
+  1566                           ;LCD_libreria.c: 424: LATDbits.LATD4 = 0;
+  1567  000F84  988C               	bcf	3980,4,c	;volatile
+  1568                           
+  1569                           ;LCD_libreria.c: 429: PORTD &= 0xf0;
+  1570  000F86  0EF0               	movlw	240
+  1571  000F88  1683               	andwf	3971,f,c	;volatile
+  1572                           
+  1573                           ;LCD_libreria.c: 430: PORTD |= (data&0x0f);
+  1574  000F8A  5001               	movf	WriteDataXLCD@data,w,c
+  1575  000F8C  0B0F               	andlw	15
+  1576  000F8E  1283               	iorwf	3971,f,c	;volatile
+  1577                           
+  1578                           ;LCD_libreria.c: 432: DelayFor18TCY();
+  1579  000F90  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  1580                           
+  1581                           ;LCD_libreria.c: 433: LATDbits.LATD4 = 1;
+  1582  000F94  888C               	bsf	3980,4,c	;volatile
+  1583                           
+  1584                           ;LCD_libreria.c: 434: DelayFor18TCY();
+  1585  000F96  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  1586                           
+  1587                           ;LCD_libreria.c: 435: LATDbits.LATD4 = 0;
+  1588  000F9A  988C               	bcf	3980,4,c	;volatile
+  1589                           
+  1590                           ;LCD_libreria.c: 439: TRISD |= 0x0f;
+  1591  000F9C  0E0F               	movlw	15
+  1592  000F9E  1295               	iorwf	3989,f,c	;volatile
+  1593  000FA0  0012               	return	
+  1594  000FA2                     __end_of_WriteDataXLCD:
+  1595                           	opt stack 0
+  1596                           tblptru	equ	0xFF8
+  1597                           tblptrh	equ	0xFF7
+  1598                           tblptrl	equ	0xFF6
+  1599                           tablat	equ	0xFF5
+  1600                           prodl	equ	0xFF3
+  1601                           wreg	equ	0xFE8
+  1602                           status	equ	0xFD8
+  1603                           
+  1604 ;; *************** function _SetCGRamAddr *****************
+  1605 ;; Defined at:
+  1606 ;;		line 252 in file "LCD_libreria.c"
+  1607 ;; Parameters:    Size  Location     Type
+  1608 ;;  CGaddr          1    wreg     unsigned char 
+  1609 ;; Auto vars:     Size  Location     Type
+  1610 ;;  CGaddr          1    3[COMRAM] unsigned char 
+  1611 ;; Return value:  Size  Location     Type
+  1612 ;;                  1    wreg      void 
+  1613 ;; Registers used:
+  1614 ;;		wreg, status,2, status,0, cstack
+  1615 ;; Tracked objects:
+  1616 ;;		On entry : 0/0
+  1617 ;;		On exit  : 0/0
+  1618 ;;		Unchanged: 0/0
+  1619 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1620 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1621 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1622 ;;      Temps:          3       0       0       0       0       0       0       0       0
+  1623 ;;      Totals:         4       0       0       0       0       0       0       0       0
+  1624 ;;Total ram usage:        4 bytes
+  1625 ;; Hardware stack levels used:    1
+  1626 ;; Hardware stack levels required when called:    2
+  1627 ;; This function calls:
+  1628 ;;		_BusyXLCD
+  1629 ;; This function is called by:
+  1630 ;;		_LCD_WriteChr_CGRAM
+  1631 ;; This function uses a non-reentrant model
+  1632 ;;
+  1633                           
+  1634                           	psect	text5
+  1635  000E9E                     __ptext5:
+  1636                           	opt stack 0
+  1637  000E9E                     _SetCGRamAddr:
+  1638                           	opt stack 27
+  1639                           
+  1640                           ;incstack = 0
+  1641                           ;SetCGRamAddr@CGaddr stored from wreg
+  1642  000E9E  6E04               	movwf	SetCGRamAddr@CGaddr,c
+  1643  000EA0                     
+  1644                           ;LCD_libreria.c: 254: while(BusyXLCD());
+  1645  000EA0  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1646  000EA4  0900               	iorlw	0
+  1647  000EA6  A4D8               	btfss	status,2,c
+  1648  000EA8  D7FB               	goto	l966
+  1649                           
+  1650                           ;LCD_libreria.c: 272: TRISD &= 0xf0;
+  1651  000EAA  0EF0               	movlw	240
+  1652  000EAC  1695               	andwf	3989,f,c	;volatile
+  1653                           
+  1654                           ;LCD_libreria.c: 273: PORTD &= 0xf0;
+  1655  000EAE  0EF0               	movlw	240
+  1656  000EB0  1683               	andwf	3971,f,c	;volatile
+  1657                           
+  1658                           ;LCD_libreria.c: 274: PORTD |= (((CGaddr |0b01000000)>>4) & 0x0f);
+  1659  000EB2  5004               	movf	SetCGRamAddr@CGaddr,w,c
+  1660  000EB4  6E01               	movwf	??_SetCGRamAddr& (0+255),c
+  1661  000EB6  6A02               	clrf	(??_SetCGRamAddr+1)& (0+255),c
+  1662  000EB8  0E40               	movlw	64
+  1663  000EBA  1201               	iorwf	??_SetCGRamAddr,f,c
+  1664  000EBC  0E00               	movlw	0
+  1665  000EBE  1202               	iorwf	??_SetCGRamAddr+1,f,c
+  1666  000EC0  0E04               	movlw	4
+  1667  000EC2  6E03               	movwf	(??_SetCGRamAddr+2)& (0+255),c
+  1668  000EC4                     u125:
+  1669  000EC4  3402               	rlcf	??_SetCGRamAddr+1,w,c
+  1670  000EC6  3202               	rrcf	??_SetCGRamAddr+1,f,c
+  1671  000EC8  3201               	rrcf	??_SetCGRamAddr,f,c
+  1672  000ECA  2E03               	decfsz	(??_SetCGRamAddr+2)& (0+255),f,c
+  1673  000ECC  D7FB               	goto	u125
+  1674  000ECE  5001               	movf	??_SetCGRamAddr,w,c
+  1675  000ED0  0B0F               	andlw	15
+  1676  000ED2  1283               	iorwf	3971,f,c	;volatile
+  1677                           
+  1678                           ;LCD_libreria.c: 276: LATDbits.LATD6 = 0;
+  1679  000ED4  9C8C               	bcf	3980,6,c	;volatile
+  1680                           
+  1681                           ;LCD_libreria.c: 277: LATDbits.LATD5 = 0;
+  1682  000ED6  9A8C               	bcf	3980,5,c	;volatile
+  1683                           
+  1684                           ;LCD_libreria.c: 278: _delay((unsigned long)((1)*(20000000L/4000000.0)));
+  1685  000ED8  D000               	nop2		;2 cycle nop
+  1686  000EDA  D000               	nop2		;2 cycle nop
+  1687  000EDC  F000               	nop	
+  1688                           
+  1689                           ;LCD_libreria.c: 279: LATDbits.LATD4 = 1;
+  1690  000EDE  888C               	bsf	3980,4,c	;volatile
+  1691                           
+  1692                           ;LCD_libreria.c: 280: _delay((unsigned long)((1)*(20000000L/4000000.0)));
+  1693  000EE0  D000               	nop2		;2 cycle nop
+  1694  000EE2  D000               	nop2		;2 cycle nop
+  1695  000EE4  F000               	nop	
+  1696                           
+  1697                           ;LCD_libreria.c: 281: LATDbits.LATD4 = 0;
+  1698  000EE6  988C               	bcf	3980,4,c	;volatile
+  1699                           
+  1700                           ;LCD_libreria.c: 286: PORTD &= 0xf0;
+  1701  000EE8  0EF0               	movlw	240
+  1702  000EEA  1683               	andwf	3971,f,c	;volatile
+  1703                           
+  1704                           ;LCD_libreria.c: 287: PORTD |= (CGaddr&0x0f);
+  1705  000EEC  5004               	movf	SetCGRamAddr@CGaddr,w,c
+  1706  000EEE  0B0F               	andlw	15
+  1707  000EF0  1283               	iorwf	3971,f,c	;volatile
+  1708                           
+  1709                           ;LCD_libreria.c: 289: _delay((unsigned long)((1)*(20000000L/4000000.0)));
+  1710  000EF2  D000               	nop2		;2 cycle nop
+  1711  000EF4  D000               	nop2		;2 cycle nop
+  1712  000EF6  F000               	nop	
+  1713                           
+  1714                           ;LCD_libreria.c: 290: LATDbits.LATD4 = 1;
+  1715  000EF8  888C               	bsf	3980,4,c	;volatile
+  1716                           
+  1717                           ;LCD_libreria.c: 291: _delay((unsigned long)((1)*(20000000L/4000000.0)));
+  1718  000EFA  D000               	nop2		;2 cycle nop
+  1719  000EFC  D000               	nop2		;2 cycle nop
+  1720  000EFE  F000               	nop	
+  1721                           
+  1722                           ;LCD_libreria.c: 292: LATDbits.LATD4 = 0;
+  1723  000F00  988C               	bcf	3980,4,c	;volatile
+  1724                           
+  1725                           ;LCD_libreria.c: 296: TRISD |= 0x0f;
+  1726  000F02  0E0F               	movlw	15
+  1727  000F04  1295               	iorwf	3989,f,c	;volatile
+  1728  000F06  0012               	return	
+  1729  000F08                     __end_of_SetCGRamAddr:
+  1730                           	opt stack 0
+  1731                           tblptru	equ	0xFF8
+  1732                           tblptrh	equ	0xFF7
+  1733                           tblptrl	equ	0xFF6
+  1734                           tablat	equ	0xFF5
+  1735                           prodl	equ	0xFF3
+  1736                           wreg	equ	0xFE8
+  1737                           status	equ	0xFD8
+  1738                           
+  1739 ;; *************** function _LCD_Init *****************
+  1740 ;; Defined at:
+  1741 ;;		line 90 in file "Programa_principal.c"
+  1742 ;; Parameters:    Size  Location     Type
+  1743 ;;		None
+  1744 ;; Auto vars:     Size  Location     Type
+  1745 ;;		None
+  1746 ;; Return value:  Size  Location     Type
+  1747 ;;                  1    wreg      void 
+  1748 ;; Registers used:
+  1749 ;;		wreg, status,2, status,0, cstack
+  1750 ;; Tracked objects:
+  1751 ;;		On entry : 0/0
+  1752 ;;		On exit  : 0/0
+  1753 ;;		Unchanged: 0/0
+  1754 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1755 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1756 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1757 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1758 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1759 ;;Total ram usage:        0 bytes
+  1760 ;; Hardware stack levels used:    1
+  1761 ;; Hardware stack levels required when called:    3
+  1762 ;; This function calls:
+  1763 ;;		_BusyXLCD
+  1764 ;;		_OpenXLCD
+  1765 ;;		_WriteCmdXLCD
+  1766 ;; This function is called by:
+  1767 ;;		_main
+  1768 ;; This function uses a non-reentrant model
+  1769 ;;
+  1770                           
+  1771                           	psect	text6
+  1772  0010A2                     __ptext6:
+  1773                           	opt stack 0
+  1774  0010A2                     _LCD_Init:
+  1775                           	opt stack 27
+  1776                           
+  1777                           ;Programa_principal.c: 91: OpenXLCD(0b00101100 & 0b00111000 );
+  1778                           
+  1779                           ;incstack = 0
+  1780  0010A2  0E28               	movlw	40
+  1781  0010A4  ECFD  F006         	call	_OpenXLCD
+  1782  0010A8  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1783  0010AC  0900               	iorlw	0
+  1784  0010AE  A4D8               	btfss	status,2,c
+  1785  0010B0  D7FB               	goto	l42
+  1786                           
+  1787                           ;Programa_principal.c: 93: WriteCmdXLCD(0x06);
+  1788  0010B2  0E06               	movlw	6
+  1789  0010B4  ECD1  F007         	call	_WriteCmdXLCD
+  1790                           
+  1791                           ;Programa_principal.c: 94: WriteCmdXLCD(0x0C);
+  1792  0010B8  0E0C               	movlw	12
+  1793  0010BA  ECD1  F007         	call	_WriteCmdXLCD
+  1794  0010BE  0012               	return		;funcret
+  1795  0010C0                     __end_of_LCD_Init:
+  1796                           	opt stack 0
+  1797                           tblptru	equ	0xFF8
+  1798                           tblptrh	equ	0xFF7
+  1799                           tblptrl	equ	0xFF6
+  1800                           tablat	equ	0xFF5
+  1801                           prodl	equ	0xFF3
+  1802                           wreg	equ	0xFE8
+  1803                           status	equ	0xFD8
+  1804                           
+  1805 ;; *************** function _OpenXLCD *****************
+  1806 ;; Defined at:
+  1807 ;;		line 74 in file "LCD_libreria.c"
+  1808 ;; Parameters:    Size  Location     Type
+  1809 ;;  lcdtype         1    wreg     unsigned char 
+  1810 ;; Auto vars:     Size  Location     Type
+  1811 ;;  lcdtype         1    4[COMRAM] unsigned char 
+  1812 ;; Return value:  Size  Location     Type
+  1813 ;;                  1    wreg      void 
+  1814 ;; Registers used:
+  1815 ;;		wreg, status,2, status,0, cstack
+  1816 ;; Tracked objects:
+  1817 ;;		On entry : 0/0
+  1818 ;;		On exit  : 0/0
+  1819 ;;		Unchanged: 0/0
+  1820 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1821 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1822 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1823 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1824 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  1825 ;;Total ram usage:        1 bytes
+  1826 ;; Hardware stack levels used:    1
+  1827 ;; Hardware stack levels required when called:    2
+  1828 ;; This function calls:
+  1829 ;;		_BusyXLCD
+  1830 ;;		_DelayPORXLCD
+  1831 ;;		_SetDDRamAddr
+  1832 ;;		_WriteCmdXLCD
+  1833 ;; This function is called by:
+  1834 ;;		_LCD_Init
+  1835 ;; This function uses a non-reentrant model
+  1836 ;;
+  1837                           
+  1838                           	psect	text7
+  1839  000DFA                     __ptext7:
+  1840                           	opt stack 0
+  1841  000DFA                     _OpenXLCD:
+  1842                           	opt stack 27
+  1843                           
+  1844                           ;incstack = 0
+  1845                           ;OpenXLCD@lcdtype stored from wreg
+  1846  000DFA  6E05               	movwf	OpenXLCD@lcdtype,c
+  1847                           
+  1848                           ;LCD_libreria.c: 86: PORTD &= 0xf0;
+  1849  000DFC  0EF0               	movlw	240
+  1850  000DFE  1683               	andwf	3971,f,c	;volatile
+  1851                           
+  1852                           ;LCD_libreria.c: 87: TRISD &= 0xF0;
+  1853  000E00  0EF0               	movlw	240
+  1854  000E02  1695               	andwf	3989,f,c	;volatile
+  1855                           
+  1856                           ;LCD_libreria.c: 90: TRISDbits.TRISD6 = 0;
+  1857  000E04  9C95               	bcf	3989,6,c	;volatile
+  1858                           
+  1859                           ;LCD_libreria.c: 91: TRISDbits.TRISD5 = 0;
+  1860  000E06  9A95               	bcf	3989,5,c	;volatile
+  1861                           
+  1862                           ;LCD_libreria.c: 92: TRISDbits.TRISD4 = 0;
+  1863  000E08  9895               	bcf	3989,4,c	;volatile
+  1864                           
+  1865                           ;LCD_libreria.c: 93: LATDbits.LATD6 = 0;
+  1866  000E0A  9C8C               	bcf	3980,6,c	;volatile
+  1867                           
+  1868                           ;LCD_libreria.c: 94: LATDbits.LATD5 = 0;
+  1869  000E0C  9A8C               	bcf	3980,5,c	;volatile
+  1870                           
+  1871                           ;LCD_libreria.c: 95: LATDbits.LATD4 = 0;
+  1872  000E0E  988C               	bcf	3980,4,c	;volatile
+  1873                           
+  1874                           ;LCD_libreria.c: 98: DelayPORXLCD();
+  1875  000E10  EC78  F008         	call	_DelayPORXLCD	;wreg free
+  1876                           
+  1877                           ;LCD_libreria.c: 100: WriteCmdXLCD(0x30);
+  1878  000E14  0E30               	movlw	48
+  1879  000E16  ECD1  F007         	call	_WriteCmdXLCD
+  1880                           
+  1881                           ;LCD_libreria.c: 101: _delay((unsigned long)((1)*(20000000L/4000000.0)));
+  1882  000E1A  D000               	nop2		;2 cycle nop
+  1883  000E1C  D000               	nop2		;2 cycle nop
+  1884  000E1E  F000               	nop	
+  1885                           
+  1886                           ;LCD_libreria.c: 103: WriteCmdXLCD(0x30);
+  1887  000E20  0E30               	movlw	48
+  1888  000E22  ECD1  F007         	call	_WriteCmdXLCD
+  1889                           
+  1890                           ;LCD_libreria.c: 104: _delay((unsigned long)((1)*(20000000L/4000000.0)));
+  1891  000E26  D000               	nop2		;2 cycle nop
+  1892  000E28  D000               	nop2		;2 cycle nop
+  1893  000E2A  F000               	nop	
+  1894                           
+  1895                           ;LCD_libreria.c: 107: WriteCmdXLCD(0x32);
+  1896  000E2C  0E32               	movlw	50
+  1897  000E2E  ECD1  F007         	call	_WriteCmdXLCD
+  1898  000E32  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1899  000E36  0900               	iorlw	0
+  1900  000E38  A4D8               	btfss	status,2,c
+  1901  000E3A  D7FB               	goto	l105
+  1902  000E3C                     u30:
+  1903                           
+  1904                           ;LCD_libreria.c: 113: while(BusyXLCD());
+  1905  000E3C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1906  000E40  0900               	iorlw	0
+  1907  000E42  A4D8               	btfss	status,2,c
+  1908  000E44  D7FB               	goto	u30
+  1909                           
+  1910                           ;LCD_libreria.c: 114: WriteCmdXLCD(lcdtype);
+  1911  000E46  5005               	movf	OpenXLCD@lcdtype,w,c
+  1912  000E48  ECD1  F007         	call	_WriteCmdXLCD
+  1913  000E4C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1914  000E50  0900               	iorlw	0
+  1915  000E52  A4D8               	btfss	status,2,c
+  1916  000E54  D7FB               	goto	l111
+  1917                           
+  1918                           ;LCD_libreria.c: 118: WriteCmdXLCD(0b00001011&0b00001101&0b00001110);
+  1919  000E56  0E08               	movlw	8
+  1920  000E58  ECD1  F007         	call	_WriteCmdXLCD
+  1921  000E5C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1922  000E60  0900               	iorlw	0
+  1923  000E62  A4D8               	btfss	status,2,c
+  1924  000E64  D7FB               	goto	l114
+  1925                           
+  1926                           ;LCD_libreria.c: 120: WriteCmdXLCD(0b00001111&0b00001111&0b00001111);
+  1927  000E66  0E0F               	movlw	15
+  1928  000E68  ECD1  F007         	call	_WriteCmdXLCD
+  1929  000E6C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1930  000E70  0900               	iorlw	0
+  1931  000E72  A4D8               	btfss	status,2,c
+  1932  000E74  D7FB               	goto	l117
+  1933                           
+  1934                           ;LCD_libreria.c: 124: WriteCmdXLCD(0x01);
+  1935  000E76  0E01               	movlw	1
+  1936  000E78  ECD1  F007         	call	_WriteCmdXLCD
+  1937  000E7C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1938  000E80  0900               	iorlw	0
+  1939  000E82  A4D8               	btfss	status,2,c
+  1940  000E84  D7FB               	goto	l120
+  1941                           
+  1942                           ;LCD_libreria.c: 128: WriteCmdXLCD(0b00000100);
+  1943  000E86  0E04               	movlw	4
+  1944  000E88  ECD1  F007         	call	_WriteCmdXLCD
+  1945  000E8C  ECF0  F007         	call	_BusyXLCD	;wreg free
+  1946  000E90  0900               	iorlw	0
+  1947  000E92  A4D8               	btfss	status,2,c
+  1948  000E94  D7FB               	goto	l123
+  1949                           
+  1950                           ;LCD_libreria.c: 132: SetDDRamAddr(0x80);
+  1951  000E96  0E80               	movlw	128
+  1952  000E98  EC84  F007         	call	_SetDDRamAddr
+  1953  000E9C  0012               	return	
+  1954  000E9E                     __end_of_OpenXLCD:
+  1955                           	opt stack 0
+  1956                           tblptru	equ	0xFF8
+  1957                           tblptrh	equ	0xFF7
+  1958                           tblptrl	equ	0xFF6
+  1959                           tablat	equ	0xFF5
+  1960                           prodl	equ	0xFF3
+  1961                           wreg	equ	0xFE8
+  1962                           status	equ	0xFD8
+  1963                           
+  1964 ;; *************** function _WriteCmdXLCD *****************
+  1965 ;; Defined at:
+  1966 ;;		line 162 in file "LCD_libreria.c"
+  1967 ;; Parameters:    Size  Location     Type
+  1968 ;;  cmd             1    wreg     unsigned char 
+  1969 ;; Auto vars:     Size  Location     Type
+  1970 ;;  cmd             1    0[COMRAM] unsigned char 
+  1971 ;; Return value:  Size  Location     Type
+  1972 ;;                  1    wreg      void 
+  1973 ;; Registers used:
+  1974 ;;		wreg, status,2, status,0, cstack
+  1975 ;; Tracked objects:
+  1976 ;;		On entry : 0/0
+  1977 ;;		On exit  : 0/0
+  1978 ;;		Unchanged: 0/0
+  1979 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1980 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1981 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  1982 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1983 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  1984 ;;Total ram usage:        1 bytes
+  1985 ;; Hardware stack levels used:    1
+  1986 ;; Hardware stack levels required when called:    1
+  1987 ;; This function calls:
+  1988 ;;		_DelayFor18TCY
+  1989 ;; This function is called by:
+  1990 ;;		_LCD_Init
+  1991 ;;		_main
+  1992 ;;		_LCD_gotoXY
+  1993 ;;		_OpenXLCD
+  1994 ;; This function uses a non-reentrant model
+  1995 ;;
+  1996                           
+  1997                           	psect	text8
+  1998  000FA2                     __ptext8:
+  1999                           	opt stack 0
+  2000  000FA2                     _WriteCmdXLCD:
+  2001                           	opt stack 29
+  2002                           
+  2003                           ;incstack = 0
+  2004                           ;WriteCmdXLCD@cmd stored from wreg
+  2005  000FA2  6E01               	movwf	WriteCmdXLCD@cmd,c
+  2006                           
+  2007                           ;LCD_libreria.c: 181: TRISD &= 0xf0;
+  2008  000FA4  0EF0               	movlw	240
+  2009  000FA6  1695               	andwf	3989,f,c	;volatile
+  2010                           
+  2011                           ;LCD_libreria.c: 182: PORTD &= 0xf0;
+  2012  000FA8  0EF0               	movlw	240
+  2013  000FAA  1683               	andwf	3971,f,c	;volatile
+  2014                           
+  2015                           ;LCD_libreria.c: 183: PORTD |= (cmd>>4)&0x0f;
+  2016  000FAC  3801               	swapf	WriteCmdXLCD@cmd,w,c
+  2017  000FAE  0B0F               	andlw	15
+  2018  000FB0  0B0F               	andlw	15
+  2019  000FB2  1283               	iorwf	3971,f,c	;volatile
+  2020                           
+  2021                           ;LCD_libreria.c: 185: LATDbits.LATD6 = 0;
+  2022  000FB4  9C8C               	bcf	3980,6,c	;volatile
+  2023                           
+  2024                           ;LCD_libreria.c: 186: LATDbits.LATD5 = 0;
+  2025  000FB6  9A8C               	bcf	3980,5,c	;volatile
+  2026                           
+  2027                           ;LCD_libreria.c: 187: DelayFor18TCY();
+  2028  000FB8  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2029                           
+  2030                           ;LCD_libreria.c: 188: LATDbits.LATD4 = 1;
+  2031  000FBC  888C               	bsf	3980,4,c	;volatile
+  2032                           
+  2033                           ;LCD_libreria.c: 189: DelayFor18TCY();
+  2034  000FBE  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2035                           
+  2036                           ;LCD_libreria.c: 190: LATDbits.LATD4 = 0;
+  2037  000FC2  988C               	bcf	3980,4,c	;volatile
+  2038                           
+  2039                           ;LCD_libreria.c: 195: PORTD &= 0xf0;
+  2040  000FC4  0EF0               	movlw	240
+  2041  000FC6  1683               	andwf	3971,f,c	;volatile
+  2042                           
+  2043                           ;LCD_libreria.c: 196: PORTD |= cmd&0x0f;
+  2044  000FC8  5001               	movf	WriteCmdXLCD@cmd,w,c
+  2045  000FCA  0B0F               	andlw	15
+  2046  000FCC  1283               	iorwf	3971,f,c	;volatile
+  2047                           
+  2048                           ;LCD_libreria.c: 198: DelayFor18TCY();
+  2049  000FCE  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2050                           
+  2051                           ;LCD_libreria.c: 199: LATDbits.LATD4 = 1;
+  2052  000FD2  888C               	bsf	3980,4,c	;volatile
+  2053                           
+  2054                           ;LCD_libreria.c: 200: DelayFor18TCY();
+  2055  000FD4  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2056                           
+  2057                           ;LCD_libreria.c: 201: LATDbits.LATD4 = 0;
+  2058  000FD8  988C               	bcf	3980,4,c	;volatile
+  2059                           
+  2060                           ;LCD_libreria.c: 205: TRISD |= 0x0f;
+  2061  000FDA  0E0F               	movlw	15
+  2062  000FDC  1295               	iorwf	3989,f,c	;volatile
+  2063  000FDE  0012               	return	
+  2064  000FE0                     __end_of_WriteCmdXLCD:
+  2065                           	opt stack 0
+  2066                           tblptru	equ	0xFF8
+  2067                           tblptrh	equ	0xFF7
+  2068                           tblptrl	equ	0xFF6
+  2069                           tablat	equ	0xFF5
+  2070                           prodl	equ	0xFF3
+  2071                           wreg	equ	0xFE8
+  2072                           status	equ	0xFD8
+  2073                           
+  2074 ;; *************** function _SetDDRamAddr *****************
+  2075 ;; Defined at:
+  2076 ;;		line 303 in file "LCD_libreria.c"
+  2077 ;; Parameters:    Size  Location     Type
+  2078 ;;  DDaddr          1    wreg     unsigned char 
+  2079 ;; Auto vars:     Size  Location     Type
+  2080 ;;  DDaddr          1    3[COMRAM] unsigned char 
+  2081 ;; Return value:  Size  Location     Type
+  2082 ;;                  1    wreg      void 
+  2083 ;; Registers used:
+  2084 ;;		wreg, status,2, status,0, cstack
+  2085 ;; Tracked objects:
+  2086 ;;		On entry : 0/0
+  2087 ;;		On exit  : 0/0
+  2088 ;;		Unchanged: 0/0
+  2089 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2090 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2091 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  2092 ;;      Temps:          3       0       0       0       0       0       0       0       0
+  2093 ;;      Totals:         4       0       0       0       0       0       0       0       0
+  2094 ;;Total ram usage:        4 bytes
+  2095 ;; Hardware stack levels used:    1
+  2096 ;; Hardware stack levels required when called:    1
+  2097 ;; This function calls:
+  2098 ;;		_DelayFor18TCY
+  2099 ;; This function is called by:
+  2100 ;;		_OpenXLCD
+  2101 ;; This function uses a non-reentrant model
+  2102 ;;
+  2103                           
+  2104                           	psect	text9
+  2105  000F08                     __ptext9:
+  2106                           	opt stack 0
+  2107  000F08                     _SetDDRamAddr:
+  2108                           	opt stack 27
+  2109                           
+  2110                           ;incstack = 0
+  2111                           ;SetDDRamAddr@DDaddr stored from wreg
+  2112  000F08  6E04               	movwf	SetDDRamAddr@DDaddr,c
+  2113                           
+  2114                           ;LCD_libreria.c: 322: TRISD &= 0xf0;
+  2115  000F0A  0EF0               	movlw	240
+  2116  000F0C  1695               	andwf	3989,f,c	;volatile
+  2117                           
+  2118                           ;LCD_libreria.c: 323: PORTD &= 0xf0;
+  2119  000F0E  0EF0               	movlw	240
+  2120  000F10  1683               	andwf	3971,f,c	;volatile
+  2121                           
+  2122                           ;LCD_libreria.c: 324: PORTD |= (((DDaddr | 0b10000000)>>4) & 0x0f);
+  2123  000F12  5004               	movf	SetDDRamAddr@DDaddr,w,c
+  2124  000F14  6E01               	movwf	??_SetDDRamAddr& (0+255),c
+  2125  000F16  6A02               	clrf	(??_SetDDRamAddr+1)& (0+255),c
+  2126  000F18  8E01               	bsf	??_SetDDRamAddr,7,c
+  2127  000F1A  0E04               	movlw	4
+  2128  000F1C  6E03               	movwf	(??_SetDDRamAddr+2)& (0+255),c
+  2129  000F1E                     u25:
+  2130  000F1E  3402               	rlcf	??_SetDDRamAddr+1,w,c
+  2131  000F20  3202               	rrcf	??_SetDDRamAddr+1,f,c
+  2132  000F22  3201               	rrcf	??_SetDDRamAddr,f,c
+  2133  000F24  2E03               	decfsz	(??_SetDDRamAddr+2)& (0+255),f,c
+  2134  000F26  D7FB               	goto	u25
+  2135  000F28  5001               	movf	??_SetDDRamAddr,w,c
+  2136  000F2A  0B0F               	andlw	15
+  2137  000F2C  1283               	iorwf	3971,f,c	;volatile
+  2138                           
+  2139                           ;LCD_libreria.c: 326: LATDbits.LATD6 = 0;
+  2140  000F2E  9C8C               	bcf	3980,6,c	;volatile
+  2141                           
+  2142                           ;LCD_libreria.c: 327: LATDbits.LATD5 = 0;
+  2143  000F30  9A8C               	bcf	3980,5,c	;volatile
+  2144                           
+  2145                           ;LCD_libreria.c: 328: DelayFor18TCY();
+  2146  000F32  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2147                           
+  2148                           ;LCD_libreria.c: 329: LATDbits.LATD4 = 1;
+  2149  000F36  888C               	bsf	3980,4,c	;volatile
+  2150                           
+  2151                           ;LCD_libreria.c: 330: DelayFor18TCY();
+  2152  000F38  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2153                           
+  2154                           ;LCD_libreria.c: 331: LATDbits.LATD4 = 0;
+  2155  000F3C  988C               	bcf	3980,4,c	;volatile
+  2156                           
+  2157                           ;LCD_libreria.c: 336: PORTD &= 0xf0;
+  2158  000F3E  0EF0               	movlw	240
+  2159  000F40  1683               	andwf	3971,f,c	;volatile
+  2160                           
+  2161                           ;LCD_libreria.c: 337: PORTD |= (DDaddr&0x0f);
+  2162  000F42  5004               	movf	SetDDRamAddr@DDaddr,w,c
+  2163  000F44  0B0F               	andlw	15
+  2164  000F46  1283               	iorwf	3971,f,c	;volatile
+  2165                           
+  2166                           ;LCD_libreria.c: 339: DelayFor18TCY();
+  2167  000F48  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2168                           
+  2169                           ;LCD_libreria.c: 340: LATDbits.LATD4 = 1;
+  2170  000F4C  888C               	bsf	3980,4,c	;volatile
+  2171                           
+  2172                           ;LCD_libreria.c: 341: DelayFor18TCY();
+  2173  000F4E  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2174                           
+  2175                           ;LCD_libreria.c: 342: LATDbits.LATD4 = 0;
+  2176  000F52  988C               	bcf	3980,4,c	;volatile
+  2177                           
+  2178                           ;LCD_libreria.c: 346: TRISD |= 0x0f;
+  2179  000F54  0E0F               	movlw	15
+  2180  000F56  1295               	iorwf	3989,f,c	;volatile
+  2181  000F58  0012               	return	
+  2182  000F5A                     __end_of_SetDDRamAddr:
+  2183                           	opt stack 0
+  2184                           tblptru	equ	0xFF8
+  2185                           tblptrh	equ	0xFF7
+  2186                           tblptrl	equ	0xFF6
+  2187                           tablat	equ	0xFF5
+  2188                           prodl	equ	0xFF3
+  2189                           wreg	equ	0xFE8
+  2190                           status	equ	0xFD8
+  2191                           
+  2192 ;; *************** function _DelayPORXLCD *****************
+  2193 ;; Defined at:
+  2194 ;;		line 44 in file "LCD_libreria.c"
+  2195 ;; Parameters:    Size  Location     Type
+  2196 ;;		None
+  2197 ;; Auto vars:     Size  Location     Type
+  2198 ;;		None
+  2199 ;; Return value:  Size  Location     Type
+  2200 ;;                  1    wreg      void 
+  2201 ;; Registers used:
+  2202 ;;		wreg
+  2203 ;; Tracked objects:
+  2204 ;;		On entry : 0/0
+  2205 ;;		On exit  : 0/0
+  2206 ;;		Unchanged: 0/0
+  2207 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2208 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2209 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2210 ;;      Temps:          1       0       0       0       0       0       0       0       0
+  2211 ;;      Totals:         1       0       0       0       0       0       0       0       0
+  2212 ;;Total ram usage:        1 bytes
+  2213 ;; Hardware stack levels used:    1
+  2214 ;; This function calls:
+  2215 ;;		Nothing
+  2216 ;; This function is called by:
+  2217 ;;		_OpenXLCD
+  2218 ;; This function uses a non-reentrant model
+  2219 ;;
+  2220                           
+  2221                           	psect	text10
+  2222  0010F0                     __ptext10:
+  2223                           	opt stack 0
+  2224  0010F0                     _DelayPORXLCD:
+  2225                           	opt stack 28
+  2226                           
+  2227                           ;LCD_libreria.c: 45: _delay((unsigned long)((15)*(20000000L/4000.0)));
+  2228                           
+  2229                           ;incstack = 0
+  2230  0010F0  0E62               	movlw	98
+  2231  0010F2  6E01               	movwf	??_DelayPORXLCD& (0+255),c
+  2232  0010F4  0E66               	movlw	102
+  2233  0010F6                     u657:
+  2234  0010F6  2EE8               	decfsz	wreg,f,c
+  2235  0010F8  D7FE               	bra	u657
+  2236  0010FA  2E01               	decfsz	??_DelayPORXLCD& (0+255),f,c
+  2237  0010FC  D7FC               	bra	u657
+  2238  0010FE  0012               	return	
+  2239  001100                     __end_of_DelayPORXLCD:
+  2240                           	opt stack 0
+  2241                           tblptru	equ	0xFF8
+  2242                           tblptrh	equ	0xFF7
+  2243                           tblptrl	equ	0xFF6
+  2244                           tablat	equ	0xFF5
+  2245                           prodl	equ	0xFF3
+  2246                           wreg	equ	0xFE8
+  2247                           status	equ	0xFD8
+  2248                           
+  2249 ;; *************** function _BusyXLCD *****************
+  2250 ;; Defined at:
+  2251 ;;		line 446 in file "LCD_libreria.c"
+  2252 ;; Parameters:    Size  Location     Type
+  2253 ;;		None
+  2254 ;; Auto vars:     Size  Location     Type
+  2255 ;;		None
+  2256 ;; Return value:  Size  Location     Type
+  2257 ;;                  1    wreg      unsigned char 
+  2258 ;; Registers used:
+  2259 ;;		wreg, cstack
+  2260 ;; Tracked objects:
+  2261 ;;		On entry : 0/0
+  2262 ;;		On exit  : 0/0
+  2263 ;;		Unchanged: 0/0
+  2264 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2265 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2266 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2267 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2268 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  2269 ;;Total ram usage:        0 bytes
+  2270 ;; Hardware stack levels used:    1
+  2271 ;; Hardware stack levels required when called:    1
+  2272 ;; This function calls:
+  2273 ;;		_DelayFor18TCY
+  2274 ;; This function is called by:
+  2275 ;;		_LCD_Init
+  2276 ;;		_OpenXLCD
+  2277 ;;		_putrsXLCD
+  2278 ;;		_SetCGRamAddr
+  2279 ;;		_WriteDataXLCD
+  2280 ;;		_putsXLCD
+  2281 ;; This function uses a non-reentrant model
+  2282 ;;
+  2283                           
+  2284                           	psect	text11
+  2285  000FE0                     __ptext11:
+  2286                           	opt stack 0
+  2287  000FE0                     _BusyXLCD:
+  2288                           	opt stack 27
+  2289                           
+  2290                           ;LCD_libreria.c: 448: LATDbits.LATD6 = 1;
+  2291                           
+  2292                           ;incstack = 0
+  2293  000FE0  8C8C               	bsf	3980,6,c	;volatile
+  2294                           
+  2295                           ;LCD_libreria.c: 449: LATDbits.LATD5 = 0;
+  2296  000FE2  9A8C               	bcf	3980,5,c	;volatile
+  2297                           
+  2298                           ;LCD_libreria.c: 450: DelayFor18TCY();
+  2299  000FE4  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2300                           
+  2301                           ;LCD_libreria.c: 451: LATDbits.LATD4 = 1;
+  2302  000FE8  888C               	bsf	3980,4,c	;volatile
+  2303                           
+  2304                           ;LCD_libreria.c: 452: DelayFor18TCY();
+  2305  000FEA  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2306                           
+  2307                           ;LCD_libreria.c: 470: if(PORTD&0x08)
+  2308  000FEE  A683               	btfss	3971,3,c	;volatile
+  2309  000FF0  D00A               	goto	l170
+  2310                           
+  2311                           ;LCD_libreria.c: 472: {
+  2312                           ;LCD_libreria.c: 473: LATDbits.LATD4 = 0;
+  2313  000FF2  988C               	bcf	3980,4,c	;volatile
+  2314                           
+  2315                           ;LCD_libreria.c: 474: DelayFor18TCY();
+  2316  000FF4  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2317                           
+  2318                           ;LCD_libreria.c: 475: LATDbits.LATD4 = 1;
+  2319  000FF8  888C               	bsf	3980,4,c	;volatile
+  2320                           
+  2321                           ;LCD_libreria.c: 476: DelayFor18TCY();
+  2322  000FFA  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2323                           
+  2324                           ;LCD_libreria.c: 477: LATDbits.LATD4 = 0;
+  2325  000FFE  988C               	bcf	3980,4,c	;volatile
+  2326                           
+  2327                           ;LCD_libreria.c: 478: LATDbits.LATD6 = 0;
+  2328  001000  9C8C               	bcf	3980,6,c	;volatile
+  2329                           
+  2330                           ;LCD_libreria.c: 479: return 1;
+  2331  001002  0E01               	movlw	1
+  2332                           
+  2333                           ;LCD_libreria.c: 480: }
+  2334  001004  0012               	return	
+  2335  001006                     l170:
+  2336                           
+  2337                           ;LCD_libreria.c: 481: else
+  2338                           ;LCD_libreria.c: 482: {
+  2339                           ;LCD_libreria.c: 483: LATDbits.LATD4 = 0;
+  2340  001006  988C               	bcf	3980,4,c	;volatile
+  2341                           
+  2342                           ;LCD_libreria.c: 484: DelayFor18TCY();
+  2343  001008  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2344                           
+  2345                           ;LCD_libreria.c: 485: LATDbits.LATD4 = 1;
+  2346  00100C  888C               	bsf	3980,4,c	;volatile
+  2347                           
+  2348                           ;LCD_libreria.c: 486: DelayFor18TCY();
+  2349  00100E  EC60  F008         	call	_DelayFor18TCY	;wreg free
+  2350                           
+  2351                           ;LCD_libreria.c: 487: LATDbits.LATD4 = 0;
+  2352  001012  988C               	bcf	3980,4,c	;volatile
+  2353                           
+  2354                           ;LCD_libreria.c: 488: LATDbits.LATD6 = 0;
+  2355  001014  9C8C               	bcf	3980,6,c	;volatile
+  2356                           
+  2357                           ;LCD_libreria.c: 489: return 0;
+  2358  001016  0E00               	movlw	0
+  2359  001018  0012               	return	
+  2360  00101A                     __end_of_BusyXLCD:
+  2361                           	opt stack 0
+  2362                           tblptru	equ	0xFF8
+  2363                           tblptrh	equ	0xFF7
+  2364                           tblptrl	equ	0xFF6
+  2365                           tablat	equ	0xFF5
+  2366                           prodl	equ	0xFF3
+  2367                           wreg	equ	0xFE8
+  2368                           status	equ	0xFD8
+  2369                           
+  2370 ;; *************** function _DelayFor18TCY *****************
+  2371 ;; Defined at:
+  2372 ;;		line 27 in file "LCD_libreria.c"
+  2373 ;; Parameters:    Size  Location     Type
+  2374 ;;		None
+  2375 ;; Auto vars:     Size  Location     Type
+  2376 ;;		None
+  2377 ;; Return value:  Size  Location     Type
+  2378 ;;                  1    wreg      void 
+  2379 ;; Registers used:
+  2380 ;;		None
+  2381 ;; Tracked objects:
+  2382 ;;		On entry : 0/0
+  2383 ;;		On exit  : 0/0
+  2384 ;;		Unchanged: 0/0
+  2385 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2386 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2387 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2388 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2389 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  2390 ;;Total ram usage:        0 bytes
+  2391 ;; Hardware stack levels used:    1
+  2392 ;; This function calls:
+  2393 ;;		Nothing
+  2394 ;; This function is called by:
+  2395 ;;		_WriteCmdXLCD
+  2396 ;;		_SetDDRamAddr
+  2397 ;;		_WriteDataXLCD
+  2398 ;;		_BusyXLCD
+  2399 ;;		_ReadAddrXLCD
+  2400 ;;		_ReadDataXLCD
+  2401 ;; This function uses a non-reentrant model
+  2402 ;;
+  2403                           
+  2404                           	psect	text12
+  2405  0010C0                     __ptext12:
+  2406                           	opt stack 0
+  2407  0010C0                     _DelayFor18TCY:
+  2408                           	opt stack 28
+  2409                           
+  2410                           ;LCD_libreria.c: 28: __nop();
+  2411                           
+  2412                           ;incstack = 0
+  2413  0010C0  F000               	nop	
+  2414                           
+  2415                           ;LCD_libreria.c: 29: __nop();
+  2416  0010C2  F000               	nop	
+  2417                           
+  2418                           ;LCD_libreria.c: 30: __nop();
+  2419  0010C4  F000               	nop	
+  2420                           
+  2421                           ;LCD_libreria.c: 31: __nop();
+  2422  0010C6  F000               	nop	
+  2423                           
+  2424                           ;LCD_libreria.c: 32: __nop();
+  2425  0010C8  F000               	nop	
+  2426                           
+  2427                           ;LCD_libreria.c: 33: __nop();
+  2428  0010CA  F000               	nop	
+  2429                           
+  2430                           ;LCD_libreria.c: 34: __nop();
+  2431  0010CC  F000               	nop	
+  2432                           
+  2433                           ;LCD_libreria.c: 35: __nop();
+  2434  0010CE  F000               	nop	
+  2435                           
+  2436                           ;LCD_libreria.c: 36: __nop();
+  2437  0010D0  F000               	nop	
+  2438                           
+  2439                           ;LCD_libreria.c: 37: __nop();
+  2440  0010D2  F000               	nop	
+  2441                           
+  2442                           ;LCD_libreria.c: 38: __nop();
+  2443  0010D4  F000               	nop	
+  2444                           
+  2445                           ;LCD_libreria.c: 39: __nop();
+  2446  0010D6  F000               	nop	
+  2447                           
+  2448                           ;LCD_libreria.c: 40: return;
+  2449  0010D8  0012               	return		;funcret
+  2450  0010DA                     __end_of_DelayFor18TCY:
+  2451                           	opt stack 0
+  2452                           tblptru	equ	0xFF8
+  2453                           tblptrh	equ	0xFF7
+  2454                           tblptrl	equ	0xFF6
+  2455                           tablat	equ	0xFF5
+  2456                           prodl	equ	0xFF3
+  2457                           wreg	equ	0xFE8
+  2458                           status	equ	0xFD8
+  2459                           
+  2460 ;; *************** function _InitPort *****************
+  2461 ;; Defined at:
+  2462 ;;		line 97 in file "Programa_principal.c"
+  2463 ;; Parameters:    Size  Location     Type
+  2464 ;;		None
+  2465 ;; Auto vars:     Size  Location     Type
+  2466 ;;		None
+  2467 ;; Return value:  Size  Location     Type
+  2468 ;;                  1    wreg      void 
+  2469 ;; Registers used:
+  2470 ;;		None
+  2471 ;; Tracked objects:
+  2472 ;;		On entry : 0/0
+  2473 ;;		On exit  : 0/0
+  2474 ;;		Unchanged: 0/0
+  2475 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2476 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2477 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  2478 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  2479 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  2480 ;;Total ram usage:        0 bytes
+  2481 ;; Hardware stack levels used:    1
+  2482 ;; This function calls:
+  2483 ;;		Nothing
+  2484 ;; This function is called by:
+  2485 ;;		_main
+  2486 ;; This function uses a non-reentrant model
+  2487 ;;
+  2488                           
+  2489                           	psect	text13
+  2490  0010DA                     __ptext13:
+  2491                           	opt stack 0
+  2492  0010DA                     _InitPort:
+  2493                           	opt stack 30
+  2494                           
+  2495                           ;Programa_principal.c: 98: ADCON1bits.PCFG = 0xFF;
+  2496                           
+  2497                           ;incstack = 0
+  2498  0010DA  80C1               	bsf	4033,0,c	;volatile
+  2499  0010DC  82C1               	bsf	4033,1,c	;volatile
+  2500  0010DE  84C1               	bsf	4033,2,c	;volatile
+  2501  0010E0  86C1               	bsf	4033,3,c	;volatile
+  2502                           
+  2503                           ;Programa_principal.c: 99: TRISBbits.RB0 = 1;
+  2504  0010E2  8093               	bsf	3987,0,c	;volatile
+  2505                           
+  2506                           ;Programa_principal.c: 100: TRISBbits.RB7 = 1;
+  2507  0010E4  8E93               	bsf	3987,7,c	;volatile
+  2508                           
+  2509                           ;Programa_principal.c: 101: TRISBbits.RB5 = 1;
+  2510  0010E6  8A93               	bsf	3987,5,c	;volatile
+  2511                           
+  2512                           ;Programa_principal.c: 102: TRISBbits.RB4 = 1;
+  2513  0010E8  8893               	bsf	3987,4,c	;volatile
+  2514                           
+  2515                           ;Programa_principal.c: 103: TRISBbits.RB2 = 1;
+  2516  0010EA  8493               	bsf	3987,2,c	;volatile
+  2517                           
+  2518                           ;Programa_principal.c: 104: INTCON2bits.RBPU = 0;
+  2519  0010EC  9EF1               	bcf	intcon2,7,c	;volatile
+  2520  0010EE  0012               	return		;funcret
+  2521  0010F0                     __end_of_InitPort:
+  2522                           	opt stack 0
+  2523                           tblptru	equ	0xFF8
+  2524                           tblptrh	equ	0xFF7
+  2525                           tblptrl	equ	0xFF6
+  2526                           tablat	equ	0xFF5
+  2527                           prodl	equ	0xFF3
+  2528                           intcon2	equ	0xFF1
+  2529                           wreg	equ	0xFE8
+  2530                           status	equ	0xFD8
+  2531                           tblptru	equ	0xFF8
+  2532                           tblptrh	equ	0xFF7
+  2533                           tblptrl	equ	0xFF6
+  2534                           tablat	equ	0xFF5
+  2535                           prodl	equ	0xFF3
+  2536                           intcon2	equ	0xFF1
+  2537                           wreg	equ	0xFE8
+  2538                           status	equ	0xFD8
+  2539                           
+  2540                           	psect	rparam
+  2541  0000                     tblptru	equ	0xFF8
+  2542                           tblptrh	equ	0xFF7
+  2543                           tblptrl	equ	0xFF6
+  2544                           tablat	equ	0xFF5
+  2545                           prodl	equ	0xFF3
+  2546                           intcon2	equ	0xFF1
+  2547                           wreg	equ	0xFE8
+  2548                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     105
+    Constant    63
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     10      10
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    putrsXLCD@buffer	PTR const unsigned char  size(2) Largest target is 17
+		 -> STR_7(CODE[15]), STR_6(CODE[14]), STR_5(CODE[16]), STR_4(CODE[13]), 
+		 -> STR_3(CODE[13]), STR_2(CODE[17]), STR_1(CODE[17]), 
+
+    LCD_WriteChr_CGRAM@buffer	PTR const unsigned char  size(2) Largest target is 9
+		 -> bulbasaur(CODE[9]), squirtle(CODE[9]), charmander(CODE[9]), pikachu(CODE[9]), 
+		 -> pokeball(CODE[9]), wels1(CODE[9]), wels(CODE[9]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_LCD_WriteChr_CGRAM
+    _putrsXLCD->_WriteDataXLCD
+    _LCD_gotoXY->_WriteCmdXLCD
+    _LCD_WriteChr_CGRAM->_SetCGRamAddr
+    _LCD_Init->_OpenXLCD
+    _OpenXLCD->_SetDDRamAddr
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0    5124
+                                              8 COMRAM     2     2      0
+                           _InitPort
+                           _LCD_Init
+                 _LCD_WriteChr_CGRAM
+                         _LCD_gotoXY
+                       _WriteCmdXLCD
+                      _WriteDataXLCD
+                          _putrsXLCD
+ ---------------------------------------------------------------------------------
+ (1) _putrsXLCD                                            2     0      2     607
+                                              1 COMRAM     2     0      2
+                           _BusyXLCD
+                      _WriteDataXLCD
+ ---------------------------------------------------------------------------------
+ (1) _LCD_gotoXY                                           4     0      4    3136
+                                              1 COMRAM     4     0      4
+                       _WriteCmdXLCD
+ ---------------------------------------------------------------------------------
+ (1) _LCD_WriteChr_CGRAM                                   4     1      3    1216
+                                              4 COMRAM     4     1      3
+                       _SetCGRamAddr
+                      _WriteDataXLCD
+ ---------------------------------------------------------------------------------
+ (2) _WriteDataXLCD                                        1     1      0      30
+                                              0 COMRAM     1     1      0
+                           _BusyXLCD
+                      _DelayFor18TCY
+ ---------------------------------------------------------------------------------
+ (2) _SetCGRamAddr                                         4     4      0      30
+                                              0 COMRAM     4     4      0
+                           _BusyXLCD
+ ---------------------------------------------------------------------------------
+ (1) _LCD_Init                                             0     0      0     105
+                           _BusyXLCD
+                           _OpenXLCD
+                       _WriteCmdXLCD
+ ---------------------------------------------------------------------------------
+ (2) _OpenXLCD                                             1     1      0      75
+                                              4 COMRAM     1     1      0
+                           _BusyXLCD
+                       _DelayPORXLCD
+                       _SetDDRamAddr
+                       _WriteCmdXLCD
+ ---------------------------------------------------------------------------------
+ (1) _WriteCmdXLCD                                         1     1      0      30
+                                              0 COMRAM     1     1      0
+                      _DelayFor18TCY
+ ---------------------------------------------------------------------------------
+ (3) _SetDDRamAddr                                         4     4      0      30
+                                              0 COMRAM     4     4      0
+                      _DelayFor18TCY
+ ---------------------------------------------------------------------------------
+ (3) _DelayPORXLCD                                         1     1      0       0
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ (3) _BusyXLCD                                             0     0      0       0
+                      _DelayFor18TCY
+ ---------------------------------------------------------------------------------
+ (3) _DelayFor18TCY                                        0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _InitPort                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _InitPort
+   _LCD_Init
+     _BusyXLCD
+       _DelayFor18TCY
+     _OpenXLCD
+       _BusyXLCD
+         _DelayFor18TCY
+       _DelayPORXLCD
+       _SetDDRamAddr
+         _DelayFor18TCY
+       _WriteCmdXLCD
+         _DelayFor18TCY
+     _WriteCmdXLCD
+       _DelayFor18TCY
+   _LCD_WriteChr_CGRAM
+     _SetCGRamAddr
+       _BusyXLCD
+         _DelayFor18TCY
+     _WriteDataXLCD
+       _BusyXLCD
+         _DelayFor18TCY
+       _DelayFor18TCY
+   _LCD_gotoXY
+     _WriteCmdXLCD
+       _DelayFor18TCY
+   _WriteCmdXLCD
+     _DelayFor18TCY
+   _WriteDataXLCD
+     _BusyXLCD
+       _DelayFor18TCY
+     _DelayFor18TCY
+   _putrsXLCD
+     _BusyXLCD
+       _DelayFor18TCY
+     _WriteDataXLCD
+       _BusyXLCD
+         _DelayFor18TCY
+       _DelayFor18TCY
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      A       A       1       10.5%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+ABS                  0      0       0      20        0.0%
+BIGRAM             7FF      0       0      21        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
+Symbol Table                                                                                   Sat Feb 17 19:36:31 2018
+
+                         l42 10A8                           l53 09B2                           l54 0B12  
+                         l55 0C0A                           l56 0D02                           l94 1098  
+                         l99 1068                           u30 0E3C                           u25 0F1E  
+                __CFG_BORV$3 000000                 __CFG_CP0$OFF 000000                 __CFG_CP1$OFF 000000  
+               __CFG_CP2$OFF 000000                 __CFG_CP3$OFF 000000                          l111 0E4C  
+                        l120 0E7C                          l105 0E32                          l114 0E5C  
+                        l123 0E8C                          l117 0E6C                          l128 103A  
+                        l129 101C                          l170 1006                          l938 0F5C  
+                        l966 0EA0                 __CFG_CPB$OFF 000000                          u125 0EC4  
+                        u260 108E                          u407 0A0E                          u417 0A2A  
+               __CFG_CPD$OFF 000000                          u507 0BB0                          u427 0A58  
+                        u517 0BE6                          u437 0A88                          u607 0D40  
+                        u527 0C00                          u447 0AB8                          u367 08DC  
+                        u617 0D70                          u537 0C1A                          u457 0AEE  
+                        u377 0912                          u627 0DA0                          u547 0C48  
+                        u467 0B08                          u387 09A4                          u637 0DD6  
+                        u557 0C78                          u477 0B22                          u397 09DC  
+                        u647 0DF0                          u567 0CA8                          u487 0B50  
+                        u657 10F6                          u577 0CDE                          u497 0B80  
+                        u587 0CF8                          u597 0D12                  ?_LCD_gotoXY 0002  
+               __CFG_BOR$OFF 000000        __size_of_WriteCmdXLCD 003E                          wreg 000FE8  
+               __CFG_FOSC$HS 000000                 __CFG_LVP$OFF 000000                 __CFG_WDT$OFF 000000  
+                       l1286 1060                         STR_1 0851                         STR_2 0840  
+                       STR_3 089C                         STR_4 088F                         STR_5 0862  
+                       STR_6 0881                         STR_7 0872                         _main 08AA  
+                       _wels 0837     LCD_WriteChr_CGRAM@Addres 0007       __size_of_WriteDataXLCD 0048  
+                       prodl 000FF3                         start 0000                __CFG_IESO$OFF 000000  
+              __CFG_MCLRE$ON 000000                 ___param_bank 000000                 _WriteCmdXLCD 0FA2  
+           __end_of_LCD_Init 10C0     LCD_WriteChr_CGRAM@buffer 0005                __CFG_PLLDIV$1 000000  
+             __CFG_CCP2MX$ON 000000           _LCD_WriteChr_CGRAM 104E                ?_SetDDRamAddr 0001  
+                      ?_main 0001                ?_SetCGRamAddr 0001                        _PORTD 000F83  
+              __CFG_USBDIV$1 000000                        _TRISD 000F95                __CFG_PWRT$OFF 000000  
+              __CFG_WRT0$OFF 000000                __CFG_WRT1$OFF 000000                __CFG_WRT2$OFF 000000  
+              __CFG_WRT3$OFF 000000               __CFG_EBTR0$OFF 000000               __CFG_FCMEN$OFF 000000  
+             __CFG_EBTR1$OFF 000000               __CFG_EBTR2$OFF 000000               __CFG_EBTR3$OFF 000000  
+              __CFG_WRTB$OFF 000000                __CFG_WRTC$OFF 000000          ?_LCD_WriteChr_CGRAM 0005  
+              __CFG_WRTD$OFF 000000               __CFG_EBTRB$OFF 000000                        _wels1 082E  
+            __end_of_pikachu 0825                        tablat 000FF5                        status 000FD8  
+             __CFG_ICPRT$OFF 000000               __CFG_PBADEN$ON 000000          __size_of_LCD_gotoXY 0022  
+       ??_LCD_WriteChr_CGRAM 0008              __initialization 1100                  LCD_gotoXY@x 0002  
+                LCD_gotoXY@y 0004                 __end_of_main 0DFA                 __end_of_wels 0840  
+           __end_of_BusyXLCD 101A             __end_of_InitPort 10F0        __size_of_DelayPORXLCD 0010  
+             ??_SetDDRamAddr 0001               ??_SetCGRamAddr 0001             __end_of_OpenXLCD 0E9E  
+                     ??_main 0009                __activetblptr 000001                _WriteDataXLCD 0F5A  
+               _DelayPORXLCD 10F0               __CFG_XINST$OFF 000000               __CFG_STVREN$ON 000000  
+             ?_WriteDataXLCD 0001             __end_of_pokeball 082E                 __mediumconst 0000  
+                     tblptrh 000FF7                       tblptrl 000FF6                       tblptru 000FF8  
+           __end_of_squirtle 081C                   __accesstop 0060      __end_of__initialization 1100  
+                  ?_LCD_Init 0001                ___rparam_used 000001               __pcstackCOMRAM 0001  
+              __end_of_wels1 0837                 ??_LCD_gotoXY 0006       __size_of_DelayFor18TCY 001A  
+                  ?_BusyXLCD 0001              WriteCmdXLCD@cmd 0001                    ?_InitPort 0001  
+                 ??_LCD_Init 0006         __end_of_SetDDRamAddr 0F5A         __end_of_SetCGRamAddr 0F08  
+                 _charmander 0801                    ?_OpenXLCD 0001           __end_of_LCD_gotoXY 10A2  
+          WriteDataXLCD@data 0001              ??_WriteDataXLCD 0001           __size_of_putrsXLCD 0034  
+                 ??_BusyXLCD 0001              __CFG_VREGEN$OFF 000000                   ??_InitPort 0001  
+                 ??_OpenXLCD 0005                      __Hparam 0000                      __Lparam 0000  
+              _DelayFor18TCY 10C0            __end_of_bulbasaur 0813                 __psmallconst 0800  
+                    __pcinit 1100              putrsXLCD@buffer 0002                      __ramtop 0800  
+                    __ptext0 08AA                      __ptext1 101A                      __ptext2 1080  
+                    __ptext3 104E                      __ptext4 0F5A                      __ptext5 0E9E  
+                    __ptext6 10A2                      __ptext7 0DFA                      __ptext8 0FA2  
+                    __ptext9 0F08                      _pikachu 081C         end_of_initialization 1100  
+__size_of_LCD_WriteChr_CGRAM 0032               ?_DelayFor18TCY 0001            __end_of_putrsXLCD 104E  
+                  _PORTBbits 000F81                    _TRISBbits 000F93                    _TRISDbits 000F95  
+      __size_of_SetDDRamAddr 0052        __size_of_SetCGRamAddr 006A            __size_of_LCD_Init 001E  
+               _SetDDRamAddr 0F08                 _SetCGRamAddr 0E9E           SetDDRamAddr@DDaddr 0004  
+        start_initialization 1100            __size_of_BusyXLCD 003A            __size_of_InitPort 0016  
+            ??_DelayFor18TCY 0001            __size_of_OpenXLCD 00A4                ?_WriteCmdXLCD 0001  
+           __CFG_LPT1OSC$OFF 000000          LCD_WriteChr_CGRAM@i 0008               ??_WriteCmdXLCD 0001  
+      __end_of_WriteDataXLCD 0FA2                    _bulbasaur 080A                  __smallconst 0800  
+                   _LCD_Init 10A2                     _LATDbits 000F8C                ?_DelayPORXLCD 0001  
+            OpenXLCD@lcdtype 0005             __CFG_WDTPS$32768 000000                   _ADCON1bits 000FC1  
+                  _putrsXLCD 101A           __end_of_charmander 080A                  _INTCON2bits 000FF1  
+                   _BusyXLCD 0FE0                     _InitPort 10DA               ??_DelayPORXLCD 0001  
+                   _OpenXLCD 0DFA   __end_of_LCD_WriteChr_CGRAM 1080                     __Hrparam 0000  
+                   __Lrparam 0000                 __Lsmallconst 0800                   ?_putrsXLCD 0002  
+         SetCGRamAddr@CGaddr 0004                     __ptext10 10F0                     __ptext11 0FE0  
+                   __ptext12 10C0                     __ptext13 10DA         __end_of_WriteCmdXLCD 0FE0  
+              __size_of_main 0550                     _pokeball 0825                     _squirtle 0813  
+      __CFG_CPUDIV$OSC1_PLL2 000000                   _LCD_gotoXY 1080        __end_of_DelayFor18TCY 10DA  
+       __end_of_DelayPORXLCD 1100                  ??_putrsXLCD 0004  

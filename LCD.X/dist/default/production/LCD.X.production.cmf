@@ -1,0 +1,692 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\LCD.X.production.obj
+cinit CODE 0 1100 1100 E 1
+text0 CODE 0 8AA 8AA 550 1
+text1 CODE 0 101A 101A 34 1
+text2 CODE 0 1080 1080 22 1
+text3 CODE 0 104E 104E 32 1
+text4 CODE 0 F5A F5A 48 1
+text5 CODE 0 E9E E9E 6A 1
+text6 CODE 0 10A2 10A2 1E 1
+text7 CODE 0 DFA DFA A4 1
+text8 CODE 0 FA2 FA2 3E 1
+text9 CODE 0 F08 F08 52 1
+text10 CODE 0 10F0 10F0 10 1
+text11 CODE 0 FE0 FE0 3A 1
+text12 CODE 0 10C0 10C0 1A 1
+text13 CODE 0 10DA 10DA 16 1
+cstackCOMRAM COMRAM 1 1 1 A 1
+smallconst SMALLCONST 0 800 800 AA 1
+$C:\Users\Wels\AppData\Local\Temp\s694.obj
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-7FF 1
+SFR F60-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7FF 1
+CONST 110E-7FFF 1
+STACK 60-7FF 1
+SMALLCONST 110E-7FFF 1
+CODE 4-7FF 1
+CODE 110E-7FFF 1
+BIGRAM B-7FF 1
+COMRAM B-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 110E-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\LCD.X.production.obj
+10DA text13 CODE >97:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10DA text13 CODE >98:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10E2 text13 CODE >99:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10E4 text13 CODE >100:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10E6 text13 CODE >101:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10E8 text13 CODE >102:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10EA text13 CODE >103:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10EC text13 CODE >104:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10EE text13 CODE >105:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10C0 text12 CODE >27:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10C0 text12 CODE >28:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10C2 text12 CODE >29:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10C4 text12 CODE >30:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10C6 text12 CODE >31:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10C8 text12 CODE >32:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10CA text12 CODE >33:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10CC text12 CODE >34:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10CE text12 CODE >35:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10D0 text12 CODE >36:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10D2 text12 CODE >37:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10D4 text12 CODE >38:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10D6 text12 CODE >39:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10D8 text12 CODE >41:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FE0 text11 CODE >446:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FE0 text11 CODE >448:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FE2 text11 CODE >449:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FE4 text11 CODE >450:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FE8 text11 CODE >451:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FEA text11 CODE >452:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FEE text11 CODE >470:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FF2 text11 CODE >473:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FF4 text11 CODE >474:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FF8 text11 CODE >475:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FFA text11 CODE >476:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FFE text11 CODE >477:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1000 text11 CODE >478:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1002 text11 CODE >479:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1004 text11 CODE >480:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1006 text11 CODE >481:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1006 text11 CODE >483:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1008 text11 CODE >484:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+100C text11 CODE >485:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+100E text11 CODE >486:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1012 text11 CODE >487:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1014 text11 CODE >488:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1016 text11 CODE >489:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10F0 text10 CODE >44:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10F0 text10 CODE >45:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F08 text9 CODE >303:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F0A text9 CODE >322:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F0E text9 CODE >323:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F12 text9 CODE >324:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F2E text9 CODE >326:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F30 text9 CODE >327:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F32 text9 CODE >328:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F36 text9 CODE >329:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F38 text9 CODE >330:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F3C text9 CODE >331:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F3E text9 CODE >336:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F42 text9 CODE >337:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F48 text9 CODE >339:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F4C text9 CODE >340:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F4E text9 CODE >341:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F52 text9 CODE >342:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F54 text9 CODE >346:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FA2 text8 CODE >162:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FA4 text8 CODE >181:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FA8 text8 CODE >182:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FAC text8 CODE >183:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FB4 text8 CODE >185:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FB6 text8 CODE >186:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FB8 text8 CODE >187:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FBC text8 CODE >188:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FBE text8 CODE >189:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FC2 text8 CODE >190:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FC4 text8 CODE >195:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FC8 text8 CODE >196:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FCE text8 CODE >198:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FD2 text8 CODE >199:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FD4 text8 CODE >200:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FD8 text8 CODE >201:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+FDA text8 CODE >205:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+DFA text7 CODE >74:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+DFC text7 CODE >86:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E00 text7 CODE >87:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E04 text7 CODE >90:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E06 text7 CODE >91:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E08 text7 CODE >92:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E0A text7 CODE >93:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E0C text7 CODE >94:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E0E text7 CODE >95:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E10 text7 CODE >98:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E14 text7 CODE >100:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E1A text7 CODE >101:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E20 text7 CODE >103:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E26 text7 CODE >104:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E2C text7 CODE >107:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E32 text7 CODE >108:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E3C text7 CODE >113:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E46 text7 CODE >114:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E4C text7 CODE >117:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E56 text7 CODE >118:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E5C text7 CODE >119:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E66 text7 CODE >120:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E6C text7 CODE >123:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E76 text7 CODE >124:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E7C text7 CODE >127:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E86 text7 CODE >128:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E8C text7 CODE >131:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+E96 text7 CODE >132:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+10A2 text6 CODE >90:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10A2 text6 CODE >91:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10A8 text6 CODE >92:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10B2 text6 CODE >93:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10B8 text6 CODE >94:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+10BE text6 CODE >95:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+E9E text5 CODE >252:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EA0 text5 CODE >254:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EAA text5 CODE >272:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EAE text5 CODE >273:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EB2 text5 CODE >274:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+ED4 text5 CODE >276:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+ED6 text5 CODE >277:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+ED8 text5 CODE >278:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EDE text5 CODE >279:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EE0 text5 CODE >280:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EE6 text5 CODE >281:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EE8 text5 CODE >286:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EEC text5 CODE >287:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EF2 text5 CODE >289:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EF8 text5 CODE >290:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+EFA text5 CODE >291:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F00 text5 CODE >292:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F02 text5 CODE >296:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F5A text4 CODE >395:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F5C text4 CODE >397:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F66 text4 CODE >415:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F6A text4 CODE >416:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F6E text4 CODE >417:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F76 text4 CODE >419:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F78 text4 CODE >420:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F7A text4 CODE >421:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F7E text4 CODE >422:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F80 text4 CODE >423:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F84 text4 CODE >424:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F86 text4 CODE >429:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F8A text4 CODE >430:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F90 text4 CODE >432:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F94 text4 CODE >433:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F96 text4 CODE >434:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F9A text4 CODE >435:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+F9C text4 CODE >439:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+104E text3 CODE >63:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+104E text3 CODE >64:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1052 text3 CODE >66:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+105C text3 CODE >67:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1068 text3 CODE >68:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1078 text3 CODE >69:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+107C text3 CODE >67:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1080 text2 CODE >55:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1080 text2 CODE >57:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1098 text2 CODE >58:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+101A text1 CODE >138:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+101A text1 CODE >140:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+101C text1 CODE >142:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1026 text1 CODE >143:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+1036 text1 CODE >144:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+103A text1 CODE >140:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+103A text1 CODE >145:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\LCD_libreria.c
+8AA text0 CODE >108:C:\Users\Wels\AppData\Local\Temp\s694.
+8AA text0 CODE >108:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+8AA text0 CODE >109:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+8AE text0 CODE >110:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+8B2 text0 CODE >111:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+8C6 text0 CODE >112:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+8D2 text0 CODE >113:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+8E8 text0 CODE >114:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+8FC text0 CODE >115:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+908 text0 CODE >116:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+91E text0 CODE >117:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+924 text0 CODE >118:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+92A text0 CODE >119:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+93A text0 CODE >120:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+94A text0 CODE >121:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+95A text0 CODE >122:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+96A text0 CODE >123:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+97A text0 CODE >124:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+98A text0 CODE >125:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+99A text0 CODE >126:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+9B2 text0 CODE >127:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+9B2 text0 CODE >128:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+9C6 text0 CODE >129:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+9D2 text0 CODE >130:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+9EA text0 CODE >131:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+9FE text0 CODE >132:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A04 text0 CODE >133:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A1A text0 CODE >134:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A1E text0 CODE >135:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A24 text0 CODE >136:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A34 text0 CODE >137:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A48 text0 CODE >138:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A4E text0 CODE >139:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A64 text0 CODE >140:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A78 text0 CODE >141:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A7E text0 CODE >142:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+A94 text0 CODE >143:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+AA8 text0 CODE >144:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+AAE text0 CODE >145:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+AC4 text0 CODE >146:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+AD8 text0 CODE >147:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+AE4 text0 CODE >148:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+AFC text0 CODE >149:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B02 text0 CODE >150:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B12 text0 CODE >151:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B12 text0 CODE >152:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B16 text0 CODE >153:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B1C text0 CODE >154:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B2C text0 CODE >155:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B40 text0 CODE >156:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B46 text0 CODE >157:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B5C text0 CODE >158:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B70 text0 CODE >159:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B76 text0 CODE >160:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+B8C text0 CODE >161:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+BA0 text0 CODE >162:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+BA6 text0 CODE >163:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+BBC text0 CODE >164:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+BD0 text0 CODE >165:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+BDC text0 CODE >166:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+BF4 text0 CODE >167:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+BFA text0 CODE >168:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C0A text0 CODE >169:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C0A text0 CODE >170:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C0E text0 CODE >171:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C14 text0 CODE >172:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C24 text0 CODE >173:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C38 text0 CODE >174:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C3E text0 CODE >175:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C54 text0 CODE >176:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C68 text0 CODE >177:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C6E text0 CODE >178:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C84 text0 CODE >179:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C98 text0 CODE >180:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+C9E text0 CODE >181:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+CB4 text0 CODE >182:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+CC8 text0 CODE >183:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+CD4 text0 CODE >184:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+CEC text0 CODE >185:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+CF2 text0 CODE >186:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D02 text0 CODE >187:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D02 text0 CODE >188:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D06 text0 CODE >189:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D0C text0 CODE >190:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D1C text0 CODE >191:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D30 text0 CODE >192:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D36 text0 CODE >193:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D4C text0 CODE >194:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D60 text0 CODE >195:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D66 text0 CODE >196:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D7C text0 CODE >197:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D90 text0 CODE >198:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+D96 text0 CODE >199:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+DAC text0 CODE >200:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+DC0 text0 CODE >201:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+DCC text0 CODE >202:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+DE4 text0 CODE >203:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+DEA text0 CODE >204:E:\Wels Theory\Electrónica\Pic18f4550\LCD.X\Programa_principal.c
+1100 cinit CODE >1429:C:\Users\Wels\AppData\Local\Temp\s694.
+1100 cinit CODE >1431:C:\Users\Wels\AppData\Local\Temp\s694.
+1100 cinit CODE >1434:C:\Users\Wels\AppData\Local\Temp\s694.
+1100 cinit CODE >1440:C:\Users\Wels\AppData\Local\Temp\s694.
+1100 cinit CODE >1443:C:\Users\Wels\AppData\Local\Temp\s694.
+1102 cinit CODE >1444:C:\Users\Wels\AppData\Local\Temp\s694.
+1104 cinit CODE >1445:C:\Users\Wels\AppData\Local\Temp\s694.
+1106 cinit CODE >1446:C:\Users\Wels\AppData\Local\Temp\s694.
+1108 cinit CODE >1447:C:\Users\Wels\AppData\Local\Temp\s694.
+110A cinit CODE >1448:C:\Users\Wels\AppData\Local\Temp\s694.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+WriteCmdXLCD@cmd 1 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\LCD.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hspace_1 B 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\LCD.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\s694.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\LCD.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s694.obj
+_main 8AA 0 CODE 0 text0 dist/default/production\LCD.X.production.obj
+_wels 837 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+start 0 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\s694.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_LCD_Init 10A2 0 CODE 0 text6 dist/default/production\LCD.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\LCD.X.production.obj
+_charmander 801 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s694.obj
+__end_of_LCD_Init 10C0 0 CODE 0 text6 dist/default/production\LCD.X.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s694.obj
+intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s694.obj
+intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s694.obj
+intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s694.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\LCD.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\LCD.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\LCD.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s694.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s694.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\LCD.X.production.obj
+__size_of_BusyXLCD 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\LCD.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\LCD.X.production.obj
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\LCD.X.production.obj
+__end_of_charmander 80A 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+_WriteDataXLCD F5A 0 CODE 0 text4 dist/default/production\LCD.X.production.obj
+_INTCON2bits FF1 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\LCD.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+OpenXLCD@lcdtype 5 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+_DelayFor18TCY 10C0 0 CODE 0 text12 dist/default/production\LCD.X.production.obj
+start_initialization 1100 0 CODE 0 cinit dist/default/production\LCD.X.production.obj
+__CFG_PBADEN$ON 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\LCD.X.production.obj
+_TRISBbits F93 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_TRISDbits F95 0 ABS 0 - dist/default/production\LCD.X.production.obj
+putrsXLCD@buffer 2 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_BusyXLCD FE0 0 CODE 0 text11 dist/default/production\LCD.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__size_of_LCD_WriteChr_CGRAM 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__end_of_BusyXLCD 101A 0 CODE 0 text11 dist/default/production\LCD.X.production.obj
+_squirtle 813 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+_LCD_gotoXY 1080 0 CODE 0 text2 dist/default/production\LCD.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\LCD.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\LCD.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\LCD.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\LCD.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\LCD.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\LCD.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\LCD.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\LCD.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\LCD.X.production.obj
+__Hconst 0 0 CONST 0 const dist/default/production\LCD.X.production.obj
+__end_of_squirtle 81C 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\LCD.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\LCD.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\LCD.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\LCD.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\LCD.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\LCD.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\LCD.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\LCD.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\LCD.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\LCD.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\LCD.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\LCD.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\LCD.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\LCD.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\LCD.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\LCD.X.production.obj
+SetCGRamAddr@CGaddr 4 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\LCD.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\LCD.X.production.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\s694.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\LCD.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\LCD.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\LCD.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\LCD.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\LCD.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\LCD.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\LCD.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\LCD.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\LCD.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\LCD.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\LCD.X.production.obj
+__Lconst 0 0 CONST 0 const dist/default/production\LCD.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\LCD.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\LCD.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\LCD.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\LCD.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\LCD.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\LCD.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\LCD.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\LCD.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\LCD.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\LCD.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\LCD.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\LCD.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\LCD.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\LCD.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\LCD.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\LCD.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\LCD.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\LCD.X.production.obj
+__end_of_pikachu 825 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+_PORTBbits F81 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_SetDDRamAddr F08 0 CODE 0 text9 dist/default/production\LCD.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\LCD.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\LCD.X.production.obj
+__Hinit 4 0 CODE 0 init dist/default/production\LCD.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\LCD.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\LCD.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production\LCD.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\LCD.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\LCD.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\LCD.X.production.obj
+__Linit 0 0 CODE 0 init dist/default/production\LCD.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\LCD.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\LCD.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\LCD.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\LCD.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\LCD.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\LCD.X.production.obj
+__size_of_InitPort 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__S1 B 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__size_of_WriteDataXLCD 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_PLLDIV$1 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__size_of_DelayFor18TCY 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__end_of_LCD_gotoXY 10A2 0 CODE 0 text2 dist/default/production\LCD.X.production.obj
+LCD_WriteChr_CGRAM@Addres 7 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\LCD.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\LCD.X.production.obj
+__end_of_putrsXLCD 104E 0 CODE 0 text1 dist/default/production\LCD.X.production.obj
+__size_of_putrsXLCD 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\LCD.X.production.obj
+SetDDRamAddr@DDaddr 4 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\LCD.X.production.obj
+__size_of_SetDDRamAddr 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\LCD.X.production.obj
+__activetblptr 1 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\LCD.X.production.obj
+__end_of_WriteDataXLCD FA2 0 CODE 0 text4 dist/default/production\LCD.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\LCD.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\LCD.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\LCD.X.production.obj
+__Htext13 0 0 ABS 0 text13 dist/default/production\LCD.X.production.obj
+__size_of_OpenXLCD 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__end_of_DelayFor18TCY 10DA 0 CODE 0 text12 dist/default/production\LCD.X.production.obj
+_putrsXLCD 101A 0 CODE 0 text1 dist/default/production\LCD.X.production.obj
+WriteDataXLCD@data 1 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+LCD_gotoXY@x 2 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+LCD_gotoXY@y 4 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+_InitPort 10DA 0 CODE 0 text13 dist/default/production\LCD.X.production.obj
+__ptext10 10F0 0 CODE 0 text10 dist/default/production\LCD.X.production.obj
+__ptext11 FE0 0 CODE 0 text11 dist/default/production\LCD.X.production.obj
+__ptext12 10C0 0 CODE 0 text12 dist/default/production\LCD.X.production.obj
+__ptext13 10DA 0 CODE 0 text13 dist/default/production\LCD.X.production.obj
+__end_of_bulbasaur 813 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\LCD.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\LCD.X.production.obj
+__CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+LCD_WriteChr_CGRAM@i 8 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__end_of_SetDDRamAddr F5A 0 CODE 0 text9 dist/default/production\LCD.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\LCD.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\LCD.X.production.obj
+__end_of_InitPort 10F0 0 CODE 0 text13 dist/default/production\LCD.X.production.obj
+_LATDbits F8C 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\LCD.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\LCD.X.production.obj
+_bulbasaur 80A 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+stackhi 7FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s694.obj
+stacklo 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s694.obj
+__Lintcode 0 0 CODE 0 intcode dist/default/production\LCD.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\LCD.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\LCD.X.production.obj
+_ADCON1bits FC1 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_OpenXLCD DFA 0 CODE 0 text7 dist/default/production\LCD.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\LCD.X.production.obj
+_WriteCmdXLCD FA2 0 CODE 0 text8 dist/default/production\LCD.X.production.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+end_of_initialization 1100 0 CODE 0 cinit dist/default/production\LCD.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\LCD.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\LCD.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__end_of_OpenXLCD E9E 0 CODE 0 text7 dist/default/production\LCD.X.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\LCD.X.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\LCD.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\LCD.X.production.obj
+__pcinit 1100 0 CODE 0 cinit dist/default/production\LCD.X.production.obj
+__ptext0 8AA 0 CODE 0 text0 dist/default/production\LCD.X.production.obj
+__ptext1 101A 0 CODE 0 text1 dist/default/production\LCD.X.production.obj
+__ptext2 1080 0 CODE 0 text2 dist/default/production\LCD.X.production.obj
+__ptext3 104E 0 CODE 0 text3 dist/default/production\LCD.X.production.obj
+__ptext4 F5A 0 CODE 0 text4 dist/default/production\LCD.X.production.obj
+__ptext5 E9E 0 CODE 0 text5 dist/default/production\LCD.X.production.obj
+__ptext6 10A2 0 CODE 0 text6 dist/default/production\LCD.X.production.obj
+__ptext7 DFA 0 CODE 0 text7 dist/default/production\LCD.X.production.obj
+__ptext8 FA2 0 CODE 0 text8 dist/default/production\LCD.X.production.obj
+__ptext9 F08 0 CODE 0 text9 dist/default/production\LCD.X.production.obj
+_SetCGRamAddr E9E 0 CODE 0 text5 dist/default/production\LCD.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\LCD.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\LCD.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\LCD.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\LCD.X.production.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/production\LCD.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\s694.obj
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\LCD.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\LCD.X.production.obj
+_DelayPORXLCD 10F0 0 CODE 0 text10 dist/default/production\LCD.X.production.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\LCD.X.production.obj
+__size_of_WriteCmdXLCD 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_pikachu 81C 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+LCD_WriteChr_CGRAM@buffer 5 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__size_of_LCD_gotoXY 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+___param_bank 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\LCD.X.production.obj
+__end_of__initialization 1100 0 CODE 0 cinit dist/default/production\LCD.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\LCD.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\LCD.X.production.obj
+__size_of_SetCGRamAddr 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\LCD.X.production.obj
+__end_of_WriteCmdXLCD FE0 0 CODE 0 text8 dist/default/production\LCD.X.production.obj
+__size_of_DelayPORXLCD 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__end_of_main DFA 0 CODE 0 text0 dist/default/production\LCD.X.production.obj
+__end_of_wels 840 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__end_of_LCD_WriteChr_CGRAM 1080 0 CODE 0 text3 dist/default/production\LCD.X.production.obj
+_pokeball 825 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+_PORTD F83 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_TRISD F95 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__end_of_wels1 837 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\LCD.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\LCD.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\LCD.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\LCD.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\LCD.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\LCD.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+_wels1 82E 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__end_of_SetCGRamAddr F08 0 CODE 0 text5 dist/default/production\LCD.X.production.obj
+__end_of_pokeball 82E 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__initialization 1100 0 CODE 0 cinit dist/default/production\LCD.X.production.obj
+__end_of_DelayPORXLCD 1100 0 CODE 0 text10 dist/default/production\LCD.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\LCD.X.production.obj
+__Hsmallconst 8AA 0 SMALLCONST 0 smallconst dist/default/production\LCD.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\LCD.X.production.obj
+__size_of_LCD_Init 0 0 ABS 0 - dist/default/production\LCD.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\LCD.X.production.obj
+__Hintcode 0 0 CODE 0 intcode dist/default/production\LCD.X.production.obj
+_LCD_WriteChr_CGRAM 104E 0 CODE 0 text3 dist/default/production\LCD.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+text0 0 8AA 8AA 864 1
+cstackCOMRAM 1 1 1 A 1
+reset_vec 0 0 0 4 1
+smallconst 0 800 800 AA 1
+config 0 300000 300000 E 1
