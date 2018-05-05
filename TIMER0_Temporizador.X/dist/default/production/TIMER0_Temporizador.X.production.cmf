@@ -37,7 +37,7 @@ cstackCOMRAM COMRAM 1 1 1 1E 1
 temp COMRAM 1 1F 1F 1 1
 intcode CODE 0 8 8 6 1
 smallconst SMALLCONST 0 800 800 20 1
-$C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+$C:\Users\Wels\AppData\Local\Temp\s64c.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -347,18 +347,18 @@ BEA text1 CODE >145:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\
 9F2 text0 CODE >54:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
 9F4 text0 CODE >55:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
 9F6 text0 CODE >47:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
-CFC cinit CODE >1248:C:\Users\Wels\AppData\Local\Temp\s8jg.
-CFC cinit CODE >1250:C:\Users\Wels\AppData\Local\Temp\s8jg.
-CFC cinit CODE >1253:C:\Users\Wels\AppData\Local\Temp\s8jg.
-CFC cinit CODE >1259:C:\Users\Wels\AppData\Local\Temp\s8jg.
-CFC cinit CODE >1261:C:\Users\Wels\AppData\Local\Temp\s8jg.
-CFE cinit CODE >1262:C:\Users\Wels\AppData\Local\Temp\s8jg.
-D00 cinit CODE >1264:C:\Users\Wels\AppData\Local\Temp\s8jg.
-D02 cinit CODE >1265:C:\Users\Wels\AppData\Local\Temp\s8jg.
-D04 cinit CODE >1266:C:\Users\Wels\AppData\Local\Temp\s8jg.
-D06 cinit CODE >1267:C:\Users\Wels\AppData\Local\Temp\s8jg.
-D08 cinit CODE >1268:C:\Users\Wels\AppData\Local\Temp\s8jg.
-D0A cinit CODE >1269:C:\Users\Wels\AppData\Local\Temp\s8jg.
+CFC cinit CODE >1248:C:\Users\Wels\AppData\Local\Temp\s64c.
+CFC cinit CODE >1250:C:\Users\Wels\AppData\Local\Temp\s64c.
+CFC cinit CODE >1253:C:\Users\Wels\AppData\Local\Temp\s64c.
+CFC cinit CODE >1259:C:\Users\Wels\AppData\Local\Temp\s64c.
+CFC cinit CODE >1261:C:\Users\Wels\AppData\Local\Temp\s64c.
+CFE cinit CODE >1262:C:\Users\Wels\AppData\Local\Temp\s64c.
+D00 cinit CODE >1264:C:\Users\Wels\AppData\Local\Temp\s64c.
+D02 cinit CODE >1265:C:\Users\Wels\AppData\Local\Temp\s64c.
+D04 cinit CODE >1266:C:\Users\Wels\AppData\Local\Temp\s64c.
+D06 cinit CODE >1267:C:\Users\Wels\AppData\Local\Temp\s64c.
+D08 cinit CODE >1268:C:\Users\Wels\AppData\Local\Temp\s64c.
+D0A cinit CODE >1269:C:\Users\Wels\AppData\Local\Temp\s64c.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -379,16 +379,16 @@ __Hspace_1 20 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production
 __Hspace_2 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\TIMER0_Temporizador.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\TIMER0_Temporizador.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\TIMER0_Temporizador.X.production.obj
 _LATA F89 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 _LATB F8A 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s64c.obj
 _main 984 0 CODE 0 text0 dist/default/production\TIMER0_Temporizador.X.production.obj
 btemp 1F 0 COMRAM 1 temp dist/default/production\TIMER0_Temporizador.X.production.obj
-start E 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+start E 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 __size_ofi2_WriteDataXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 __size_ofi2_DelayFor18TCY 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
@@ -398,12 +398,12 @@ __Hpowerup E 0 CODE 0 powerup dist/default/production\TIMER0_Temporizador.X.prod
 i2LCD_gotoXY@x 2 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
 i2LCD_gotoXY@y 4 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
 _T0CONbits FD5 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __end_of_LCD_Init C94 0 CODE 0 text5 dist/default/production\TIMER0_Temporizador.X.production.obj
-intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
-intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
-intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
-intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s64c.obj
+intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s64c.obj
+intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s64c.obj
+intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\TIMER0_Temporizador.X.production.obj
 wtemp6 20 0 COMRAM 1 temp dist/default/production\TIMER0_Temporizador.X.production.obj
@@ -418,8 +418,8 @@ __Hifardata 0 0 CODE 0 ifardata dist/default/production\TIMER0_Temporizador.X.pr
 __end_ofi2_LCD_gotoXY C76 0 CODE 0 text17 dist/default/production\TIMER0_Temporizador.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\TIMER0_Temporizador.X.production.obj
 __end_of_ISR_TIMER_0 8E0 0 CODE 0 intcode_body dist/default/production\TIMER0_Temporizador.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s8jg.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s64c.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\TIMER0_Temporizador.X.production.obj
 __size_of_BusyXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\TIMER0_Temporizador.X.production.obj
@@ -471,7 +471,7 @@ __Htext8 0 0 ABS 0 text8 dist/default/production\TIMER0_Temporizador.X.productio
 __Htext9 0 0 ABS 0 text9 dist/default/production\TIMER0_Temporizador.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\TIMER0_Temporizador.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\TIMER0_Temporizador.X.production.obj
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\TIMER0_Temporizador.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\TIMER0_Temporizador.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
@@ -591,8 +591,8 @@ _LATDbits F8C 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\TIMER0_Temporizador.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\TIMER0_Temporizador.X.production.obj
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s8jg.obj
-stacklo 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+stackhi 7FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s64c.obj
+stacklo 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\TIMER0_Temporizador.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\TIMER0_Temporizador.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\TIMER0_Temporizador.X.production.obj
@@ -638,7 +638,7 @@ __Ltext17 0 0 ABS 0 text17 dist/default/production\TIMER0_Temporizador.X.product
 __Ltext18 0 0 ABS 0 text18 dist/default/production\TIMER0_Temporizador.X.production.obj
 __Ltext19 0 0 ABS 0 text19 dist/default/production\TIMER0_Temporizador.X.production.obj
 __end_ofi2_DelayFor18TCY CFC 0 CODE 0 text19 dist/default/production\TIMER0_Temporizador.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\s64c.obj
 __Lpowerup E 0 CODE 0 powerup dist/default/production\TIMER0_Temporizador.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\TIMER0_Temporizador.X.production.obj
 _DelayPORXLCD D0E 0 CODE 0 text9 dist/default/production\TIMER0_Temporizador.X.production.obj
