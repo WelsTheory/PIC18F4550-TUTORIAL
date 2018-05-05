@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %CMF
 # %PSECTS Section
 # For each object file, details of its psects are enumerated here.
@@ -733,3 +734,740 @@ reset_vec 0 0 0 4 1
 intcode 0 8 8 A 1
 smallconst 0 800 800 20 1
 config 0 300000 300000 E 1
+=======
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\TIMER0_Temporizador.X.production.obj
+cinit CODE 0 CFC CFC 12 1
+intcode_body CODE 0 820 820 C0 1
+text0 CODE 0 984 984 74 1
+text1 CODE 0 BCA BCA 34 1
+text2 CODE 0 A4A A4A 48 1
+text3 CODE 0 C94 C94 1A 1
+text4 CODE 0 C32 C32 22 1
+text5 CODE 0 C76 C76 1E 1
+text6 CODE 0 8E0 8E0 A4 1
+text7 CODE 0 ADA ADA 3E 1
+text8 CODE 0 9F8 9F8 52 1
+text9 CODE 0 D0E D0E 10 1
+text10 CODE 0 B56 B56 3A 1
+text11 CODE 0 CAE CAE 1A 1
+text12 CODE 0 CC8 CC8 1A 1
+text14 CODE 0 BFE BFE 34 1
+text15 CODE 0 A92 A92 48 1
+text16 CODE 0 B90 B90 3A 1
+text17 CODE 0 C54 C54 22 1
+text18 CODE 0 B18 B18 3E 1
+text19 CODE 0 CE2 CE2 1A 1
+cstackCOMRAM COMRAM 1 1 1 1E 1
+temp COMRAM 1 1F 1F 1 1
+intcode CODE 0 8 8 6 1
+smallconst SMALLCONST 0 800 800 20 1
+$C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 E E 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-7FF 1
+SFR F60-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 12-7FF 1
+CONST D1E-7FFF 1
+STACK 60-7FF 1
+SMALLCONST D1E-7FFF 1
+CODE 4-7 1
+CODE 12-7FF 1
+CODE D1E-7FFF 1
+BIGRAM 20-7FF 1
+COMRAM 20-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST D1E-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\TIMER0_Temporizador.X.production.obj
+8 intcode CODE >26:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+8 intcode CODE >60:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CE2 text19 CODE >27:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CE2 text19 CODE >28:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CE4 text19 CODE >29:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CE6 text19 CODE >30:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CE8 text19 CODE >31:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CEA text19 CODE >32:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CEC text19 CODE >33:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CEE text19 CODE >34:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CF0 text19 CODE >35:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CF2 text19 CODE >36:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CF4 text19 CODE >37:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CF6 text19 CODE >38:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CF8 text19 CODE >39:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CFA text19 CODE >41:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B18 text18 CODE >162:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B1A text18 CODE >181:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B1E text18 CODE >182:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B22 text18 CODE >183:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B2A text18 CODE >185:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B2C text18 CODE >186:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B2E text18 CODE >187:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B32 text18 CODE >188:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B34 text18 CODE >189:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B38 text18 CODE >190:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B3A text18 CODE >195:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B3E text18 CODE >196:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B44 text18 CODE >198:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B48 text18 CODE >199:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B4A text18 CODE >200:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B4E text18 CODE >201:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B50 text18 CODE >205:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C54 text17 CODE >55:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C54 text17 CODE >57:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C6C text17 CODE >58:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B90 text16 CODE >446:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B90 text16 CODE >448:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B92 text16 CODE >449:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B94 text16 CODE >450:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B98 text16 CODE >451:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B9A text16 CODE >452:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B9E text16 CODE >470:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BA2 text16 CODE >473:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BA4 text16 CODE >474:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BA8 text16 CODE >475:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BAA text16 CODE >476:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BAE text16 CODE >477:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BB0 text16 CODE >478:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BB2 text16 CODE >479:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BB4 text16 CODE >480:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BB6 text16 CODE >481:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BB6 text16 CODE >483:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BB8 text16 CODE >484:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BBC text16 CODE >485:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BBE text16 CODE >486:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BC2 text16 CODE >487:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BC4 text16 CODE >488:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BC6 text16 CODE >489:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A92 text15 CODE >395:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A94 text15 CODE >397:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A9E text15 CODE >415:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AA2 text15 CODE >416:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AA6 text15 CODE >417:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AAE text15 CODE >419:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AB0 text15 CODE >420:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AB2 text15 CODE >421:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AB6 text15 CODE >422:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AB8 text15 CODE >423:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+ABC text15 CODE >424:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+ABE text15 CODE >429:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AC2 text15 CODE >430:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AC8 text15 CODE >432:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+ACC text15 CODE >433:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+ACE text15 CODE >434:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AD2 text15 CODE >435:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AD4 text15 CODE >439:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BFE text14 CODE >138:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BFE text14 CODE >140:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C00 text14 CODE >142:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C0A text14 CODE >143:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C1A text14 CODE >144:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C1E text14 CODE >140:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C1E text14 CODE >145:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+820 intcode_body CODE >60:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+86A intcode_body CODE >61:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+86E intcode_body CODE >62:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+882 intcode_body CODE >63:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+88E intcode_body CODE >64:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+890 intcode_body CODE >65:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+892 intcode_body CODE >66:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+894 intcode_body CODE >67:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+894 intcode_body CODE >68:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CC8 text12 CODE >20:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CC8 text12 CODE >21:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CD0 text12 CODE >22:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CD4 text12 CODE >23:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CD8 text12 CODE >24:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CDC text12 CODE >25:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CE0 text12 CODE >26:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CAE text11 CODE >27:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CAE text11 CODE >28:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CB0 text11 CODE >29:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CB2 text11 CODE >30:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CB4 text11 CODE >31:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CB6 text11 CODE >32:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CB8 text11 CODE >33:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CBA text11 CODE >34:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CBC text11 CODE >35:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CBE text11 CODE >36:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CC0 text11 CODE >37:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CC2 text11 CODE >38:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CC4 text11 CODE >39:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+CC6 text11 CODE >41:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B56 text10 CODE >446:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B56 text10 CODE >448:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B58 text10 CODE >449:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B5A text10 CODE >450:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B5E text10 CODE >451:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B60 text10 CODE >452:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B64 text10 CODE >470:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B68 text10 CODE >473:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B6A text10 CODE >474:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B6E text10 CODE >475:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B70 text10 CODE >476:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B74 text10 CODE >477:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B76 text10 CODE >478:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B78 text10 CODE >479:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B7A text10 CODE >480:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B7C text10 CODE >481:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B7C text10 CODE >483:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B7E text10 CODE >484:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B82 text10 CODE >485:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B84 text10 CODE >486:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B88 text10 CODE >487:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B8A text10 CODE >488:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B8C text10 CODE >489:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+D0E text9 CODE >44:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+D0E text9 CODE >45:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+9F8 text8 CODE >303:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+9FA text8 CODE >322:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+9FE text8 CODE >323:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A02 text8 CODE >324:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A1E text8 CODE >326:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A20 text8 CODE >327:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A22 text8 CODE >328:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A26 text8 CODE >329:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A28 text8 CODE >330:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A2C text8 CODE >331:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A2E text8 CODE >336:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A32 text8 CODE >337:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A38 text8 CODE >339:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A3C text8 CODE >340:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A3E text8 CODE >341:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A42 text8 CODE >342:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A44 text8 CODE >346:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+ADA text7 CODE >162:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+ADC text7 CODE >181:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AE0 text7 CODE >182:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AE4 text7 CODE >183:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AEC text7 CODE >185:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AEE text7 CODE >186:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AF0 text7 CODE >187:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AF4 text7 CODE >188:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AF6 text7 CODE >189:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AFA text7 CODE >190:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+AFC text7 CODE >195:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B00 text7 CODE >196:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B06 text7 CODE >198:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B0A text7 CODE >199:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B0C text7 CODE >200:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B10 text7 CODE >201:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+B12 text7 CODE >205:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8E0 text6 CODE >74:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8E2 text6 CODE >86:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8E6 text6 CODE >87:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8EA text6 CODE >90:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8EC text6 CODE >91:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8EE text6 CODE >92:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8F0 text6 CODE >93:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8F2 text6 CODE >94:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8F4 text6 CODE >95:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8F6 text6 CODE >98:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+8FA text6 CODE >100:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+900 text6 CODE >101:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+906 text6 CODE >103:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+90C text6 CODE >104:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+912 text6 CODE >107:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+918 text6 CODE >108:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+922 text6 CODE >113:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+92C text6 CODE >114:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+932 text6 CODE >117:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+93C text6 CODE >118:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+942 text6 CODE >119:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+94C text6 CODE >120:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+952 text6 CODE >123:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+95C text6 CODE >124:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+962 text6 CODE >127:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+96C text6 CODE >128:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+972 text6 CODE >131:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+97C text6 CODE >132:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C76 text5 CODE >13:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C76 text5 CODE >14:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C7C text5 CODE >15:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C86 text5 CODE >16:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C8C text5 CODE >17:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C92 text5 CODE >18:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C32 text4 CODE >55:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C32 text4 CODE >57:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C4A text4 CODE >58:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+C94 text3 CODE >28:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C94 text3 CODE >29:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C96 text3 CODE >30:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C98 text3 CODE >31:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+C9A text3 CODE >32:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CA0 text3 CODE >33:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CA2 text3 CODE >34:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CA4 text3 CODE >35:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CA6 text3 CODE >36:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CA8 text3 CODE >37:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CAA text3 CODE >38:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CAC text3 CODE >39:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+A4A text2 CODE >395:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A4C text2 CODE >397:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A56 text2 CODE >415:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A5A text2 CODE >416:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A5E text2 CODE >417:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A66 text2 CODE >419:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A68 text2 CODE >420:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A6A text2 CODE >421:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A6E text2 CODE >422:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A70 text2 CODE >423:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A74 text2 CODE >424:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A76 text2 CODE >429:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A7A text2 CODE >430:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A80 text2 CODE >432:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A84 text2 CODE >433:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A86 text2 CODE >434:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A8A text2 CODE >435:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+A8C text2 CODE >439:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BCA text1 CODE >138:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BCA text1 CODE >140:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BCC text1 CODE >142:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BD6 text1 CODE >143:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BE6 text1 CODE >144:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BEA text1 CODE >140:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+BEA text1 CODE >145:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+984 text0 CODE >41:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+984 text0 CODE >42:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+988 text0 CODE >43:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+98C text0 CODE >44:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+990 text0 CODE >45:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9A4 text0 CODE >46:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9B0 text0 CODE >47:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9B0 text0 CODE >48:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9B4 text0 CODE >49:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9CA text0 CODE >50:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9CE text0 CODE >51:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9D2 text0 CODE >52:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9E6 text0 CODE >53:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9F2 text0 CODE >54:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9F4 text0 CODE >55:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+9F6 text0 CODE >47:E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+CFC cinit CODE >1248:C:\Users\Wels\AppData\Local\Temp\s8jg.
+CFC cinit CODE >1250:C:\Users\Wels\AppData\Local\Temp\s8jg.
+CFC cinit CODE >1253:C:\Users\Wels\AppData\Local\Temp\s8jg.
+CFC cinit CODE >1259:C:\Users\Wels\AppData\Local\Temp\s8jg.
+CFC cinit CODE >1261:C:\Users\Wels\AppData\Local\Temp\s8jg.
+CFE cinit CODE >1262:C:\Users\Wels\AppData\Local\Temp\s8jg.
+D00 cinit CODE >1264:C:\Users\Wels\AppData\Local\Temp\s8jg.
+D02 cinit CODE >1265:C:\Users\Wels\AppData\Local\Temp\s8jg.
+D04 cinit CODE >1266:C:\Users\Wels\AppData\Local\Temp\s8jg.
+D06 cinit CODE >1267:C:\Users\Wels\AppData\Local\Temp\s8jg.
+D08 cinit CODE >1268:C:\Users\Wels\AppData\Local\Temp\s8jg.
+D0A cinit CODE >1269:C:\Users\Wels\AppData\Local\Temp\s8jg.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+WriteCmdXLCD@cmd 18 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\TIMER0_Temporizador.X.production.obj
+i2_LCD_gotoXY C54 0 CODE 0 text17 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hspace_1 20 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\TIMER0_Temporizador.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\TIMER0_Temporizador.X.production.obj
+_LATA F89 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_LATB F8A 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+_main 984 0 CODE 0 text0 dist/default/production\TIMER0_Temporizador.X.production.obj
+btemp 1F 0 COMRAM 1 temp dist/default/production\TIMER0_Temporizador.X.production.obj
+start E 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_ofi2_WriteDataXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_ofi2_DelayFor18TCY 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_LCD_Init C76 0 CODE 0 text5 dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_ofi2_LCD_gotoXY 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hpowerup E 0 CODE 0 powerup dist/default/production\TIMER0_Temporizador.X.production.obj
+i2LCD_gotoXY@x 2 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+i2LCD_gotoXY@y 4 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+_T0CONbits FD5 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__end_of_LCD_Init C94 0 CODE 0 text5 dist/default/production\TIMER0_Temporizador.X.production.obj
+intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+wtemp6 20 0 COMRAM 1 temp dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_Timer0_Init 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+i2WriteDataXLCD@data 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_ofi2_LCD_gotoXY C76 0 CODE 0 text17 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_ISR_TIMER_0 8E0 0 CODE 0 intcode_body dist/default/production\TIMER0_Temporizador.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_BusyXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hintcodelo E 0 CODE 0 intcodelo dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_ofi2_BusyXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_ofi2_putrsXLCD C32 0 CODE 0 text14 dist/default/production\TIMER0_Temporizador.X.production.obj
+_WriteDataXLCD A4A 0 CODE 0 text2 dist/default/production\TIMER0_Temporizador.X.production.obj
+i2putrsXLCD@buffer 2 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lintcodelo E 0 CODE 0 intcodelo dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+OpenXLCD@lcdtype 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+_DelayFor18TCY CAE 0 CODE 0 text11 dist/default/production\TIMER0_Temporizador.X.production.obj
+start_initialization CFC 0 CODE 0 cinit dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_PBADEN$ON 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+_TRISDbits F95 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+putrsXLCD@buffer 19 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_BusyXLCD B56 0 CODE 0 text10 dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_BusyXLCD B90 0 CODE 0 text10 dist/default/production\TIMER0_Temporizador.X.production.obj
+_LCD_gotoXY C32 0 CODE 0 text4 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hconst 0 0 CONST 0 const dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext7 0 0 ABS 0 text7 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext9 0 0 ABS 0 text9 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\TIMER0_Temporizador.X.production.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+i2_WriteCmdXLCD B18 0 CODE 0 text18 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lconst 0 0 CONST 0 const dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_ISR_TIMER_0 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\TIMER0_Temporizador.X.production.obj
+_PORTBbits F81 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_SetDDRamAddr 9F8 0 CODE 0 text8 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hinit 12 0 CODE 0 init dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htemp 20 0 COMRAM 1 temp dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\TIMER0_Temporizador.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\TIMER0_Temporizador.X.production.obj
+__Linit E 0 CODE 0 init dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltemp 1F 0 COMRAM 1 temp dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+int$flags 1F 0 COMRAM 1 temp dist/default/production\TIMER0_Temporizador.X.production.obj
+_Timer0_Init C94 0 CODE 0 text3 dist/default/production\TIMER0_Temporizador.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_InitPort 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__S1 20 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_WriteDataXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_PLLDIV$1 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_DelayFor18TCY 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_LCD_gotoXY C54 0 CODE 0 text4 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_ofi2_putrsXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_putrsXLCD BFE 0 CODE 0 text1 dist/default/production\TIMER0_Temporizador.X.production.obj
+int_func 820 0 CODE 0 intcode_body dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_putrsXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_ofi2_WriteCmdXLCD B56 0 CODE 0 text18 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\TIMER0_Temporizador.X.production.obj
+SetDDRamAddr@DDaddr 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_SetDDRamAddr 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\TIMER0_Temporizador.X.production.obj
+__activetblptr 1 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_WriteDataXLCD A92 0 CODE 0 text2 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext10 0 0 ABS 0 text10 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext11 0 0 ABS 0 text11 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext12 0 0 ABS 0 text12 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_OpenXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_DelayFor18TCY CC8 0 CODE 0 text11 dist/default/production\TIMER0_Temporizador.X.production.obj
+_putrsXLCD BCA 0 CODE 0 text1 dist/default/production\TIMER0_Temporizador.X.production.obj
+WriteDataXLCD@data 18 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+LCD_gotoXY@x 19 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+LCD_gotoXY@y 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+_InitPort CC8 0 CODE 0 text12 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext10 B56 0 CODE 0 text10 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext11 CAE 0 CODE 0 text11 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext12 CC8 0 CODE 0 text12 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext14 BFE 0 CODE 0 text14 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext15 A92 0 CODE 0 text15 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext16 B90 0 CODE 0 text16 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext17 C54 0 CODE 0 text17 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext18 B18 0 CODE 0 text18 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext19 CE2 0 CODE 0 text19 dist/default/production\TIMER0_Temporizador.X.production.obj
+__pintcode_body 820 0 CODE 0 intcode_body dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_SetDDRamAddr A4A 0 CODE 0 text8 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_InitPort CE2 0 CODE 0 text12 dist/default/production\TIMER0_Temporizador.X.production.obj
+_LATAbits F89 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_LATDbits F8C 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+stackhi 7FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+stacklo 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__Lintcode 8 0 CODE 0 intcode dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\TIMER0_Temporizador.X.production.obj
+_ADCON1bits FC1 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_OpenXLCD 8E0 0 CODE 0 text6 dist/default/production\TIMER0_Temporizador.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+_WriteCmdXLCD ADA 0 CODE 0 text7 dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+end_of_initialization CFC 0 CODE 0 cinit dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_OpenXLCD 984 0 CODE 0 text6 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\TIMER0_Temporizador.X.production.obj
+__pcinit CFC 0 CODE 0 cinit dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext0 984 0 CODE 0 text0 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext1 BCA 0 CODE 0 text1 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext2 A4A 0 CODE 0 text2 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext3 C94 0 CODE 0 text3 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext4 C32 0 CODE 0 text4 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext5 C76 0 CODE 0 text5 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext6 8E0 0 CODE 0 text6 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext7 ADA 0 CODE 0 text7 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext8 9F8 0 CODE 0 text8 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ptext9 D0E 0 CODE 0 text9 dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_ofi2_WriteDataXLCD ADA 0 CODE 0 text15 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\TIMER0_Temporizador.X.production.obj
+_ISR_TIMER_0 8 0 CODE 0 intcode dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_ofi2_DelayFor18TCY CFC 0 CODE 0 text19 dist/default/production\TIMER0_Temporizador.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\s8jg.obj
+__Lpowerup E 0 CODE 0 powerup dist/default/production\TIMER0_Temporizador.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\TIMER0_Temporizador.X.production.obj
+_DelayPORXLCD D0E 0 CODE 0 text9 dist/default/production\TIMER0_Temporizador.X.production.obj
+i2_BusyXLCD B90 0 CODE 0 text16 dist/default/production\TIMER0_Temporizador.X.production.obj
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_WriteCmdXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_LCD_gotoXY 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+___param_bank 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of__initialization CFC 0 CODE 0 cinit dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\TIMER0_Temporizador.X.production.obj
+i2_putrsXLCD BFE 0 CODE 0 text14 dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_Timer0_Init CAE 0 CODE 0 text3 dist/default/production\TIMER0_Temporizador.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_WriteCmdXLCD B18 0 CODE 0 text7 dist/default/production\TIMER0_Temporizador.X.production.obj
+i2_WriteDataXLCD A92 0 CODE 0 text15 dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_DelayPORXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+i2_DelayFor18TCY CE2 0 CODE 0 text19 dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_PWRT$ON 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_main 9F8 0 CODE 0 text0 dist/default/production\TIMER0_Temporizador.X.production.obj
+__pintcode 8 0 CODE 0 intcode dist/default/production\TIMER0_Temporizador.X.production.obj
+_PORTD F83 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_TMR0H FD7 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_TMR0L FD6 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_TRISA F92 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_TRISB F93 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+_TRISD F95 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\TIMER0_Temporizador.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_ofi2_BusyXLCD BCA 0 CODE 0 text16 dist/default/production\TIMER0_Temporizador.X.production.obj
+__initialization CFC 0 CODE 0 cinit dist/default/production\TIMER0_Temporizador.X.production.obj
+i2WriteCmdXLCD@cmd 1 0 COMRAM 1 cstackCOMRAM dist/default/production\TIMER0_Temporizador.X.production.obj
+__end_of_DelayPORXLCD D1E 0 CODE 0 text9 dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hsmallconst 820 0 SMALLCONST 0 smallconst dist/default/production\TIMER0_Temporizador.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_of_LCD_Init 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__size_ofi2_WriteCmdXLCD 0 0 ABS 0 - dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\TIMER0_Temporizador.X.production.obj
+__Hintcode E 0 CODE 0 intcode dist/default/production\TIMER0_Temporizador.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+intcode_body 0 820 820 4FE 1
+cstackCOMRAM 1 1 1 1F 1
+reset_vec 0 0 0 4 1
+intcode 0 8 8 A 1
+smallconst 0 800 800 20 1
+config 0 300000 300000 E 1
+>>>>>>> origin/master

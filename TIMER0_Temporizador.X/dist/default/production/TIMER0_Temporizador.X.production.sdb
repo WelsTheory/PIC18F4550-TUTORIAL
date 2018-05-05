@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
 [d version 1.1 ]
 [d edition pro ]
@@ -344,3 +345,351 @@
 {
 "41
 } 0
+=======
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"27 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+[v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
+[v i2_DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
+"44
+[v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
+"55
+[v _LCD_gotoXY LCD_gotoXY `(v  1 e 1 0 ]
+[v i2_LCD_gotoXY LCD_gotoXY `(v  1 e 1 0 ]
+"74
+[v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
+"138
+[v _putrsXLCD putrsXLCD `(v  1 e 1 0 ]
+[v i2_putrsXLCD putrsXLCD `(v  1 e 1 0 ]
+"162
+[v _WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
+[v i2_WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
+"252
+[v _SetCGRamAddr SetCGRamAddr `(v  1 e 1 0 ]
+"303
+[v _SetDDRamAddr SetDDRamAddr `(v  1 e 1 0 ]
+"395
+[v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
+[v i2_WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
+"446
+[v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
+[v i2_BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
+"13 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+"20
+[v _InitPort InitPort `(v  1 e 1 0 ]
+"28
+[v _Timer0_Init Timer0_Init `(v  1 e 1 0 ]
+"41
+[v _main main `(v  1 e 1 0 ]
+"60
+[v _ISR_TIMER_0 ISR_TIMER_0 `II(v  1 e 1 0 ]
+[s S160 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2481 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
+[s S169 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S177 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S180 . 1 `S160 1 . 1 0 `S169 1 . 1 0 `S177 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES180  1 e 1 @3969 ]
+"2703
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+"2971
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+[s S213 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+]
+"2996
+[s S221 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+]
+[u S229 . 1 `S213 1 . 1 0 `S221 1 . 1 0 ]
+[v _LATAbits LATAbits `VES229  1 e 1 @3977 ]
+"3071
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S367 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"3288
+[s S376 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S385 . 1 `S367 1 . 1 0 `S376 1 . 1 0 ]
+[v _LATDbits LATDbits `VES385  1 e 1 @3980 ]
+"3425
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"3623
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"3999
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S327 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"4031
+[s S336 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+[u S345 . 1 `S327 1 . 1 0 `S336 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES345  1 e 1 @3989 ]
+[s S35 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 VCFG 1 0 :2:4 
+]
+"6604
+[s S38 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+]
+[s S45 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+`uc 1 VCFG01 1 0 :1:4 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S50 . 1 `S35 1 . 1 0 `S38 1 . 1 0 `S45 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES50  1 e 1 @4033 ]
+[s S123 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"8087
+[s S130 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S134 . 1 `S123 1 . 1 0 `S130 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES134  1 e 1 @4053 ]
+"8144
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"8151
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S74 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"8612
+[s S83 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S92 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S96 . 1 `S74 1 . 1 0 `S83 1 . 1 0 `S92 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES96  1 e 1 @4082 ]
+"41 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+[v _main main `(v  1 e 1 0 ]
+{
+"58
+} 0
+"138 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+[v _putrsXLCD putrsXLCD `(v  1 e 1 0 ]
+{
+[v putrsXLCD@buffer buffer `*.32Cuc  1 p 2 24 ]
+"147
+} 0
+"395
+[v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
+{
+[v WriteDataXLCD@data data `uc  1 a 1 wreg ]
+[v WriteDataXLCD@data data `uc  1 a 1 wreg ]
+[v WriteDataXLCD@data data `uc  1 a 1 23 ]
+"443
+} 0
+"28 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+[v _Timer0_Init Timer0_Init `(v  1 e 1 0 ]
+{
+"39
+} 0
+"55 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+[v _LCD_gotoXY LCD_gotoXY `(v  1 e 1 0 ]
+{
+[v LCD_gotoXY@x x `i  1 p 2 24 ]
+[v LCD_gotoXY@y y `i  1 p 2 26 ]
+"60
+} 0
+"13 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+"18
+} 0
+"74 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+[v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
+{
+[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
+[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
+"86
+[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 27 ]
+"135
+} 0
+"162
+[v _WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
+{
+[v WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
+[v WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
+"181
+[v WriteCmdXLCD@cmd cmd `uc  1 a 1 23 ]
+"209
+} 0
+"303
+[v _SetDDRamAddr SetDDRamAddr `(v  1 e 1 0 ]
+{
+[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 wreg ]
+[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 wreg ]
+"322
+[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 26 ]
+"350
+} 0
+"44
+[v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
+{
+"47
+} 0
+"446
+[v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
+{
+"492
+} 0
+"27
+[v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
+{
+"41
+} 0
+"20 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\ProgramaPrincipal.c
+[v _InitPort InitPort `(v  1 e 1 0 ]
+{
+"26
+} 0
+"60
+[v _ISR_TIMER_0 ISR_TIMER_0 `II(v  1 e 1 0 ]
+{
+"68
+} 0
+"138 E:\Wels Theory\Electrónica\Pic18f4550\TIMER0_Temporizador.X\LCD_libreria.c
+[v i2_putrsXLCD putrsXLCD `(v  1 e 1 0 ]
+{
+[v i2putrsXLCD@buffer buffer `*.32Cuc  1 p 2 1 ]
+"147
+} 0
+"395
+[v i2_WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
+{
+[v i2WriteDataXLCD@data data `uc  1 a 1 wreg ]
+[v i2WriteDataXLCD@data data `uc  1 a 1 wreg ]
+[v i2WriteDataXLCD@data data `uc  1 a 1 0 ]
+"443
+} 0
+"446
+[v i2_BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
+{
+"492
+} 0
+"55
+[v i2_LCD_gotoXY LCD_gotoXY `(v  1 e 1 0 ]
+{
+[v i2LCD_gotoXY@x x `i  1 p 2 1 ]
+[v i2LCD_gotoXY@y y `i  1 p 2 3 ]
+"60
+} 0
+"162
+[v i2_WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
+{
+[v i2WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
+[v i2WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
+"181
+[v i2WriteCmdXLCD@cmd cmd `uc  1 a 1 0 ]
+"209
+} 0
+"27
+[v i2_DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
+{
+"41
+} 0
+>>>>>>> origin/master
