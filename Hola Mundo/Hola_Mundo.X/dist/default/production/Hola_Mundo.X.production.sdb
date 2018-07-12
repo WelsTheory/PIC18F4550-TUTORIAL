@@ -23,7 +23,7 @@
 [v ___flmul __flmul `(d  1 e 3 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"13 E:\The Wels Theory\Electrónica\Pic18f4550\Hola Mundo\Hola_Mundo.X\Hola_mundo.c
+"13 E:\Wels Theory\Electrónica\Pic18f4550\Hola Mundo\Hola_Mundo.X\Hola_mundo.c
 [v _InitPort InitPort `(v  1 e 1 0 ]
 "27
 [v _main main `(v  1 e 1 0 ]
@@ -261,7 +261,7 @@
 ]
 [u S36 . 1 `S21 1 . 1 0 `S24 1 . 1 0 `S31 1 . 1 0 ]
 [v _ADCON1bits ADCON1bits `VES36  1 e 1 @4033 ]
-"27 E:\The Wels Theory\Electrónica\Pic18f4550\Hola Mundo\Hola_Mundo.X\Hola_mundo.c
+"27 E:\Wels Theory\Electrónica\Pic18f4550\Hola Mundo\Hola_Mundo.X\Hola_mundo.c
 [v _main main `(v  1 e 1 0 ]
 {
 "43
