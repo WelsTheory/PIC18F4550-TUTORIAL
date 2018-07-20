@@ -5000,7 +5000,7 @@ void LCD_WriteChr_CGRAM( const char *buffer, unsigned char Addres);
 void ADC_init(void);
 unsigned int ADC_read(unsigned char ch);
 
-# 41 "Programa_principal.c"
+# 42 "Programa_principal.c"
 uint16_t valor;
 float voltaje;
 char datos[20];
@@ -5013,6 +5013,7 @@ WriteCmdXLCD(0x0C);
 }
 
 void main(){
+TRISBbits.RB0 = 0;
 LCD_Init();
 ADC_init();
 TRISA = 1;
@@ -5028,11 +5029,14 @@ LCD_gotoXY(0,0);
 putrsXLCD("VOLTAJE ES:");
 _delay((unsigned long)((100)*(20000000L/4000.0)));
 valor = ADC_read(0);
-voltaje = (valor*5.0)/1023;
-LCD_gotoXY(1,12);
-sprintf(datos,"%.2f",voltaje);
-putrsXLCD(datos);
-_delay((unsigned long)((500)*(20000000L/4000.0)));
+if(valor < 200){
+PORTBbits.RB0 = 1;
+}
+else if(valor <500){
+PORTBbits.RB0 = 0;
+}
+
+# 81
 }
 }
 

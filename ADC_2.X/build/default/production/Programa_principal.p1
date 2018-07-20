@@ -6,6 +6,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 "145
 [v _WriteCmdXLCD `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
+"3634 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
+[s S143 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S143 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"3644
+[s S144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S144 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"3633
+[u S142 `S143 1 `S144 1 ]
+[n S142 . . . ]
+"3655
+[v _TRISBbits `VS142 ~T0 @X0 0 e@3987 ]
 "8 ADC_libreria.h
 [v _ADC_init `(v ~T0 @X0 0 ef ]
 "3425 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
@@ -20,8 +31,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p i __delay ]
 "9 ADC_libreria.h
 [v _ADC_read `(ui ~T0 @X0 0 ef1`uc ]
-"194 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"2457 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
+[s S102 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S102 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"2467
+[s S103 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S103 . INT0 INT1 INT2 . PGM PGC PGD ]
+"2476
+[s S104 :3 `uc 1 :1 `uc 1 ]
+[n S104 . . CCP2_PA2 ]
+"2456
+[u S101 `S102 1 `S103 1 `S104 1 ]
+[n S101 . . . . ]
+"2481
+[v _PORTBbits `VS101 ~T0 @X0 0 e@3969 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3607,122 +3630,132 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD_libreria.h: 173: void LCD_WriteChr_CGRAM( const char *buffer, unsigned char Addres);
 [; ;ADC_libreria.h: 8: void ADC_init(void);
 [; ;ADC_libreria.h: 9: unsigned int ADC_read(unsigned char ch);
-"41 Programa_principal.c
+"42 Programa_principal.c
 [v _valor `ui ~T0 @X0 1 e ]
-[; ;Programa_principal.c: 41: uint16_t valor;
-"42
-[v _voltaje `f ~T0 @X0 1 e ]
-[; ;Programa_principal.c: 42: float voltaje;
+[; ;Programa_principal.c: 42: uint16_t valor;
 "43
+[v _voltaje `f ~T0 @X0 1 e ]
+[; ;Programa_principal.c: 43: float voltaje;
+"44
 [v _datos `uc ~T0 @X0 -> 20 `i e ]
-[; ;Programa_principal.c: 43: char datos[20];
-"45
+[; ;Programa_principal.c: 44: char datos[20];
+"46
 [v _LCD_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;Programa_principal.c: 45: void LCD_Init(void){
+[; ;Programa_principal.c: 46: void LCD_Init(void){
 [e :U _LCD_Init ]
 [f ]
-[; ;Programa_principal.c: 46: OpenXLCD(0b00101100 & 0b00111000 );
-"46
-[e ( _OpenXLCD (1 -> & -> 44 `i -> 56 `i `uc ]
-[; ;Programa_principal.c: 47: while(BusyXLCD());
+[; ;Programa_principal.c: 47: OpenXLCD(0b00101100 & 0b00111000 );
 "47
+[e ( _OpenXLCD (1 -> & -> 44 `i -> 56 `i `uc ]
+[; ;Programa_principal.c: 48: while(BusyXLCD());
+"48
 [e $U 364  ]
 [e :U 365 ]
 [e :U 364 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 365  ]
 [e :U 366 ]
-[; ;Programa_principal.c: 48: WriteCmdXLCD(0x06);
-"48
-[e ( _WriteCmdXLCD (1 -> -> 6 `i `uc ]
-[; ;Programa_principal.c: 49: WriteCmdXLCD(0x0C);
+[; ;Programa_principal.c: 49: WriteCmdXLCD(0x06);
 "49
-[e ( _WriteCmdXLCD (1 -> -> 12 `i `uc ]
-[; ;Programa_principal.c: 50: }
+[e ( _WriteCmdXLCD (1 -> -> 6 `i `uc ]
+[; ;Programa_principal.c: 50: WriteCmdXLCD(0x0C);
 "50
+[e ( _WriteCmdXLCD (1 -> -> 12 `i `uc ]
+[; ;Programa_principal.c: 51: }
+"51
 [e :UE 363 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"52
+"53
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;Programa_principal.c: 52: void main(){
+[; ;Programa_principal.c: 53: void main(){
 [e :U _main ]
 [f ]
-[; ;Programa_principal.c: 53: LCD_Init();
-"53
-[e ( _LCD_Init ..  ]
-[; ;Programa_principal.c: 54: ADC_init();
+[; ;Programa_principal.c: 54: TRISBbits.RB0 = 0;
 "54
-[e ( _ADC_init ..  ]
-[; ;Programa_principal.c: 55: TRISA = 1;
+[e = . . _TRISBbits 1 0 -> -> 0 `i `uc ]
+[; ;Programa_principal.c: 55: LCD_Init();
 "55
-[e = _TRISA -> -> 1 `i `uc ]
-[; ;Programa_principal.c: 56: LCD_gotoXY(0,0);
+[e ( _LCD_Init ..  ]
+[; ;Programa_principal.c: 56: ADC_init();
 "56
-[e ( _LCD_gotoXY (2 , -> 0 `i -> 0 `i ]
-[; ;Programa_principal.c: 57: putrsXLCD("******ADC*******");
+[e ( _ADC_init ..  ]
+[; ;Programa_principal.c: 57: TRISA = 1;
 "57
-[e ( _putrsXLCD (1 :s 1C ]
-[; ;Programa_principal.c: 58: _delay((unsigned long)((100)*(20000000L/4000.0)));
+[e = _TRISA -> -> 1 `i `uc ]
+[; ;Programa_principal.c: 58: LCD_gotoXY(0,0);
 "58
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;Programa_principal.c: 59: LCD_gotoXY(1,0);
+[e ( _LCD_gotoXY (2 , -> 0 `i -> 0 `i ]
+[; ;Programa_principal.c: 59: putrsXLCD("******ADC*******");
 "59
-[e ( _LCD_gotoXY (2 , -> 1 `i -> 0 `i ]
-[; ;Programa_principal.c: 60: putrsXLCD("    By WELS    ");
+[e ( _putrsXLCD (1 :s 1C ]
+[; ;Programa_principal.c: 60: _delay((unsigned long)((100)*(20000000L/4000.0)));
 "60
-[e ( _putrsXLCD (1 :s 2C ]
-[; ;Programa_principal.c: 61: _delay((unsigned long)((500)*(20000000L/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;Programa_principal.c: 61: LCD_gotoXY(1,0);
 "61
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;Programa_principal.c: 62: WriteCmdXLCD(0x01);
+[e ( _LCD_gotoXY (2 , -> 1 `i -> 0 `i ]
+[; ;Programa_principal.c: 62: putrsXLCD("    By WELS    ");
 "62
-[e ( _WriteCmdXLCD (1 -> -> 1 `i `uc ]
-[; ;Programa_principal.c: 63: while(1){
+[e ( _putrsXLCD (1 :s 2C ]
+[; ;Programa_principal.c: 63: _delay((unsigned long)((500)*(20000000L/4000.0)));
 "63
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;Programa_principal.c: 64: WriteCmdXLCD(0x01);
+"64
+[e ( _WriteCmdXLCD (1 -> -> 1 `i `uc ]
+[; ;Programa_principal.c: 65: while(1){
+"65
 [e :U 369 ]
 {
-[; ;Programa_principal.c: 64: LCD_gotoXY(0,0);
-"64
-[e ( _LCD_gotoXY (2 , -> 0 `i -> 0 `i ]
-[; ;Programa_principal.c: 65: putrsXLCD("VOLTAJE ES:");
-"65
-[e ( _putrsXLCD (1 :s 3C ]
-[; ;Programa_principal.c: 66: _delay((unsigned long)((100)*(20000000L/4000.0)));
+[; ;Programa_principal.c: 66: LCD_gotoXY(0,0);
 "66
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;Programa_principal.c: 67: valor = ADC_read(0);
+[e ( _LCD_gotoXY (2 , -> 0 `i -> 0 `i ]
+[; ;Programa_principal.c: 67: putrsXLCD("VOLTAJE ES:");
 "67
-[e = _valor ( _ADC_read (1 -> -> 0 `i `uc ]
-[; ;Programa_principal.c: 68: voltaje = (valor*5.0)/1023;
+[e ( _putrsXLCD (1 :s 3C ]
+[; ;Programa_principal.c: 68: _delay((unsigned long)((100)*(20000000L/4000.0)));
 "68
-[e = _voltaje -> / * -> _valor `d .5.0 -> -> 1023 `i `d `f ]
-[; ;Programa_principal.c: 69: LCD_gotoXY(1,12);
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;Programa_principal.c: 69: valor = ADC_read(0);
 "69
-[e ( _LCD_gotoXY (2 , -> 1 `i -> 12 `i ]
-[; ;Programa_principal.c: 70: sprintf(datos,"%.2f",voltaje);
+[e = _valor ( _ADC_read (1 -> -> 0 `i `uc ]
+[; ;Programa_principal.c: 70: if(valor < 200){
 "70
-[e ( _sprintf (1 , (. , &U _datos :s 4C -> _voltaje `d ]
-[; ;Programa_principal.c: 71: putrsXLCD(datos);
+[e $ ! < _valor -> -> 200 `i `ui 371  ]
+{
+[; ;Programa_principal.c: 71: PORTBbits.RB0 = 1;
 "71
-[e ( _putrsXLCD (1 -> &U _datos `*Cuc ]
-[; ;Programa_principal.c: 72: _delay((unsigned long)((500)*(20000000L/4000.0)));
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
 "72
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+}
+[; ;Programa_principal.c: 72: }
+[e $U 372  ]
 "73
+[e :U 371 ]
+[; ;Programa_principal.c: 73: else if(valor <500){
+[e $ ! < _valor -> -> 500 `i `ui 373  ]
+{
+[; ;Programa_principal.c: 74: PORTBbits.RB0 = 0;
+"74
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"75
+}
+[e :U 373 ]
+"81
+[e :U 372 ]
 }
 [e :U 368 ]
-"63
+"65
 [e $U 369  ]
 [e :U 370 ]
-[; ;Programa_principal.c: 73: }
-[; ;Programa_principal.c: 74: }
-"74
+[; ;Programa_principal.c: 75: }
+[; ;Programa_principal.c: 81: }
+[; ;Programa_principal.c: 82: }
+"82
 [e :UE 367 ]
 }
-[p f _sprintf 8462336 ]
-[a 4C 37 46 50 102 0 ]
 [a 3C 86 79 76 84 65 74 69 32 69 83 58 0 ]
 [a 1C 42 42 42 42 42 42 65 68 67 42 42 42 42 42 42 42 0 ]
 [a 2C 32 32 32 32 66 121 32 87 69 76 83 32 32 32 32 0 ]

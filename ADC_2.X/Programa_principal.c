@@ -22,6 +22,7 @@
 
 #include <xc.h>
 #include <stdio.h>
+#include <stdint.h>
 #include "Configuracion.h"
 #include "LCD_libreria.h"
 #include "ADC_libreria.h"
