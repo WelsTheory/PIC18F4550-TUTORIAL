@@ -1,0 +1,456 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\MOTOR_USART.X.production.obj
+cinit CODE 0 7DE0 7DE0 26 1
+text0 CODE 0 7E76 7E76 BE 1
+text1 CODE 0 7DD8 7DD8 8 1
+text2 CODE 0 7DCC 7DCC 4 1
+text3 CODE 0 7E06 7E06 70 1
+text4 CODE 0 7F34 7F34 CC 1
+idataCOMRAM CODE 0 7DD1 7DD1 7 1
+cstackCOMRAM COMRAM 1 1 1 1C 1
+dataCOMRAM COMRAM 1 1D 1D 7 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-7FF 1
+SFR F60-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7DCB 1
+CONST 7DD0-7DD0 1
+STACK 60-7FF 1
+SMALLCONST 800-7DCB 1
+SMALLCONST 7DD0-7DD0 1
+CODE 4-7DCB 1
+CODE 7DD0-7DD0 1
+BIGRAM 24-7FF 1
+COMRAM 24-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 800-7DCB 1
+MEDIUMCONST 7DD0-7DD0 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\MOTOR_USART.X.production.obj
+7F34 text4 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F34 text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F38 text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F3C text4 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F4C text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F50 text4 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F50 text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F54 text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F64 text4 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F68 text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F68 text4 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F78 text4 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F84 text4 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F88 text4 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F8A text4 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F94 text4 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F96 text4 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F96 text4 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7F9A text4 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FA4 text4 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FB8 text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FC8 text4 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FCA text4 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FCA text4 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FD4 text4 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FD8 text4 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FDE text4 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7FEE text4 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+7E06 text3 CODE >26:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E06 text3 CODE >28:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E08 text3 CODE >29:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E0A text3 CODE >32:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E66 text3 CODE >35:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E68 text3 CODE >36:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E6A text3 CODE >37:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E6C text3 CODE >40:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E6E text3 CODE >41:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E70 text3 CODE >44:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E72 text3 CODE >45:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E74 text3 CODE >46:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7DCC text2 CODE >52:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7DCC text2 CODE >53:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7DD8 text1 CODE >48:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7DDA text1 CODE >49:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7DDE text1 CODE >50:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\USART_libreria.c
+7E76 text0 CODE >29:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E76 text0 CODE >30:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E8A text0 CODE >31:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E8C text0 CODE >32:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E8E text0 CODE >33:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E90 text0 CODE >34:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E92 text0 CODE >35:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E94 text0 CODE >36:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E94 text0 CODE >37:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7E9A text0 CODE >38:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EA2 text0 CODE >39:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EA4 text0 CODE >40:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EA4 text0 CODE >41:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EAA text0 CODE >42:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EB2 text0 CODE >43:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EB4 text0 CODE >44:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EB6 text0 CODE >45:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EBA text0 CODE >48:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EC2 text0 CODE >49:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EC6 text0 CODE >51:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EC6 text0 CODE >52:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EC8 text0 CODE >53:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7ECA text0 CODE >54:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7ED2 text0 CODE >55:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7ED4 text0 CODE >56:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7ED6 text0 CODE >57:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EDA text0 CODE >60:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EE2 text0 CODE >61:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EE4 text0 CODE >62:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EE6 text0 CODE >63:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EE8 text0 CODE >64:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EEA text0 CODE >65:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7EF4 text0 CODE >66:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7F06 text0 CODE >67:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7F1C text0 CODE >65:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7F30 text0 CODE >74:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7F30 text0 CODE >75:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7F32 text0 CODE >36:E:\Wels Theory\Electrónica\Pic18f4550\MOTOR_USART.X\Programa_principal.c
+7DE0 cinit CODE >1182:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DE0 cinit CODE >1184:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DE0 cinit CODE >1187:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DE0 cinit CODE >1202:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DE2 cinit CODE >1203:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DE4 cinit CODE >1204:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DE6 cinit CODE >1205:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DE8 cinit CODE >1206:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DEA cinit CODE >1207:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DEC cinit CODE >1208:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DF0 cinit CODE >1209:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DF4 cinit CODE >1210:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DF4 cinit CODE >1211:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DF6 cinit CODE >1212:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DFA cinit CODE >1213:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DFC cinit CODE >1214:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7DFE cinit CODE >1215:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7E00 cinit CODE >1221:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7E00 cinit CODE >1223:C:\Users\Wels\AppData\Local\Temp\sdfk.
+7E02 cinit CODE >1224:C:\Users\Wels\AppData\Local\Temp\sdfk.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\MOTOR_USART.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hspace_1 24 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\MOTOR_USART.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\MOTOR_USART.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+main@i 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\MOTOR_USART.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+_main 7E76 0 CODE 0 text0 dist/default/production\MOTOR_USART.X.production.obj
+start 0 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+__size_of___aldiv 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__size_of_USART_Rx 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__size_of_USART_Tx 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+USART_Tx@data 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__end_of_USART_Init 7E76 0 CODE 0 text3 dist/default/production\MOTOR_USART.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\MOTOR_USART.X.production.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+___aldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\MOTOR_USART.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\MOTOR_USART.X.production.obj
+___aldiv@sign A 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\MOTOR_USART.X.production.obj
+__pidataCOMRAM 7DD1 0 CODE 0 idataCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+_USART_Rx 7DCC 0 CODE 0 text2 dist/default/production\MOTOR_USART.X.production.obj
+_USART_Tx 7DD8 0 CODE 0 text1 dist/default/production\MOTOR_USART.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\MOTOR_USART.X.production.obj
+__end_of_USART_Rx 7DD0 0 CODE 0 text2 dist/default/production\MOTOR_USART.X.production.obj
+__end_of_USART_Tx 7DE0 0 CODE 0 text1 dist/default/production\MOTOR_USART.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\MOTOR_USART.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\MOTOR_USART.X.production.obj
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\MOTOR_USART.X.production.obj
+__end_of___aldiv 8000 0 CODE 0 text4 dist/default/production\MOTOR_USART.X.production.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\MOTOR_USART.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+start_initialization 7DE0 0 CODE 0 cinit dist/default/production\MOTOR_USART.X.production.obj
+__CFG_PBADEN$ON 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\MOTOR_USART.X.production.obj
+_TRISCbits F94 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+_TRISDbits F95 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+___aldiv@quotient B 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__size_of_USART_Init 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\MOTOR_USART.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\MOTOR_USART.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\MOTOR_USART.X.production.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/production\MOTOR_USART.X.production.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/production\MOTOR_USART.X.production.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\MOTOR_USART.X.production.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\MOTOR_USART.X.production.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\MOTOR_USART.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\MOTOR_USART.X.production.obj
+__Hconst 0 0 CONST 0 const dist/default/production\MOTOR_USART.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\MOTOR_USART.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\MOTOR_USART.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\MOTOR_USART.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\MOTOR_USART.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\MOTOR_USART.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\MOTOR_USART.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\MOTOR_USART.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\MOTOR_USART.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\MOTOR_USART.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\MOTOR_USART.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\MOTOR_USART.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\MOTOR_USART.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\MOTOR_USART.X.production.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\MOTOR_USART.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\MOTOR_USART.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\MOTOR_USART.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\MOTOR_USART.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\MOTOR_USART.X.production.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/production\MOTOR_USART.X.production.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/production\MOTOR_USART.X.production.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\MOTOR_USART.X.production.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\MOTOR_USART.X.production.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\MOTOR_USART.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\MOTOR_USART.X.production.obj
+__Lconst 0 0 CONST 0 const dist/default/production\MOTOR_USART.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\MOTOR_USART.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\MOTOR_USART.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\MOTOR_USART.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\MOTOR_USART.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\MOTOR_USART.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\MOTOR_USART.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\MOTOR_USART.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\MOTOR_USART.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\MOTOR_USART.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\MOTOR_USART.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\MOTOR_USART.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\MOTOR_USART.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\MOTOR_USART.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\MOTOR_USART.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\MOTOR_USART.X.production.obj
+__Hinit 4 0 CODE 0 init dist/default/production\MOTOR_USART.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\MOTOR_USART.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\MOTOR_USART.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production\MOTOR_USART.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\MOTOR_USART.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\MOTOR_USART.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\MOTOR_USART.X.production.obj
+__Linit 0 0 CODE 0 init dist/default/production\MOTOR_USART.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\MOTOR_USART.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\MOTOR_USART.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\MOTOR_USART.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\MOTOR_USART.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\MOTOR_USART.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\MOTOR_USART.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__S1 24 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+USART_Init@BAUD F 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__CFG_PLLDIV$1 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\MOTOR_USART.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\MOTOR_USART.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\MOTOR_USART.X.production.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/production\MOTOR_USART.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\MOTOR_USART.X.production.obj
+__activetblptr 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\MOTOR_USART.X.production.obj
+_RCSTAbits FAB 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+___aldiv 7F34 0 CODE 0 text4 dist/default/production\MOTOR_USART.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\MOTOR_USART.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\MOTOR_USART.X.production.obj
+__CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\MOTOR_USART.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\MOTOR_USART.X.production.obj
+_LATDbits F8C 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+main@data 19 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+main@dato 1C 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\MOTOR_USART.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+stackhi 7FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+stacklo 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+__Lintcode 0 0 CODE 0 intcode dist/default/production\MOTOR_USART.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\MOTOR_USART.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\MOTOR_USART.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+end_of_initialization 7E00 0 CODE 0 cinit dist/default/production\MOTOR_USART.X.production.obj
+_USART_Init$845 13 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\MOTOR_USART.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\MOTOR_USART.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+?___aldiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\MOTOR_USART.X.production.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/production\MOTOR_USART.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\MOTOR_USART.X.production.obj
+__pcinit 7DE0 0 CODE 0 cinit dist/default/production\MOTOR_USART.X.production.obj
+__ptext0 7E76 0 CODE 0 text0 dist/default/production\MOTOR_USART.X.production.obj
+__ptext1 7DD8 0 CODE 0 text1 dist/default/production\MOTOR_USART.X.production.obj
+__ptext2 7DCC 0 CODE 0 text2 dist/default/production\MOTOR_USART.X.production.obj
+__ptext3 7E06 0 CODE 0 text3 dist/default/production\MOTOR_USART.X.production.obj
+__ptext4 7F34 0 CODE 0 text4 dist/default/production\MOTOR_USART.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\MOTOR_USART.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\sdfk.obj
+___aldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\MOTOR_USART.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\MOTOR_USART.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\MOTOR_USART.X.production.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+___param_bank 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\MOTOR_USART.X.production.obj
+__end_of__initialization 7E00 0 CODE 0 cinit dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\MOTOR_USART.X.production.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+_TXSTAbits FAC 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+___aldiv@counter 9 0 COMRAM 1 cstackCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__CFG_PWRT$ON 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__end_of_main 7F34 0 CODE 0 text0 dist/default/production\MOTOR_USART.X.production.obj
+_RCREG FAE 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+_SPBRG FAF 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+_TXREG FAD 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\MOTOR_USART.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\MOTOR_USART.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\MOTOR_USART.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\MOTOR_USART.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\MOTOR_USART.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+_datos 1D 0 COMRAM 1 dataCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\MOTOR_USART.X.production.obj
+_USART_Init 7E06 0 CODE 0 text3 dist/default/production\MOTOR_USART.X.production.obj
+__initialization 7DE0 0 CODE 0 cinit dist/default/production\MOTOR_USART.X.production.obj
+__pdataCOMRAM 1D 0 COMRAM 1 dataCOMRAM dist/default/production\MOTOR_USART.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\MOTOR_USART.X.production.obj
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\MOTOR_USART.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\MOTOR_USART.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\MOTOR_USART.X.production.obj
+__Hintcode 0 0 CODE 0 intcode dist/default/production\MOTOR_USART.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7DE0 7DE0 26 1
+idloc 0 200000 200000 8 1
+text0 0 7E76 7E76 BE 1
+text1 0 7DD8 7DD8 8 1
+text2 0 7DCC 7DCC 4 1
+text3 0 7E06 7E06 70 1
+text4 0 7F34 7F34 CC 1
+idataCOMRAM 0 7DD1 7DD1 7 1
+cstackCOMRAM 1 1 1 23 1
+reset_vec 0 0 0 4 1
+config 0 300000 300000 E 1
