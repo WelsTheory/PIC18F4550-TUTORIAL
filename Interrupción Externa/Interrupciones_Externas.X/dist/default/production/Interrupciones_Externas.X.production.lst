@@ -1,0 +1,1622 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V2.00 build -1524193055 
+                                                                                               Mon Oct 08 13:26:49 2018
+
+Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 20180527130849
+     1  0000                     
+     2                           ; Version 2.00
+     3                           ; Generated 27/05/2018 GMT
+     4                           
+     5                           ; 
+     6                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+     7                           ; All rights reserved.
+     8                           ; 
+     9                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+                                 ip").
+    10                           ; 
+    11                           ; Redistribution and use in source and binary forms, with or without modification, are
+    12                           ; permitted provided that the following conditions are met:
+    13                           ; 
+    14                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+                                 t of
+    15                           ;        conditions and the following disclaimer.
+    16                           ; 
+    17                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+                                 list
+    18                           ;        of conditions and the following disclaimer in the documentation and/or other
+    19                           ;        materials provided with the distribution.
+    20                           ; 
+    21                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+                                 is
+    22                           ;        software without specific prior written permission.
+    23                           ; 
+    24                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+
+    25                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+                                 OR
+    26                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+                                 T,
+    27                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+                                 
+    28                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+                                 
+    29                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+                                 RICT
+    30                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+                                 SE OF
+    31                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    32                           ; 
+    33                           
+    34                           
+    35                           ; 
+    36                           ; Code-generator required, PIC18F4550 Definitions
+    37                           ; 
+    38  0000                     fsr0 equ 0FE9h
+    39  0000                     fsr0h equ 0FEAh
+    40  0000                     fsr0l equ 0FE9h
+    41  0000                     fsr1 equ 0FE1h
+    42  0000                     fsr1h equ 0FE2h
+    43  0000                     fsr1l equ 0FE1h
+    44  0000                     fsr2 equ 0FD9h
+    45  0000                     fsr2h equ 0FDAh
+    46  0000                     fsr2l equ 0FD9h
+    47  0000                     indf0 equ 0FEFh
+    48  0000                     indf1 equ 0FE7h
+    49  0000                     indf2 equ 0FDFh
+    50  0000                     intcon equ 0FF2h
+    51  0000                     nvmcon equ 00h
+    52  0000                     pcl equ 0FF9h
+    53  0000                     pclath equ 0FFAh
+    54  0000                     pclatu equ 0FFBh
+    55  0000                     plusw0 equ 0FEBh
+    56  0000                     plusw1 equ 0FE3h
+    57  0000                     plusw2 equ 0FDBh
+    58  0000                     postdec0 equ 0FEDh
+    59  0000                     postdec1 equ 0FE5h
+    60  0000                     postdec2 equ 0FDDh
+    61  0000                     postinc0 equ 0FEEh
+    62  0000                     postinc1 equ 0FE6h
+    63  0000                     postinc2 equ 0FDEh
+    64  0000                     preinc0 equ 0FECh
+    65  0000                     preinc1 equ 0FE4h
+    66  0000                     preinc2 equ 0FDCh
+    67  0000                     prod equ 0FF3h
+    68  0000                     prodh equ 0FF4h
+    69  0000                     prodl equ 0FF3h
+    70  0000                     status equ 0FD8h
+    71  0000                     tablat equ 0FF5h
+    72  0000                     tblptr equ 0FF6h
+    73  0000                     tblptrh equ 0FF7h
+    74  0000                     tblptrl equ 0FF6h
+    75  0000                     tblptru equ 0FF8h
+    76  0000                     tosl equ 0FFDh
+    77  0000                     wreg equ 0FE8h
+    78  0000                     
+     2                           opt pagewidth 120
+     3  0000                     byte0	macro	val
+     4                           	(getbyte(val,0))
+     5                           endm
+     6  0000                     byte1	macro	val
+     7                           	(getbyte(val,1))
+     8                           endm
+     9  0000                     byte2	macro	val
+    10                           	(getbyte(val,2))
+    11                           endm
+    12  0000                     byte3	macro	val
+    13                           	(getbyte(val,3))
+    14                           endm
+    15  0000                     byte4	macro	val
+    16                           	(getbyte(val,4))
+    17                           endm
+    18  0000                     byte5	macro	val
+    19                           	(getbyte(val,5))
+    20                           endm
+    21  0000                     byte6	macro	val
+    22                           	(getbyte(val,6))
+    23                           endm
+    24  0000                     byte7	macro	val
+    25                           	(getbyte(val,7))
+    26                           endm
+    27  0000                     getword	macro	val,pos
+    28                           	(((val) >> (8 * pos)) and 0xffff)
+    29                           endm
+    30  0000                     word0	macro	val
+    31                           	(getword(val,0))
+    32                           endm
+    33  0000                     word1	macro	val
+    34                           	(getword(val,2))
+    35                           endm
+    36  0000                     word2	macro	val
+    37                           	(getword(val,4))
+    38                           endm
+    39  0000                     word3	macro	val
+    40                           	(getword(val,6))
+    41                           endm
+    42  0000                     gettword	macro	val,pos
+    43                           	(((val) >> (8 * pos)) and 0xffffff)
+    44                           endm
+    45  0000                     tword0	macro	val
+    46                           	(gettword(val,0))
+    47                           endm
+    48  0000                     tword1	macro	val
+    49                           	(gettword(val,3))
+    50                           endm
+    51  0000                     tword2	macro	val
+    52                           	(gettword(val,6))
+    53                           endm
+    54  0000                     getdword	macro	val,pos
+    55                           	(((val) >> (8 * pos)) and 0xffffffff)
+    56                           endm
+    57  0000                     dword0	macro	val
+    58                           	(getdword(val,0))
+    59                           endm
+    60  0000                     dword1	macro	val
+    61                           	(getdword(val,4))
+    62                           endm
+    63  0000                     clrc   macro
+    64                           	bcf	status,0
+    65                           endm
+    66  0000                     setc   macro
+    67                           	bsf	status,0
+    68                           endm
+    69  0000                     clrz   macro
+    70                           	bcf	status,2
+    71                           endm
+    72  0000                     setz   macro
+    73                           	bsf	status,2
+    74                           endm
+    75  0000                     skipnz macro
+    76                           	btfsc	status,2
+    77                           endm
+    78  0000                     skipz  macro
+    79                           	btfss	status,2
+    80                           endm
+    81  0000                     skipnc macro
+    82                           	btfsc	status,0
+    83                           endm
+    84  0000                     skipc  macro
+    85                           	btfss	status,0
+    86                           endm
+    87  0000                     pushw macro
+    88                           	movwf postinc1
+    89                           endm
+    90  0000                     pushf macro arg1
+    91                           	movff arg1, postinc1
+    92                           endm
+    93  0000                     popw macro
+    94                           	movf postdec1,f
+    95                           	movf indf1,w
+    96                           endm
+    97  0000                     popf macro arg1
+    98                           	movf postdec1,f
+    99                           	movff indf1,arg1
+   100                           endm
+   101  0000                     popfc macro arg1
+   102                           	movff plusw1,arg1
+   103                           	decfsz fsr1,f
+   104                           endm
+   105  0000                     	global	__ramtop
+   106                           	global	__accesstop
+   107                           # 54 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   108                           SPPDATA equ 0F62h ;# 
+   109  0000                     # 74 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   110                           SPPCFG equ 0F63h ;# 
+   111  0000                     # 151 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   112                           SPPEPS equ 0F64h ;# 
+   113  0000                     # 225 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   114                           SPPCON equ 0F65h ;# 
+   115  0000                     # 251 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   116                           UFRM equ 0F66h ;# 
+   117  0000                     # 258 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   118                           UFRML equ 0F66h ;# 
+   119  0000                     # 336 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   120                           UFRMH equ 0F67h ;# 
+   121  0000                     # 376 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   122                           UIR equ 0F68h ;# 
+   123  0000                     # 432 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   124                           UIE equ 0F69h ;# 
+   125  0000                     # 488 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   126                           UEIR equ 0F6Ah ;# 
+   127  0000                     # 539 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   128                           UEIE equ 0F6Bh ;# 
+   129  0000                     # 590 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   130                           USTAT equ 0F6Ch ;# 
+   131  0000                     # 650 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   132                           UCON equ 0F6Dh ;# 
+   133  0000                     # 701 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   134                           UADDR equ 0F6Eh ;# 
+   135  0000                     # 765 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   136                           UCFG equ 0F6Fh ;# 
+   137  0000                     # 844 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   138                           UEP0 equ 0F70h ;# 
+   139  0000                     # 952 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   140                           UEP1 equ 0F71h ;# 
+   141  0000                     # 1060 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   142                           UEP2 equ 0F72h ;# 
+   143  0000                     # 1168 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   144                           UEP3 equ 0F73h ;# 
+   145  0000                     # 1276 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   146                           UEP4 equ 0F74h ;# 
+   147  0000                     # 1384 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   148                           UEP5 equ 0F75h ;# 
+   149  0000                     # 1492 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   150                           UEP6 equ 0F76h ;# 
+   151  0000                     # 1600 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   152                           UEP7 equ 0F77h ;# 
+   153  0000                     # 1708 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   154                           UEP8 equ 0F78h ;# 
+   155  0000                     # 1784 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   156                           UEP9 equ 0F79h ;# 
+   157  0000                     # 1860 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   158                           UEP10 equ 0F7Ah ;# 
+   159  0000                     # 1936 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   160                           UEP11 equ 0F7Bh ;# 
+   161  0000                     # 2012 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   162                           UEP12 equ 0F7Ch ;# 
+   163  0000                     # 2088 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   164                           UEP13 equ 0F7Dh ;# 
+   165  0000                     # 2164 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   166                           UEP14 equ 0F7Eh ;# 
+   167  0000                     # 2240 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   168                           UEP15 equ 0F7Fh ;# 
+   169  0000                     # 2316 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   170                           PORTA equ 0F80h ;# 
+   171  0000                     # 2455 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   172                           PORTB equ 0F81h ;# 
+   173  0000                     # 2565 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   174                           PORTC equ 0F82h ;# 
+   175  0000                     # 2707 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   176                           PORTD equ 0F83h ;# 
+   177  0000                     # 2828 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   178                           PORTE equ 0F84h ;# 
+   179  0000                     # 2975 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   180                           LATA equ 0F89h ;# 
+   181  0000                     # 3075 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   182                           LATB equ 0F8Ah ;# 
+   183  0000                     # 3187 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   184                           LATC equ 0F8Bh ;# 
+   185  0000                     # 3265 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   186                           LATD equ 0F8Ch ;# 
+   187  0000                     # 3377 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   188                           LATE equ 0F8Dh ;# 
+   189  0000                     # 3429 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   190                           TRISA equ 0F92h ;# 
+   191  0000                     # 3434 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   192                           DDRA equ 0F92h ;# 
+   193  0000                     # 3627 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   194                           TRISB equ 0F93h ;# 
+   195  0000                     # 3632 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   196                           DDRB equ 0F93h ;# 
+   197  0000                     # 3849 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   198                           TRISC equ 0F94h ;# 
+   199  0000                     # 3854 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   200                           DDRC equ 0F94h ;# 
+   201  0000                     # 4003 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   202                           TRISD equ 0F95h ;# 
+   203  0000                     # 4008 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   204                           DDRD equ 0F95h ;# 
+   205  0000                     # 4225 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   206                           TRISE equ 0F96h ;# 
+   207  0000                     # 4230 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   208                           DDRE equ 0F96h ;# 
+   209  0000                     # 4327 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   210                           OSCTUNE equ 0F9Bh ;# 
+   211  0000                     # 4386 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   212                           PIE1 equ 0F9Dh ;# 
+   213  0000                     # 4470 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   214                           PIR1 equ 0F9Eh ;# 
+   215  0000                     # 4554 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   216                           IPR1 equ 0F9Fh ;# 
+   217  0000                     # 4638 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   218                           PIE2 equ 0FA0h ;# 
+   219  0000                     # 4709 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   220                           PIR2 equ 0FA1h ;# 
+   221  0000                     # 4780 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   222                           IPR2 equ 0FA2h ;# 
+   223  0000                     # 4851 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   224                           EECON1 equ 0FA6h ;# 
+   225  0000                     # 4917 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   226                           EECON2 equ 0FA7h ;# 
+   227  0000                     # 4924 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   228                           EEDATA equ 0FA8h ;# 
+   229  0000                     # 4931 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   230                           EEADR equ 0FA9h ;# 
+   231  0000                     # 4938 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   232                           RCSTA equ 0FABh ;# 
+   233  0000                     # 4943 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   234                           RCSTA1 equ 0FABh ;# 
+   235  0000                     # 5148 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   236                           TXSTA equ 0FACh ;# 
+   237  0000                     # 5153 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   238                           TXSTA1 equ 0FACh ;# 
+   239  0000                     # 5404 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   240                           TXREG equ 0FADh ;# 
+   241  0000                     # 5409 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   242                           TXREG1 equ 0FADh ;# 
+   243  0000                     # 5416 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   244                           RCREG equ 0FAEh ;# 
+   245  0000                     # 5421 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   246                           RCREG1 equ 0FAEh ;# 
+   247  0000                     # 5428 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   248                           SPBRG equ 0FAFh ;# 
+   249  0000                     # 5433 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   250                           SPBRG1 equ 0FAFh ;# 
+   251  0000                     # 5440 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   252                           SPBRGH equ 0FB0h ;# 
+   253  0000                     # 5447 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   254                           T3CON equ 0FB1h ;# 
+   255  0000                     # 5568 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   256                           TMR3 equ 0FB2h ;# 
+   257  0000                     # 5575 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   258                           TMR3L equ 0FB2h ;# 
+   259  0000                     # 5582 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   260                           TMR3H equ 0FB3h ;# 
+   261  0000                     # 5589 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   262                           CMCON equ 0FB4h ;# 
+   263  0000                     # 5679 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   264                           CVRCON equ 0FB5h ;# 
+   265  0000                     # 5764 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   266                           ECCP1AS equ 0FB6h ;# 
+   267  0000                     # 5769 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   268                           CCP1AS equ 0FB6h ;# 
+   269  0000                     # 5926 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   270                           ECCP1DEL equ 0FB7h ;# 
+   271  0000                     # 5931 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   272                           CCP1DEL equ 0FB7h ;# 
+   273  0000                     # 6064 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   274                           BAUDCON equ 0FB8h ;# 
+   275  0000                     # 6069 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   276                           BAUDCTL equ 0FB8h ;# 
+   277  0000                     # 6244 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   278                           CCP2CON equ 0FBAh ;# 
+   279  0000                     # 6308 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   280                           CCPR2 equ 0FBBh ;# 
+   281  0000                     # 6315 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   282                           CCPR2L equ 0FBBh ;# 
+   283  0000                     # 6322 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   284                           CCPR2H equ 0FBCh ;# 
+   285  0000                     # 6329 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   286                           CCP1CON equ 0FBDh ;# 
+   287  0000                     # 6334 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   288                           ECCP1CON equ 0FBDh ;# 
+   289  0000                     # 6491 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   290                           CCPR1 equ 0FBEh ;# 
+   291  0000                     # 6498 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   292                           CCPR1L equ 0FBEh ;# 
+   293  0000                     # 6505 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   294                           CCPR1H equ 0FBFh ;# 
+   295  0000                     # 6512 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   296                           ADCON2 equ 0FC0h ;# 
+   297  0000                     # 6583 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   298                           ADCON1 equ 0FC1h ;# 
+   299  0000                     # 6668 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   300                           ADCON0 equ 0FC2h ;# 
+   301  0000                     # 6787 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   302                           ADRES equ 0FC3h ;# 
+   303  0000                     # 6794 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   304                           ADRESL equ 0FC3h ;# 
+   305  0000                     # 6801 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   306                           ADRESH equ 0FC4h ;# 
+   307  0000                     # 6808 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   308                           SSPCON2 equ 0FC5h ;# 
+   309  0000                     # 6870 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   310                           SSPCON1 equ 0FC6h ;# 
+   311  0000                     # 6940 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   312                           SSPSTAT equ 0FC7h ;# 
+   313  0000                     # 7188 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   314                           SSPADD equ 0FC8h ;# 
+   315  0000                     # 7195 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   316                           SSPBUF equ 0FC9h ;# 
+   317  0000                     # 7202 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   318                           T2CON equ 0FCAh ;# 
+   319  0000                     # 7300 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   320                           PR2 equ 0FCBh ;# 
+   321  0000                     # 7305 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   322                           MEMCON equ 0FCBh ;# 
+   323  0000                     # 7410 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   324                           TMR2 equ 0FCCh ;# 
+   325  0000                     # 7417 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   326                           T1CON equ 0FCDh ;# 
+   327  0000                     # 7520 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   328                           TMR1 equ 0FCEh ;# 
+   329  0000                     # 7527 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   330                           TMR1L equ 0FCEh ;# 
+   331  0000                     # 7534 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   332                           TMR1H equ 0FCFh ;# 
+   333  0000                     # 7541 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   334                           RCON equ 0FD0h ;# 
+   335  0000                     # 7690 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   336                           WDTCON equ 0FD1h ;# 
+   337  0000                     # 7718 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   338                           HLVDCON equ 0FD2h ;# 
+   339  0000                     # 7723 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   340                           LVDCON equ 0FD2h ;# 
+   341  0000                     # 7988 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   342                           OSCCON equ 0FD3h ;# 
+   343  0000                     # 8071 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   344                           T0CON equ 0FD5h ;# 
+   345  0000                     # 8141 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   346                           TMR0 equ 0FD6h ;# 
+   347  0000                     # 8148 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   348                           TMR0L equ 0FD6h ;# 
+   349  0000                     # 8155 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   350                           TMR0H equ 0FD7h ;# 
+   351  0000                     # 8162 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   352                           STATUS equ 0FD8h ;# 
+   353  0000                     # 8233 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   354                           FSR2 equ 0FD9h ;# 
+   355  0000                     # 8240 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   356                           FSR2L equ 0FD9h ;# 
+   357  0000                     # 8247 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   358                           FSR2H equ 0FDAh ;# 
+   359  0000                     # 8254 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   360                           PLUSW2 equ 0FDBh ;# 
+   361  0000                     # 8261 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   362                           PREINC2 equ 0FDCh ;# 
+   363  0000                     # 8268 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   364                           POSTDEC2 equ 0FDDh ;# 
+   365  0000                     # 8275 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   366                           POSTINC2 equ 0FDEh ;# 
+   367  0000                     # 8282 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   368                           INDF2 equ 0FDFh ;# 
+   369  0000                     # 8289 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   370                           BSR equ 0FE0h ;# 
+   371  0000                     # 8296 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   372                           FSR1 equ 0FE1h ;# 
+   373  0000                     # 8303 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   374                           FSR1L equ 0FE1h ;# 
+   375  0000                     # 8310 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   376                           FSR1H equ 0FE2h ;# 
+   377  0000                     # 8317 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   378                           PLUSW1 equ 0FE3h ;# 
+   379  0000                     # 8324 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   380                           PREINC1 equ 0FE4h ;# 
+   381  0000                     # 8331 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   382                           POSTDEC1 equ 0FE5h ;# 
+   383  0000                     # 8338 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   384                           POSTINC1 equ 0FE6h ;# 
+   385  0000                     # 8345 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   386                           INDF1 equ 0FE7h ;# 
+   387  0000                     # 8352 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   388                           WREG equ 0FE8h ;# 
+   389  0000                     # 8359 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   390                           FSR0 equ 0FE9h ;# 
+   391  0000                     # 8366 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   392                           FSR0L equ 0FE9h ;# 
+   393  0000                     # 8373 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   394                           FSR0H equ 0FEAh ;# 
+   395  0000                     # 8380 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   396                           PLUSW0 equ 0FEBh ;# 
+   397  0000                     # 8387 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   398                           PREINC0 equ 0FECh ;# 
+   399  0000                     # 8394 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   400                           POSTDEC0 equ 0FEDh ;# 
+   401  0000                     # 8401 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   402                           POSTINC0 equ 0FEEh ;# 
+   403  0000                     # 8408 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   404                           INDF0 equ 0FEFh ;# 
+   405  0000                     # 8415 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   406                           INTCON3 equ 0FF0h ;# 
+   407  0000                     # 8507 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   408                           INTCON2 equ 0FF1h ;# 
+   409  0000                     # 8584 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   410                           INTCON equ 0FF2h ;# 
+   411  0000                     # 8701 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   412                           PROD equ 0FF3h ;# 
+   413  0000                     # 8708 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   414                           PRODL equ 0FF3h ;# 
+   415  0000                     # 8715 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   416                           PRODH equ 0FF4h ;# 
+   417  0000                     # 8722 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   418                           TABLAT equ 0FF5h ;# 
+   419  0000                     # 8731 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   420                           TBLPTR equ 0FF6h ;# 
+   421  0000                     # 8738 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   422                           TBLPTRL equ 0FF6h ;# 
+   423  0000                     # 8745 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   424                           TBLPTRH equ 0FF7h ;# 
+   425  0000                     # 8752 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   426                           TBLPTRU equ 0FF8h ;# 
+   427  0000                     # 8761 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   428                           PCLAT equ 0FF9h ;# 
+   429  0000                     # 8768 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   430                           PC equ 0FF9h ;# 
+   431  0000                     # 8775 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   432                           PCL equ 0FF9h ;# 
+   433  0000                     # 8782 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   434                           PCLATH equ 0FFAh ;# 
+   435  0000                     # 8789 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   436                           PCLATU equ 0FFBh ;# 
+   437  0000                     # 8796 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   438                           STKPTR equ 0FFCh ;# 
+   439  0000                     # 8872 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   440                           TOS equ 0FFDh ;# 
+   441  0000                     # 8879 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   442                           TOSL equ 0FFDh ;# 
+   443  0000                     # 8886 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   444                           TOSH equ 0FFEh ;# 
+   445  0000                     # 8893 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   446                           TOSU equ 0FFFh ;# 
+   447  0000                     # 54 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   448                           SPPDATA equ 0F62h ;# 
+   449  0000                     # 74 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   450                           SPPCFG equ 0F63h ;# 
+   451  0000                     # 151 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   452                           SPPEPS equ 0F64h ;# 
+   453  0000                     # 225 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   454                           SPPCON equ 0F65h ;# 
+   455  0000                     # 251 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   456                           UFRM equ 0F66h ;# 
+   457  0000                     # 258 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   458                           UFRML equ 0F66h ;# 
+   459  0000                     # 336 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   460                           UFRMH equ 0F67h ;# 
+   461  0000                     # 376 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   462                           UIR equ 0F68h ;# 
+   463  0000                     # 432 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   464                           UIE equ 0F69h ;# 
+   465  0000                     # 488 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   466                           UEIR equ 0F6Ah ;# 
+   467  0000                     # 539 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   468                           UEIE equ 0F6Bh ;# 
+   469  0000                     # 590 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   470                           USTAT equ 0F6Ch ;# 
+   471  0000                     # 650 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   472                           UCON equ 0F6Dh ;# 
+   473  0000                     # 701 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   474                           UADDR equ 0F6Eh ;# 
+   475  0000                     # 765 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   476                           UCFG equ 0F6Fh ;# 
+   477  0000                     # 844 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   478                           UEP0 equ 0F70h ;# 
+   479  0000                     # 952 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   480                           UEP1 equ 0F71h ;# 
+   481  0000                     # 1060 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   482                           UEP2 equ 0F72h ;# 
+   483  0000                     # 1168 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   484                           UEP3 equ 0F73h ;# 
+   485  0000                     # 1276 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   486                           UEP4 equ 0F74h ;# 
+   487  0000                     # 1384 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   488                           UEP5 equ 0F75h ;# 
+   489  0000                     # 1492 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   490                           UEP6 equ 0F76h ;# 
+   491  0000                     # 1600 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   492                           UEP7 equ 0F77h ;# 
+   493  0000                     # 1708 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   494                           UEP8 equ 0F78h ;# 
+   495  0000                     # 1784 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   496                           UEP9 equ 0F79h ;# 
+   497  0000                     # 1860 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   498                           UEP10 equ 0F7Ah ;# 
+   499  0000                     # 1936 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   500                           UEP11 equ 0F7Bh ;# 
+   501  0000                     # 2012 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   502                           UEP12 equ 0F7Ch ;# 
+   503  0000                     # 2088 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   504                           UEP13 equ 0F7Dh ;# 
+   505  0000                     # 2164 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   506                           UEP14 equ 0F7Eh ;# 
+   507  0000                     # 2240 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   508                           UEP15 equ 0F7Fh ;# 
+   509  0000                     # 2316 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   510                           PORTA equ 0F80h ;# 
+   511  0000                     # 2455 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   512                           PORTB equ 0F81h ;# 
+   513  0000                     # 2565 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   514                           PORTC equ 0F82h ;# 
+   515  0000                     # 2707 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   516                           PORTD equ 0F83h ;# 
+   517  0000                     # 2828 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   518                           PORTE equ 0F84h ;# 
+   519  0000                     # 2975 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   520                           LATA equ 0F89h ;# 
+   521  0000                     # 3075 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   522                           LATB equ 0F8Ah ;# 
+   523  0000                     # 3187 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   524                           LATC equ 0F8Bh ;# 
+   525  0000                     # 3265 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   526                           LATD equ 0F8Ch ;# 
+   527  0000                     # 3377 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   528                           LATE equ 0F8Dh ;# 
+   529  0000                     # 3429 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   530                           TRISA equ 0F92h ;# 
+   531  0000                     # 3434 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   532                           DDRA equ 0F92h ;# 
+   533  0000                     # 3627 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   534                           TRISB equ 0F93h ;# 
+   535  0000                     # 3632 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   536                           DDRB equ 0F93h ;# 
+   537  0000                     # 3849 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   538                           TRISC equ 0F94h ;# 
+   539  0000                     # 3854 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   540                           DDRC equ 0F94h ;# 
+   541  0000                     # 4003 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   542                           TRISD equ 0F95h ;# 
+   543  0000                     # 4008 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   544                           DDRD equ 0F95h ;# 
+   545  0000                     # 4225 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   546                           TRISE equ 0F96h ;# 
+   547  0000                     # 4230 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   548                           DDRE equ 0F96h ;# 
+   549  0000                     # 4327 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   550                           OSCTUNE equ 0F9Bh ;# 
+   551  0000                     # 4386 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   552                           PIE1 equ 0F9Dh ;# 
+   553  0000                     # 4470 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   554                           PIR1 equ 0F9Eh ;# 
+   555  0000                     # 4554 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   556                           IPR1 equ 0F9Fh ;# 
+   557  0000                     # 4638 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   558                           PIE2 equ 0FA0h ;# 
+   559  0000                     # 4709 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   560                           PIR2 equ 0FA1h ;# 
+   561  0000                     # 4780 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   562                           IPR2 equ 0FA2h ;# 
+   563  0000                     # 4851 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   564                           EECON1 equ 0FA6h ;# 
+   565  0000                     # 4917 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   566                           EECON2 equ 0FA7h ;# 
+   567  0000                     # 4924 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   568                           EEDATA equ 0FA8h ;# 
+   569  0000                     # 4931 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   570                           EEADR equ 0FA9h ;# 
+   571  0000                     # 4938 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   572                           RCSTA equ 0FABh ;# 
+   573  0000                     # 4943 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   574                           RCSTA1 equ 0FABh ;# 
+   575  0000                     # 5148 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   576                           TXSTA equ 0FACh ;# 
+   577  0000                     # 5153 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   578                           TXSTA1 equ 0FACh ;# 
+   579  0000                     # 5404 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   580                           TXREG equ 0FADh ;# 
+   581  0000                     # 5409 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   582                           TXREG1 equ 0FADh ;# 
+   583  0000                     # 5416 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   584                           RCREG equ 0FAEh ;# 
+   585  0000                     # 5421 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   586                           RCREG1 equ 0FAEh ;# 
+   587  0000                     # 5428 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   588                           SPBRG equ 0FAFh ;# 
+   589  0000                     # 5433 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   590                           SPBRG1 equ 0FAFh ;# 
+   591  0000                     # 5440 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   592                           SPBRGH equ 0FB0h ;# 
+   593  0000                     # 5447 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   594                           T3CON equ 0FB1h ;# 
+   595  0000                     # 5568 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   596                           TMR3 equ 0FB2h ;# 
+   597  0000                     # 5575 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   598                           TMR3L equ 0FB2h ;# 
+   599  0000                     # 5582 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   600                           TMR3H equ 0FB3h ;# 
+   601  0000                     # 5589 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   602                           CMCON equ 0FB4h ;# 
+   603  0000                     # 5679 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   604                           CVRCON equ 0FB5h ;# 
+   605  0000                     # 5764 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   606                           ECCP1AS equ 0FB6h ;# 
+   607  0000                     # 5769 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   608                           CCP1AS equ 0FB6h ;# 
+   609  0000                     # 5926 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   610                           ECCP1DEL equ 0FB7h ;# 
+   611  0000                     # 5931 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   612                           CCP1DEL equ 0FB7h ;# 
+   613  0000                     # 6064 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   614                           BAUDCON equ 0FB8h ;# 
+   615  0000                     # 6069 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   616                           BAUDCTL equ 0FB8h ;# 
+   617  0000                     # 6244 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   618                           CCP2CON equ 0FBAh ;# 
+   619  0000                     # 6308 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   620                           CCPR2 equ 0FBBh ;# 
+   621  0000                     # 6315 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   622                           CCPR2L equ 0FBBh ;# 
+   623  0000                     # 6322 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   624                           CCPR2H equ 0FBCh ;# 
+   625  0000                     # 6329 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   626                           CCP1CON equ 0FBDh ;# 
+   627  0000                     # 6334 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   628                           ECCP1CON equ 0FBDh ;# 
+   629  0000                     # 6491 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   630                           CCPR1 equ 0FBEh ;# 
+   631  0000                     # 6498 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   632                           CCPR1L equ 0FBEh ;# 
+   633  0000                     # 6505 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   634                           CCPR1H equ 0FBFh ;# 
+   635  0000                     # 6512 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   636                           ADCON2 equ 0FC0h ;# 
+   637  0000                     # 6583 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   638                           ADCON1 equ 0FC1h ;# 
+   639  0000                     # 6668 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   640                           ADCON0 equ 0FC2h ;# 
+   641  0000                     # 6787 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   642                           ADRES equ 0FC3h ;# 
+   643  0000                     # 6794 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   644                           ADRESL equ 0FC3h ;# 
+   645  0000                     # 6801 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   646                           ADRESH equ 0FC4h ;# 
+   647  0000                     # 6808 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   648                           SSPCON2 equ 0FC5h ;# 
+   649  0000                     # 6870 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   650                           SSPCON1 equ 0FC6h ;# 
+   651  0000                     # 6940 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   652                           SSPSTAT equ 0FC7h ;# 
+   653  0000                     # 7188 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   654                           SSPADD equ 0FC8h ;# 
+   655  0000                     # 7195 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   656                           SSPBUF equ 0FC9h ;# 
+   657  0000                     # 7202 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   658                           T2CON equ 0FCAh ;# 
+   659  0000                     # 7300 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   660                           PR2 equ 0FCBh ;# 
+   661  0000                     # 7305 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   662                           MEMCON equ 0FCBh ;# 
+   663  0000                     # 7410 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   664                           TMR2 equ 0FCCh ;# 
+   665  0000                     # 7417 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   666                           T1CON equ 0FCDh ;# 
+   667  0000                     # 7520 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   668                           TMR1 equ 0FCEh ;# 
+   669  0000                     # 7527 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   670                           TMR1L equ 0FCEh ;# 
+   671  0000                     # 7534 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   672                           TMR1H equ 0FCFh ;# 
+   673  0000                     # 7541 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   674                           RCON equ 0FD0h ;# 
+   675  0000                     # 7690 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   676                           WDTCON equ 0FD1h ;# 
+   677  0000                     # 7718 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   678                           HLVDCON equ 0FD2h ;# 
+   679  0000                     # 7723 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   680                           LVDCON equ 0FD2h ;# 
+   681  0000                     # 7988 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   682                           OSCCON equ 0FD3h ;# 
+   683  0000                     # 8071 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   684                           T0CON equ 0FD5h ;# 
+   685  0000                     # 8141 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   686                           TMR0 equ 0FD6h ;# 
+   687  0000                     # 8148 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   688                           TMR0L equ 0FD6h ;# 
+   689  0000                     # 8155 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   690                           TMR0H equ 0FD7h ;# 
+   691  0000                     # 8162 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   692                           STATUS equ 0FD8h ;# 
+   693  0000                     # 8233 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   694                           FSR2 equ 0FD9h ;# 
+   695  0000                     # 8240 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   696                           FSR2L equ 0FD9h ;# 
+   697  0000                     # 8247 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   698                           FSR2H equ 0FDAh ;# 
+   699  0000                     # 8254 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   700                           PLUSW2 equ 0FDBh ;# 
+   701  0000                     # 8261 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   702                           PREINC2 equ 0FDCh ;# 
+   703  0000                     # 8268 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   704                           POSTDEC2 equ 0FDDh ;# 
+   705  0000                     # 8275 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   706                           POSTINC2 equ 0FDEh ;# 
+   707  0000                     # 8282 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   708                           INDF2 equ 0FDFh ;# 
+   709  0000                     # 8289 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   710                           BSR equ 0FE0h ;# 
+   711  0000                     # 8296 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   712                           FSR1 equ 0FE1h ;# 
+   713  0000                     # 8303 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   714                           FSR1L equ 0FE1h ;# 
+   715  0000                     # 8310 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   716                           FSR1H equ 0FE2h ;# 
+   717  0000                     # 8317 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   718                           PLUSW1 equ 0FE3h ;# 
+   719  0000                     # 8324 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   720                           PREINC1 equ 0FE4h ;# 
+   721  0000                     # 8331 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   722                           POSTDEC1 equ 0FE5h ;# 
+   723  0000                     # 8338 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   724                           POSTINC1 equ 0FE6h ;# 
+   725  0000                     # 8345 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   726                           INDF1 equ 0FE7h ;# 
+   727  0000                     # 8352 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   728                           WREG equ 0FE8h ;# 
+   729  0000                     # 8359 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   730                           FSR0 equ 0FE9h ;# 
+   731  0000                     # 8366 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   732                           FSR0L equ 0FE9h ;# 
+   733  0000                     # 8373 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   734                           FSR0H equ 0FEAh ;# 
+   735  0000                     # 8380 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   736                           PLUSW0 equ 0FEBh ;# 
+   737  0000                     # 8387 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   738                           PREINC0 equ 0FECh ;# 
+   739  0000                     # 8394 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   740                           POSTDEC0 equ 0FEDh ;# 
+   741  0000                     # 8401 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   742                           POSTINC0 equ 0FEEh ;# 
+   743  0000                     # 8408 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   744                           INDF0 equ 0FEFh ;# 
+   745  0000                     # 8415 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   746                           INTCON3 equ 0FF0h ;# 
+   747  0000                     # 8507 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   748                           INTCON2 equ 0FF1h ;# 
+   749  0000                     # 8584 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   750                           INTCON equ 0FF2h ;# 
+   751  0000                     # 8701 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   752                           PROD equ 0FF3h ;# 
+   753  0000                     # 8708 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   754                           PRODL equ 0FF3h ;# 
+   755  0000                     # 8715 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   756                           PRODH equ 0FF4h ;# 
+   757  0000                     # 8722 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   758                           TABLAT equ 0FF5h ;# 
+   759  0000                     # 8731 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   760                           TBLPTR equ 0FF6h ;# 
+   761  0000                     # 8738 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   762                           TBLPTRL equ 0FF6h ;# 
+   763  0000                     # 8745 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   764                           TBLPTRH equ 0FF7h ;# 
+   765  0000                     # 8752 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   766                           TBLPTRU equ 0FF8h ;# 
+   767  0000                     # 8761 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   768                           PCLAT equ 0FF9h ;# 
+   769  0000                     # 8768 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   770                           PC equ 0FF9h ;# 
+   771  0000                     # 8775 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   772                           PCL equ 0FF9h ;# 
+   773  0000                     # 8782 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   774                           PCLATH equ 0FFAh ;# 
+   775  0000                     # 8789 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   776                           PCLATU equ 0FFBh ;# 
+   777  0000                     # 8796 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   778                           STKPTR equ 0FFCh ;# 
+   779  0000                     # 8872 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   780                           TOS equ 0FFDh ;# 
+   781  0000                     # 8879 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   782                           TOSL equ 0FFDh ;# 
+   783  0000                     # 8886 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   784                           TOSH equ 0FFEh ;# 
+   785  0000                     # 8893 "C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f4550.h"
+   786                           TOSU equ 0FFFh ;# 
+   787  0000                     	FNCALL	_main,_Int_Ext
+   788                           	FNROOT	_main
+   789                           	FNCALL	intlevel2,_INT_isr
+   790                           	global	intlevel2
+   791                           	FNROOT	intlevel2
+   792                           	global	_cont
+   793                           	global	_INTCON2bits
+   794                           _INTCON2bits	set	0xFF1
+   795  0000                     	global	_INTCONbits
+   796                           _INTCONbits	set	0xFF2
+   797  0000                     	global	_TRISBbits
+   798                           _TRISBbits	set	0xF93
+   799  0000                     	global	_LATD
+   800                           _LATD	set	0xF8C
+   801  0000                     	global	_TRISD
+   802                           _TRISD	set	0xF95
+   803  0000                     ; #config settings
+   804                           global __CFG_PLLDIV$1
+   805                           __CFG_PLLDIV$1 equ 0x0
+   806  0000                     global __CFG_CPUDIV$OSC1_PLL2
+   807                           __CFG_CPUDIV$OSC1_PLL2 equ 0x0
+   808  0000                     global __CFG_USBDIV$1
+   809                           __CFG_USBDIV$1 equ 0x0
+   810  0000                     global __CFG_FOSC$HS
+   811                           __CFG_FOSC$HS equ 0x0
+   812  0000                     global __CFG_FCMEN$OFF
+   813                           __CFG_FCMEN$OFF equ 0x0
+   814  0000                     global __CFG_IESO$OFF
+   815                           __CFG_IESO$OFF equ 0x0
+   816  0000                     global __CFG_PWRT$ON
+   817                           __CFG_PWRT$ON equ 0x0
+   818  0000                     global __CFG_BOR$OFF
+   819                           __CFG_BOR$OFF equ 0x0
+   820  0000                     global __CFG_BORV$3
+   821                           __CFG_BORV$3 equ 0x0
+   822  0000                     global __CFG_VREGEN$OFF
+   823                           __CFG_VREGEN$OFF equ 0x0
+   824  0000                     global __CFG_WDT$OFF
+   825                           __CFG_WDT$OFF equ 0x0
+   826  0000                     global __CFG_WDTPS$32768
+   827                           __CFG_WDTPS$32768 equ 0x0
+   828  0000                     global __CFG_CCP2MX$ON
+   829                           __CFG_CCP2MX$ON equ 0x0
+   830  0000                     global __CFG_PBADEN$OFF
+   831                           __CFG_PBADEN$OFF equ 0x0
+   832  0000                     global __CFG_LPT1OSC$OFF
+   833                           __CFG_LPT1OSC$OFF equ 0x0
+   834  0000                     global __CFG_MCLRE$ON
+   835                           __CFG_MCLRE$ON equ 0x0
+   836  0000                     global __CFG_STVREN$ON
+   837                           __CFG_STVREN$ON equ 0x0
+   838  0000                     global __CFG_LVP$OFF
+   839                           __CFG_LVP$OFF equ 0x0
+   840  0000                     global __CFG_ICPRT$OFF
+   841                           __CFG_ICPRT$OFF equ 0x0
+   842  0000                     global __CFG_XINST$OFF
+   843                           __CFG_XINST$OFF equ 0x0
+   844  0000                     global __CFG_CP0$OFF
+   845                           __CFG_CP0$OFF equ 0x0
+   846  0000                     global __CFG_CP1$OFF
+   847                           __CFG_CP1$OFF equ 0x0
+   848  0000                     global __CFG_CP2$OFF
+   849                           __CFG_CP2$OFF equ 0x0
+   850  0000                     global __CFG_CP3$OFF
+   851                           __CFG_CP3$OFF equ 0x0
+   852  0000                     global __CFG_CPB$OFF
+   853                           __CFG_CPB$OFF equ 0x0
+   854  0000                     global __CFG_CPD$OFF
+   855                           __CFG_CPD$OFF equ 0x0
+   856  0000                     global __CFG_WRT0$OFF
+   857                           __CFG_WRT0$OFF equ 0x0
+   858  0000                     global __CFG_WRT1$OFF
+   859                           __CFG_WRT1$OFF equ 0x0
+   860  0000                     global __CFG_WRT2$OFF
+   861                           __CFG_WRT2$OFF equ 0x0
+   862  0000                     global __CFG_WRT3$OFF
+   863                           __CFG_WRT3$OFF equ 0x0
+   864  0000                     global __CFG_WRTC$OFF
+   865                           __CFG_WRTC$OFF equ 0x0
+   866  0000                     global __CFG_WRTB$OFF
+   867                           __CFG_WRTB$OFF equ 0x0
+   868  0000                     global __CFG_WRTD$OFF
+   869                           __CFG_WRTD$OFF equ 0x0
+   870  0000                     global __CFG_EBTR0$OFF
+   871                           __CFG_EBTR0$OFF equ 0x0
+   872  0000                     global __CFG_EBTR1$OFF
+   873                           __CFG_EBTR1$OFF equ 0x0
+   874  0000                     global __CFG_EBTR2$OFF
+   875                           __CFG_EBTR2$OFF equ 0x0
+   876  0000                     global __CFG_EBTR3$OFF
+   877                           __CFG_EBTR3$OFF equ 0x0
+   878  0000                     global __CFG_EBTRB$OFF
+   879                           __CFG_EBTRB$OFF equ 0x0
+   880  0000                     	file	"C:\Users\Wels\AppData\Local\Temp\s8g8."
+   881                           	line	#
+   882                           psect	cinit,class=CODE,delta=1,reloc=2
+   883                           global __pcinit
+   884                           __pcinit:
+   885  00002E                     global start_initialization
+   886                           start_initialization:
+   887  00002E                     
+   888                           global __initialization
+   889                           __initialization:
+   890  00002E                     psect	bssCOMRAM,class=COMRAM,space=1,noexec
+   891                           global __pbssCOMRAM
+   892                           __pbssCOMRAM:
+   893  000001                     	global	_cont
+   894                           _cont:
+   895  000001                            ds      2
+   896  000001                     	file	"C:\Users\Wels\AppData\Local\Temp\s8g8."
+   897                           	line	#
+   898                           psect	cinit
+   899                           ; Clear objects allocated to COMRAM (2 bytes)
+   900                           	global __pbssCOMRAM
+   901                           clrf	(__pbssCOMRAM+1)&0xffh,c
+   902  00002E  6A02               clrf	(__pbssCOMRAM+0)&0xffh,c
+   903  000030  6A01               psect cinit,class=CODE,delta=1
+   904                           global end_of_initialization,__end_of__initialization
+   905                           
+   906                           ;End of C runtime variable initialization code
+   907                           
+   908                           end_of_initialization:
+   909  000032                     __end_of__initialization:
+   910  000032                     	bcf int$flags,0,c ;clear compiler interrupt flag (level 1)
+   911  000032  9003               	bcf int$flags,1,c ;clear compiler interrupt flag (level 2)
+   912  000034  9203               movlb 0
+   913  000036  0100               goto _main	;jump to C main() function
+   914  000038  EF09  F000         psect	cstackCOMRAM,class=COMRAM,space=1,noexec
+   915                           global __pcstackCOMRAM
+   916                           __pcstackCOMRAM:
+   917  000000                     ?_Int_Ext:	; 1 bytes @ 0x0
+   918  000000                     ??_Int_Ext:	; 1 bytes @ 0x0
+   919  000000                     ?_main:	; 1 bytes @ 0x0
+   920  000000                     ??_main:	; 1 bytes @ 0x0
+   921  000000                     ?_INT_isr:	; 1 bytes @ 0x0
+   922  000000                     ??_INT_isr:	; 1 bytes @ 0x0
+   923  000000                     ;!
+   924                           ;!Data Sizes:
+   925                           ;!    Strings     0
+   926                           ;!    Constant    0
+   927                           ;!    Data        0
+   928                           ;!    BSS         2
+   929                           ;!    Persistent  0
+   930                           ;!    Stack       0
+   931                           ;!
+   932                           ;!Auto Spaces:
+   933                           ;!    Space          Size  Autos    Used
+   934                           ;!    COMRAM           94      0       2
+   935                           ;!    BANK0           160      0       0
+   936                           ;!    BANK1           256      0       0
+   937                           ;!    BANK2           256      0       0
+   938                           ;!    BANK3           256      0       0
+   939                           ;!    BANK4           256      0       0
+   940                           ;!    BANK5           256      0       0
+   941                           ;!    BANK6           256      0       0
+   942                           ;!    BANK7           256      0       0
+   943                           
+   944                           ;!
+   945                           ;!Pointer List with Targets:
+   946                           ;!
+   947                           ;!    None.
+   948                           
+   949                           
+   950                           ;!
+   951                           ;!Critical Paths under _main in COMRAM
+   952                           ;!
+   953                           ;!    None.
+   954                           ;!
+   955                           ;!Critical Paths under _INT_isr in COMRAM
+   956                           ;!
+   957                           ;!    None.
+   958                           ;!
+   959                           ;!Critical Paths under _main in BANK0
+   960                           ;!
+   961                           ;!    None.
+   962                           ;!
+   963                           ;!Critical Paths under _INT_isr in BANK0
+   964                           ;!
+   965                           ;!    None.
+   966                           ;!
+   967                           ;!Critical Paths under _main in BANK1
+   968                           ;!
+   969                           ;!    None.
+   970                           ;!
+   971                           ;!Critical Paths under _INT_isr in BANK1
+   972                           ;!
+   973                           ;!    None.
+   974                           ;!
+   975                           ;!Critical Paths under _main in BANK2
+   976                           ;!
+   977                           ;!    None.
+   978                           ;!
+   979                           ;!Critical Paths under _INT_isr in BANK2
+   980                           ;!
+   981                           ;!    None.
+   982                           ;!
+   983                           ;!Critical Paths under _main in BANK3
+   984                           ;!
+   985                           ;!    None.
+   986                           ;!
+   987                           ;!Critical Paths under _INT_isr in BANK3
+   988                           ;!
+   989                           ;!    None.
+   990                           ;!
+   991                           ;!Critical Paths under _main in BANK4
+   992                           ;!
+   993                           ;!    None.
+   994                           ;!
+   995                           ;!Critical Paths under _INT_isr in BANK4
+   996                           ;!
+   997                           ;!    None.
+   998                           ;!
+   999                           ;!Critical Paths under _main in BANK5
+  1000                           ;!
+  1001                           ;!    None.
+  1002                           ;!
+  1003                           ;!Critical Paths under _INT_isr in BANK5
+  1004                           ;!
+  1005                           ;!    None.
+  1006                           ;!
+  1007                           ;!Critical Paths under _main in BANK6
+  1008                           ;!
+  1009                           ;!    None.
+  1010                           ;!
+  1011                           ;!Critical Paths under _INT_isr in BANK6
+  1012                           ;!
+  1013                           ;!    None.
+  1014                           ;!
+  1015                           ;!Critical Paths under _main in BANK7
+  1016                           ;!
+  1017                           ;!    None.
+  1018                           ;!
+  1019                           ;!Critical Paths under _INT_isr in BANK7
+  1020                           ;!
+  1021                           ;!    None.
+  1022                           
+  1023 ;;
+  1024 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+  1025 ;;
+  1026                           
+  1027                           ;!
+  1028                           ;!Call Graph Tables:
+  1029                           ;!
+  1030                           ;! ---------------------------------------------------------------------------------
+  1031                           ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+  1032                           ;! ---------------------------------------------------------------------------------
+  1033                           ;! (0) _main                                                 0     0      0       0
+  1034                           ;!                            _Int_Ext
+  1035                           ;! ---------------------------------------------------------------------------------
+  1036                           ;! (1) _Int_Ext                                              0     0      0       0
+  1037                           ;! ---------------------------------------------------------------------------------
+  1038                           ;! Estimated maximum stack depth 1
+  1039                           ;! ---------------------------------------------------------------------------------
+  1040                           ;! (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+  1041                           ;! ---------------------------------------------------------------------------------
+  1042                           ;! (2) _INT_isr                                              0     0      0       0
+  1043                           ;! ---------------------------------------------------------------------------------
+  1044                           ;! Estimated maximum stack depth 2
+  1045                           ;! ---------------------------------------------------------------------------------
+  1046                           ;!
+  1047                           ;! Call Graph Graphs:
+  1048                           ;!
+  1049                           ;! _main (ROOT)
+  1050                           ;!   _Int_Ext
+  1051                           ;!
+  1052                           ;! _INT_isr (ROOT)
+  1053                           ;!
+  1054                           
+  1055                           ;! Address spaces:
+  1056                           
+  1057                           ;!Name               Size   Autos  Total    Cost      Usage
+  1058                           ;!BIGRAM             7FF      0       0      21        0.0%
+  1059                           ;!EEDATA             100      0       0       0        0.0%
+  1060                           ;!BITBANK7           100      0       0      18        0.0%
+  1061                           ;!BANK7              100      0       0      19        0.0%
+  1062                           ;!BITBANK6           100      0       0      16        0.0%
+  1063                           ;!BANK6              100      0       0      17        0.0%
+  1064                           ;!BITBANK5           100      0       0      14        0.0%
+  1065                           ;!BANK5              100      0       0      15        0.0%
+  1066                           ;!BITBANK4           100      0       0      12        0.0%
+  1067                           ;!BANK4              100      0       0      13        0.0%
+  1068                           ;!BITBANK3           100      0       0      10        0.0%
+  1069                           ;!BANK3              100      0       0      11        0.0%
+  1070                           ;!BITBANK2           100      0       0       8        0.0%
+  1071                           ;!BANK2              100      0       0       9        0.0%
+  1072                           ;!BITBANK1           100      0       0       6        0.0%
+  1073                           ;!BANK1              100      0       0       7        0.0%
+  1074                           ;!BITBANK0            A0      0       0       4        0.0%
+  1075                           ;!BANK0               A0      0       0       5        0.0%
+  1076                           ;!BITCOMRAM           5E      0       0       0        0.0%
+  1077                           ;!COMRAM              5E      0       2       1        2.1%
+  1078                           ;!BITSFR               0      0       0     200        0.0%
+  1079                           ;!SFR                  0      0       0     200        0.0%
+  1080                           ;!STACK                0      0       0       2        0.0%
+  1081                           ;!NULL                 0      0       0       0        0.0%
+  1082                           ;!ABS                  0      0       2      20        0.0%
+  1083                           ;!DATA                 0      0       2       3        0.0%
+  1084                           ;!CODE                 0      0       0       0        0.0%
+  1085                           
+  1086                           	global	_main
+  1087                           
+  1088 ;; *************** function _main *****************
+  1089 ;; Defined at:
+  1090 ;;		line 28 in file "Programa_principal.c"
+  1091 ;; Parameters:    Size  Location     Type
+  1092 ;;		None
+  1093 ;; Auto vars:     Size  Location     Type
+  1094 ;;		None
+  1095 ;; Return value:  Size  Location     Type
+  1096 ;;                  1    wreg      void 
+  1097 ;; Registers used:
+  1098 ;;		wreg, status,2, cstack
+  1099 ;; Tracked objects:
+  1100 ;;		On entry : 0/0
+  1101 ;;		On exit  : 0/0
+  1102 ;;		Unchanged: 0/0
+  1103 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1104 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1105 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1106 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1107 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1108 ;;Total ram usage:        0 bytes
+  1109 ;; Hardware stack levels required when called:    2
+  1110 ;; This function calls:
+  1111 ;;		_Int_Ext
+  1112 ;; This function is called by:
+  1113 ;;		Startup code after reset
+  1114 ;; This function uses a non-reentrant model
+  1115 ;;
+  1116                           psect	text0,class=CODE,space=0,reloc=2,group=0
+  1117                           	file	"Programa_principal.c"
+  1118                           	line	28
+  1119                           global __ptext0
+  1120                           __ptext0:
+  1121  000012                     psect	text0
+  1122                           	file	"Programa_principal.c"
+  1123                           	line	28
+  1124                           	global	__size_of_main
+  1125                           	__size_of_main	equ	__end_of_main-_main
+  1126  0000                     	
+  1127                           _main:
+  1128  000012                     ;incstack = 0
+  1129                           	opt	stack 29
+  1130                           	line	29
+  1131                           	
+  1132                           l708:
+  1133  000012                     ;Programa_principal.c: 29:     Int_Ext();
+  1134                           	call	_Int_Ext	;wreg free
+  1135  000012  EC1E  F000         	line	30
+  1136                           	
+  1137                           l710:
+  1138  000016                     ;Programa_principal.c: 30:     TRISD = 0;
+  1139                           	movlw	low(0)
+  1140  000016  0E00               	movwf	((c:3989)),c	;volatile
+  1141  000018  6E95               	goto	l712
+  1142  00001A  EF0F  F000         	line	31
+  1143                           ;Programa_principal.c: 31:     while(1){
+  1144                           	
+  1145                           l19:
+  1146  00001E                     	line	32
+  1147                           	
+  1148                           l712:
+  1149  00001E                     ;Programa_principal.c: 32:         LATD = cont;
+  1150                           	movff	(c:_cont),(c:3980)	;volatile
+  1151  00001E  C001  FF8C         	goto	l712
+  1152  000022  EF0F  F000         	line	33
+  1153                           ;Programa_principal.c: 33:     }
+  1154                           	
+  1155                           l20:
+  1156  000026                     	goto	l712
+  1157  000026  EF0F  F000         	
+  1158                           l21:
+  1159  00002A                     	line	35
+  1160                           	
+  1161                           l22:
+  1162  00002A                     	global	start
+  1163                           	goto	start
+  1164  00002A  EF07  F000         	opt stack 0
+  1165                           GLOBAL	__end_of_main
+  1166                           	__end_of_main:
+  1167  00002E                     	signat	_main,89
+  1168                           	global	_Int_Ext
+  1169                           
+  1170 ;; *************** function _Int_Ext *****************
+  1171 ;; Defined at:
+  1172 ;;		line 37 in file "Programa_principal.c"
+  1173 ;; Parameters:    Size  Location     Type
+  1174 ;;		None
+  1175 ;; Auto vars:     Size  Location     Type
+  1176 ;;		None
+  1177 ;; Return value:  Size  Location     Type
+  1178 ;;                  1    wreg      void 
+  1179 ;; Registers used:
+  1180 ;;		None
+  1181 ;; Tracked objects:
+  1182 ;;		On entry : 0/0
+  1183 ;;		On exit  : 0/0
+  1184 ;;		Unchanged: 0/0
+  1185 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1186 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1187 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1188 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1189 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1190 ;;Total ram usage:        0 bytes
+  1191 ;; Hardware stack levels used:    1
+  1192 ;; Hardware stack levels required when called:    1
+  1193 ;; This function calls:
+  1194 ;;		Nothing
+  1195 ;; This function is called by:
+  1196 ;;		_main
+  1197 ;; This function uses a non-reentrant model
+  1198 ;;
+  1199                           psect	text1,class=CODE,space=0,reloc=2,group=0
+  1200                           	line	37
+  1201                           global __ptext1
+  1202                           __ptext1:
+  1203  00003C                     psect	text1
+  1204                           	file	"Programa_principal.c"
+  1205                           	line	37
+  1206                           	global	__size_of_Int_Ext
+  1207                           	__size_of_Int_Ext	equ	__end_of_Int_Ext-_Int_Ext
+  1208  0000                     	
+  1209                           _Int_Ext:
+  1210  00003C                     ;incstack = 0
+  1211                           	opt	stack 29
+  1212                           	line	38
+  1213                           	
+  1214                           l706:
+  1215  00003C                     ;Programa_principal.c: 38:     TRISBbits.RB0 = 1;
+  1216                           	bsf	((c:3987)),c,0	;volatile
+  1217  00003C  8093               	line	39
+  1218                           ;Programa_principal.c: 39:     INTCONbits.INT0IE = 1;
+  1219                           	bsf	((c:4082)),c,4	;volatile
+  1220  00003E  88F2               	line	40
+  1221                           ;Programa_principal.c: 40:     INTCONbits.INT0IF = 0;
+  1222                           	bcf	((c:4082)),c,1	;volatile
+  1223  000040  92F2               	line	41
+  1224                           ;Programa_principal.c: 41:     INTCON2bits.INTEDG0 = 0;
+  1225                           	bcf	((c:4081)),c,6	;volatile
+  1226  000042  9CF1               	line	42
+  1227                           ;Programa_principal.c: 42:     INTCONbits.GIE = 1;
+  1228                           	bsf	((c:4082)),c,7	;volatile
+  1229  000044  8EF2               	line	43
+  1230                           	
+  1231                           l25:
+  1232  000046                     	return	;funcret
+  1233  000046  0012               	opt stack 0
+  1234                           GLOBAL	__end_of_Int_Ext
+  1235                           	__end_of_Int_Ext:
+  1236  000048                     	signat	_Int_Ext,89
+  1237                           	global	_INT_isr
+  1238                           
+  1239 ;; *************** function _INT_isr *****************
+  1240 ;; Defined at:
+  1241 ;;		line 45 in file "Programa_principal.c"
+  1242 ;; Parameters:    Size  Location     Type
+  1243 ;;		None
+  1244 ;; Auto vars:     Size  Location     Type
+  1245 ;;		None
+  1246 ;; Return value:  Size  Location     Type
+  1247 ;;                  1    wreg      void 
+  1248 ;; Registers used:
+  1249 ;;		status,2, status,0
+  1250 ;; Tracked objects:
+  1251 ;;		On entry : 0/0
+  1252 ;;		On exit  : 0/0
+  1253 ;;		Unchanged: 0/0
+  1254 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1255 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1256 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1257 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1258 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1259 ;;Total ram usage:        0 bytes
+  1260 ;; Hardware stack levels used:    1
+  1261 ;; This function calls:
+  1262 ;;		Nothing
+  1263 ;; This function is called by:
+  1264 ;;		Interrupt level 2
+  1265 ;; This function uses a non-reentrant model
+  1266 ;;
+  1267                           psect	intcode,class=CODE,space=0,reloc=2
+  1268                           global __pintcode
+  1269                           __pintcode:
+  1270  000008                     psect	intcode
+  1271                           	file	"Programa_principal.c"
+  1272                           	line	45
+  1273                           	global	__size_of_INT_isr
+  1274                           	__size_of_INT_isr	equ	__end_of_INT_isr-_INT_isr
+  1275  0000                     	
+  1276                           _INT_isr:
+  1277  000008                     ;incstack = 0
+  1278                           	opt	stack 29
+  1279                           	bsf int$flags,1,c ;set compiler interrupt flag (level 2)
+  1280  000008  8203               	global	int_func
+  1281                           	call	int_func,f	;refresh shadow registers
+  1282  00000A  ED24  F000         psect	intcode_body,class=CODE,space=0,reloc=2
+  1283                           global __pintcode_body
+  1284                           __pintcode_body:
+  1285  000048                     int_func:
+  1286  000048                     
+  1287                           	pop	; remove dummy address from shadow register refresh
+  1288  000048  0006               	line	46
+  1289                           	
+  1290                           i2l714:
+  1291  00004A                     ;Programa_principal.c: 46:     cont++;
+  1292                           	infsnz	((c:_cont)),c
+  1293  00004A  4A01               	incf	((c:_cont+1)),c
+  1294  00004C  2A02               	line	47
+  1295                           	
+  1296                           i2l716:
+  1297  00004E                     ;Programa_principal.c: 47:     INTCONbits.INT0IF = 0;
+  1298                           	bcf	((c:4082)),c,1	;volatile
+  1299  00004E  92F2               	line	48
+  1300                           	
+  1301                           i2l30:
+  1302  000050                     	bcf int$flags,1,c ;clear compiler interrupt flag (level 2)
+  1303  000050  9203               	retfie f
+  1304  000052  0011               	opt stack 0
+  1305                           GLOBAL	__end_of_INT_isr
+  1306                           	__end_of_INT_isr:
+  1307  000054                     	signat	_INT_isr,89
+  1308                           	GLOBAL	__activetblptr
+  1309                           __activetblptr	EQU	0
+  1310  0000                     	psect	intsave_regs,class=BIGRAM,space=1,noexec
+  1311                           	PSECT	rparam,class=COMRAM,space=1,noexec
+  1312                           	GLOBAL	__Lrparam
+  1313                           	FNCONF	rparam,??,?
+  1314                           	GLOBAL	___rparam_used
+  1315                           	___rparam_used EQU 1
+  1316  0000                     	GLOBAL	___param_bank
+  1317                           	___param_bank EQU 0
+  1318  0000                     GLOBAL	__Lparam, __Hparam
+  1319                           GLOBAL	__Lrparam, __Hrparam
+  1320                           __Lparam	EQU	__Lrparam
+  1321  0000                     __Hparam	EQU	__Hrparam
+  1322  0000                            psect   temp,common,ovrld,class=COMRAM,space=1
+  1323                           	global	btemp
+  1324                           btemp:
+  1325  000003                     	ds	1
+  1326  000003                     	global	int$flags
+  1327                           	int$flags	set btemp
+  1328  0000                     	global	wtemp8
+  1329                           	wtemp8 set btemp+1
+  1330  0000                     	global	ttemp5
+  1331                           	ttemp5 set btemp+1
+  1332  0000                     	global	ttemp6
+  1333                           	ttemp6 set btemp+4
+  1334  0000                     	global	ttemp7
+  1335                           	ttemp7 set btemp+8
+  1336  0000                     	end
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         2
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           94      0       2
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _INT_isr in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _INT_isr in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _INT_isr in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _INT_isr in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _INT_isr in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _INT_isr in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _INT_isr in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _INT_isr in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _INT_isr in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                            _Int_Ext
+ ---------------------------------------------------------------------------------
+ (1) _Int_Ext                                              0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _INT_isr                                              0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Int_Ext
+
+ _INT_isr (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5E      0       0       0        0.0%
+COMRAM              5E      0       2       1        2.1%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0       2      20        0.0%
+DATA                 0      0       2       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.00 build -1524193055 
+Symbol Table                                                                                   Mon Oct 08 13:26:49 2018
+
+                     l20 0026                       l21 002A                       l22 002A  
+                     l25 0046                       l19 001E              __CFG_BORV$3 000000  
+           __CFG_CP0$OFF 000000             __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000  
+           __CFG_CP3$OFF 000000                      l710 0016                      l712 001E  
+                    l706 003C                      l708 0012             __CFG_CPB$OFF 000000  
+           __CFG_CPD$OFF 000000             __CFG_BOR$OFF 000000             __CFG_FOSC$HS 000000  
+           __CFG_LVP$OFF 000000             __CFG_WDT$OFF 000000                     _LATD 000F8C  
+                   i2l30 0050             __CFG_PWRT$ON 000000          __end_of_INT_isr 0054  
+                   _cont 0001                     _main 0012                     btemp 0003  
+                   start 000E            __CFG_IESO$OFF 000000            __CFG_MCLRE$ON 000000  
+           ___param_bank 000000          __end_of_Int_Ext 0048            __CFG_PLLDIV$1 000000  
+         __CFG_CCP2MX$ON 000000                    ?_main 0000                    i2l714 004A  
+                  i2l716 004E            __CFG_USBDIV$1 000000                    _TRISD 000F95  
+          __CFG_WRT0$OFF 000000            __CFG_WRT1$OFF 000000            __CFG_WRT2$OFF 000000  
+          __CFG_WRT3$OFF 000000           __CFG_EBTR0$OFF 000000           __CFG_FCMEN$OFF 000000  
+         __CFG_EBTR1$OFF 000000           __CFG_EBTR2$OFF 000000           __CFG_EBTR3$OFF 000000  
+          __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000            __CFG_WRTD$OFF 000000  
+         __CFG_EBTRB$OFF 000000                    ttemp5 0004                    ttemp6 0007  
+                  ttemp7 000B                    wtemp8 0004           __CFG_ICPRT$OFF 000000  
+        __initialization 002E             __end_of_main 002E                   ??_main 0000  
+          __activetblptr 000000                ??_INT_isr 0000                ??_Int_Ext 0000  
+         __CFG_XINST$OFF 000000           __CFG_STVREN$ON 000000               __accesstop 0060  
+__end_of__initialization 0032          __CFG_PBADEN$OFF 000000            ___rparam_used 000001  
+         __pcstackCOMRAM 0000                  _INT_isr 0008          __CFG_VREGEN$OFF 000000  
+                _Int_Ext 003C                  __Hparam 0000                  __Lparam 0000  
+                __pcinit 002E                  __ramtop 0800                  __ptext0 0012  
+                __ptext1 003C           __pintcode_body 0048     end_of_initialization 0032  
+                int_func 0048                _TRISBbits 000F93      start_initialization 002E  
+       __CFG_LPT1OSC$OFF 000000              __pbssCOMRAM 0001                 ?_INT_isr 0000  
+               ?_Int_Ext 0000                __pintcode 0008         __CFG_WDTPS$32768 000000  
+       __size_of_INT_isr 004C              _INTCON2bits 000FF1                 __Hrparam 0000  
+       __size_of_Int_Ext 000C                 __Lrparam 0000            __size_of_main 001C  
+               int$flags 0003    __CFG_CPUDIV$OSC1_PLL2 000000               _INTCONbits 000FF2  
+               intlevel2 0000  
