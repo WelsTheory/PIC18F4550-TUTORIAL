@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>32768</length>
+      <used>8868</used>
+      <free>23900</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>2048</length>
+      <used>289</used>
+      <free>1759</free>
+    </memory>
+  </executable>
+</project>

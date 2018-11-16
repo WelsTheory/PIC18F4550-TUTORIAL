@@ -1,0 +1,103 @@
+########################################
+Visual Basic 2005 HID Functions
+Compiled and modified by Amr Bekhit
+########################################
+
+-----------------------------
+--How to use
+-----------------------------
+
+Before using the code, you need to make sure that the mcHID.dll file is present in either the SYSTEM32 folder of your PC
+OR in the same directory as your application's executable file. If you plan to distribute your application, the mcHID.dll
+file must also be included in order for the application to work.
+
+Using the code is very simple. First, all the following variables need to set to their correct values, which will
+be determined by your USB hardware:
+
+- VendorID
+- ProductID
+- BufferInSize
+- BufferOutSize
+
+The variables can be found at the top of the form code.
+
+If you need to write code that responds to your USB device being plugged or unplugged, simply place that code where shown
+in the OnPlugged and OnUnplugged events respectively in the main form.
+
+When the USB device sends data to the PC, the OnRead event will be called and the BufferIn array will be populated with
+the received data. Take note that the received data starts from BufferIn(1) onwards. BufferIn(0) is unused.
+
+If you want to transmit data to the USB device, simply fill the BufferOut array with data, then call the hidWriteEx
+function to transmit the data to your USB device. Take note that your transmitted data must start from BufferOut(1)
+and that BufferOut(0) must always be set to 0.
+
+If you want to integrate the code into an existing application, you need to add the mcHIDInterface.vb fileto your 
+existing project and copy the code in the template's form into the form in your project that will be doing the USB 
+communication.
+
+-----------------------------
+--Variables
+-----------------------------
+
+The following is a brief description of the variables used in the main form that allow USB communication:
+
+- VendorID
+	Integer value specifying the Vendor ID of the USB device.
+
+- ProductID
+	Integer value specifying the Product ID of the USB device.
+	
+- BufferInSize
+	Non-zero integer value specifying the size (in bytes) of the data packet that the USB device will send to the PC.
+
+- BufferOutSize
+	Non-zero integer value specifying the size (in bytes) of the data packet that the PC will send to the USB device.
+
+- BufferIn()
+	Byte array which contains the data packet received from the USB device. The first byte of the array, BufferIn(0), 
+	is unused. Your data will start from BufferIn(1)
+
+- BufferOut()
+	Byte array which contains the data packet that will be sent to the USB device. The first byte of the array,
+	BufferOut(0), must always be 0. Your data is placed in BufferOut(1) and onwards.
+
+-----------------------------
+--Functions
+-----------------------------
+
+The following is a brief description of the important functions that allow USB communication:
+
+- hidWriteEx(ByVal pVendorID As Integer, ByVal pProductID As Integer, ByRef pData As Byte) As Boolean
+	This function is used to send data to the USB device. It's usage is very simple: the BufferOut array (see above)
+	is filled with the data that needs to be sent (make sure to set BufferOut(0)=0). After that, the function is called
+	as follows:
+	
+	hidWriteEx(VendorID, ProductID, BufferOut(0))
+	
+	VendorID, ProductID and BufferOut are all declared at the top of the form
+
+-----------------------------
+--Events
+-----------------------------
+
+The following is a brief description of the important events in the main form that allow USB communication:
+
+- Form1_Load
+	When the form is loading, ConnectToHID is called to initialize the USB functions.
+	This line must be present in order for the USB communication to function properly.
+	
+- Form1_FormClosed
+	When the form is closing, any USB connections are cleaned up and released.
+	
+- OnPlugged
+	This function gets called when your device is plugged into a USB port.
+	
+- OnUnplugged
+	This function gets called when your device has been unplugged from a USB port.
+	
+- OnChanged
+	Not sure what it does, but you don't need to mess with it in order to use USB. Leave it alone and you'll be fine.
+	
+- OnRead
+	This function gets called when data is sent to the PC from your USB device. The data is placed in the BufferIn array
+	declared at the top of the form.

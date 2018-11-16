@@ -1,0 +1,11 @@
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.vbprojAssemblyReference.cache
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.USB_Estado.resources
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.Resources.resources
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.vbproj.GenerateResource.cache
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.vbproj.CoreCompileInputs.cache
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\bin\Debug\PIC18F4550_USB_Demo.exe
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\bin\Debug\PIC18F4550_USB_Demo.pdb
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\bin\Debug\PIC18F4550_USB_Demo.xml
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.exe
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.xml
+C:\Users\Wels\source\repos\PIC18F4550_USB_Demo\PIC18F4550_USB_Demo\obj\Debug\PIC18F4550_USB_Demo.pdb

@@ -1,0 +1,1702 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+cinit CODE 0 2A70 2A70 26 1
+intcode_body CODE 0 2622 2622 6A 1
+text0 CODE 0 25B6 25B6 6C 1
+text1 CODE 0 29A2 29A2 36 1
+text2 CODE 0 177E 177E 14E 1
+text3 CODE 0 ED2 ED2 18E 1
+text4 CODE 0 28E6 28E6 40 1
+text5 CODE 0 284C 284C 52 1
+text7 CODE 0 C4E C4E 284 1
+text8 CODE 0 1060 1060 18E 1
+text9 CODE 0 289E 289E 48 1
+text10 CODE 0 2A42 2A42 2E 1
+text11 CODE 0 268C 268C 64 1
+text12 CODE 0 2966 2966 3C 1
+text13 CODE 0 21BA 21BA C4 1
+text14 CODE 0 26F0 26F0 58 1
+text15 CODE 0 24A8 24A8 90 1
+text16 CODE 0 135A 135A 166 1
+text17 CODE 0 2342 2342 B6 1
+text18 CODE 0 1B52 1B52 12C 1
+text19 CODE 0 1D9A 1D9A 10E 1
+text20 CODE 0 2926 2926 40 1
+text21 CODE 0 1EA8 1EA8 10C 1
+text22 CODE 0 14C0 14C0 160 1
+text23 CODE 0 8C8 8C8 386 1
+text24 CODE 0 227E 227E C4 1
+text25 CODE 0 29D8 29D8 36 1
+text26 CODE 0 11EE 11EE 16C 1
+text27 CODE 0 1FB4 1FB4 108 1
+text28 CODE 0 27A0 27A0 56 1
+text29 CODE 0 27F6 27F6 56 1
+text30 CODE 0 2A0E 2A0E 34 1
+text31 CODE 0 18CC 18CC 14E 1
+text32 CODE 0 2748 2748 58 1
+text33 CODE 0 23F8 23F8 B0 1
+text34 CODE 0 2538 2538 7E 1
+text35 CODE 0 1620 1620 15E 1
+text36 CODE 0 20BC 20BC FE 1
+text37 CODE 0 1C7E 1C7E 11C 1
+text38 CODE 0 1A1A 1A1A 138 1
+cstackCOMRAM COMRAM 1 1 1 33 1
+temp COMRAM 1 5F 5F 1 1
+bssBANK0 BANK0 1 60 60 12 1
+intcode CODE 0 8 8 6 1
+smallconst SMALLCONST 0 800 800 C8 1
+bssCOMRAM COMRAM 1 34 34 2B 1
+$C:\Users\Wels\AppData\Local\Temp\s5bs.o
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 E E 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 72-3FF 1
+RAM 430-4FF 1
+RAM 580-7FF 1
+SFR F60-FFF 1
+BANK0 72-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 430-4FF 1
+BANK5 580-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 12-7FF 1
+CONST 2A96-7FFF 1
+STACK 72-3FF 1
+SMALLCONST 2A96-7FFF 1
+CODE 4-7 1
+CODE 12-7FF 1
+CODE 2A96-7FFF 1
+BIGRAM 72-3FF 1
+BIGRAM 430-4FF 1
+BIGRAM 580-7FF 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 2A96-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+8 intcode CODE >1382:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+8 intcode CODE >95:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+1A1A text38 CODE >1771:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A1A text38 CODE >1777:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A1E text38 CODE >1778:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A34 text38 CODE >1780:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A38 text38 CODE >1787:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A48 text38 CODE >1789:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A4C text38 CODE >1790:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A50 text38 CODE >1791:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A60 text38 CODE >1793:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A68 text38 CODE >1794:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A6C text38 CODE >1795:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A70 text38 CODE >1799:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A78 text38 CODE >1804:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A88 text38 CODE >1808:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A92 text38 CODE >1809:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AA4 text38 CODE >1811:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AA8 text38 CODE >1813:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1ADC text38 CODE >1814:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AE2 text38 CODE >1811:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AE2 text38 CODE >1815:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AF6 text38 CODE >1816:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AFA text38 CODE >1817:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AFA text38 CODE >1819:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1AFE text38 CODE >1821:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B32 text38 CODE >1822:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B38 text38 CODE >1819:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B38 text38 CODE >1823:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B50 text38 CODE >1824:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B50 text38 CODE >1825:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C7E text37 CODE >2592:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C7E text37 CODE >2596:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C8E text37 CODE >2599:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C98 text37 CODE >2604:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CAA text37 CODE >2606:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CB2 text37 CODE >2607:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CC2 text37 CODE >2609:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CC6 text37 CODE >2610:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CCA text37 CODE >2611:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CCA text37 CODE >2613:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CD2 text37 CODE >2614:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CD6 text37 CODE >2615:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CD6 text37 CODE >2618:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CE6 text37 CODE >2620:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CFA text37 CODE >2621:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1CFE text37 CODE >2627:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D10 text37 CODE >2631:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D1C text37 CODE >2632:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D28 text37 CODE >2633:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D2C text37 CODE >2634:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D2C text37 CODE >2636:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D3C text37 CODE >2638:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D48 text37 CODE >2639:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D54 text37 CODE >2640:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D58 text37 CODE >2641:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D58 text37 CODE >2643:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D64 text37 CODE >2644:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D74 text37 CODE >2645:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D78 text37 CODE >2646:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D78 text37 CODE >2647:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D7C text37 CODE >2648:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D7C text37 CODE >2653:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D8A text37 CODE >2655:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D8A text37 CODE >2658:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D8A text37 CODE >2659:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D90 text37 CODE >2660:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D90 text37 CODE >2662:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D98 text37 CODE >2665:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D98 text37 CODE >2667:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+20BC text36 CODE >1416:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+20BC text36 CODE >1423:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+20CE text36 CODE >1425:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+20D2 text36 CODE >1426:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+20E2 text36 CODE >1428:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+20E6 text36 CODE >1432:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+20F8 text36 CODE >1434:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2108 text36 CODE >1435:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2114 text36 CODE >1436:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2120 text36 CODE >1437:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2124 text36 CODE >1438:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2134 text36 CODE >1440:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2138 text36 CODE >1445:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2148 text36 CODE >1446:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+215C text36 CODE >1447:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2168 text36 CODE >1448:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2174 text36 CODE >1449:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2178 text36 CODE >1453:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2188 text36 CODE >1454:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+219C text36 CODE >1455:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21AC text36 CODE >1456:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21B0 text36 CODE >1457:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21B8 text36 CODE >1458:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21B8 text36 CODE >1459:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1620 text35 CODE >1852:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1620 text35 CODE >1859:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1630 text35 CODE >1865:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1646 text35 CODE >1867:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+164E text35 CODE >1868:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+164E text35 CODE >1870:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1656 text35 CODE >1874:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+165E text35 CODE >1875:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+165E text35 CODE >1876:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+167E text35 CODE >1874:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+169A text35 CODE >1881:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+16AC text35 CODE >1883:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+16BC text35 CODE >1884:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+16D0 text35 CODE >1885:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+16E6 text35 CODE >1887:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+16F2 text35 CODE >1888:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+16FE text35 CODE >1889:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1702 text35 CODE >1890:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1702 text35 CODE >1892:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+170E text35 CODE >1893:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+171E text35 CODE >1894:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+171E text35 CODE >1895:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1722 text35 CODE >1896:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1722 text35 CODE >1901:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1732 text35 CODE >1902:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1746 text35 CODE >1906:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1752 text35 CODE >1907:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+175E text35 CODE >1914:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+175E text35 CODE >1926:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+175E text35 CODE >1927:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1760 text35 CODE >1941:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1770 text35 CODE >1943:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1778 text35 CODE >1944:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+177C text35 CODE >1945:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+177C text35 CODE >1947:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2538 text34 CODE >2538:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2538 text34 CODE >2540:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+254A text34 CODE >2542:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+254E text34 CODE >2543:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2552 text34 CODE >2544:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2552 text34 CODE >2548:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2556 text34 CODE >2555:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2568 text34 CODE >2557:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2578 text34 CODE >2558:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+258C text34 CODE >2559:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2598 text34 CODE >2560:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+25A4 text34 CODE >2561:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+25A8 text34 CODE >2562:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+25A8 text34 CODE >2564:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+25B0 text34 CODE >2565:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+25B4 text34 CODE >2566:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+25B4 text34 CODE >2567:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23F8 text33 CODE >1543:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23FA text33 CODE >1549:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2402 text33 CODE >1550:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+243C text33 CODE >1552:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2446 text33 CODE >1557:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2456 text33 CODE >1559:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+246E text33 CODE >1560:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2472 text33 CODE >1561:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2472 text33 CODE >1563:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+248E text33 CODE >1564:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+248E text33 CODE >1567:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2498 text33 CODE >1568:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24A6 text33 CODE >1585:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2748 text32 CODE >878:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+274A text32 CODE >884:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2758 text32 CODE >886:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2766 text32 CODE >887:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2766 text32 CODE >888:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2774 text32 CODE >890:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2782 text32 CODE >891:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2782 text32 CODE >899:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2792 text32 CODE >901:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+279E text32 CODE >902:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18CC text31 CODE >995:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18CE text31 CODE >1000:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18DE text31 CODE >1003:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18F6 text31 CODE >1004:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18FA text31 CODE >1005:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18FA text31 CODE >1008:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1916 text31 CODE >1009:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1916 text31 CODE >1013:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1928 text31 CODE >1015:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1938 text31 CODE >1016:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1938 text31 CODE >1029:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+194C text31 CODE >1030:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+195C text31 CODE >1031:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1968 text31 CODE >1032:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1974 text31 CODE >1033:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1980 text31 CODE >1036:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1990 text31 CODE >1039:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+19CA text31 CODE >1040:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+19CE text31 CODE >1041:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+19CE text31 CODE >1044:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A0C text31 CODE >1045:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A0C text31 CODE >1046:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1A18 text31 CODE >1047:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A0E text30 CODE >77:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_device_custom_hid.c
+2A0E text30 CODE >81:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_device_custom_hid.c
+2A18 text30 CODE >84:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_device_custom_hid.c
+2A22 text30 CODE >87:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_device_custom_hid.c
+2A40 text30 CODE >88:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_device_custom_hid.c
+27F6 text29 CODE >137:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27F8 text29 CODE >139:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27FC text29 CODE >141:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27FC text29 CODE >142:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27FE text29 CODE >143:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2802 text29 CODE >145:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2802 text29 CODE >146:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2804 text29 CODE >147:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2808 text29 CODE >149:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2808 text29 CODE >150:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+280A text29 CODE >151:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+280E text29 CODE >153:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+280E text29 CODE >154:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2810 text29 CODE >155:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2814 text29 CODE >157:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2814 text29 CODE >158:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+2818 text29 CODE >159:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+281C text29 CODE >139:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+284A text29 CODE >159:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+284A text29 CODE >160:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27A0 text28 CODE >96:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27A2 text28 CODE >98:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27A6 text28 CODE >100:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27A6 text28 CODE >101:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27A8 text28 CODE >102:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27AC text28 CODE >104:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27AC text28 CODE >105:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27AE text28 CODE >106:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27B2 text28 CODE >108:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27B2 text28 CODE >109:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27B4 text28 CODE >110:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27B8 text28 CODE >112:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27B8 text28 CODE >113:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27BA text28 CODE >114:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27BE text28 CODE >116:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27BE text28 CODE >117:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27C2 text28 CODE >118:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27C6 text28 CODE >98:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27F4 text28 CODE >118:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+27F4 text28 CODE >119:C:\microchip\mla\v2017_03_06/bsp/picdem_fs_usb/leds.c
+1FB4 text27 CODE >50:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FB4 text27 CODE >54:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FC2 text27 CODE >56:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FCC text27 CODE >57:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FD0 text27 CODE >58:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FD0 text27 CODE >60:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FD4 text27 CODE >62:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FD4 text27 CODE >65:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FE6 text27 CODE >67:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FEC text27 CODE >68:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+1FF0 text27 CODE >69:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2004 text27 CODE >71:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+200A text27 CODE >72:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+200E text27 CODE >73:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2024 text27 CODE >75:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2030 text27 CODE >76:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2034 text27 CODE >77:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+203C text27 CODE >79:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+203C text27 CODE >82:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+204E text27 CODE >84:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2054 text27 CODE >85:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2058 text27 CODE >86:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+206C text27 CODE >88:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2072 text27 CODE >89:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2076 text27 CODE >90:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+208C text27 CODE >92:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+2098 text27 CODE >93:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+209C text27 CODE >94:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+20A4 text27 CODE >95:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+20A8 text27 CODE >60:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+20B6 text27 CODE >95:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+20B6 text27 CODE >98:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+20BA text27 CODE >99:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/app_led_usb_status.c
+11EE text26 CODE >153:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+11EE text26 CODE >155:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+120C text26 CODE >156:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1224 text26 CODE >163:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+123A text26 CODE >165:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+123E text26 CODE >167:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+123E text26 CODE >168:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+124E text26 CODE >170:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1266 text26 CODE >174:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1266 text26 CODE >175:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+126A text26 CODE >176:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+126A text26 CODE >179:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+127E text26 CODE >184:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1282 text26 CODE >185:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1282 text26 CODE >197:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1286 text26 CODE >198:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+128A text26 CODE >165:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12A8 text26 CODE >198:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12AC text26 CODE >199:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12AC text26 CODE >201:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12C6 text26 CODE >203:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12CA text26 CODE >204:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12CA text26 CODE >206:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12CE text26 CODE >208:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12CE text26 CODE >212:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12D2 text26 CODE >213:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12D2 text26 CODE >217:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12D6 text26 CODE >218:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12D6 text26 CODE >219:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12EA text26 CODE >223:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12EE text26 CODE >224:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12EE text26 CODE >225:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12F2 text26 CODE >226:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12F6 text26 CODE >228:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12FA text26 CODE >229:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+12FA text26 CODE >230:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+130E text26 CODE >234:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1312 text26 CODE >235:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1312 text26 CODE >236:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1316 text26 CODE >237:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+131A text26 CODE >238:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+131E text26 CODE >239:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1322 text26 CODE >206:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1358 text26 CODE >239:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+1358 text26 CODE >241:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device_hid.c
+29D8 text25 CODE >68:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29DA text25 CODE >70:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29DE text25 CODE >72:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29DE text25 CODE >82:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29E2 text25 CODE >84:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29E2 text25 CODE >85:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29E6 text25 CODE >87:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29E6 text25 CODE >88:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29EA text25 CODE >89:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29EE text25 CODE >70:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+2A0C text25 CODE >89:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+2A0C text25 CODE >90:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+227E text24 CODE >51:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+227E text24 CODE >53:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2282 text24 CODE >55:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2282 text24 CODE >56:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2286 text24 CODE >58:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2286 text24 CODE >61:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+228A text24 CODE >62:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+228E text24 CODE >64:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+228E text24 CODE >66:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2292 text24 CODE >74:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2298 text24 CODE >75:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+229C text24 CODE >77:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+229C text24 CODE >79:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22A0 text24 CODE >85:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22A6 text24 CODE >86:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22AA text24 CODE >88:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22AA text24 CODE >91:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22AE text24 CODE >92:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22B2 text24 CODE >94:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22B2 text24 CODE >95:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22B6 text24 CODE >97:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22B6 text24 CODE >100:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22BA text24 CODE >101:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22BE text24 CODE >103:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22BE text24 CODE >104:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22C2 text24 CODE >106:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22C2 text24 CODE >107:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22C6 text24 CODE >109:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22C6 text24 CODE >110:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22CA text24 CODE >111:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+22CE text24 CODE >53:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2340 text24 CODE >111:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+2340 text24 CODE >113:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/usb_events.c
+8C8 text23 CODE >2754:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+8C8 text23 CODE >2800:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+8EE text23 CODE >2802:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+8F0 text23 CODE >2803:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+902 text23 CODE >2804:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+90A text23 CODE >2805:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+90A text23 CODE >2806:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+912 text23 CODE >2807:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+912 text23 CODE >2813:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+972 text23 CODE >2817:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+974 text23 CODE >2820:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+982 text23 CODE >2822:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+9A0 text23 CODE >2823:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+9BA text23 CODE >2824:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+9BE text23 CODE >2825:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+9BE text23 CODE >2827:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+9DC text23 CODE >2828:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+9FA text23 CODE >2829:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+9FA text23 CODE >2835:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A08 text23 CODE >2837:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A14 text23 CODE >2838:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A18 text23 CODE >2839:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A18 text23 CODE >2841:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A26 text23 CODE >2842:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A26 text23 CODE >2847:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A34 text23 CODE >2849:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A52 text23 CODE >2850:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A56 text23 CODE >2851:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A56 text23 CODE >2853:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A78 text23 CODE >2854:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A78 text23 CODE >2857:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+A8A text23 CODE >2859:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+AA0 text23 CODE >2863:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+AAE text23 CODE >2865:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+AC6 text23 CODE >2866:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ACA text23 CODE >2867:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ACA text23 CODE >2869:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+AE6 text23 CODE >2870:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+AEA text23 CODE >2871:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+AEA text23 CODE >2874:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+AF6 text23 CODE >2875:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B02 text23 CODE >2876:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B06 text23 CODE >2877:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B06 text23 CODE >2882:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B10 text23 CODE >2884:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B26 text23 CODE >2888:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B32 text23 CODE >2889:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B3E text23 CODE >2890:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B5A text23 CODE >2891:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B5E text23 CODE >2892:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B5E text23 CODE >2895:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B6E text23 CODE >2896:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B6E text23 CODE >2900:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B78 text23 CODE >2906:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+B9C text23 CODE >2908:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+BAC text23 CODE >2910:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+BC4 text23 CODE >2911:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+BC8 text23 CODE >2912:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+BC8 text23 CODE >2914:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+BE4 text23 CODE >2915:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+BE4 text23 CODE >2917:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+BF0 text23 CODE >2920:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C0C text23 CODE >2921:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C10 text23 CODE >2922:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C10 text23 CODE >2925:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C20 text23 CODE >2926:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C20 text23 CODE >2973:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C38 text23 CODE >2977:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C48 text23 CODE >2978:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C4C text23 CODE >2979:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C4C text23 CODE >2980:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14C0 text22 CODE >2043:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14C0 text22 CODE >2045:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14D4 text22 CODE >2047:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14D8 text22 CODE >2049:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14DC text22 CODE >2051:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14DC text22 CODE >2055:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14E4 text22 CODE >2057:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14EC text22 CODE >2058:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14F0 text22 CODE >2059:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14F0 text22 CODE >2063:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1500 text22 CODE >2068:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+151C text22 CODE >2074:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+154A text22 CODE >2075:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1578 text22 CODE >2076:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+157C text22 CODE >2077:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+157C text22 CODE >2079:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1584 text22 CODE >2080:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1584 text22 CODE >2081:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1588 text22 CODE >2082:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1588 text22 CODE >2086:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+159A text22 CODE >2089:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15B6 text22 CODE >2091:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15DE text22 CODE >2092:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15E2 text22 CODE >2102:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15E2 text22 CODE >2104:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15EA text22 CODE >2105:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15EA text22 CODE >2106:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15EE text22 CODE >2107:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15EE text22 CODE >2108:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15F2 text22 CODE >2109:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15F6 text22 CODE >2110:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+15FA text22 CODE >2049:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+161A text22 CODE >2110:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+161E text22 CODE >2111:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+161E text22 CODE >2112:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EA8 text21 CODE >2129:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EA8 text21 CODE >2131:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EAE text21 CODE >2132:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EB2 text21 CODE >2134:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EB6 text21 CODE >2136:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EB6 text21 CODE >2137:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EB8 text21 CODE >2142:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EBC text21 CODE >2144:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EC2 text21 CODE >2145:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EC2 text21 CODE >2147:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1ED2 text21 CODE >2149:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1ED8 text21 CODE >2150:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1ED8 text21 CODE >2151:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EDC text21 CODE >2152:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EDC text21 CODE >2153:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EDE text21 CODE >2154:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EE2 text21 CODE >2155:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EE2 text21 CODE >2156:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EE4 text21 CODE >2163:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EF2 text21 CODE >2165:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F10 text21 CODE >2166:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F14 text21 CODE >2167:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F14 text21 CODE >2169:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F36 text21 CODE >2170:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F36 text21 CODE >2172:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F62 text21 CODE >2173:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F6A text21 CODE >2174:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F6E text21 CODE >2176:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F72 text21 CODE >2134:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F92 text21 CODE >2176:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1F92 text21 CODE >2178:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1FA0 text21 CODE >2180:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1FA8 text21 CODE >2181:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1FAA text21 CODE >2182:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1FB2 text21 CODE >2183:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1FB2 text21 CODE >2184:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2926 text20 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+2926 text20 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+292E text20 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+2932 text20 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+2946 text20 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+2964 text20 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+1D9A text19 CODE >1968:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D9A text19 CODE >1973:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1D9C text19 CODE >1976:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1DB8 text19 CODE >1979:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1DD4 text19 CODE >1982:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1DD6 text19 CODE >1987:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1DF2 text19 CODE >1988:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1DF2 text19 CODE >1989:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E06 text19 CODE >1990:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E1A text19 CODE >1987:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E30 text19 CODE >1994:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E4C text19 CODE >1997:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E4E text19 CODE >1999:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E56 text19 CODE >2002:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E5E text19 CODE >2003:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E66 text19 CODE >2006:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E6A text19 CODE >2009:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E7A text19 CODE >2012:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E7E text19 CODE >2013:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E82 text19 CODE >2014:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E82 text19 CODE >2017:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1E9E text19 CODE >2022:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EA6 text19 CODE >2023:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1EA6 text19 CODE >2024:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B52 text18 CODE >2686:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B52 text18 CODE >2688:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B72 text18 CODE >2690:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B76 text18 CODE >2692:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B76 text18 CODE >2693:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B78 text18 CODE >2694:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B7C text18 CODE >2696:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B80 text18 CODE >2697:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B80 text18 CODE >2698:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B84 text18 CODE >2699:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B88 text18 CODE >2700:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B88 text18 CODE >2701:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B8C text18 CODE >2702:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B90 text18 CODE >2703:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B90 text18 CODE >2704:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B98 text18 CODE >2705:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B9A text18 CODE >2706:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1B9E text18 CODE >2707:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BA0 text18 CODE >2708:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BA4 text18 CODE >2709:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BA4 text18 CODE >2710:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BA8 text18 CODE >2711:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BAC text18 CODE >2712:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BB0 text18 CODE >2713:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BB0 text18 CODE >2714:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BB4 text18 CODE >2715:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BB8 text18 CODE >2716:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BB8 text18 CODE >2717:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BCA text18 CODE >2718:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BCC text18 CODE >2719:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BD0 text18 CODE >2720:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BD2 text18 CODE >2721:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BD6 text18 CODE >2722:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BD6 text18 CODE >2723:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BD8 text18 CODE >2724:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BEC text18 CODE >2725:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BF0 text18 CODE >2726:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1BF0 text18 CODE >2727:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C0C text18 CODE >2728:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C10 text18 CODE >2729:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C14 text18 CODE >2730:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C14 text18 CODE >2731:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C18 text18 CODE >2732:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C1C text18 CODE >2690:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C7C text18 CODE >2732:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1C7C text18 CODE >2733:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2342 text17 CODE >1488:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2342 text17 CODE >1490:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2348 text17 CODE >1491:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+234C text17 CODE >1493:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+235E text17 CODE >1496:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+236E text17 CODE >1497:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2382 text17 CODE >1498:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+238E text17 CODE >1499:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+239A text17 CODE >1500:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+239E text17 CODE >1501:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+239E text17 CODE >1505:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23B6 text17 CODE >1507:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23C2 text17 CODE >1508:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23C2 text17 CODE >1509:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23C6 text17 CODE >1514:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23DA text17 CODE >1515:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23E6 text17 CODE >1516:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23F6 text17 CODE >1517:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+23F6 text17 CODE >1518:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+135A text16 CODE >1616:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+135A text16 CODE >1622:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+135C text16 CODE >1628:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+136A text16 CODE >1630:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1378 text16 CODE >1632:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+137C text16 CODE >1643:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+138E text16 CODE >1645:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1396 text16 CODE >1646:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1396 text16 CODE >1650:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+139C text16 CODE >1651:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13A0 text16 CODE >1652:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13A4 text16 CODE >1653:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13A4 text16 CODE >1659:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13B4 text16 CODE >1660:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13C8 text16 CODE >1661:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13D4 text16 CODE >1662:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13E0 text16 CODE >1663:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13EC text16 CODE >1664:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13FC text16 CODE >1665:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+13FC text16 CODE >1666:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1400 text16 CODE >1667:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1400 text16 CODE >1669:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1410 text16 CODE >1671:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1414 text16 CODE >1685:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1426 text16 CODE >1687:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+142E text16 CODE >1688:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+142E text16 CODE >1710:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1434 text16 CODE >1711:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1438 text16 CODE >1712:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1448 text16 CODE >1714:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1450 text16 CODE >1715:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1450 text16 CODE >1716:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1454 text16 CODE >1717:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1454 text16 CODE >1729:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1458 text16 CODE >1732:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1468 text16 CODE >1733:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+147C text16 CODE >1734:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1488 text16 CODE >1735:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1494 text16 CODE >1738:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+149A text16 CODE >1739:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+149E text16 CODE >1740:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14AE text16 CODE >1742:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14B6 text16 CODE >1743:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14BA text16 CODE >1744:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14BE text16 CODE >1746:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+14BE text16 CODE >1748:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24A8 text15 CODE >2465:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24A8 text15 CODE >2470:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24AC text15 CODE >2471:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24B0 text15 CODE >2472:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24B6 text15 CODE >2473:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24BA text15 CODE >2474:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24BE text15 CODE >2475:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24C2 text15 CODE >2484:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24CE text15 CODE >2486:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24D8 text15 CODE >2487:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24E4 text15 CODE >2488:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24EE text15 CODE >2489:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24FA text15 CODE >2491:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+24FE text15 CODE >2492:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2506 text15 CODE >2493:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+250A text15 CODE >2494:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2512 text15 CODE >2500:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2516 text15 CODE >2501:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2532 text15 CODE >2514:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2536 text15 CODE >2515:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26F0 text14 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+26F0 text14 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+26F8 text14 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+2700 text14 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+2704 text14 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+2714 text14 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+2728 text14 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+2728 text14 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+2746 text14 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memcpy.c
+21BA text13 CODE >2372:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21BA text13 CODE >2378:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21BE text13 CODE >2382:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21D4 text13 CODE >2386:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21F0 text13 CODE >2394:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+21F8 text13 CODE >2396:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2202 text13 CODE >2399:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2220 text13 CODE >2405:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2248 text13 CODE >2408:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+224C text13 CODE >2409:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2250 text13 CODE >2410:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2250 text13 CODE >2413:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2258 text13 CODE >2414:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2258 text13 CODE >2415:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+225C text13 CODE >2416:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2270 text13 CODE >2420:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2278 text13 CODE >2421:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+227C text13 CODE >2423:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2966 text12 CODE >3025:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2966 text12 CODE >3033:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2974 text12 CODE >3034:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2984 text12 CODE >3036:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2986 text12 CODE >3038:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2996 text12 CODE >3040:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+299C text12 CODE >3041:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+29A0 text12 CODE >3042:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+29A0 text12 CODE >3043:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+268C text11 CODE >2202:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+268C text11 CODE >2214:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+269A text11 CODE >2217:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26CE text11 CODE >2220:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26DA text11 CODE >2221:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26EA text11 CODE >2222:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26EA text11 CODE >2223:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26EC text11 CODE >2224:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26EC text11 CODE >2226:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+26EE text11 CODE >2227:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A42 text10 CODE >2245:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A42 text10 CODE >2270:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A44 text10 CODE >2271:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A46 text10 CODE >2274:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A48 text10 CODE >2277:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A4C text10 CODE >2278:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A52 text10 CODE >2285:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2A6E text10 CODE >2286:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+289E text9 CODE >2303:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+289E text9 CODE >2305:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28A2 text9 CODE >2311:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28BE text9 CODE >2318:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28C0 text9 CODE >2323:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28C2 text9 CODE >2341:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28C6 text9 CODE >2344:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28CC text9 CODE >2341:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28CC text9 CODE >2345:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28DE text9 CODE >2347:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28E4 text9 CODE >2349:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1060 text8 CODE >277:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1060 text8 CODE >281:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1062 text8 CODE >288:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1066 text8 CODE >291:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+106A text8 CODE >294:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+106E text8 CODE >296:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+108A text8 CODE >298:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1096 text8 CODE >307:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10B2 text8 CODE >308:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10B2 text8 CODE >309:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10CA text8 CODE >307:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10DC text8 CODE >313:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10DE text8 CODE >316:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10E2 text8 CODE >319:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10E4 text8 CODE >322:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10EA text8 CODE >325:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10EA text8 CODE >327:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10EC text8 CODE >329:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10F0 text8 CODE >330:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10F4 text8 CODE >331:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+10FC text8 CODE >332:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+110E text8 CODE >336:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1114 text8 CODE >337:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1118 text8 CODE >339:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+111C text8 CODE >340:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1120 text8 CODE >341:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1124 text8 CODE >345:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1140 text8 CODE >346:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1140 text8 CODE >347:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1158 text8 CODE >348:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1170 text8 CODE >349:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1184 text8 CODE >350:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1198 text8 CODE >345:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11AE text8 CODE >354:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11B6 text8 CODE >356:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11BA text8 CODE >358:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11C4 text8 CODE >359:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11C8 text8 CODE >360:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11CC text8 CODE >361:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11CE text8 CODE >364:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11D2 text8 CODE >366:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11E4 text8 CODE >367:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11E8 text8 CODE >370:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+11EC text8 CODE >371:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C4E text7 CODE >477:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C4E text7 CODE >590:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C5E text7 CODE >601:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C6C text7 CODE >608:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C70 text7 CODE >614:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C72 text7 CODE >615:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C74 text7 CODE >616:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C7C text7 CODE >617:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C80 text7 CODE >618:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C80 text7 CODE >634:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C9C text7 CODE >636:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+C9E text7 CODE >640:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CA6 text7 CODE >642:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CA6 text7 CODE >647:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CB4 text7 CODE >649:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CB6 text7 CODE >650:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CBA text7 CODE >651:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CBA text7 CODE >663:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CD6 text7 CODE >665:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CDA text7 CODE >669:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CDC text7 CODE >671:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CE0 text7 CODE >681:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CE6 text7 CODE >682:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+CE6 text7 CODE >687:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D02 text7 CODE >694:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D0A text7 CODE >696:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D0A text7 CODE >708:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D18 text7 CODE >711:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D26 text7 CODE >713:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D46 text7 CODE >714:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D46 text7 CODE >715:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D48 text7 CODE >718:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D4C text7 CODE >735:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D5C text7 CODE >737:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D62 text7 CODE >738:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D62 text7 CODE >744:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D72 text7 CODE >746:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D7A text7 CODE >747:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D7E text7 CODE >749:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D7E text7 CODE >751:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+D9A text7 CODE >753:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DA2 text7 CODE >754:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DA2 text7 CODE >756:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DBE text7 CODE >758:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DD8 text7 CODE >759:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DE0 text7 CODE >767:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DE0 text7 CODE >774:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DF0 text7 CODE >776:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DF2 text7 CODE >777:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DF6 text7 CODE >778:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+DF6 text7 CODE >783:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E04 text7 CODE >785:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E20 text7 CODE >786:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E20 text7 CODE >787:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E2E text7 CODE >790:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E32 text7 CODE >791:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E3C text7 CODE >793:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E3E text7 CODE >798:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E4C text7 CODE >800:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E5E text7 CODE >801:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E62 text7 CODE >802:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E62 text7 CODE >804:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E78 text7 CODE >805:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E78 text7 CODE >810:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E88 text7 CODE >812:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E8C text7 CODE >813:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E90 text7 CODE >814:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+E90 text7 CODE >816:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EB0 text7 CODE >817:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EB0 text7 CODE >818:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EB4 text7 CODE >819:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EB4 text7 CODE >821:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EB8 text7 CODE >785:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EB8 text7 CODE >822:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ECE text7 CODE >824:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ECE text7 CODE >826:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ED0 text7 CODE >827:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2622 intcode_body CODE >95:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+2654 intcode_body CODE >98:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+2658 intcode_body CODE >100:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+284C text5 CODE >1352:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+284C text5 CODE >1355:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+285C text5 CODE >1360:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2860 text5 CODE >1363:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2864 text5 CODE >1367:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2870 text5 CODE >1369:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2878 text5 CODE >1372:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2890 text5 CODE >1375:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+2898 text5 CODE >1380:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+289C text5 CODE >1381:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+289C text5 CODE >1382:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+28E6 text4 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+28E6 text4 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+28EE text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+28F2 text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+2906 text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+2924 text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\memset.c
+ED2 text3 CODE >277:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ED2 text3 CODE >281:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ED4 text3 CODE >288:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+ED8 text3 CODE >291:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EDC text3 CODE >294:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EE0 text3 CODE >296:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+EFC text3 CODE >298:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F08 text3 CODE >307:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F24 text3 CODE >308:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F24 text3 CODE >309:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F3C text3 CODE >307:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F4E text3 CODE >313:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F50 text3 CODE >316:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F54 text3 CODE >319:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F56 text3 CODE >322:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F5C text3 CODE >325:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F5C text3 CODE >327:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F5E text3 CODE >329:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F62 text3 CODE >330:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F66 text3 CODE >331:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F6E text3 CODE >332:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F80 text3 CODE >336:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F86 text3 CODE >337:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F8A text3 CODE >339:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F8E text3 CODE >340:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F92 text3 CODE >341:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+F96 text3 CODE >345:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+FB2 text3 CODE >346:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+FB2 text3 CODE >347:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+FCA text3 CODE >348:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+FE2 text3 CODE >349:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+FF6 text3 CODE >350:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+100A text3 CODE >345:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1020 text3 CODE >354:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1028 text3 CODE >356:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+102C text3 CODE >358:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1036 text3 CODE >359:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+103A text3 CODE >360:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+103E text3 CODE >361:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1040 text3 CODE >364:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1044 text3 CODE >366:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1056 text3 CODE >367:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+105A text3 CODE >370:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+105E text3 CODE >371:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+177E text2 CODE >995:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1780 text2 CODE >1000:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1790 text2 CODE >1003:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17A8 text2 CODE >1004:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17AC text2 CODE >1005:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17AC text2 CODE >1008:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17C8 text2 CODE >1009:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17C8 text2 CODE >1013:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17DA text2 CODE >1015:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17EA text2 CODE >1016:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17EA text2 CODE >1029:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+17FE text2 CODE >1030:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+180E text2 CODE >1031:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+181A text2 CODE >1032:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1826 text2 CODE >1033:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1832 text2 CODE >1036:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1842 text2 CODE >1039:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+187C text2 CODE >1040:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1880 text2 CODE >1041:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+1880 text2 CODE >1044:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18BE text2 CODE >1045:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18BE text2 CODE >1046:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+18CA text2 CODE >1047:C:\microchip\mla\v2017_03_06/framework/usb/src/usb_device.c
+29A2 text1 CODE >68:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29A4 text1 CODE >70:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29A8 text1 CODE >72:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29A8 text1 CODE >82:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29AC text1 CODE >84:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29AC text1 CODE >85:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29B0 text1 CODE >87:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29B0 text1 CODE >88:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29B4 text1 CODE >89:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29B8 text1 CODE >70:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29D6 text1 CODE >89:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+29D6 text1 CODE >90:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware\picdem_fs_usb_wels.x\system.c
+25B6 text0 CODE >37:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25B6 text0 CODE >39:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25BC text0 CODE >40:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25C0 text0 CODE >41:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25C4 text0 CODE >42:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25C6 text0 CODE >43:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25CC text0 CODE >44:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25CC text0 CODE >46:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25D0 text0 CODE >47:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25D0 text0 CODE >48:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25D2 text0 CODE >49:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25D6 text0 CODE >50:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25D6 text0 CODE >51:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25D8 text0 CODE >52:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25DC text0 CODE >53:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25E0 text0 CODE >46:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25F8 text0 CODE >53:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+25F8 text0 CODE >54:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+261A text0 CODE >44:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+261A text0 CODE >55:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+261E text0 CODE >56:C:\microchip\mla\v2017_03_06\apps\usb\device\hid_custom\firmware/demo_src/main.c
+2A70 cinit CODE >4286:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A70 cinit CODE >4288:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A70 cinit CODE >4291:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A70 cinit CODE >4396:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A74 cinit CODE >4397:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A76 cinit CODE >4398:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A76 cinit CODE >4399:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A78 cinit CODE >4400:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A7A cinit CODE >4401:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A7C cinit CODE >4404:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A80 cinit CODE >4405:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A82 cinit CODE >4406:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A82 cinit CODE >4407:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A84 cinit CODE >4408:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A86 cinit CODE >4409:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A88 cinit CODE >4415:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A88 cinit CODE >4417:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A8A cinit CODE >4418:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A8C cinit CODE >4420:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A8E cinit CODE >4421:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A90 cinit CODE >4422:C:\Users\Wels\AppData\Local\Temp\s5bs.
+2A92 cinit CODE >4423:C:\Users\Wels\AppData\Local\Temp\s5bs.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBStdGetStatusHandler@p 2 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hspace_0 30000E 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hspace_1 72 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hspace_2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_IESO$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USB1msTickCount 60 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_ofi2_USBTransferOnePacket 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBTransferOnePacket@dir 29 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBTransferOnePacket@len 2C 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\s5bs.o
+__size_of_USBCtrlEPServiceComplete 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBStdSetCfgHandler 1EA8 0 CODE 0 text19 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBEnableEndpoint@options 9 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_LED_On 27F6 0 CODE 0 text28 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_VREGEN$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBIncrement1msInternalTimers 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lsmallconst 800 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UCFG F6F 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UCON F6D 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UEIE F6B 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UEIR F6A 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UEP0 F70 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UEP1 F71 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s5bs.o
+_main 25B6 0 CODE 0 text0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_pDst 68 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+btemp 5F 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+start E 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\s5bs.o
+__end_of_USBCheckHIDRequest 135A 0 CODE 0 text26 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2memset@p1 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBTransferOnePacket 177E 0 CODE 0 text2 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_main 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_active_protocol 70 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBDeviceInit ED2 0 CODE 0 text3 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USB_Init 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_pBDTEntryEP0OutNext 50 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBDeviceTasks 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_SYS_InterruptHigh 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBCtrlTrfInHandler@lastDTS 2 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBConfigureEndpoint 23F8 0 CODE 0 text33 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hpowerup E 0 CODE 0 powerup dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_LED_Off 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UEP0bits F70 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_APP_LEDUpdateUSBStatus 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_ofi2_USB_Init 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_APP_DeviceCustomHIDInitialize 2A42 0 CODE 0 text30 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+APP_LEDUpdateUSBStatus@ledCount 4A 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_CtrlTrfData 428 0 ABS 1 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+ttemp5 60 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+ttemp6 63 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+ttemp7 67 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s5bs.o
+intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s5bs.o
+intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s5bs.o
+intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s5bs.o
+intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s5bs.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_USBDIV$2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_pBDTEntryIn 42 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+wtemp8 60 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCheckHIDRequest 11EE 0 CODE 0 text26 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlTrfRxService 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBEnableEndpoint 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_controlTransferState 59 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlTrfTxService 1A1A 0 CODE 0 text38 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlEPAllowDataStage 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBDeviceInit@i 31 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ADCON0 FC2 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ADCON2 FC0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ADRESH FC4 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ADRESL FC3 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_idle_rate 71 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s5bs.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s5bs.o
+_USB_Init 29A2 0 CODE 0 text1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlEPServiceComplete 14C0 0 CODE 0 text16 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+?_USBTransferOnePacket 29 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBStdGetStatusHandler 1FB4 0 CODE 0 text21 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USB_Init 29D8 0 CODE 0 text1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_SetupPkt 420 0 ABS 1 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlTrfOutHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBEnableEndpoint@ep C 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hintcodelo E 0 CODE 0 intcodelo dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBStdGetDscHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBStallHandler 26F0 0 CODE 0 text11 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlTrfSetupHandler 24A8 0 CODE 0 text15 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlEPAllowStatusStage 21BA 0 CODE 0 text36 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlTrfRxService 1620 0 CODE 0 text35 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBStdFeatureReqHandler@pUEP 16 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBInHandle 64 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBCtrlTrfRxService@byteToRead 2 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBDeviceInit 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlTrfOutHandler 25B6 0 CODE 0 text34 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBBusIsSuspended 57 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_LED_On 27A0 0 CODE 0 text28 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_LED_Off 284C 0 CODE 0 text29 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memcpy@tmp B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBDeferOUTDataStagePackets 6B 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lintcodelo E 0 CODE 0 intcodelo dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+start_initialization 2A70 0 CODE 0 cinit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_SYS_InterruptHigh 268C 0 CODE 0 intcode_body dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2USBTransferOnePacket@ep 9 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_ofi2_memset 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_TRISAbits F92 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_TRISBbits F93 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_TRISDbits F95 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCheckStdRequest 1C7E 0 CODE 0 text18 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+___rparam_used 1 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_device_dsc 8B1 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_memcpy 2748 0 CODE 0 text14 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_memset 2926 0 CODE 0 text4 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBTicksSinceSuspendEnd 6A 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBDeviceInit 1060 0 CODE 0 text3 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStdGetDscHandler 14C0 0 CODE 0 text22 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USER_USB_CALLBACK_EVENT_HANDLER 2342 0 CODE 0 text24 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_IPR2bits FA2 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlTrfTxService 1B52 0 CODE 0 text38 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStallHandler 268C 0 CODE 0 text11 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_APP_DeviceCustomHIDInitialize 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBEnableEndpoint 27A0 0 CODE 0 text32 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_LED_On 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UIEbits F69 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2_USBTransferOnePacket 18CC 0 CODE 0 text31 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UIRbits F68 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hcinit 0 0 ABS 0 cinit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hconst 0 0 CONST 0 const dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBWakeFromSuspend 28E6 0 CODE 0 text9 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hidata 0 0 CODE 0 idata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hidloc 200008 0 IDLOC 0 idloc dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hstack 0 0 STACK 2 stack dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext0 0 0 ABS 0 text0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext1 0 0 ABS 0 text1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext2 0 0 ABS 0 text2 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext3 0 0 ABS 0 text3 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext4 0 0 ABS 0 text4 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext5 0 0 ABS 0 text5 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext7 0 0 ABS 0 text7 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext8 0 0 ABS 0 text8 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext9 0 0 ABS 0 text9 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlEPService 21BA 0 CODE 0 text13 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbigram 0 0 ABS 0 bigram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\s5bs.o
+_USBCheckStdRequest 1B52 0 CODE 0 text18 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBIncrement1msInternalTimers 2966 0 CODE 0 text12 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBStdFeatureReqHandler@p 19 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hcomram 0 0 ABS 0 comram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hconfig 30000E 0 CONFIG 0 config dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USER_USB_CALLBACK_EVENT_HANDLER@event D 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USER_USB_CALLBACK_EVENT_HANDLER@size 11 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBTransferOnePacket@handle 32 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USER_USB_CALLBACK_EVENT_HANDLER@pdata F 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lcinit 0 0 ABS 0 cinit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lconst 0 0 CONST 0 const dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USB_Init@estado 29 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lidata 0 0 CODE 0 idata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lidloc 200000 0 IDLOC 0 idloc dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lstack 0 0 STACK 2 stack dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext0 0 0 ABS 0 text0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext1 0 0 ABS 0 text1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext2 0 0 ABS 0 text2 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext3 0 0 ABS 0 text3 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext4 0 0 ABS 0 text4 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext5 0 0 ABS 0 text5 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext7 0 0 ABS 0 text7 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext8 0 0 ABS 0 text8 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext9 0 0 ABS 0 text9 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2_memset 2926 0 CODE 0 text20 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlTrfRxService 177E 0 CODE 0 text35 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_PORTBbits F81 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memcpy@d1 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memcpy@s1 3 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_INTCONbits FF2 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Habs1 0 0 ABS 0 abs1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hdata 0 0 ABS 0 data dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hinit 12 0 CODE 0 init dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htemp 60 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext 0 0 ABS 0 text dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Labs1 0 0 ABS 0 abs1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ldata 0 0 ABS 0 data dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Linit E 0 CODE 0 init dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltemp 5F 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext 0 0 ABS 0 text dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_XINST$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memcpy@d 7 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memcpy@n 5 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memcpy@s 9 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memset@c 2B 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memset@n 2D 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memset@p 2F 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+int$flags 5F 0 COMRAM 1 temp dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_device_dsc 8C3 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ToSendDataBuffer 540 0 ABS 1 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_ofi2_memset 2966 0 CODE 0 text20 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlTrfInHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hintret 0 0 ABS 0 intret dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBSuspend 2A42 0 CODE 0 text10 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hirdata 0 0 CODE 0 irdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_BDT 400 0 ABS 1 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UIE F69 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UIR F68 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__S0 30000E 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__S1 72 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__S2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+?i2_USBTransferOnePacket 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_APP_LEDUpdateUSBStatus 1FB4 0 CODE 0 text27 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBWakeFromSuspend 289E 0 CODE 0 text9 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStdFeatureReqHandler 8C8 0 CODE 0 text23 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_BothEP0OutUOWNsSet 6F 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UCONbits F6D 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBCtrlTrfRxService@i 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_SYS_InterruptHigh 8 0 CODE 0 intcode dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCheckHIDRequest 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBStdFeatureReqHandler C4E 0 CODE 0 text23 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_PLLDIV$5 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ReceivedDataBuffer 500 0 ABS 1 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBAlternateInterface 5D 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBDeviceState 5B 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBDeviceTasks C4E 0 CODE 0 text7 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+int_func 2622 0 CODE 0 intcode_body dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBStdGetStatusHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_ofi2_USBDeviceInit 11EE 0 CODE 0 text8 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBStdGetDscHandler 1620 0 CODE 0 text22 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lintentry 0 0 ABS 0 intentry dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBStallHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlTrfSetupHandler 2538 0 CODE 0 text15 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hramtop 800 0 RAM 0 ramtop dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBEnableEndpoint 2748 0 CODE 0 text32 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__activetblptr 2 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext10 0 0 ABS 0 text10 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext11 0 0 ABS 0 text11 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext12 0 0 ABS 0 text12 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext13 0 0 ABS 0 text13 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext14 0 0 ABS 0 text14 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext15 0 0 ABS 0 text15 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext16 0 0 ABS 0 text16 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext17 0 0 ABS 0 text17 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext18 0 0 ABS 0 text18 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext19 0 0 ABS 0 text19 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext20 0 0 ABS 0 text20 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext21 0 0 ABS 0 text21 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext22 0 0 ABS 0 text22 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext23 0 0 ABS 0 text23 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext24 0 0 ABS 0 text24 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext25 0 0 ABS 0 text25 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext26 0 0 ABS 0 text26 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext27 0 0 ABS 0 text27 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext28 0 0 ABS 0 text28 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext29 0 0 ABS 0 text29 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext30 0 0 ABS 0 text30 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext31 0 0 ABS 0 text31 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext32 0 0 ABS 0 text32 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext33 0 0 ABS 0 text33 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext34 0 0 ABS 0 text34 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext35 0 0 ABS 0 text35 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext36 0 0 ABS 0 text36 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext37 0 0 ABS 0 text37 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Htext38 0 0 ABS 0 text38 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlEPService 227E 0 CODE 0 text13 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2USBTransferOnePacket@data 2 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlTrfInHandler 1C7E 0 CODE 0 text37 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBTransferOnePacket 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_PIE2bits FA0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_memcpy 26F0 0 CODE 0 text14 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_memset 28E6 0 CODE 0 text4 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBConfigureEndpoint@handle 7 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+memset@p1 29 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2memset@c 3 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2memset@n 5 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2memset@p 7 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext10 2A42 0 CODE 0 text10 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext11 268C 0 CODE 0 text11 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext12 2966 0 CODE 0 text12 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext13 21BA 0 CODE 0 text13 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext14 26F0 0 CODE 0 text14 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext15 24A8 0 CODE 0 text15 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext16 135A 0 CODE 0 text16 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext17 2342 0 CODE 0 text17 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext18 1B52 0 CODE 0 text18 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext19 1D9A 0 CODE 0 text19 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext20 2926 0 CODE 0 text20 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext21 1EA8 0 CODE 0 text21 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext22 14C0 0 CODE 0 text22 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext23 8C8 0 CODE 0 text23 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext24 227E 0 CODE 0 text24 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext25 29D8 0 CODE 0 text25 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext26 11EE 0 CODE 0 text26 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext27 1FB4 0 CODE 0 text27 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext28 27A0 0 CODE 0 text28 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext29 27F6 0 CODE 0 text29 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext30 2A0E 0 CODE 0 text30 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext31 18CC 0 CODE 0 text31 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext32 2748 0 CODE 0 text32 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext33 23F8 0 CODE 0 text33 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext34 2538 0 CODE 0 text34 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext35 1620 0 CODE 0 text35 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext36 20BC 0 CODE 0 text36 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext37 1C7E 0 CODE 0 text37 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext38 1A1A 0 CODE 0 text38 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlEPService 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_configDescriptor1 894 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBSuspend 2A70 0 CODE 0 text10 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__pintcode_body 2622 0 CODE 0 intcode_body dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbigram 0 0 ABS 0 bigram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USB_CD_Ptr 807 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_BOR$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_BORV$3 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ep_data_in 4E 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBActiveConfiguration 5E 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlEPAllowStatusStage 20BC 0 CODE 0 text36 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBConfigureEndpoint 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lcomram 0 0 ABS 0 comram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lconfig 300000 0 CONFIG 0 config dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_LATDbits F8C 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBTransferOnePacket 18CC 0 CODE 0 text2 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_RemoteWakeup 58 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_LED_Off 27F6 0 CODE 0 text29 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2USBDeviceInit@i 9 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBDeviceAttach 289E 0 CODE 0 text5 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBDeviceTasks ED2 0 CODE 0 text7 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ep_data_out 4C 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2_USB_Init 29D8 0 CODE 0 text25 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2_USBDeviceInit 1060 0 CODE 0 text8 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBEnableEndpoint@p A 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+stackhi 3FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s5bs.o
+stacklo 72 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s5bs.o
+__end_of_USBConfigureEndpoint 24A8 0 CODE 0 text33 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlEPAllowDataStage 2342 0 CODE 0 text17 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lintcode 8 0 CODE 0 intcode dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lintret 0 0 ABS 0 intret dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lirdata 0 0 CODE 0 irdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ADCON0bits FC2 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ADCON1bits FC1 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_ADCON2bits FC0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_LVP$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlEPAllowDataStage 23F8 0 CODE 0 text17 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lspace_0 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lspace_1 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lspace_2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__pbssCOMRAM 34 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_ofi2_USBTransferOnePacket 1A1A 0 CODE 0 text31 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_memcpy 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_memset 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlTrfOutHandler 2538 0 CODE 0 text34 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_PIR2bits FA1 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBStdSetCfgHandler@i 15 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+end_of_initialization 2A88 0 CODE 0 cinit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBStdSetCfgHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hintentry 0 0 ABS 0 intentry dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBDeferStatusStagePacket 54 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_STVREN$ON 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_RCONbits FD0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USER_USB_CALLBACK_EVENT_HANDLER 227E 0 CODE 0 text24 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_APP_DeviceCustomHIDInitialize 2A0E 0 CODE 0 text30 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_inPipes 3C 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_shortPacketStatus 5A 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USB_CD_Ptr 809 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBTransferOnePacket@ep 31 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_endpoint_number 56 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lramtop 800 0 RAM 0 ramtop dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBConfigureEndpoint@EPNum 6 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USB_SD_Ptr 801 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__pcinit 2A70 0 CODE 0 cinit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext0 25B6 0 CODE 0 text0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext1 29A2 0 CODE 0 text1 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext2 177E 0 CODE 0 text2 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext3 ED2 0 CODE 0 text3 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext4 28E6 0 CODE 0 text4 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext5 284C 0 CODE 0 text5 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext7 C4E 0 CODE 0 text7 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext8 1060 0 CODE 0 text8 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ptext9 289E 0 CODE 0 text9 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBDeviceAttach 284C 0 CODE 0 text5 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCheckStdRequest 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBIncrement1msInternalTimers 29A2 0 CODE 0 text12 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext10 0 0 ABS 0 text10 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext11 0 0 ABS 0 text11 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext12 0 0 ABS 0 text12 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext13 0 0 ABS 0 text13 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext14 0 0 ABS 0 text14 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext15 0 0 ABS 0 text15 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext16 0 0 ABS 0 text16 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext17 0 0 ABS 0 text17 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext18 0 0 ABS 0 text18 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext19 0 0 ABS 0 text19 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext20 0 0 ABS 0 text20 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext21 0 0 ABS 0 text21 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext22 0 0 ABS 0 text22 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext23 0 0 ABS 0 text23 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext24 0 0 ABS 0 text24 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext25 0 0 ABS 0 text25 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext26 0 0 ABS 0 text26 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext27 0 0 ABS 0 text27 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext28 0 0 ABS 0 text28 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext29 0 0 ABS 0 text29 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext30 0 0 ABS 0 text30 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext31 0 0 ABS 0 text31 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext32 0 0 ABS 0 text32 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext33 0 0 ABS 0 text33 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext34 0 0 ABS 0 text34 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext35 0 0 ABS 0 text35 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext36 0 0 ABS 0 text36 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext37 0 0 ABS 0 text37 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Ltext38 0 0 ABS 0 text38 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USBCtrlTrfInHandler 1D9A 0 CODE 0 text37 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\s5bs.o
+__end_of_APP_LEDUpdateUSBStatus 20BC 0 CODE 0 text27 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBCtrlEPServiceComplete 135A 0 CODE 0 text16 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lpowerup E 0 CODE 0 powerup dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_ofi2_USB_Init 2A0E 0 CODE 0 text25 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_configDescriptor1 86B 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBStdFeatureReqHandler@current_ep_data 18 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__psmallconst 800 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_pBDTEntryEP0OutCurrent 52 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBTransferOnePacket@data 2A 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_pBDTEntryOut 46 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+___param_bank 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStdSetCfgHandler 1D9A 0 CODE 0 text19 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_WDT$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of__initialization 2A88 0 CODE 0 cinit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_hid_rpt01 8B1 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBWakeFromSuspend 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_ofi2_USBDeviceInit 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBCtrlTrfTxService@byteToSend 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USTATcopy 5C 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_FOSC$HSPLL_HS 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_outPipes 34 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBCtrlTrfSetupHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStatusStageTimeoutCounter 55 0 COMRAM 1 bssCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+LED_On@led 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBOutHandle 66 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_hid_rpt01 894 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_USB_SD_Ptr 807 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_main 2622 0 CODE 0 text0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__pintcode 8 0 CODE 0 intcode dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_UADDR F6E 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USTAT F6C 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_sd000 8C7 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_sd001 83D 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__end_of_sd002 86B 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_CP0$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_CP1$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__HRAM 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hbss 0 0 RAM 1 bss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hram 0 0 ABS 0 ram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hsfr 0 0 ABS 0 sfr dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__LRAM 1 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lbss 0 0 RAM 1 bss dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lram 0 0 ABS 0 ram dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lsfr 0 0 ABS 0 sfr dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStdGetStatusHandler 1EA8 0 CODE 0 text21 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBDeferINDataStagePackets 6C 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2USBTransferOnePacket@dir 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2USBTransferOnePacket@len 4 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__CFG_CPB$OFF 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2USB_Init@estado 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+LED_Off@led 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_sd000 8C3 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_sd001 809 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_sd002 83D 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBSuspend 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__initialization 2A70 0 CODE 0 cinit dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBDeviceAttach 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBDeviceTasks@i 1C 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USER_USB_CALLBACK_EVENT_HANDLER 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+USBConfigureEndpoint@direction 1 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hsmallconst 8C8 0 SMALLCONST 0 smallconst dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__size_of_USBStdFeatureReqHandler 0 0 ABS 0 - dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+__Hintcode E 0 CODE 0 intcode dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStatusStageEnabledFlag1 6E 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+_USBStatusStageEnabledFlag2 6D 0 BANK0 1 bssBANK0 dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+i2USBTransferOnePacket@handle A 0 COMRAM 1 cstackCOMRAM dist/PICDEM_FSUSB/production\picdem_fs_usb_wels.x.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+_CtrlTrfData 1 428 8
+_SetupPkt 1 420 8
+_ToSendDataBuffer 1 540 40
+_BDT 1 400 20
+_ReceivedDataBuffer 1 500 40
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+text23 0 8C8 8C8 21CE 1
+cstackCOMRAM 1 1 1 5F 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 12 1
+intcode 0 8 8 A 1
+smallconst 0 800 800 C8 1
+config 0 300000 300000 E 1
