@@ -17,7 +17,7 @@ void InitPort(){
     LATB=0;
     LATC=0;
     LATE=0;
-    TRISDbits.RD1=0; //PORTD = SALIDA 0 , 1 ENTRADA
+    TRISDbits.RD0=0; //PORTD = SALIDA 0 , 1 ENTRADA
     TRISAbits.RA1=0;
     TRISBbits.RB1=0;
     TRISCbits.RC1=0;
@@ -27,13 +27,13 @@ void InitPort(){
 void main(void) {
     InitPort();
     while(1){
-        PORTDbits.RD1 = 1;
+        PORTDbits.RD0 = 0;
         PORTAbits.RA1 = 1;
         PORTBbits.RB1 = 1;
         PORTCbits.RC1 = 1;
         PORTEbits.RE1 = 1;
         __delay_ms(100);
-        PORTDbits.RD1 = 0;
+        PORTDbits.RD0 = 1;
         PORTAbits.RA1 = 0;
         PORTBbits.RB1 = 0;
         PORTCbits.RC1 = 0;

@@ -3705,9 +3705,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Hola_mundo.c: 19: LATE=0;
 "19
 [e = _LATE -> -> 0 `i `uc ]
-[; ;Hola_mundo.c: 20: TRISDbits.RD1=0;
+[; ;Hola_mundo.c: 20: TRISDbits.RD0=0;
 "20
-[e = . . _TRISDbits 1 1 -> -> 0 `i `uc ]
+[e = . . _TRISDbits 1 0 -> -> 0 `i `uc ]
 [; ;Hola_mundo.c: 21: TRISAbits.RA1=0;
 "21
 [e = . . _TRISAbits 1 1 -> -> 0 `i `uc ]
@@ -3738,9 +3738,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "29
 [e :U 365 ]
 {
-[; ;Hola_mundo.c: 30: PORTDbits.RD1 = 1;
+[; ;Hola_mundo.c: 30: PORTDbits.RD0 = 0;
 "30
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 [; ;Hola_mundo.c: 31: PORTAbits.RA1 = 1;
 "31
 [e = . . _PORTAbits 0 1 -> -> 1 `i `uc ]
@@ -3756,9 +3756,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Hola_mundo.c: 35: _delay((unsigned long)((100)*(20000000/4000.0)));
 "35
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;Hola_mundo.c: 36: PORTDbits.RD1 = 0;
+[; ;Hola_mundo.c: 36: PORTDbits.RD0 = 1;
 "36
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 [; ;Hola_mundo.c: 37: PORTAbits.RA1 = 0;
 "37
 [e = . . _PORTAbits 0 1 -> -> 0 `i `uc ]

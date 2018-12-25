@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+$C:\Users\Wels\AppData\Local\Temp\s80k.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
@@ -87,12 +87,12 @@ $dist/default/production\Hola_Mundo.X.production.obj
 7FE6 text0 CODE >40:E:\Wels Theory\Electrónica\Pic18f4550\Hola Mundo\Hola_Mundo.X\Hola_mundo.c
 7FE8 text0 CODE >41:E:\Wels Theory\Electrónica\Pic18f4550\Hola Mundo\Hola_Mundo.X\Hola_mundo.c
 7FFE text0 CODE >29:E:\Wels Theory\Electrónica\Pic18f4550\Hola Mundo\Hola_Mundo.X\Hola_mundo.c
-7F8C cinit CODE >840:C:\Users\Wels\AppData\Local\Temp\s9a4.
-7F8C cinit CODE >842:C:\Users\Wels\AppData\Local\Temp\s9a4.
-7F8C cinit CODE >845:C:\Users\Wels\AppData\Local\Temp\s9a4.
-7F8C cinit CODE >851:C:\Users\Wels\AppData\Local\Temp\s9a4.
-7F8C cinit CODE >853:C:\Users\Wels\AppData\Local\Temp\s9a4.
-7F8E cinit CODE >854:C:\Users\Wels\AppData\Local\Temp\s9a4.
+7F8C cinit CODE >840:C:\Users\Wels\AppData\Local\Temp\s80k.
+7F8C cinit CODE >842:C:\Users\Wels\AppData\Local\Temp\s80k.
+7F8C cinit CODE >845:C:\Users\Wels\AppData\Local\Temp\s80k.
+7F8C cinit CODE >851:C:\Users\Wels\AppData\Local\Temp\s80k.
+7F8C cinit CODE >853:C:\Users\Wels\AppData\Local\Temp\s80k.
+7F8E cinit CODE >854:C:\Users\Wels\AppData\Local\Temp\s80k.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -111,7 +111,7 @@ __Hspace_1 3 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Hola_Mundo.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Wels\AppData\Local\Temp\s80k.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Hola_Mundo.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Hola_Mundo.X.production.obj
@@ -120,16 +120,16 @@ _LATB F8A 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 _LATC F8B 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 _LATD F8C 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 _LATE F8D 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+___sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s80k.obj
 _main 7FBA 0 CODE 0 text0 dist/default/production\Hola_Mundo.X.production.obj
-start 0 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+start 0 0 CODE 0 init C:\Users\Wels\AppData\Local\Temp\s80k.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\Hola_Mundo.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s9a4.obj
-intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s9a4.obj
-intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s9a4.obj
-intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s9a4.obj
-intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+__accesstop 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s80k.obj
+intlevel0 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s80k.obj
+intlevel1 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s80k.obj
+intlevel2 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s80k.obj
+intlevel3 0 0 CODE 0 text C:\Users\Wels\AppData\Local\Temp\s80k.obj
 __CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Hola_Mundo.X.production.obj
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
@@ -139,8 +139,8 @@ __CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Hola_Mundo.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Hola_Mundo.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s9a4.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s80k.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Wels\AppData\Local\Temp\s80k.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Hola_Mundo.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Hola_Mundo.X.production.obj
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Hola_Mundo.X.production.obj
@@ -177,7 +177,7 @@ __Htext0 0 0 ABS 0 text0 dist/default/production\Hola_Mundo.X.production.obj
 __Htext1 0 0 ABS 0 text1 dist/default/production\Hola_Mundo.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Hola_Mundo.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\Hola_Mundo.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Wels\AppData\Local\Temp\s80k.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\Hola_Mundo.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\Hola_Mundo.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
@@ -248,8 +248,8 @@ __end_of_InitPort 7FBA 0 CODE 0 text1 dist/default/production\Hola_Mundo.X.produ
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Hola_Mundo.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Hola_Mundo.X.production.obj
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\Hola_Mundo.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s9a4.obj
-stacklo 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+stackhi 7FF 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s80k.obj
+stacklo 60 0 ABS 0 - C:\Users\Wels\AppData\Local\Temp\s80k.obj
 __Lintcode 0 0 CODE 0 intcode dist/default/production\Hola_Mundo.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\Hola_Mundo.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\Hola_Mundo.X.production.obj
@@ -272,7 +272,7 @@ __pcinit 7F8C 0 CODE 0 cinit dist/default/production\Hola_Mundo.X.production.obj
 __ptext0 7FBA 0 CODE 0 text0 dist/default/production\Hola_Mundo.X.production.obj
 __ptext1 7F92 0 CODE 0 text1 dist/default/production\Hola_Mundo.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\Hola_Mundo.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\s9a4.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\Wels\AppData\Local\Temp\s80k.obj
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\Hola_Mundo.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Hola_Mundo.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Hola_Mundo.X.production.obj

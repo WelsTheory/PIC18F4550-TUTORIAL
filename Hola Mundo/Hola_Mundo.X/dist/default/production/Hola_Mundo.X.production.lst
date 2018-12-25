@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.45 build -152302408 
-                                                                                               Mon Jun 04 11:56:21 2018
+                                                                                               Mon Dec 24 00:56:30 2018
 
 Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160504
      1                           	processor	18F4550
@@ -141,8 +141,8 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    127                           ;incstack = 0
    128  007FBA  ECC9  F03F         	call	_InitPort	;wreg free
    129  007FBE                     
-   130                           ;Hola_mundo.c: 30: PORTDbits.RD1 = 1;
-   131  007FBE  8283               	bsf	3971,1,c	;volatile
+   130                           ;Hola_mundo.c: 30: PORTDbits.RD0 = 0;
+   131  007FBE  9083               	bcf	3971,0,c	;volatile
    132                           
    133                           ;Hola_mundo.c: 31: PORTAbits.RA1 = 1;
    134  007FC0  8280               	bsf	3968,1,c	;volatile
@@ -170,8 +170,8 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    156  007FDA  2E02               	decfsz	(??_main+1)& (0+255),f,c
    157  007FDC  D7FA               	bra	u17
    158                           
-   159                           ;Hola_mundo.c: 36: PORTDbits.RD1 = 0;
-   160  007FDE  9283               	bcf	3971,1,c	;volatile
+   159                           ;Hola_mundo.c: 36: PORTDbits.RD0 = 1;
+   160  007FDE  8083               	bsf	3971,0,c	;volatile
    161                           
    162                           ;Hola_mundo.c: 37: PORTAbits.RA1 = 0;
    163  007FE0  9280               	bcf	3968,1,c	;volatile
@@ -266,8 +266,8 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    252  007FAA  0E00               	movlw	0
    253  007FAC  6E8D               	movwf	3981,c	;volatile
    254                           
-   255                           ;Hola_mundo.c: 20: TRISDbits.RD1=0;
-   256  007FAE  9295               	bcf	3989,1,c	;volatile
+   255                           ;Hola_mundo.c: 20: TRISDbits.RD0=0;
+   256  007FAE  9095               	bcf	3989,0,c	;volatile
    257                           
    258                           ;Hola_mundo.c: 21: TRISAbits.RA1=0;
    259  007FB0  9292               	bcf	3986,1,c	;volatile
@@ -401,7 +401,7 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                   Mon Jun 04 11:56:21 2018
+Symbol Table                                                                                   Mon Dec 24 00:56:30 2018
 
                      l42 7FBE                       u17 7FD2                       u27 7FF2  
             __CFG_BORV$3 000000             __CFG_CP0$OFF 000000             __CFG_CP1$OFF 000000  
