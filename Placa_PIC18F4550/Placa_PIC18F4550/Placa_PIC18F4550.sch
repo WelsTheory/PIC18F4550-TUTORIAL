@@ -503,10 +503,8 @@ F 1 "47uF" V 3539 1950 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3738 1800 50  0001 C CNN
 F 3 "~" H 3700 1950 50  0001 C CNN
 	1    3700 1950
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	3550 1950 3450 1950
 $Comp
 L power:GND #PWR0103
 U 1 1 5C03648E
@@ -518,8 +516,6 @@ F 3 "" H 4000 1950 50  0001 C CNN
 	1    4000 1950
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4000 1950 3850 1950
 Wire Wire Line
 	8300 4850 8100 4850
 Wire Wire Line
@@ -1080,4 +1076,8 @@ Text Label 10200 4700 2    50   ~ 0
 RB6
 Text Label 10200 4800 2    50   ~ 0
 RB5
+Wire Wire Line
+	3550 1950 3450 1950
+Wire Wire Line
+	3850 1950 4000 1950
 $EndSCHEMATC

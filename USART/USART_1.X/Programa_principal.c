@@ -23,7 +23,7 @@
 #include <xc.h>
 #include "Configuracion.h"
 #include "USART_libreria.h"
-
+char Mensaje [8] = "Hola";
 void main(void) {
     USART_Init(9600);
     while(1){
