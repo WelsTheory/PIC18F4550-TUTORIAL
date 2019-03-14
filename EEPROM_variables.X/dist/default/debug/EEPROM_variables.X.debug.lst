@@ -1,0 +1,1246 @@
+
+
+Microchip MPLAB XC8 Assembler V2.05 build -831301201 
+                                                                                               Wed Mar 13 09:52:25 2019
+
+Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     8                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     9                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+    10                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text8,global,reloc=2,class=CODE,delta=1
+    19                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    20                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    21  0000                     
+    22                           ; Version 2.05
+    23                           ; Generated 20/12/2018 GMT
+    24                           ; 
+    25                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    26                           ; All rights reserved.
+    27                           ; 
+    28                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    29                           ; 
+    30                           ; Redistribution and use in source and binary forms, with or without modification, are
+    31                           ; permitted provided that the following conditions are met:
+    32                           ; 
+    33                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    34                           ;        conditions and the following disclaimer.
+    35                           ; 
+    36                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    37                           ;        of conditions and the following disclaimer in the documentation and/or other
+    38                           ;        materials provided with the distribution.
+    39                           ; 
+    40                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    41                           ;        software without specific prior written permission.
+    42                           ; 
+    43                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    44                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    45                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    46                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    47                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    48                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    49                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    50                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    51                           ; 
+    52                           ; 
+    53                           ; Code-generator required, PIC18F4550 Definitions
+    54                           ; 
+    55                           ; SFR Addresses
+    56  0000                     
+    57                           	psect	idataCOMRAM
+    58  007D56                     __pidataCOMRAM:
+    59                           	opt callstack 0
+    60                           
+    61                           ;initializer for _wels
+    62  007D56  3333               	dw	13107
+    63  007D58  425A               	dw	16986
+    64                           
+    65                           ;initializer for _like
+    66  007D5A  CDEE               	dw	52718
+    67  007D5C  FFAA               	dw	65450
+    68                           
+    69                           ;initializer for _sus
+    70  007D5E  AAFF               	dw	43775
+    71  0000                     _PIR2bits	set	4001
+    72  0000                     _EECON2	set	4007
+    73  0000                     _INTCONbits	set	4082
+    74  0000                     _EECON1bits	set	4006
+    75  0000                     _EEDATA	set	4008
+    76  0000                     _EEADR	set	4009
+    77                           
+    78                           ; #config settings
+    79  0000                     
+    80                           	psect	cinit
+    81  007D94                     __pcinit:
+    82                           	opt callstack 0
+    83  007D94                     start_initialization:
+    84                           	opt callstack 0
+    85  007D94                     __initialization:
+    86                           	opt callstack 0
+    87                           
+    88                           ; Initialize objects allocated to COMRAM (10 bytes)
+    89                           ; load TBLPTR registers with __pidataCOMRAM
+    90  007D94  0E56               	movlw	low __pidataCOMRAM
+    91  007D96  6EF6               	movwf	tblptrl,c
+    92  007D98  0E7D               	movlw	high __pidataCOMRAM
+    93  007D9A  6EF7               	movwf	tblptrh,c
+    94  007D9C  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+    95  007D9E  6EF8               	movwf	tblptru,c
+    96  007DA0  EE00  F00D         	lfsr	0,__pdataCOMRAM
+    97  007DA4  EE10 F00A          	lfsr	1,10
+    98  007DA8                     copy_data0:
+    99  007DA8  0009               	tblrd		*+
+   100  007DAA  CFF5 FFEE          	movff	tablat,postinc0
+   101  007DAE  50E5               	movf	postdec1,w,c
+   102  007DB0  50E1               	movf	fsr1l,w,c
+   103  007DB2  E1FA               	bnz	copy_data0
+   104                           
+   105                           ; Clear objects allocated to COMRAM (12 bytes)
+   106  007DB4  EE00  F001         	lfsr	0,__pbssCOMRAM
+   107  007DB8  0E0C               	movlw	12
+   108  007DBA                     clear_0:
+   109  007DBA  6AEE               	clrf	postinc0,c
+   110  007DBC  06E8               	decf	wreg,f,c
+   111  007DBE  E1FD               	bnz	clear_0
+   112  007DC0                     end_of_initialization:
+   113                           	opt callstack 0
+   114  007DC0                     __end_of__initialization:
+   115                           	opt callstack 0
+   116  007DC0  0100               	movlb	0
+   117  007DC2  EFB4  F03F         	goto	_main	;jump to C main() function
+   118                           
+   119                           	psect	bssCOMRAM
+   120  000001                     __pbssCOMRAM:
+   121                           	opt callstack 0
+   122  000001                     _sad:
+   123                           	opt callstack 0
+   124  000001                     	ds	4
+   125  000005                     _asd:
+   126                           	opt callstack 0
+   127  000005                     	ds	4
+   128  000009                     _cribete:
+   129                           	opt callstack 0
+   130  000009                     	ds	2
+   131  00000B                     _i:
+   132                           	opt callstack 0
+   133  00000B                     	ds	2
+   134                           
+   135                           	psect	dataCOMRAM
+   136  00000D                     __pdataCOMRAM:
+   137                           	opt callstack 0
+   138  00000D                     _wels:
+   139                           	opt callstack 0
+   140  00000D                     	ds	4
+   141  000011                     _like:
+   142                           	opt callstack 0
+   143  000011                     	ds	4
+   144  000015                     _sus:
+   145                           	opt callstack 0
+   146  000015                     	ds	2
+   147                           
+   148                           	psect	cstackCOMRAM
+   149  000017                     __pcstackCOMRAM:
+   150                           	opt callstack 0
+   151  000017                     EEPROM_Guardar@dir:
+   152                           	opt callstack 0
+   153  000017                     EEPROM_Lectura@dir:
+   154                           	opt callstack 0
+   155                           
+   156                           ; 2 bytes @ 0x0
+   157  000017                     	ds	2
+   158  000019                     ?_EEPROM_Lectura_int16:
+   159                           	opt callstack 0
+   160  000019                     ?_EEPROM_Lectura_int32:
+   161                           	opt callstack 0
+   162  000019                     ?_EEPROM_Lectura_float:
+   163                           	opt callstack 0
+   164  000019                     EEPROM_Guardar@data:
+   165                           	opt callstack 0
+   166  000019                     EEPROM_Lectura_int16@dir:
+   167                           	opt callstack 0
+   168  000019                     EEPROM_Lectura_int32@dir:
+   169                           	opt callstack 0
+   170  000019                     EEPROM_Lectura_float@dir:
+   171                           	opt callstack 0
+   172                           
+   173                           ; 2 bytes @ 0x2
+   174  000019                     	ds	1
+   175  00001A                     EEPROM_Guardar_int16@dir:
+   176                           	opt callstack 0
+   177  00001A                     EEPROM_Guardar_int32@dir:
+   178                           	opt callstack 0
+   179  00001A                     EEPROM_Guardar_float@dir:
+   180                           	opt callstack 0
+   181                           
+   182                           ; 2 bytes @ 0x3
+   183  00001A                     	ds	1
+   184  00001B                     EEPROM_Lectura_int16@data:
+   185                           	opt callstack 0
+   186                           
+   187                           ; 2 bytes @ 0x4
+   188  00001B                     	ds	1
+   189  00001C                     EEPROM_Guardar_int16@data:
+   190                           	opt callstack 0
+   191  00001C                     EEPROM_Guardar_int32@data:
+   192                           	opt callstack 0
+   193  00001C                     EEPROM_Guardar_float@data:
+   194                           	opt callstack 0
+   195                           
+   196                           ; 4 bytes @ 0x5
+   197  00001C                     	ds	1
+   198  00001D                     EEPROM_Lectura_int32@data:
+   199                           	opt callstack 0
+   200  00001D                     EEPROM_Lectura_float@data:
+   201                           	opt callstack 0
+   202                           
+   203                           ; 4 bytes @ 0x6
+   204  00001D                     	ds	1
+   205  00001E                     
+   206                           ; 1 bytes @ 0x7
+   207  00001E                     	ds	2
+   208  000020                     
+   209                           ; 1 bytes @ 0x9
+   210  000020                     	ds	1
+   211  000021                     
+   212                           ; 1 bytes @ 0xA
+   213 ;;
+   214 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   215 ;;
+   216 ;; *************** function _main *****************
+   217 ;; Defined at:
+   218 ;;		line 22 in file "Programa_principal.c"
+   219 ;; Parameters:    Size  Location     Type
+   220 ;;		None
+   221 ;; Auto vars:     Size  Location     Type
+   222 ;;		None
+   223 ;; Return value:  Size  Location     Type
+   224 ;;                  1    wreg      void 
+   225 ;; Registers used:
+   226 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   227 ;; Tracked objects:
+   228 ;;		On entry : 0/0
+   229 ;;		On exit  : 0/0
+   230 ;;		Unchanged: 0/0
+   231 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   232 ;;      Params:         0       0       0       0       0       0       0       0       0
+   233 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   234 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   235 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   236 ;;Total ram usage:        0 bytes
+   237 ;; Hardware stack levels required when called:    2
+   238 ;; This function calls:
+   239 ;;		_EEPROM_Guardar_float
+   240 ;;		_EEPROM_Guardar_int16
+   241 ;;		_EEPROM_Guardar_int32
+   242 ;;		_EEPROM_Lectura_float
+   243 ;;		_EEPROM_Lectura_int16
+   244 ;;		_EEPROM_Lectura_int32
+   245 ;; This function is called by:
+   246 ;;		Startup code after reset
+   247 ;; This function uses a non-reentrant model
+   248 ;;
+   249                           
+   250                           	psect	text0
+   251  007F68                     __ptext0:
+   252                           	opt callstack 0
+   253  007F68                     _main:
+   254                           	opt callstack 29
+   255                           
+   256                           ;Programa_principal.c: 23:     EEPROM_Guardar_int16(0,sus);
+   257                           
+   258                           ;incstack = 0
+   259  007F68  0E00               	movlw	0
+   260  007F6A  6E1B               	movwf	EEPROM_Guardar_int16@dir+1,c
+   261  007F6C  0E00               	movlw	0
+   262  007F6E  6E1A               	movwf	EEPROM_Guardar_int16@dir,c
+   263  007F70  0EAA               	movlw	170
+   264  007F72  6E1D               	movwf	EEPROM_Guardar_int16@data+1,c
+   265  007F74  681C               	setf	EEPROM_Guardar_int16@data,c
+   266  007F76  EC03  F03F         	call	_EEPROM_Guardar_int16	;wreg free
+   267                           
+   268                           ;Programa_principal.c: 24:     cribete = EEPROM_Lectura_int16(0);
+   269  007F7A  0E00               	movlw	0
+   270  007F7C  6E1A               	movwf	EEPROM_Lectura_int16@dir+1,c
+   271  007F7E  0E00               	movlw	0
+   272  007F80  6E19               	movwf	EEPROM_Lectura_int16@dir,c
+   273  007F82  EC43  F03F         	call	_EEPROM_Lectura_int16	;wreg free
+   274  007F86  C019  F009         	movff	?_EEPROM_Lectura_int16,_cribete
+   275  007F8A  C01A  F00A         	movff	?_EEPROM_Lectura_int16+1,_cribete+1
+   276                           
+   277                           ;Programa_principal.c: 25:     EEPROM_Guardar_int32(8,like);
+   278  007F8E  0E00               	movlw	0
+   279  007F90  6E1B               	movwf	EEPROM_Guardar_int32@dir+1,c
+   280  007F92  0E08               	movlw	8
+   281  007F94  6E1A               	movwf	EEPROM_Guardar_int32@dir,c
+   282  007F96  0EEE               	movlw	238
+   283  007F98  6E1C               	movwf	EEPROM_Guardar_int32@data,c
+   284  007F9A  0ECD               	movlw	205
+   285  007F9C  6E1D               	movwf	EEPROM_Guardar_int32@data+1,c
+   286  007F9E  0EAA               	movlw	170
+   287  007FA0  6E1E               	movwf	EEPROM_Guardar_int32@data+2,c
+   288  007FA2  0EFF               	movlw	255
+   289  007FA4  6E1F               	movwf	EEPROM_Guardar_int32@data+3,c
+   290  007FA6  EC23  F03F         	call	_EEPROM_Guardar_int32	;wreg free
+   291                           
+   292                           ;Programa_principal.c: 26:     asd = EEPROM_Lectura_int32(8);
+   293  007FAA  0E00               	movlw	0
+   294  007FAC  6E1A               	movwf	EEPROM_Lectura_int32@dir+1,c
+   295  007FAE  0E08               	movlw	8
+   296  007FB0  6E19               	movwf	EEPROM_Lectura_int32@dir,c
+   297  007FB2  EC8D  F03F         	call	_EEPROM_Lectura_int32	;wreg free
+   298  007FB6  C019  F005         	movff	?_EEPROM_Lectura_int32,_asd
+   299  007FBA  C01A  F006         	movff	?_EEPROM_Lectura_int32+1,_asd+1
+   300  007FBE  C01B  F007         	movff	?_EEPROM_Lectura_int32+2,_asd+2
+   301  007FC2  C01C  F008         	movff	?_EEPROM_Lectura_int32+3,_asd+3
+   302                           
+   303                           ;Programa_principal.c: 27:     EEPROM_Guardar_float(15,wels);
+   304  007FC6  0E00               	movlw	0
+   305  007FC8  6E1B               	movwf	EEPROM_Guardar_float@dir+1,c
+   306  007FCA  0E0F               	movlw	15
+   307  007FCC  6E1A               	movwf	EEPROM_Guardar_float@dir,c
+   308  007FCE  0E33               	movlw	51
+   309  007FD0  6E1C               	movwf	EEPROM_Guardar_float@data,c
+   310  007FD2  0E33               	movlw	51
+   311  007FD4  6E1D               	movwf	EEPROM_Guardar_float@data+1,c
+   312  007FD6  0E5A               	movlw	90
+   313  007FD8  6E1E               	movwf	EEPROM_Guardar_float@data+2,c
+   314  007FDA  0E42               	movlw	66
+   315  007FDC  6E1F               	movwf	EEPROM_Guardar_float@data+3,c
+   316  007FDE  ECE3  F03E         	call	_EEPROM_Guardar_float	;wreg free
+   317                           
+   318                           ;Programa_principal.c: 28:     sad = EEPROM_Lectura_float(15);
+   319  007FE2  0E00               	movlw	0
+   320  007FE4  6E1A               	movwf	EEPROM_Lectura_float@dir+1,c
+   321  007FE6  0E0F               	movlw	15
+   322  007FE8  6E19               	movwf	EEPROM_Lectura_float@dir,c
+   323  007FEA  EC66  F03F         	call	_EEPROM_Lectura_float	;wreg free
+   324  007FEE  C019  F001         	movff	?_EEPROM_Lectura_float,_sad
+   325  007FF2  C01A  F002         	movff	?_EEPROM_Lectura_float+1,_sad+1
+   326  007FF6  C01B  F003         	movff	?_EEPROM_Lectura_float+2,_sad+2
+   327  007FFA  C01C  F004         	movff	?_EEPROM_Lectura_float+3,_sad+3
+   328  007FFE                     l82:
+   329                           
+   330                           ;Programa_principal.c: 30:     }
+   331  007FFE  D7FF               	goto	l82
+   332  008000                     __end_of_main:
+   333                           	opt callstack 0
+   334                           
+   335 ;; *************** function _EEPROM_Lectura_int32 *****************
+   336 ;; Defined at:
+   337 ;;		line 52 in file "EEPROM_libreria.c"
+   338 ;; Parameters:    Size  Location     Type
+   339 ;;  dir             2    2[COMRAM] int 
+   340 ;; Auto vars:     Size  Location     Type
+   341 ;;  data            4    6[COMRAM] long 
+   342 ;; Return value:  Size  Location     Type
+   343 ;;                  4    2[COMRAM] long 
+   344 ;; Registers used:
+   345 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   346 ;; Tracked objects:
+   347 ;;		On entry : 0/0
+   348 ;;		On exit  : 0/0
+   349 ;;		Unchanged: 0/0
+   350 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   351 ;;      Params:         4       0       0       0       0       0       0       0       0
+   352 ;;      Locals:         4       0       0       0       0       0       0       0       0
+   353 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   354 ;;      Totals:         8       0       0       0       0       0       0       0       0
+   355 ;;Total ram usage:        8 bytes
+   356 ;; Hardware stack levels used:    1
+   357 ;; Hardware stack levels required when called:    1
+   358 ;; This function calls:
+   359 ;;		_EEPROM_Lectura
+   360 ;; This function is called by:
+   361 ;;		_main
+   362 ;; This function uses a non-reentrant model
+   363 ;;
+   364                           
+   365                           	psect	text1
+   366  007F1A                     __ptext1:
+   367                           	opt callstack 0
+   368  007F1A                     _EEPROM_Lectura_int32:
+   369                           	opt callstack 29
+   370                           
+   371                           ;EEPROM_libreria.c: 53:     long data;;EEPROM_libreria.c: 54:     for(i=0;i<4;i++){
+   372                           
+   373                           ;incstack = 0
+   374  007F1A  0E00               	movlw	0
+   375  007F1C  6E0C               	movwf	_i+1,c
+   376  007F1E  0E00               	movlw	0
+   377  007F20  6E0B               	movwf	_i,c
+   378  007F22                     l901:
+   379  007F22  BE0C               	btfsc	_i+1,7,c
+   380  007F24  D006               	goto	l905
+   381  007F26  500C               	movf	_i+1,w,c
+   382  007F28  E116               	bnz	l42
+   383  007F2A  0E04               	movlw	4
+   384  007F2C  5C0B               	subwf	_i,w,c
+   385  007F2E  B0D8               	btfsc	status,0,c
+   386  007F30  D012               	goto	l42
+   387  007F32                     l905:
+   388                           
+   389                           ;EEPROM_libreria.c: 55:         *((int8_t*)(&data)+i) = EEPROM_Lectura(dir+i);
+   390  007F32  0E1D               	movlw	low EEPROM_Lectura_int32@data
+   391  007F34  240B               	addwf	_i,w,c
+   392  007F36  6ED9               	movwf	fsr2l,c
+   393  007F38  0E00               	movlw	high EEPROM_Lectura_int32@data
+   394  007F3A  200C               	addwfc	_i+1,w,c
+   395  007F3C  6EDA               	movwf	fsr2h,c
+   396  007F3E  500B               	movf	_i,w,c
+   397  007F40  2419               	addwf	EEPROM_Lectura_int32@dir,w,c
+   398  007F42  6E17               	movwf	EEPROM_Lectura@dir,c
+   399  007F44  500C               	movf	_i+1,w,c
+   400  007F46  201A               	addwfc	EEPROM_Lectura_int32@dir+1,w,c
+   401  007F48  6E18               	movwf	EEPROM_Lectura@dir+1,c
+   402  007F4A  ECB0  F03E         	call	_EEPROM_Lectura	;wreg free
+   403  007F4E  6EDF               	movwf	indf2,c
+   404                           
+   405                           ;EEPROM_libreria.c: 56:     }
+   406  007F50  4A0B               	infsnz	_i,f,c
+   407  007F52  2A0C               	incf	_i+1,f,c
+   408  007F54  D7E6               	goto	l901
+   409  007F56                     l42:
+   410                           
+   411                           ;EEPROM_libreria.c: 57:     return (data);
+   412  007F56  C01D  F019         	movff	EEPROM_Lectura_int32@data,?_EEPROM_Lectura_int32
+   413  007F5A  C01E  F01A         	movff	EEPROM_Lectura_int32@data+1,?_EEPROM_Lectura_int32+1
+   414  007F5E  C01F  F01B         	movff	EEPROM_Lectura_int32@data+2,?_EEPROM_Lectura_int32+2
+   415  007F62  C020  F01C         	movff	EEPROM_Lectura_int32@data+3,?_EEPROM_Lectura_int32+3
+   416  007F66  0012               	return		;funcret
+   417  007F68                     __end_of_EEPROM_Lectura_int32:
+   418                           	opt callstack 0
+   419                           
+   420 ;; *************** function _EEPROM_Lectura_int16 *****************
+   421 ;; Defined at:
+   422 ;;		line 38 in file "EEPROM_libreria.c"
+   423 ;; Parameters:    Size  Location     Type
+   424 ;;  dir             2    2[COMRAM] int 
+   425 ;; Auto vars:     Size  Location     Type
+   426 ;;  data            2    4[COMRAM] int 
+   427 ;; Return value:  Size  Location     Type
+   428 ;;                  2    2[COMRAM] int 
+   429 ;; Registers used:
+   430 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   431 ;; Tracked objects:
+   432 ;;		On entry : 0/0
+   433 ;;		On exit  : 0/0
+   434 ;;		Unchanged: 0/0
+   435 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   436 ;;      Params:         2       0       0       0       0       0       0       0       0
+   437 ;;      Locals:         2       0       0       0       0       0       0       0       0
+   438 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   439 ;;      Totals:         4       0       0       0       0       0       0       0       0
+   440 ;;Total ram usage:        4 bytes
+   441 ;; Hardware stack levels used:    1
+   442 ;; Hardware stack levels required when called:    1
+   443 ;; This function calls:
+   444 ;;		_EEPROM_Lectura
+   445 ;; This function is called by:
+   446 ;;		_main
+   447 ;; This function uses a non-reentrant model
+   448 ;;
+   449                           
+   450                           	psect	text2
+   451  007E86                     __ptext2:
+   452                           	opt callstack 0
+   453  007E86                     _EEPROM_Lectura_int16:
+   454                           	opt callstack 29
+   455                           
+   456                           ;EEPROM_libreria.c: 39:     int data;;EEPROM_libreria.c: 40:     for(i=0;i<2;i++){
+   457                           
+   458                           ;incstack = 0
+   459  007E86  0E00               	movlw	0
+   460  007E88  6E0C               	movwf	_i+1,c
+   461  007E8A  0E00               	movlw	0
+   462  007E8C  6E0B               	movwf	_i,c
+   463  007E8E                     l877:
+   464  007E8E  BE0C               	btfsc	_i+1,7,c
+   465  007E90  D006               	goto	l881
+   466  007E92  500C               	movf	_i+1,w,c
+   467  007E94  E116               	bnz	l32
+   468  007E96  0E02               	movlw	2
+   469  007E98  5C0B               	subwf	_i,w,c
+   470  007E9A  B0D8               	btfsc	status,0,c
+   471  007E9C  D012               	goto	l32
+   472  007E9E                     l881:
+   473                           
+   474                           ;EEPROM_libreria.c: 41:         *((int8_t*)(&data)+i) = EEPROM_Lectura(dir+i);
+   475  007E9E  0E1B               	movlw	low EEPROM_Lectura_int16@data
+   476  007EA0  240B               	addwf	_i,w,c
+   477  007EA2  6ED9               	movwf	fsr2l,c
+   478  007EA4  0E00               	movlw	high EEPROM_Lectura_int16@data
+   479  007EA6  200C               	addwfc	_i+1,w,c
+   480  007EA8  6EDA               	movwf	fsr2h,c
+   481  007EAA  500B               	movf	_i,w,c
+   482  007EAC  2419               	addwf	EEPROM_Lectura_int16@dir,w,c
+   483  007EAE  6E17               	movwf	EEPROM_Lectura@dir,c
+   484  007EB0  500C               	movf	_i+1,w,c
+   485  007EB2  201A               	addwfc	EEPROM_Lectura_int16@dir+1,w,c
+   486  007EB4  6E18               	movwf	EEPROM_Lectura@dir+1,c
+   487  007EB6  ECB0  F03E         	call	_EEPROM_Lectura	;wreg free
+   488  007EBA  6EDF               	movwf	indf2,c
+   489                           
+   490                           ;EEPROM_libreria.c: 42:     }
+   491  007EBC  4A0B               	infsnz	_i,f,c
+   492  007EBE  2A0C               	incf	_i+1,f,c
+   493  007EC0  D7E6               	goto	l877
+   494  007EC2                     l32:
+   495                           
+   496                           ;EEPROM_libreria.c: 43:     return (data);
+   497  007EC2  C01B  F019         	movff	EEPROM_Lectura_int16@data,?_EEPROM_Lectura_int16
+   498  007EC6  C01C  F01A         	movff	EEPROM_Lectura_int16@data+1,?_EEPROM_Lectura_int16+1
+   499  007ECA  0012               	return		;funcret
+   500  007ECC                     __end_of_EEPROM_Lectura_int16:
+   501                           	opt callstack 0
+   502                           
+   503 ;; *************** function _EEPROM_Lectura_float *****************
+   504 ;; Defined at:
+   505 ;;		line 66 in file "EEPROM_libreria.c"
+   506 ;; Parameters:    Size  Location     Type
+   507 ;;  dir             2    2[COMRAM] int 
+   508 ;; Auto vars:     Size  Location     Type
+   509 ;;  data            4    6[COMRAM] float 
+   510 ;; Return value:  Size  Location     Type
+   511 ;;                  4    2[COMRAM] float 
+   512 ;; Registers used:
+   513 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   514 ;; Tracked objects:
+   515 ;;		On entry : 0/0
+   516 ;;		On exit  : 0/0
+   517 ;;		Unchanged: 0/0
+   518 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   519 ;;      Params:         4       0       0       0       0       0       0       0       0
+   520 ;;      Locals:         4       0       0       0       0       0       0       0       0
+   521 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   522 ;;      Totals:         8       0       0       0       0       0       0       0       0
+   523 ;;Total ram usage:        8 bytes
+   524 ;; Hardware stack levels used:    1
+   525 ;; Hardware stack levels required when called:    1
+   526 ;; This function calls:
+   527 ;;		_EEPROM_Lectura
+   528 ;; This function is called by:
+   529 ;;		_main
+   530 ;; This function uses a non-reentrant model
+   531 ;;
+   532                           
+   533                           	psect	text3
+   534  007ECC                     __ptext3:
+   535                           	opt callstack 0
+   536  007ECC                     _EEPROM_Lectura_float:
+   537                           	opt callstack 29
+   538                           
+   539                           ;EEPROM_libreria.c: 67:     float data;;EEPROM_libreria.c: 68:     for(i=0;i<4;i++){
+   540                           
+   541                           ;incstack = 0
+   542  007ECC  0E00               	movlw	0
+   543  007ECE  6E0C               	movwf	_i+1,c
+   544  007ED0  0E00               	movlw	0
+   545  007ED2  6E0B               	movwf	_i,c
+   546  007ED4                     l925:
+   547  007ED4  BE0C               	btfsc	_i+1,7,c
+   548  007ED6  D006               	goto	l929
+   549  007ED8  500C               	movf	_i+1,w,c
+   550  007EDA  E116               	bnz	l52
+   551  007EDC  0E04               	movlw	4
+   552  007EDE  5C0B               	subwf	_i,w,c
+   553  007EE0  B0D8               	btfsc	status,0,c
+   554  007EE2  D012               	goto	l52
+   555  007EE4                     l929:
+   556                           
+   557                           ;EEPROM_libreria.c: 69:         *((int8_t*)(&data)+i) = EEPROM_Lectura(dir+i);
+   558  007EE4  0E1D               	movlw	low EEPROM_Lectura_float@data
+   559  007EE6  240B               	addwf	_i,w,c
+   560  007EE8  6ED9               	movwf	fsr2l,c
+   561  007EEA  0E00               	movlw	high EEPROM_Lectura_float@data
+   562  007EEC  200C               	addwfc	_i+1,w,c
+   563  007EEE  6EDA               	movwf	fsr2h,c
+   564  007EF0  500B               	movf	_i,w,c
+   565  007EF2  2419               	addwf	EEPROM_Lectura_float@dir,w,c
+   566  007EF4  6E17               	movwf	EEPROM_Lectura@dir,c
+   567  007EF6  500C               	movf	_i+1,w,c
+   568  007EF8  201A               	addwfc	EEPROM_Lectura_float@dir+1,w,c
+   569  007EFA  6E18               	movwf	EEPROM_Lectura@dir+1,c
+   570  007EFC  ECB0  F03E         	call	_EEPROM_Lectura	;wreg free
+   571  007F00  6EDF               	movwf	indf2,c
+   572                           
+   573                           ;EEPROM_libreria.c: 70:     }
+   574  007F02  4A0B               	infsnz	_i,f,c
+   575  007F04  2A0C               	incf	_i+1,f,c
+   576  007F06  D7E6               	goto	l925
+   577  007F08                     l52:
+   578                           
+   579                           ;EEPROM_libreria.c: 71:     return (data);
+   580  007F08  C01D  F019         	movff	EEPROM_Lectura_float@data,?_EEPROM_Lectura_float
+   581  007F0C  C01E  F01A         	movff	EEPROM_Lectura_float@data+1,?_EEPROM_Lectura_float+1
+   582  007F10  C01F  F01B         	movff	EEPROM_Lectura_float@data+2,?_EEPROM_Lectura_float+2
+   583  007F14  C020  F01C         	movff	EEPROM_Lectura_float@data+3,?_EEPROM_Lectura_float+3
+   584  007F18  0012               	return		;funcret
+   585  007F1A                     __end_of_EEPROM_Lectura_float:
+   586                           	opt callstack 0
+   587                           
+   588 ;; *************** function _EEPROM_Lectura *****************
+   589 ;; Defined at:
+   590 ;;		line 23 in file "EEPROM_libreria.c"
+   591 ;; Parameters:    Size  Location     Type
+   592 ;;  dir             2    0[COMRAM] int 
+   593 ;; Auto vars:     Size  Location     Type
+   594 ;;		None
+   595 ;; Return value:  Size  Location     Type
+   596 ;;                  1    wreg      unsigned char 
+   597 ;; Registers used:
+   598 ;;		wreg, status,2
+   599 ;; Tracked objects:
+   600 ;;		On entry : 0/0
+   601 ;;		On exit  : 0/0
+   602 ;;		Unchanged: 0/0
+   603 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   604 ;;      Params:         2       0       0       0       0       0       0       0       0
+   605 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   606 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   607 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   608 ;;Total ram usage:        2 bytes
+   609 ;; Hardware stack levels used:    1
+   610 ;; This function calls:
+   611 ;;		Nothing
+   612 ;; This function is called by:
+   613 ;;		_EEPROM_Lectura_int16
+   614 ;;		_EEPROM_Lectura_int32
+   615 ;;		_EEPROM_Lectura_float
+   616 ;; This function uses a non-reentrant model
+   617 ;;
+   618                           
+   619                           	psect	text4
+   620  007D60                     __ptext4:
+   621                           	opt callstack 0
+   622  007D60                     _EEPROM_Lectura:
+   623                           	opt callstack 29
+   624                           
+   625                           ;EEPROM_libreria.c: 24:     EEADR = dir;
+   626                           
+   627                           ;incstack = 0
+   628  007D60  C017  FFA9         	movff	EEPROM_Lectura@dir,4009	;volatile
+   629                           
+   630                           ;EEPROM_libreria.c: 25:     EECON1bits.EEPGD = 0;
+   631  007D64  9EA6               	bcf	4006,7,c	;volsfr
+   632                           
+   633                           ;EEPROM_libreria.c: 26:     EECON1bits.CFGS = 0;
+   634  007D66  9CA6               	bcf	4006,6,c	;volsfr
+   635                           
+   636                           ;EEPROM_libreria.c: 27:     EECON1bits.RD = 1;
+   637  007D68  80A6               	bsf	4006,0,c	;volsfr
+   638                           
+   639                           ;EEPROM_libreria.c: 28:     return EEDATA;
+   640  007D6A  50A8               	movf	4008,w,c	;volatile
+   641  007D6C  0012               	return		;funcret
+   642  007D6E                     __end_of_EEPROM_Lectura:
+   643                           	opt callstack 0
+   644                           
+   645 ;; *************** function _EEPROM_Guardar_int32 *****************
+   646 ;; Defined at:
+   647 ;;		line 46 in file "EEPROM_libreria.c"
+   648 ;; Parameters:    Size  Location     Type
+   649 ;;  dir             2    3[COMRAM] int 
+   650 ;;  data            4    5[COMRAM] long 
+   651 ;; Auto vars:     Size  Location     Type
+   652 ;;		None
+   653 ;; Return value:  Size  Location     Type
+   654 ;;                  1    wreg      void 
+   655 ;; Registers used:
+   656 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   657 ;; Tracked objects:
+   658 ;;		On entry : 0/0
+   659 ;;		On exit  : 0/0
+   660 ;;		Unchanged: 0/0
+   661 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   662 ;;      Params:         6       0       0       0       0       0       0       0       0
+   663 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   664 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   665 ;;      Totals:         6       0       0       0       0       0       0       0       0
+   666 ;;Total ram usage:        6 bytes
+   667 ;; Hardware stack levels used:    1
+   668 ;; Hardware stack levels required when called:    1
+   669 ;; This function calls:
+   670 ;;		_EEPROM_Guardar
+   671 ;; This function is called by:
+   672 ;;		_main
+   673 ;; This function uses a non-reentrant model
+   674 ;;
+   675                           
+   676                           	psect	text5
+   677  007E46                     __ptext5:
+   678                           	opt callstack 0
+   679  007E46                     _EEPROM_Guardar_int32:
+   680                           	opt callstack 29
+   681                           
+   682                           ;EEPROM_libreria.c: 47:     for(i=0;i<4;i++){
+   683                           
+   684                           ;incstack = 0
+   685  007E46  0E00               	movlw	0
+   686  007E48  6E0C               	movwf	_i+1,c
+   687  007E4A  0E00               	movlw	0
+   688  007E4C  6E0B               	movwf	_i,c
+   689  007E4E                     l889:
+   690  007E4E  BE0C               	btfsc	_i+1,7,c
+   691  007E50  D006               	goto	l893
+   692  007E52  500C               	movf	_i+1,w,c
+   693  007E54  E117               	bnz	l38
+   694  007E56  0E04               	movlw	4
+   695  007E58  5C0B               	subwf	_i,w,c
+   696  007E5A  B0D8               	btfsc	status,0,c
+   697  007E5C  0012               	return	
+   698  007E5E                     l893:
+   699                           
+   700                           ;EEPROM_libreria.c: 48:         EEPROM_Guardar(dir+i,*((int8_t*)(&data)+i));
+   701  007E5E  500B               	movf	_i,w,c
+   702  007E60  241A               	addwf	EEPROM_Guardar_int32@dir,w,c
+   703  007E62  6E17               	movwf	EEPROM_Guardar@dir,c
+   704  007E64  500C               	movf	_i+1,w,c
+   705  007E66  201B               	addwfc	EEPROM_Guardar_int32@dir+1,w,c
+   706  007E68  6E18               	movwf	EEPROM_Guardar@dir+1,c
+   707  007E6A  0E1C               	movlw	low EEPROM_Guardar_int32@data
+   708  007E6C  240B               	addwf	_i,w,c
+   709  007E6E  6ED9               	movwf	fsr2l,c
+   710  007E70  0E00               	movlw	high EEPROM_Guardar_int32@data
+   711  007E72  200C               	addwfc	_i+1,w,c
+   712  007E74  6EDA               	movwf	fsr2h,c
+   713  007E76  50DF               	movf	indf2,w,c
+   714  007E78  6E19               	movwf	EEPROM_Guardar@data,c
+   715  007E7A  ECB7  F03E         	call	_EEPROM_Guardar	;wreg free
+   716                           
+   717                           ;EEPROM_libreria.c: 49:     }
+   718  007E7E  4A0B               	infsnz	_i,f,c
+   719  007E80  2A0C               	incf	_i+1,f,c
+   720  007E82  D7E5               	goto	l889
+   721  007E84                     l38:
+   722  007E84  0012               	return		;funcret
+   723  007E86                     __end_of_EEPROM_Guardar_int32:
+   724                           	opt callstack 0
+   725                           
+   726 ;; *************** function _EEPROM_Guardar_int16 *****************
+   727 ;; Defined at:
+   728 ;;		line 32 in file "EEPROM_libreria.c"
+   729 ;; Parameters:    Size  Location     Type
+   730 ;;  dir             2    3[COMRAM] int 
+   731 ;;  data            2    5[COMRAM] int 
+   732 ;; Auto vars:     Size  Location     Type
+   733 ;;		None
+   734 ;; Return value:  Size  Location     Type
+   735 ;;                  1    wreg      void 
+   736 ;; Registers used:
+   737 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   738 ;; Tracked objects:
+   739 ;;		On entry : 0/0
+   740 ;;		On exit  : 0/0
+   741 ;;		Unchanged: 0/0
+   742 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   743 ;;      Params:         4       0       0       0       0       0       0       0       0
+   744 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   745 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   746 ;;      Totals:         4       0       0       0       0       0       0       0       0
+   747 ;;Total ram usage:        4 bytes
+   748 ;; Hardware stack levels used:    1
+   749 ;; Hardware stack levels required when called:    1
+   750 ;; This function calls:
+   751 ;;		_EEPROM_Guardar
+   752 ;; This function is called by:
+   753 ;;		_main
+   754 ;; This function uses a non-reentrant model
+   755 ;;
+   756                           
+   757                           	psect	text6
+   758  007E06                     __ptext6:
+   759                           	opt callstack 0
+   760  007E06                     _EEPROM_Guardar_int16:
+   761                           	opt callstack 29
+   762                           
+   763                           ;EEPROM_libreria.c: 33:     for(i=0;i<2;i++){
+   764                           
+   765                           ;incstack = 0
+   766  007E06  0E00               	movlw	0
+   767  007E08  6E0C               	movwf	_i+1,c
+   768  007E0A  0E00               	movlw	0
+   769  007E0C  6E0B               	movwf	_i,c
+   770  007E0E                     l865:
+   771  007E0E  BE0C               	btfsc	_i+1,7,c
+   772  007E10  D006               	goto	l869
+   773  007E12  500C               	movf	_i+1,w,c
+   774  007E14  E117               	bnz	l28
+   775  007E16  0E02               	movlw	2
+   776  007E18  5C0B               	subwf	_i,w,c
+   777  007E1A  B0D8               	btfsc	status,0,c
+   778  007E1C  0012               	return	
+   779  007E1E                     l869:
+   780                           
+   781                           ;EEPROM_libreria.c: 34:         EEPROM_Guardar(dir+i,*((int8_t*)(&data)+i));
+   782  007E1E  500B               	movf	_i,w,c
+   783  007E20  241A               	addwf	EEPROM_Guardar_int16@dir,w,c
+   784  007E22  6E17               	movwf	EEPROM_Guardar@dir,c
+   785  007E24  500C               	movf	_i+1,w,c
+   786  007E26  201B               	addwfc	EEPROM_Guardar_int16@dir+1,w,c
+   787  007E28  6E18               	movwf	EEPROM_Guardar@dir+1,c
+   788  007E2A  0E1C               	movlw	low EEPROM_Guardar_int16@data
+   789  007E2C  240B               	addwf	_i,w,c
+   790  007E2E  6ED9               	movwf	fsr2l,c
+   791  007E30  0E00               	movlw	high EEPROM_Guardar_int16@data
+   792  007E32  200C               	addwfc	_i+1,w,c
+   793  007E34  6EDA               	movwf	fsr2h,c
+   794  007E36  50DF               	movf	indf2,w,c
+   795  007E38  6E19               	movwf	EEPROM_Guardar@data,c
+   796  007E3A  ECB7  F03E         	call	_EEPROM_Guardar	;wreg free
+   797                           
+   798                           ;EEPROM_libreria.c: 35:     }
+   799  007E3E  4A0B               	infsnz	_i,f,c
+   800  007E40  2A0C               	incf	_i+1,f,c
+   801  007E42  D7E5               	goto	l865
+   802  007E44                     l28:
+   803  007E44  0012               	return		;funcret
+   804  007E46                     __end_of_EEPROM_Guardar_int16:
+   805                           	opt callstack 0
+   806                           
+   807 ;; *************** function _EEPROM_Guardar_float *****************
+   808 ;; Defined at:
+   809 ;;		line 60 in file "EEPROM_libreria.c"
+   810 ;; Parameters:    Size  Location     Type
+   811 ;;  dir             2    3[COMRAM] int 
+   812 ;;  data            4    5[COMRAM] float 
+   813 ;; Auto vars:     Size  Location     Type
+   814 ;;		None
+   815 ;; Return value:  Size  Location     Type
+   816 ;;                  1    wreg      void 
+   817 ;; Registers used:
+   818 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   819 ;; Tracked objects:
+   820 ;;		On entry : 0/0
+   821 ;;		On exit  : 0/0
+   822 ;;		Unchanged: 0/0
+   823 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   824 ;;      Params:         6       0       0       0       0       0       0       0       0
+   825 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   826 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   827 ;;      Totals:         6       0       0       0       0       0       0       0       0
+   828 ;;Total ram usage:        6 bytes
+   829 ;; Hardware stack levels used:    1
+   830 ;; Hardware stack levels required when called:    1
+   831 ;; This function calls:
+   832 ;;		_EEPROM_Guardar
+   833 ;; This function is called by:
+   834 ;;		_main
+   835 ;; This function uses a non-reentrant model
+   836 ;;
+   837                           
+   838                           	psect	text7
+   839  007DC6                     __ptext7:
+   840                           	opt callstack 0
+   841  007DC6                     _EEPROM_Guardar_float:
+   842                           	opt callstack 29
+   843                           
+   844                           ;EEPROM_libreria.c: 61:     for(i=0;i<4;i++){
+   845                           
+   846                           ;incstack = 0
+   847  007DC6  0E00               	movlw	0
+   848  007DC8  6E0C               	movwf	_i+1,c
+   849  007DCA  0E00               	movlw	0
+   850  007DCC  6E0B               	movwf	_i,c
+   851  007DCE                     l913:
+   852  007DCE  BE0C               	btfsc	_i+1,7,c
+   853  007DD0  D006               	goto	l917
+   854  007DD2  500C               	movf	_i+1,w,c
+   855  007DD4  E117               	bnz	l48
+   856  007DD6  0E04               	movlw	4
+   857  007DD8  5C0B               	subwf	_i,w,c
+   858  007DDA  B0D8               	btfsc	status,0,c
+   859  007DDC  0012               	return	
+   860  007DDE                     l917:
+   861                           
+   862                           ;EEPROM_libreria.c: 62:         EEPROM_Guardar(dir+i,*((int8_t*)(&data)+i));
+   863  007DDE  500B               	movf	_i,w,c
+   864  007DE0  241A               	addwf	EEPROM_Guardar_float@dir,w,c
+   865  007DE2  6E17               	movwf	EEPROM_Guardar@dir,c
+   866  007DE4  500C               	movf	_i+1,w,c
+   867  007DE6  201B               	addwfc	EEPROM_Guardar_float@dir+1,w,c
+   868  007DE8  6E18               	movwf	EEPROM_Guardar@dir+1,c
+   869  007DEA  0E1C               	movlw	low EEPROM_Guardar_float@data
+   870  007DEC  240B               	addwf	_i,w,c
+   871  007DEE  6ED9               	movwf	fsr2l,c
+   872  007DF0  0E00               	movlw	high EEPROM_Guardar_float@data
+   873  007DF2  200C               	addwfc	_i+1,w,c
+   874  007DF4  6EDA               	movwf	fsr2h,c
+   875  007DF6  50DF               	movf	indf2,w,c
+   876  007DF8  6E19               	movwf	EEPROM_Guardar@data,c
+   877  007DFA  ECB7  F03E         	call	_EEPROM_Guardar	;wreg free
+   878                           
+   879                           ;EEPROM_libreria.c: 63:     }
+   880  007DFE  4A0B               	infsnz	_i,f,c
+   881  007E00  2A0C               	incf	_i+1,f,c
+   882  007E02  D7E5               	goto	l913
+   883  007E04                     l48:
+   884  007E04  0012               	return		;funcret
+   885  007E06                     __end_of_EEPROM_Guardar_float:
+   886                           	opt callstack 0
+   887                           
+   888 ;; *************** function _EEPROM_Guardar *****************
+   889 ;; Defined at:
+   890 ;;		line 7 in file "EEPROM_libreria.c"
+   891 ;; Parameters:    Size  Location     Type
+   892 ;;  dir             2    0[COMRAM] int 
+   893 ;;  data            1    2[COMRAM] unsigned char 
+   894 ;; Auto vars:     Size  Location     Type
+   895 ;;		None
+   896 ;; Return value:  Size  Location     Type
+   897 ;;                  1    wreg      void 
+   898 ;; Registers used:
+   899 ;;		wreg, status,2
+   900 ;; Tracked objects:
+   901 ;;		On entry : 0/0
+   902 ;;		On exit  : 0/0
+   903 ;;		Unchanged: 0/0
+   904 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   905 ;;      Params:         3       0       0       0       0       0       0       0       0
+   906 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   907 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   908 ;;      Totals:         3       0       0       0       0       0       0       0       0
+   909 ;;Total ram usage:        3 bytes
+   910 ;; Hardware stack levels used:    1
+   911 ;; This function calls:
+   912 ;;		Nothing
+   913 ;; This function is called by:
+   914 ;;		_EEPROM_Guardar_int16
+   915 ;;		_EEPROM_Guardar_int32
+   916 ;;		_EEPROM_Guardar_float
+   917 ;; This function uses a non-reentrant model
+   918 ;;
+   919                           
+   920                           	psect	text8
+   921  007D6E                     __ptext8:
+   922                           	opt callstack 0
+   923  007D6E                     _EEPROM_Guardar:
+   924                           	opt callstack 29
+   925                           
+   926                           ;EEPROM_libreria.c: 8:     EEADR = dir;
+   927                           
+   928                           ;incstack = 0
+   929  007D6E  C017  FFA9         	movff	EEPROM_Guardar@dir,4009	;volatile
+   930                           
+   931                           ;EEPROM_libreria.c: 9:     EEDATA = data;
+   932  007D72  C019  FFA8         	movff	EEPROM_Guardar@data,4008	;volatile
+   933                           
+   934                           ;EEPROM_libreria.c: 10:     EECON1bits.EEPGD = 0;
+   935  007D76  9EA6               	bcf	4006,7,c	;volsfr
+   936                           
+   937                           ;EEPROM_libreria.c: 11:     EECON1bits.CFGS = 0;
+   938  007D78  9CA6               	bcf	4006,6,c	;volsfr
+   939                           
+   940                           ;EEPROM_libreria.c: 12:     EECON1bits.WREN = 1;
+   941  007D7A  84A6               	bsf	4006,2,c	;volsfr
+   942                           
+   943                           ;EEPROM_libreria.c: 13:     INTCONbits.GIE = 0;
+   944  007D7C  9EF2               	bcf	4082,7,c	;volatile
+   945                           
+   946                           ;EEPROM_libreria.c: 14:     EECON2 = 0x55;
+   947  007D7E  0E55               	movlw	85
+   948  007D80  6EA7               	movwf	4007,c	;volsfr
+   949                           
+   950                           ;EEPROM_libreria.c: 15:     EECON2 = 0x0AA;
+   951  007D82  0EAA               	movlw	170
+   952  007D84  6EA7               	movwf	4007,c	;volsfr
+   953                           
+   954                           ;EEPROM_libreria.c: 16:     EECON1bits.WR = 1;
+   955  007D86  82A6               	bsf	4006,1,c	;volsfr
+   956                           
+   957                           ;EEPROM_libreria.c: 17:     INTCONbits.GIE = 1;
+   958  007D88  8EF2               	bsf	4082,7,c	;volatile
+   959  007D8A                     l17:
+   960  007D8A  A8A1               	btfss	4001,4,c	;volatile
+   961  007D8C  D7FE               	goto	l17
+   962                           
+   963                           ;EEPROM_libreria.c: 19:     PIR2bits.EEIF = 0;
+   964  007D8E  98A1               	bcf	4001,4,c	;volatile
+   965                           
+   966                           ;EEPROM_libreria.c: 20:     EECON1bits.WREN = 0;
+   967  007D90  94A6               	bcf	4006,2,c	;volsfr
+   968  007D92  0012               	return		;funcret
+   969  007D94                     __end_of_EEPROM_Guardar:
+   970                           	opt callstack 0
+   971  0000                     
+   972                           	psect	rparam
+   973  0000                     tosu	equ	0xFFF
+   974                           tosh	equ	0xFFE
+   975                           tosl	equ	0xFFD
+   976                           stkptr	equ	0xFFC
+   977                           pclatu	equ	0xFFB
+   978                           pclath	equ	0xFFA
+   979                           pcl	equ	0xFF9
+   980                           tblptru	equ	0xFF8
+   981                           tblptrh	equ	0xFF7
+   982                           tblptrl	equ	0xFF6
+   983                           tablat	equ	0xFF5
+   984                           prodh	equ	0xFF4
+   985                           prodl	equ	0xFF3
+   986                           indf0	equ	0xFEF
+   987                           postinc0	equ	0xFEE
+   988                           postdec0	equ	0xFED
+   989                           preinc0	equ	0xFEC
+   990                           plusw0	equ	0xFEB
+   991                           fsr0h	equ	0xFEA
+   992                           fsr0l	equ	0xFE9
+   993                           wreg	equ	0xFE8
+   994                           indf1	equ	0xFE7
+   995                           postinc1	equ	0xFE6
+   996                           postdec1	equ	0xFE5
+   997                           preinc1	equ	0xFE4
+   998                           plusw1	equ	0xFE3
+   999                           fsr1h	equ	0xFE2
+  1000                           fsr1l	equ	0xFE1
+  1001                           bsr	equ	0xFE0
+  1002                           indf2	equ	0xFDF
+  1003                           postinc2	equ	0xFDE
+  1004                           postdec2	equ	0xFDD
+  1005                           preinc2	equ	0xFDC
+  1006                           plusw2	equ	0xFDB
+  1007                           fsr2h	equ	0xFDA
+  1008                           fsr2l	equ	0xFD9
+  1009                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        10
+    BSS         12
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     10      32
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_EEPROM_Lectura_float
+    _main->_EEPROM_Lectura_int32
+    _EEPROM_Lectura_int32->_EEPROM_Lectura
+    _EEPROM_Lectura_int16->_EEPROM_Lectura
+    _EEPROM_Lectura_float->_EEPROM_Lectura
+    _EEPROM_Guardar_int32->_EEPROM_Guardar
+    _EEPROM_Guardar_int16->_EEPROM_Guardar
+    _EEPROM_Guardar_float->_EEPROM_Guardar
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0    3273
+               _EEPROM_Guardar_float
+               _EEPROM_Guardar_int16
+               _EEPROM_Guardar_int32
+               _EEPROM_Lectura_float
+               _EEPROM_Lectura_int16
+               _EEPROM_Lectura_int32
+ ---------------------------------------------------------------------------------
+ (1) _EEPROM_Lectura_int32                                 8     4      4     394
+                                              2 COMRAM     8     4      4
+                     _EEPROM_Lectura
+ ---------------------------------------------------------------------------------
+ (1) _EEPROM_Lectura_int16                                 4     2      2     394
+                                              2 COMRAM     4     2      2
+                     _EEPROM_Lectura
+ ---------------------------------------------------------------------------------
+ (1) _EEPROM_Lectura_float                                 8     4      4     394
+                                              2 COMRAM     8     4      4
+                     _EEPROM_Lectura
+ ---------------------------------------------------------------------------------
+ (2) _EEPROM_Lectura                                       2     0      2     250
+                                              0 COMRAM     2     0      2
+ ---------------------------------------------------------------------------------
+ (1) _EEPROM_Guardar_int32                                 6     0      6     697
+                                              3 COMRAM     6     0      6
+                     _EEPROM_Guardar
+ ---------------------------------------------------------------------------------
+ (1) _EEPROM_Guardar_int16                                 4     0      4     697
+                                              3 COMRAM     4     0      4
+                     _EEPROM_Guardar
+ ---------------------------------------------------------------------------------
+ (1) _EEPROM_Guardar_float                                 6     0      6     697
+                                              3 COMRAM     6     0      6
+                     _EEPROM_Guardar
+ ---------------------------------------------------------------------------------
+ (2) _EEPROM_Guardar                                       3     0      3     500
+                                              0 COMRAM     3     0      3
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _EEPROM_Guardar_float
+     _EEPROM_Guardar
+   _EEPROM_Guardar_int16
+     _EEPROM_Guardar
+   _EEPROM_Guardar_int32
+     _EEPROM_Guardar
+   _EEPROM_Lectura_float
+     _EEPROM_Lectura
+   _EEPROM_Lectura_int16
+     _EEPROM_Lectura
+   _EEPROM_Lectura_int32
+     _EEPROM_Lectura
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             7FF      0       0      21        0.0%
+EEDATA             100      0       0       0        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      A      20       1       33.7%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      20      20        0.0%
+DATA                 0      0      20       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.05 build -831301201 
+Symbol Table                                                                                   Wed Mar 13 09:52:25 2019
+
+                            _i 000B                             l32 7EC2                             l17 7D8A  
+                           l42 7F56                             l28 7E44                             l52 7F08  
+                           l38 7E84                             l48 7E04                             l82 7FFE  
+                  __CFG_BOR$ON 000000                    __CFG_BORV$3 000000                   __CFG_CP0$OFF 000000  
+                 __CFG_CP1$OFF 000000                   __CFG_CP2$OFF 000000                   __CFG_CP3$OFF 000000  
+                  __CFG_LVP$ON 000000                            l901 7F22                            l913 7DCE  
+                          l905 7F32                            l917 7DDE                            l925 7ED4  
+                          l865 7E0E                            l929 7EE4                            l881 7E9E  
+                          l869 7E1E                            l893 7E5E                            l877 7E8E  
+                          l889 7E4E                   __CFG_CPB$OFF 000000                   __CFG_CPD$OFF 000000  
+                          _asd 0005                            _sad 0001                            _sus 0015  
+                          wreg 000FE8        __size_of_EEPROM_Lectura 000E                   __CFG_FOSC$HS 000000  
+      __size_of_EEPROM_Guardar 0026                   __CFG_WDT$OFF 000000                           _main 7F68  
+                         _like 0011                           _wels 000D                           indf2 000FDF  
+                         fsr1l 000FE1                           fsr2l 000FD9                           start 0000  
+                __CFG_IESO$OFF 000000                  __CFG_MCLRE$ON 000000        EEPROM_Guardar_int32@dir 001A  
+      EEPROM_Guardar_int16@dir 001A                   ___param_bank 000000        EEPROM_Lectura_int32@dir 0019  
+      EEPROM_Lectura_int16@dir 0019                  __CFG_PLLDIV$1 000000                 __CFG_CCP2MX$ON 000000  
+                        ?_main 0017                          _EEADR 000FA9        EEPROM_Guardar_float@dir 001A  
+      EEPROM_Lectura_float@dir 0019                  __CFG_USBDIV$1 000000                  __CFG_PWRT$OFF 000000  
+                __CFG_WRT0$OFF 000000                  __CFG_WRT1$OFF 000000                  __CFG_WRT2$OFF 000000  
+                __CFG_WRT3$OFF 000000                 __CFG_EBTR0$OFF 000000                 __CFG_FCMEN$OFF 000000  
+               __CFG_EBTR1$OFF 000000                 __CFG_EBTR2$OFF 000000                 __CFG_EBTR3$OFF 000000  
+                __CFG_WRTB$OFF 000000                  __CFG_WRTC$OFF 000000                  __CFG_WRTD$OFF 000000  
+               __CFG_EBTRB$OFF 000000                          tablat 000FF5                          status 000FD8  
+               __CFG_ICPRT$OFF 000000                 __CFG_PBADEN$ON 000000  __size_of_EEPROM_Lectura_int16 0046  
+__size_of_EEPROM_Lectura_int32 004E  __size_of_EEPROM_Lectura_float 004E                __initialization 7D94  
+     EEPROM_Guardar_int32@data 001C       EEPROM_Guardar_int16@data 001C       EEPROM_Lectura_int32@data 001D  
+     EEPROM_Lectura_int16@data 001B                   __end_of_main 8000                         ??_main 0021  
+                __activetblptr 000000                         _EEDATA 000FA8       EEPROM_Guardar_float@data 001C  
+                       _EECON2 000FA7       EEPROM_Lectura_float@data 001D  __size_of_EEPROM_Guardar_int16 0040  
+__size_of_EEPROM_Guardar_int32 0040  __size_of_EEPROM_Guardar_float 0040                 __CFG_XINST$OFF 000000  
+               __CFG_STVREN$ON 000000                         clear_0 7DBA                   __pdataCOMRAM 000D  
+               _EEPROM_Lectura 7D60                 _EEPROM_Guardar 7D6E                         tblptrh 000FF7  
+                       tblptrl 000FF6                         tblptru 000FF8                     __accesstop 0060  
+      __end_of__initialization 7DC0                  ___rparam_used 000001                 __pcstackCOMRAM 0017  
+       __end_of_EEPROM_Lectura 7D6E         __end_of_EEPROM_Guardar 7D94                ?_EEPROM_Lectura 0017  
+              ?_EEPROM_Guardar 0017                __CFG_VREGEN$OFF 000000                        __Hparam 0000  
+                      __Lparam 0000                        __pcinit 7D94                        __ramtop 0800  
+                      __ptext0 7F68                        __ptext1 7F1A                        __ptext2 7E86  
+                      __ptext3 7ECC                        __ptext4 7D60                        __ptext5 7E46  
+                      __ptext6 7E06                        __ptext7 7DC6                        __ptext8 7D6E  
+                      _cribete 0009   __end_of_EEPROM_Lectura_int16 7ECC   __end_of_EEPROM_Lectura_int32 7F68  
+ __end_of_EEPROM_Lectura_float 7F1A           end_of_initialization 7DC0                        postdec1 000FE5  
+                      postinc0 000FEE   __end_of_EEPROM_Guardar_int16 7E46   __end_of_EEPROM_Guardar_int32 7E86  
+ __end_of_EEPROM_Guardar_float 7E06                  __pidataCOMRAM 7D56            start_initialization 7D94  
+         _EEPROM_Lectura_int32 7F1A           _EEPROM_Lectura_int16 7E86           _EEPROM_Lectura_float 7ECC  
+             ??_EEPROM_Lectura 0019               ??_EEPROM_Guardar 001A               __CFG_LPT1OSC$OFF 000000  
+                  __pbssCOMRAM 0001           _EEPROM_Guardar_int32 7E46           _EEPROM_Guardar_int16 7E06  
+         _EEPROM_Guardar_float 7DC6          ?_EEPROM_Lectura_int32 0019          ?_EEPROM_Lectura_int16 0019  
+        ?_EEPROM_Lectura_float 0019          ?_EEPROM_Guardar_int32 001A          ?_EEPROM_Guardar_int16 001A  
+        ?_EEPROM_Guardar_float 001A                       _PIR2bits 000FA1               __CFG_WDTPS$32768 000000  
+                    copy_data0 7DA8         ??_EEPROM_Lectura_int32 001D         ??_EEPROM_Lectura_int16 001B  
+       ??_EEPROM_Lectura_float 001D                     _EECON1bits 000FA6                       __Hrparam 0000  
+                     __Lrparam 0000         ??_EEPROM_Guardar_int32 0020         ??_EEPROM_Guardar_int16 001E  
+       ??_EEPROM_Guardar_float 0020                  __size_of_main 0098          __CFG_CPUDIV$OSC1_PLL2 000000  
+                   _INTCONbits 000FF2             EEPROM_Guardar@data 0019              EEPROM_Lectura@dir 0017  
+            EEPROM_Guardar@dir 0017  
