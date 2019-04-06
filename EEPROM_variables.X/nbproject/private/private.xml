@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/Configuracion.c</file>
-            <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/EEPROM_libreria.h</file>
-            <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/EEPROM_libreria.c</file>
             <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/Programa_principal.c</file>
+            <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/EEPROM_libreria.c</file>
+            <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/EEPROM_libreria.h</file>
             <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/Configuracion.h</file>
+            <file>file:/D:/Electronica/PIC18F4550-TUTORIAL/EEPROM_variables.X/Configuracion.c</file>
         </group>
     </open-files>
 </project-private>
