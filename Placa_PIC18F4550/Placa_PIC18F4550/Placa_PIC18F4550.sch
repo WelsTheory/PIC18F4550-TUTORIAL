@@ -423,7 +423,7 @@ U 1 1 5C021409
 P 9750 2300
 F 0 "Q1" H 9941 2346 50  0000 L CNN
 F 1 "2N3906" H 9941 2255 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9950 2225 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 9950 2225 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 9750 2300 50  0001 L CNN
 	1    9750 2300
 	1    0    0    -1  
@@ -920,9 +920,7 @@ Wire Wire Line
 	5850 5800 5850 5700
 Wire Wire Line
 	5850 5400 5850 5300
-Wire Wire Line
-	5850 4850 5850 5000
-Text Label 5850 4850 3    50   ~ 0
+Text Label 5850 4450 3    50   ~ 0
 RD0
 $Comp
 L Connector:Conn_01x03_Female J6
@@ -1080,4 +1078,19 @@ Wire Wire Line
 	3550 1950 3450 1950
 Wire Wire Line
 	3850 1950 4000 1950
+$Comp
+L Connector:Conn_01x02_Male J12
+U 1 1 5CB309E6
+P 6050 4750
+F 0 "J12" H 6023 4630 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 6023 4721 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6050 4750 50  0001 C CNN
+F 3 "~" H 6050 4750 50  0001 C CNN
+	1    6050 4750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5850 4750 5850 5000
+Wire Wire Line
+	5850 4450 5850 4650
 $EndSCHEMATC

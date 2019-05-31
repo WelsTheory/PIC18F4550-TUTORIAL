@@ -1,0 +1,560 @@
+
+
+Microchip MPLAB XC8 Assembler V2.05 build -831301201 
+                                                                                               Fri May 31 00:48:02 2019
+
+Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
+     1                           	processor	18F4550
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	flic
+     5                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,noexec
+     7                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    10                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    11                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    12  0000                     
+    13                           ; Version 2.05
+    14                           ; Generated 20/12/2018 GMT
+    15                           ; 
+    16                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    17                           ; All rights reserved.
+    18                           ; 
+    19                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    20                           ; 
+    21                           ; Redistribution and use in source and binary forms, with or without modification, are
+    22                           ; permitted provided that the following conditions are met:
+    23                           ; 
+    24                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    25                           ;        conditions and the following disclaimer.
+    26                           ; 
+    27                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    28                           ;        of conditions and the following disclaimer in the documentation and/or other
+    29                           ;        materials provided with the distribution.
+    30                           ; 
+    31                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    32                           ;        software without specific prior written permission.
+    33                           ; 
+    34                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    35                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    36                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    37                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    38                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    39                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    40                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    41                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    42                           ; 
+    43                           ; 
+    44                           ; Code-generator required, PIC18F4550 Definitions
+    45                           ; 
+    46                           ; SFR Addresses
+    47  0000                     _SSPBUF	set	4041
+    48  0000                     _SSPSTATbits	set	4039
+    49  0000                     _SSPCON1bits	set	4038
+    50  0000                     _TRISCbits	set	3988
+    51  0000                     _TRISAbits	set	3986
+    52  0000                     _TRISBbits	set	3987
+    53  0000                     _ADCON1	set	4033
+    54  0000                     _LATD	set	3980
+    55  0000                     _TRISD	set	3989
+    56                           
+    57                           ; #config settings
+    58  0000                     
+    59                           	psect	cinit
+    60  007F60                     __pcinit:
+    61                           	opt callstack 0
+    62  007F60                     start_initialization:
+    63                           	opt callstack 0
+    64  007F60                     __initialization:
+    65                           	opt callstack 0
+    66  007F60                     end_of_initialization:
+    67                           	opt callstack 0
+    68  007F60                     __end_of__initialization:
+    69                           	opt callstack 0
+    70  007F60  0100               	movlb	0
+    71  007F62  EFB3  F03F         	goto	_main	;jump to C main() function
+    72                           
+    73                           	psect	cstackCOMRAM
+    74  000001                     __pcstackCOMRAM:
+    75                           	opt callstack 0
+    76  000001                     SPI_Init_Slave@modo:
+    77                           	opt callstack 0
+    78                           
+    79                           ; 1 bytes @ 0x0
+    80  000001                     	ds	1
+    81  000002                     SPI_Init_Slave@reloj:
+    82                           	opt callstack 0
+    83                           
+    84                           ; 1 bytes @ 0x1
+    85  000002                     	ds	1
+    86  000003                     ??_main:
+    87                           
+    88                           ; 1 bytes @ 0x2
+    89  000003                     	ds	2
+    90  000005                     main@dato:
+    91                           	opt callstack 0
+    92                           
+    93                           ; 1 bytes @ 0x4
+    94  000005                     	ds	1
+    95                           
+    96 ;;
+    97 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+    98 ;;
+    99 ;; *************** function _main *****************
+   100 ;; Defined at:
+   101 ;;		line 15 in file "Programa_principal.c"
+   102 ;; Parameters:    Size  Location     Type
+   103 ;;		None
+   104 ;; Auto vars:     Size  Location     Type
+   105 ;;  dato            1    4[COMRAM] unsigned char 
+   106 ;; Return value:  Size  Location     Type
+   107 ;;                  1    wreg      void 
+   108 ;; Registers used:
+   109 ;;		wreg, status,2, status,0, cstack
+   110 ;; Tracked objects:
+   111 ;;		On entry : 0/0
+   112 ;;		On exit  : 0/0
+   113 ;;		Unchanged: 0/0
+   114 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   115 ;;      Params:         0       0       0       0       0       0       0       0       0
+   116 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   117 ;;      Temps:          2       0       0       0       0       0       0       0       0
+   118 ;;      Totals:         3       0       0       0       0       0       0       0       0
+   119 ;;Total ram usage:        3 bytes
+   120 ;; Hardware stack levels required when called:    1
+   121 ;; This function calls:
+   122 ;;		_SPI_Init_Slave
+   123 ;;		_SPI_Rx
+   124 ;; This function is called by:
+   125 ;;		Startup code after reset
+   126 ;; This function uses a non-reentrant model
+   127 ;;
+   128                           
+   129                           	psect	text0
+   130  007F66                     __ptext0:
+   131                           	opt callstack 0
+   132  007F66                     _main:
+   133                           	opt callstack 30
+   134                           
+   135                           ;Programa_principal.c: 16:     char dato;;Programa_principal.c: 17:     SPI_Init_Slave(4
+      +                          , '1');
+   136                           
+   137                           ;incstack = 0
+   138  007F66  0E31               	movlw	49
+   139  007F68  6E01               	movwf	SPI_Init_Slave@modo,c
+   140  007F6A  0E04               	movlw	4
+   141  007F6C  ECD9  F03F         	call	_SPI_Init_Slave
+   142                           
+   143                           ;Programa_principal.c: 18:     _delay((unsigned long)((100)*(20000000L/4000.0)));
+   144  007F70  0E03               	movlw	3
+   145  007F72  6E04               	movwf	(??_main+1)& (0+255),c
+   146  007F74  0E8A               	movlw	138
+   147  007F76  6E03               	movwf	??_main& (0+255),c
+   148  007F78  0E56               	movlw	86
+   149  007F7A                     u207:
+   150  007F7A  2EE8               	decfsz	wreg,f,c
+   151  007F7C  D7FE               	bra	u207
+   152  007F7E  2E03               	decfsz	??_main& (0+255),f,c
+   153  007F80  D7FC               	bra	u207
+   154  007F82  2E04               	decfsz	(??_main+1)& (0+255),f,c
+   155  007F84  D7FA               	bra	u207
+   156                           
+   157                           ;Programa_principal.c: 19:     TRISD = 0;
+   158  007F86  0E00               	movlw	0
+   159  007F88  6E95               	movwf	3989,c	;volatile
+   160  007F8A                     l857:
+   161                           
+   162                           ;Programa_principal.c: 20:     LATD = 0;
+   163  007F8A  0E00               	movlw	0
+   164  007F8C                     L1:
+   165  007F8C  6E8C               	movwf	3980,c	;volatile
+   166  007F8E                     l859:
+   167                           
+   168                           ;Programa_principal.c: 22:         dato = SPI_Rx();
+   169  007F8E  ECAE  F03F         	call	_SPI_Rx	;wreg free
+   170  007F92  6E05               	movwf	main@dato,c
+   171                           
+   172                           ;Programa_principal.c: 23:         if ( dato == 0x01){
+   173  007F94  0405               	decf	main@dato,w,c
+   174  007F96  A4D8               	btfss	status,2,c
+   175  007F98  D002               	goto	l865
+   176                           
+   177                           ;Programa_principal.c: 24:             LATD = 15;
+   178  007F9A  0E0F               	movlw	15
+   179  007F9C  D7F7               	goto	L1
+   180  007F9E                     l865:
+   181  007F9E  0E06               	movlw	6
+   182  007FA0  1805               	xorwf	main@dato,w,c
+   183  007FA2  A4D8               	btfss	status,2,c
+   184  007FA4  D002               	goto	l869
+   185                           
+   186                           ;Programa_principal.c: 27:             LATD = 5;
+   187  007FA6  0E05               	movlw	5
+   188  007FA8  D7F1               	goto	L1
+   189  007FAA                     l869:
+   190  007FAA  2805               	incf	main@dato,w,c
+   191  007FAC  B4D8               	btfsc	status,2,c
+   192  007FAE  D7ED               	goto	l857
+   193  007FB0  D7EE               	goto	l859
+   194  007FB2                     __end_of_main:
+   195                           	opt callstack 0
+   196                           
+   197 ;; *************** function _SPI_Rx *****************
+   198 ;; Defined at:
+   199 ;;		line 87 in file "SPI_libreria.c"
+   200 ;; Parameters:    Size  Location     Type
+   201 ;;		None
+   202 ;; Auto vars:     Size  Location     Type
+   203 ;;		None
+   204 ;; Return value:  Size  Location     Type
+   205 ;;                  1    wreg      unsigned char 
+   206 ;; Registers used:
+   207 ;;		wreg, status,2
+   208 ;; Tracked objects:
+   209 ;;		On entry : 0/0
+   210 ;;		On exit  : 0/0
+   211 ;;		Unchanged: 0/0
+   212 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   213 ;;      Params:         0       0       0       0       0       0       0       0       0
+   214 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   215 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   216 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   217 ;;Total ram usage:        0 bytes
+   218 ;; Hardware stack levels used:    1
+   219 ;; This function calls:
+   220 ;;		Nothing
+   221 ;; This function is called by:
+   222 ;;		_main
+   223 ;; This function uses a non-reentrant model
+   224 ;;
+   225                           
+   226                           	psect	text1
+   227  007F5C                     __ptext1:
+   228                           	opt callstack 0
+   229  007F5C                     _SPI_Rx:
+   230                           	opt callstack 30
+   231                           
+   232                           ;SPI_libreria.c: 88:     return SSPBUF;
+   233                           
+   234                           ;incstack = 0
+   235  007F5C  50C9               	movf	4041,w,c	;volatile
+   236  007F5E  0012               	return		;funcret
+   237  007F60                     __end_of_SPI_Rx:
+   238                           	opt callstack 0
+   239                           
+   240 ;; *************** function _SPI_Init_Slave *****************
+   241 ;; Defined at:
+   242 ;;		line 46 in file "SPI_libreria.c"
+   243 ;; Parameters:    Size  Location     Type
+   244 ;;  reloj           1    wreg     unsigned char 
+   245 ;;  modo            1    0[COMRAM] unsigned char 
+   246 ;; Auto vars:     Size  Location     Type
+   247 ;;  reloj           1    1[COMRAM] unsigned char 
+   248 ;; Return value:  Size  Location     Type
+   249 ;;                  1    wreg      void 
+   250 ;; Registers used:
+   251 ;;		wreg, status,2, status,0
+   252 ;; Tracked objects:
+   253 ;;		On entry : 0/0
+   254 ;;		On exit  : 0/0
+   255 ;;		Unchanged: 0/0
+   256 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   257 ;;      Params:         1       0       0       0       0       0       0       0       0
+   258 ;;      Locals:         1       0       0       0       0       0       0       0       0
+   259 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   260 ;;      Totals:         2       0       0       0       0       0       0       0       0
+   261 ;;Total ram usage:        2 bytes
+   262 ;; Hardware stack levels used:    1
+   263 ;; This function calls:
+   264 ;;		Nothing
+   265 ;; This function is called by:
+   266 ;;		_main
+   267 ;; This function uses a non-reentrant model
+   268 ;;
+   269                           
+   270                           	psect	text2
+   271  007FB2                     __ptext2:
+   272                           	opt callstack 0
+   273  007FB2                     _SPI_Init_Slave:
+   274                           	opt callstack 30
+   275                           
+   276                           ;incstack = 0
+   277                           ;SPI_Init_Slave@reloj stored from wreg
+   278  007FB2  6E02               	movwf	SPI_Init_Slave@reloj,c
+   279                           
+   280                           ;SPI_libreria.c: 49:     ADCON1 = 0x0F;
+   281  007FB4  0E0F               	movlw	15
+   282  007FB6  6EC1               	movwf	4033,c	;volatile
+   283                           
+   284                           ;SPI_libreria.c: 52:     TRISBbits.RB0 = 1;
+   285  007FB8  8093               	bsf	3987,0,c	;volatile
+   286                           
+   287                           ;SPI_libreria.c: 53:     TRISBbits.RB1 = 1;
+   288  007FBA  8293               	bsf	3987,1,c	;volatile
+   289                           
+   290                           ;SPI_libreria.c: 54:     TRISAbits.RA5 = 1;
+   291  007FBC  8A92               	bsf	3986,5,c	;volatile
+   292                           
+   293                           ;SPI_libreria.c: 55:     TRISCbits.RC7 = 0;
+   294  007FBE  9E94               	bcf	3988,7,c	;volatile
+   295                           
+   296                           ;SPI_libreria.c: 58:     SSPCON1bits.SSPM = reloj;
+   297  007FC0  50C6               	movf	4038,w,c	;volatile
+   298  007FC2  1802               	xorwf	SPI_Init_Slave@reloj,w,c
+   299  007FC4  0BF0               	andlw	-16
+   300  007FC6  1802               	xorwf	SPI_Init_Slave@reloj,w,c
+   301  007FC8  6EC6               	movwf	4038,c	;volatile
+   302                           
+   303                           ;SPI_libreria.c: 61:     if (modo == '1'){
+   304  007FCA  0E31               	movlw	49
+   305  007FCC  1801               	xorwf	SPI_Init_Slave@modo,w,c
+   306  007FCE  A4D8               	btfss	status,2,c
+   307  007FD0  D002               	goto	l839
+   308                           
+   309                           ;SPI_libreria.c: 62:         SSPCON1bits.CKP = 1;
+   310  007FD2  88C6               	bsf	4038,4,c	;volatile
+   311  007FD4  D005               	goto	L2
+   312  007FD6                     l839:
+   313  007FD6  0E32               	movlw	50
+   314  007FD8  1801               	xorwf	SPI_Init_Slave@modo,w,c
+   315  007FDA  A4D8               	btfss	status,2,c
+   316  007FDC  D003               	goto	l843
+   317                           
+   318                           ;SPI_libreria.c: 66:         SSPCON1bits.CKP = 0;
+   319  007FDE  98C6               	bcf	4038,4,c	;volatile
+   320  007FE0                     L2:
+   321                           
+   322                           ;SPI_libreria.c: 67:         SSPSTATbits.CKE = 1;
+   323  007FE0  8CC7               	bsf	4039,6,c	;volatile
+   324                           
+   325                           ;SPI_libreria.c: 68:     }
+   326  007FE2  D00C               	goto	l51
+   327  007FE4                     l843:
+   328  007FE4  0E33               	movlw	51
+   329  007FE6  1801               	xorwf	SPI_Init_Slave@modo,w,c
+   330  007FE8  A4D8               	btfss	status,2,c
+   331  007FEA  D002               	goto	l847
+   332                           
+   333                           ;SPI_libreria.c: 70:         SSPCON1bits.CKP = 1;
+   334  007FEC  88C6               	bsf	4038,4,c	;volatile
+   335  007FEE  D005               	goto	L3
+   336  007FF0                     l847:
+   337  007FF0  0E34               	movlw	52
+   338  007FF2  1801               	xorwf	SPI_Init_Slave@modo,w,c
+   339  007FF4  A4D8               	btfss	status,2,c
+   340  007FF6  D002               	goto	l51
+   341                           
+   342                           ;SPI_libreria.c: 74:         SSPCON1bits.CKP = 0;
+   343  007FF8  98C6               	bcf	4038,4,c	;volatile
+   344  007FFA                     L3:
+   345                           
+   346                           ;SPI_libreria.c: 75:         SSPSTATbits.CKE = 0;
+   347  007FFA  9CC7               	bcf	4039,6,c	;volatile
+   348  007FFC                     l51:
+   349                           
+   350                           ;SPI_libreria.c: 79:     SSPCON1bits.SSPEN = 1;
+   351  007FFC  8AC6               	bsf	4038,5,c	;volatile
+   352  007FFE  0012               	return		;funcret
+   353  008000                     __end_of_SPI_Init_Slave:
+   354                           	opt callstack 0
+   355  0000                     
+   356                           	psect	rparam
+   357  0000                     tosu	equ	0xFFF
+   358                           tosh	equ	0xFFE
+   359                           tosl	equ	0xFFD
+   360                           stkptr	equ	0xFFC
+   361                           pclatu	equ	0xFFB
+   362                           pclath	equ	0xFFA
+   363                           pcl	equ	0xFF9
+   364                           tblptru	equ	0xFF8
+   365                           tblptrh	equ	0xFF7
+   366                           tblptrl	equ	0xFF6
+   367                           tablat	equ	0xFF5
+   368                           prodh	equ	0xFF4
+   369                           prodl	equ	0xFF3
+   370                           indf0	equ	0xFEF
+   371                           postinc0	equ	0xFEE
+   372                           postdec0	equ	0xFED
+   373                           preinc0	equ	0xFEC
+   374                           plusw0	equ	0xFEB
+   375                           fsr0h	equ	0xFEA
+   376                           fsr0l	equ	0xFE9
+   377                           wreg	equ	0xFE8
+   378                           indf1	equ	0xFE7
+   379                           postinc1	equ	0xFE6
+   380                           postdec1	equ	0xFE5
+   381                           preinc1	equ	0xFE4
+   382                           plusw1	equ	0xFE3
+   383                           fsr1h	equ	0xFE2
+   384                           fsr1l	equ	0xFE1
+   385                           bsr	equ	0xFE0
+   386                           indf2	equ	0xFDF
+   387                           postinc2	equ	0xFDE
+   388                           postdec2	equ	0xFDD
+   389                           preinc2	equ	0xFDC
+   390                           plusw2	equ	0xFDB
+   391                           fsr2h	equ	0xFDA
+   392                           fsr2l	equ	0xFD9
+   393                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      5       5
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_SPI_Init_Slave
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0     253
+                                              2 COMRAM     3     3      0
+                     _SPI_Init_Slave
+                             _SPI_Rx
+ ---------------------------------------------------------------------------------
+ (1) _SPI_Rx                                               0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _SPI_Init_Slave                                       2     1      1     186
+                                              0 COMRAM     2     1      1
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _SPI_Init_Slave
+   _SPI_Rx
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      5       5       1        5.3%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+ABS                  0      0       0      20        0.0%
+BIGRAM             7FF      0       0      21        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.05 build -831301201 
+Symbol Table                                                                                   Fri May 31 00:48:02 2019
+
+            _SSPSTATbits 000FC7                       l51 7FFC              __CFG_BORV$3 000000  
+           __CFG_CP0$OFF 000000             __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000  
+           __CFG_CP3$OFF 000000                      l843 7FE4                      l847 7FF0  
+                    l839 7FD6                      l865 7F9E                      l857 7F8A  
+                    l859 7F8E                      l869 7FAA             __CFG_CPB$OFF 000000  
+                    u207 7F7A             __CFG_CPD$OFF 000000             __CFG_BOR$OFF 000000  
+                    wreg 000FE8             __CFG_FOSC$HS 000000             __CFG_LVP$OFF 000000  
+           __CFG_WDT$OFF 000000                     _LATD 000F8C             __CFG_PWRT$ON 000000  
+                   _main 7F66   __end_of_SPI_Init_Slave 8000                     start 0000  
+          __CFG_IESO$OFF 000000            __CFG_MCLRE$ON 000000             ___param_bank 000000  
+          __CFG_PLLDIV$1 000000           __CFG_CCP2MX$ON 000000                    ?_main 0001  
+          __CFG_USBDIV$1 000000                    _TRISD 000F95            __CFG_WRT0$OFF 000000  
+          __CFG_WRT1$OFF 000000            __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000  
+         __CFG_EBTR0$OFF 000000           __CFG_FCMEN$OFF 000000           __CFG_EBTR1$OFF 000000  
+         __CFG_EBTR2$OFF 000000           __CFG_EBTR3$OFF 000000            __CFG_WRTB$OFF 000000  
+          __CFG_WRTC$OFF 000000            __CFG_WRTD$OFF 000000           __CFG_EBTRB$OFF 000000  
+                  status 000FD8          ?_SPI_Init_Slave 0001           __CFG_ICPRT$OFF 000000  
+         __CFG_PBADEN$ON 000000          __initialization 7F60             __end_of_main 7FB2  
+                 ??_main 0003            __activetblptr 000000                   _ADCON1 000FC1  
+                 _SSPBUF 000FC9                   _SPI_Rx 7F5C           __CFG_XINST$OFF 000000  
+         __CFG_STVREN$ON 000000               __accesstop 0060  __end_of__initialization 7F60  
+          ___rparam_used 000001           __pcstackCOMRAM 0001                  ?_SPI_Rx 0001  
+       ??_SPI_Init_Slave 0002          __CFG_VREGEN$OFF 000000          __size_of_SPI_Rx 0004  
+                __Hparam 0000                  __Lparam 0000                  __pcinit 7F60  
+                __ramtop 0800                  __ptext0 7F66                  __ptext1 7F5C  
+                __ptext2 7FB2     end_of_initialization 7F60       SPI_Init_Slave@modo 0001  
+              _TRISAbits 000F92                _TRISBbits 000F93                _TRISCbits 000F94  
+         __end_of_SPI_Rx 7F60      start_initialization 7F60                 ??_SPI_Rx 0001  
+       __CFG_LPT1OSC$OFF 000000         __CFG_WDTPS$32768 000000                 __Hrparam 0000  
+__size_of_SPI_Init_Slave 004E                 __Lrparam 0000            __size_of_main 004C  
+               main@dato 0005    __CFG_CPUDIV$OSC1_PLL2 000000      SPI_Init_Slave@reloj 0002  
+            _SSPCON1bits 000FC6           _SPI_Init_Slave 7FB2  
