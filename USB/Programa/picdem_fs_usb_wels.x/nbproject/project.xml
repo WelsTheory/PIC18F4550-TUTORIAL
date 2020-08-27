@@ -11,6 +11,24 @@
             <sourceEncoding>UTF-8</sourceEncoding>
             <asminc-extensions/>
             <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>../boards</sourceRootElem>
+                <sourceRootElem>../app_config</sourceRootElem>
+                <sourceRootElem>../../../../../../bsp</sourceRootElem>
+                <sourceRootElem>../../../hid_mouse/firmware/src</sourceRootElem>
+                <sourceRootElem>../demo_src</sourceRootElem>
+                <sourceRootElem>../../../../../../framework/usb</sourceRootElem>
+                <sourceRootElem>.</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>PICDEM_FSUSB</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
         </data>
     </configuration>
 </project>
